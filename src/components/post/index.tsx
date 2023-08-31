@@ -1,10 +1,10 @@
 import "./style.css"
 
-function post() {
+function Post() {
     return(
         <>
         </>
     )
 }
 
-export default post
+export default Post

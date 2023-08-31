@@ -17,13 +17,19 @@ import imgiconpe from "../../assets/images/iconpe.svg";
 import imgiconLocal from "../../assets/images/iconLocal.svg";
 import imgiconAnexo from "../../assets/images/iconAnexo.svg";
 import imgiconSend from "../../assets/images/iconSend.svg";
+import imgff666 from "../../assets/images/ff666.svg";
+import imglike from "../../assets/images/like.svg";
+import imgcomentar from "../../assets/images/comentar.svg";
+import imgrecomendar from "../../assets/images/recomendar.svg";
+import imgvampires from "../../assets/images/vampires.svg";
+import imgcarregandofeed from "../../assets/images/carregandofeed.svg";
 
 //rotas
 import { Link } from "react-router-dom";
 
 
 
-function Feed() {
+function PerfilUsuario() {
     return(
         <>
         <>
@@ -131,7 +137,7 @@ function Feed() {
       <li className="post">
         <div className="infoUserPost">
           <div className="imgUserPost">
-            <img src="./img/fotopeerfil.svg" alt="" />
+            <img src={imgfotopeerfil} alt="" />  
           </div>
           <div className="nameAndHour">
             <strong>@mufasa</strong>
@@ -147,18 +153,18 @@ function Feed() {
         muito sangue e rock pesadíssimo (mais pesado que qualquer música que o
         Foo Fighters já tenha feito), Terror no Estúdio 666 é uma boa pedida.{" "}
       </p>
-      <img className="balanoalvo" src="./img/ff666.svg" alt="" />
+      <img className="balanoalvo" src={imgff666} alt="" />  
       <div className="actionBtnPost">
         <button type="button" className="filesPost">
-          <img src="./img/like.svg" alt="Curtir" />
+          <img src={imglike} alt="Curtir" />  
           <span>Curtir</span>
         </button>
         <button type="button" className="filesPost">
-          <img src="./img/comentar.svg" alt="Comentar" />
+          <img src={imgcomentar} alt="Comentar" />  
           <span>comentar</span>
         </button>
         <button type="button" className="filesPost">
-          <img src="./img/recomendar.svg" alt="Recomendar" />
+          <img src={imgrecomendar} alt="Recomendar" />  
           <span>recomendar</span>
         </button>
       </div>
@@ -167,7 +173,7 @@ function Feed() {
       <li className="post">
         <div className="infoUserPost">
           <div className="imgUserPost">
-            <img src="./img/fotopeerfil.svg" alt="" />
+            <img src={imgfotopeerfil} alt="" />
           </div>
           <div className="nameAndHour">
             <strong>@mufasa &gt;</strong>
@@ -190,24 +196,24 @@ function Feed() {
         galhofa. Diverte, apesar de ser claramente mais voltado para as crianças
         e de certos problemas de roteiro.
       </p>
-      <img className="balanoalvo" src="./img/vampires.svg" alt="" />
+      <img className="balanoalvo" src={imgvampires} alt="" />  
       <div className="actionBtnPost">
         <button type="button" className="filesPost">
-          <img src="./img/like.svg" alt="Curtir" />
+          <img src={imglike} alt="Curtir" />
           <span>Curtir</span>
         </button>
         <button type="button" className="filesPost">
-          <img src="./img/comentar.svg" alt="Comentar" />
+          <img src={imgcomentar}  alt="Comentar" />
           <span>comentar</span>
         </button>
         <button type="button" className="filesPost">
-          <img src="./img/recomendar.svg" alt="Recomendar" />
+          <img src={imgrecomendar} alt="Recomendar" />
           <span>recomendar</span>
         </button>
       </div>
     </ul>
     <div className="carregamento">
-      <img src="./img/carregandofeed.svg" alt="carregamento" />
+      <img src={imgcarregandofeed} alt="carregamento" />  
     </div>
   </main>
 </>
@@ -216,4 +222,4 @@ function Feed() {
     )
 }
 
-export default Feed
+export default PerfilUsuario
