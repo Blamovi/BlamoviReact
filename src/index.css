@@ -1,5 +1,6 @@
 * {
-    background-color: var(--preto);
+    /* Nicolas: Comentei este backgroudColor por ser o caminho mais facil de resolver futuros problemas de css, caso alguma pagina tenha que ter essa especificação, adicionar diretamente no body */
+    /* background-color: var(--preto); */
     margin: 0;
     padding: 0;
     box-sizing: border-box;

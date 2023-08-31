@@ -5,6 +5,7 @@ import './index.css'
 //components
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Feed from './pages/Feed'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,10 +14,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Header />
       <Routes>
         {/* <Route path='NomeDaRota' element={<NomeDoComponente/>}/> */}
+        <Route path='/feed' element={<Feed/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
 
 
-  </React.StrictMode>,
+  </React.StrictMode>
 )
