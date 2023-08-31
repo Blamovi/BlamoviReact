@@ -13,7 +13,7 @@ import imgiconmap from "../../assets/images/iconmap.svg";
 import imgpais from "../../assets/images/pais.svg";
 import imgCalendar from "../../assets/images/Calendar.svg";
 import imgmufasaperfil from "../../assets/images/mufasaperfil.svg";
-import imgiconpe from "../../assets/images/iconImg.svg";
+import imgiconpe from "../../assets/images/iconpe.svg";
 import imgiconLocal from "../../assets/images/iconLocal.svg";
 import imgiconAnexo from "../../assets/images/iconAnexo.svg";
 import imgiconSend from "../../assets/images/iconSend.svg";
