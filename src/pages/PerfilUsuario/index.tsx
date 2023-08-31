@@ -12,6 +12,11 @@ import imgGrey from "../../assets/images/Grey.svg";
 import imgiconmap from "../../assets/images/iconmap.svg";
 import imgpais from "../../assets/images/pais.svg";
 import imgCalendar from "../../assets/images/Calendar.svg";
+import imgmufasaperfil from "../../assets/images/mufasaperfil.svg";
+import imgiconpe from "../../assets/images/iconImg.svg";
+import imgiconLocal from "../../assets/images/iconLocal.svg";
+import imgiconAnexo from "../../assets/images/iconAnexo.svg";
+import imgiconSend from "../../assets/images/iconSend.svg";
 
 //rotas
 import { Link } from "react-router-dom";
@@ -95,7 +100,7 @@ function Feed() {
     {/*Formulário de envio*/}
     <div className="newPost">
       <div className="infoUser">
-        <img src="./img/mufasaperfil.svg" alt="" />  src={imgCalendar}
+        <img src={imgmufasaperfil} alt="" />  
       </div>
       <form action="" className="formPost">
         <textarea
@@ -106,17 +111,17 @@ function Feed() {
         <div className="iconsUser">
           <div className="icons">
             <button className="btnFileForm">
-              <img src="./img/iconImg.svg" alt="Adicione uma imagem" />
+              <img src={imgiconpe} alt="Adicione uma imagem" />  
             </button>
             <button className="btnFileForm">
-              <img src="./img/iconLocal.svg" alt="Adicione um local" />
+              <img src={imgiconLocal} alt="Adicione um local" />  
             </button>
             <button className="btnFileForm">
-              <img src="./img/iconAnexo.svg" alt="Anexe um arquivo" />
+              <img  src={imgiconAnexo} alt="Anexe um arquivo" />  
             </button>
           </div>
           <button className="btnFileForm">
-            <img src="./img/iconSend.svg" alt="Publicar" />
+            <img src={imgiconSend} alt="Publicar" />  
           </button>
         </div>
       </form>
