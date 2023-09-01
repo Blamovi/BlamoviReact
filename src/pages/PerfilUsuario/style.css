@@ -24,23 +24,23 @@ main{
 
 
 .newPost{
-    background: #DCE0E6;
+    background-color: var(--branco);
     width: 100%;
     height: 180px;
     display: flex;
     /* flex-direction: column; */
     align-items: flex-start;
-    /*margin: 50px 0;*/
     padding: 17px 13px;
     border: 2px solid var(--cor1);
     border-radius: 3px;
-    height: 156px;
+    height: 211px;
 }
 
 div.newPost div.infoUser{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--branco);
 }
 
 div.newPost div.infoUser img{
@@ -48,16 +48,18 @@ div.newPost div.infoUser img{
     height: 80px;
     border-radius: 50%;
     /* background-color: #333; */
+    background-color: var(--branco);
 }
 
 div.newPost form.formPost{
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: var(--branco);
 }
 
 div.newPost form.formPost textarea{
-    background-color: #DCE0E6;
+    background-color: var(--branco);
     padding: 20px;
     margin: 15px 5px;
     border: transparent;
@@ -73,6 +75,7 @@ div.newPost form.formPost textarea{
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid black;
+    background-color: var(--branco);
 }
 
 .icons{
@@ -88,11 +91,12 @@ div.newPost form.formPost textarea{
 }
 .btnFileForm img {
     width: 20px;   
+    background-color: var(--branco);
 }
 
 .posts{
     /* margin-bottom: 200px; */
-    background-color: #DCE0E6;
+    background-color: var(--branco);
     border-radius: 10px;
     padding: 25px;
     width: 100%;
@@ -125,6 +129,7 @@ div.newPost form.formPost textarea{
 .infoUserPost{
     display: flex;
     align-items: center;
+    background-color: var(--branco);
 }
 
 .infoUserPost img{
@@ -133,6 +138,7 @@ div.newPost form.formPost textarea{
     border-radius: 50%;
     margin-right: 10px;
     margin-bottom: 5px;
+    background-color: var(--branco);
 }
 
 p{
@@ -266,12 +272,14 @@ section div {
     display: flex;
     position: absolute;
     margin: 2px 50px 79px;
+    background-color: transparent;
 
 }
 
 .tam {
     width: 20px;
     padding: 2px;
+    background-color: var(--branco);
 }
 
 .posicionamento_perfil {
@@ -285,6 +293,7 @@ section div {
     font-size: 32px;
     font-family: var(--font2);
     font-weight: 600;
+    background-color:  var(--branco);
 
 }
 
@@ -318,16 +327,22 @@ section div {
 .icons img {
     width: 20px;
     margin: 7px;
+    background-color: var(--branco);
 }
 
 .icons {
     display: flex;
     align-items: center;
     font-family: var(--font2);
+    background-color: var(--branco);
     
 }
 .icons img{
     width: 20px;
+}
+
+span.spancolor{
+    background-color: var(--branco);
 }
 
 .text p{
@@ -336,6 +351,7 @@ section div {
     padding: 41px 60px 0;
     font-weight: 600;
     font-size: 15px;
+    background-color: var(--branco);
 }
 
 nav .imagem_logado{
@@ -383,7 +399,7 @@ nav .imagem_logado{
     border-radius: 0%;
     font-weight: 600;
     text-transform: uppercase;
-    line-height: 22px;
+    line-height: 45px;
 }
 .series{
     background-color: var(--amarelo);
@@ -398,7 +414,7 @@ nav .imagem_logado{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
+    width: 23%;
     border-radius: 10px
 
 }
@@ -406,9 +422,13 @@ nav .imagem_logado{
     border-bottom: 3px solid black;
     font-weight: bolder;
     font-size: 17px;   
+    background-color: var(--amarelo);
+    border-radius: 5px;
 }
 .tam2{
     font-size: 25px;
+    background-color: var(--amarelo);
+
 }
 
 /* footer */
@@ -564,6 +584,7 @@ footer>div>img {
 
     .tam {
         display: none;
+        
     }
 
     .filesPost span{

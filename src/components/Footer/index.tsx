@@ -6,7 +6,7 @@ import imgLogoBranco from "../../assets/logo-branco.svg"
 function Footer() {
     return (
         <>
-            <footer id="footer">
+            {/* <footer id="footer">
                 <img
                     className="img-footer"
                     src={imgCinemaFooter}
@@ -27,7 +27,7 @@ function Footer() {
                         <p>© 2023 by blamovi.com, Inc.</p>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
 
         </>
     )

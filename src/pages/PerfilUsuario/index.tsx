@@ -85,10 +85,10 @@ function PerfilUsuario() {
         </div>
         <div className="icons">
           <img src={imgiconmap} alt="map" />   
-          <span>Parque Nacional do Serengeti - TZ </span>
+          <span className="spancolor">Parque Nacional do Serengeti - TZ </span>
           <img  src={imgpais} alt="pais" /> 
           <img src={imgCalendar} alt="Calendar" />   
-          <span>Entrou em 2023</span>
+          <span className="spancolor">Entrou em 2023</span>
         </div>
       </div>
     </section>

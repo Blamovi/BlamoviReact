@@ -5,7 +5,7 @@ import imgLogoBranco from "../../assets/logo-branco.svg"
 function Header() {
     return (
         <>
-            <header id="header">
+            {/* <header id="header">
                 <div className="posicionamento_header posicionamento">
                     <div className="logo">
                         <img src={imgLogoBranco} alt="logo" />
@@ -38,7 +38,7 @@ function Header() {
                         <a href="../Login/login.html">Login</a>
                     </nav>
                 </div>
-            </header>
+            </header> */}
 
         </>
     )
