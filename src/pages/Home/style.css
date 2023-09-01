@@ -311,6 +311,11 @@ footer>div>span {
 }
 
 /*  RESPONSIVO */
+@media screen and ( max-width: 1440px) {
+    .banner_texto > p,img, span{
+        text-decoration: none
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .servicos>div>div:nth-child(2) {

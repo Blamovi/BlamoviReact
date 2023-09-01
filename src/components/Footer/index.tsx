@@ -1,7 +1,7 @@
 import "./style.css"
 
-import imgCinemaFooter from "../../assets/cinema_foto_pexels 1 (1).png"
-import imgLogoBranco from "../../assets/logo-branco.svg"
+import imgCinemaFooter from "../../assets/img/footer/cinema_foto_pexels 1 (1).png"
+import imgLogoBranco from "../../assets/img/logo/logo-branco.svg"
 
 function Footer() {
     return (

@@ -1,7 +1,35 @@
 import "./style.css"
 
+import imgVetor from "../../assets/img/banner/banner_P.png";
+import imgLogo from "../../assets/img/banner/img - fundo.png";
+import imgDestaques from "../../assets/img/section/film-everything-everywhere-all-at-once_ratio-16x9 1.svg";
+import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
+import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
 
-import { Link } from "react-router-dom";
+import imgIconesTrofeu from "../../assets//img/elementos/Trophy.png";
+
+import imgStreamerHbo from "../../assets/img/streams/HBO-MAX.png";
+// import imgStreamerHbo from "../../assets/img/streams/HBO-MAX.png";
+// import imgStreamerHbo from "../../assets/img/streams/HBO-MAX.png";
+// import imgStreamerHbo from "../../assets/img/streams/HBO-MAX.png";
+// import imgStreamerHbo from "../../assets/img/streams/HBO-MAX.png";
+
+
+
+import imgFilmesBatman from "../../assets/img/filmes-f/batman-(cav-das-tre).webp";
+import imgFilmesJoker from "../../assets/img/filmes-f/joker.webp";
+import imgFilmesVingadores from "../../assets/img/filmes-f/image 111.jpg";
+import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
+
+// import imgSeries from "../../assets/img/";
+// import imgSeries from "../../assets/img/";
+// import imgSeries from "../../assets/img/";
+// import imgSeries from "../../assets/img/";
+
+// import imgSeries from "../../assets/img/";
+
+
+// import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -9,11 +37,11 @@ function Home() {
             <main id="main_home">
                 <section className="banner">
                     <div className="banner_img">
-                        <img src="../img/banner/Vector.jpg" alt="" />
+                        <img src={imgVetor} alt="" />
                     </div>
                     <div className="banner_texto">
                         <p>Não sabe o que Assistir?</p>
-                        <img src="../img/banner/logo.svg" alt="" />
+                        <img src={imgLogo} alt="" />
                         <p>
                             A <span>Blámovi</span> te recomenda!
                         </p>
@@ -22,7 +50,7 @@ function Home() {
                 <section className="destaque">
                     <div className="destaque_conteudo">
                         <img
-                            src="../img/section/film-everything-everywhere-all-at-once_ratio-16x9 1.svg"
+                            src={imgDestaques}
                             alt=""
                         />
                         <div>
@@ -41,7 +69,7 @@ function Home() {
                 <section className="comentarios">
                     <div className="container">
                         <div className="container_conteudo">
-                            <img src="../img/banner/Group 72.png" alt="" />
+                            <img src={imgCriticoLeo} alt="" />
                             <div>
                                 <h3>Leonardo Pereira</h3>
                                 <p>
@@ -54,7 +82,7 @@ function Home() {
                     </div>
                     <div className="container">
                         <div className="container_conteudo">
-                            <img src="../img/banner/320x400 1.png" alt="" />
+                            <img src={imgCriticoAna} alt="" />
                             <div>
                                 <h3>Ana Cristina </h3>
                                 <p>
@@ -73,15 +101,15 @@ function Home() {
                         <img src="../img/elementos/Polygon 11.png" alt="" />
                         <div className="card" id="teste3">
                             <a href="../filmesinformacoes/filmes.html">
-                                <img src="../img/filmes-f/batman-(cav-das-tre).webp" alt="" />
+                            <img src={imgFilmesBatman} alt="" />
                             </a>
                             <h3>Batman: O Cavaleiro das Trevas</h3>
                             <div className="itens">
                                 <div className="streams">
-                                    <img src="../img/streams/HBO-MAX.png" alt="" />
+                                    <img src={imgStreamerHbo} alt="" />
                                 </div>
                                 <div className="icones">
-                                    <img src="../img/elementos/Trophy.png" alt="" />
+                                    <img src={imgIconesTrofeu} alt="" />
                                     <span>8,8</span>
                                     <img src="../img/elementos/Talk.png" alt="" />
                                     <span>59</span>
@@ -89,7 +117,7 @@ function Home() {
                             </div>
                         </div>
                         <div className="card responsivo" id="teste3">
-                            <img src="../img/filmes-f/joker.webp" alt="" />
+                            <img src={imgFilmesJoker} alt="" />
                             <h3>Joker</h3>
                             <div className="itens">
                                 <div className="streams">
@@ -104,7 +132,7 @@ function Home() {
                             </div>
                         </div>
                         <div className="card responsivo" id="teste3">
-                            <img src="../img/filmes-f/image 111.jpg" alt="" />
+                            <img src={imgFilmesVingadores} alt="" />
                             <h3>Vingadores: Ultimato</h3>
                             <div className="itens">
                                 <div className="streams">
@@ -119,7 +147,7 @@ function Home() {
                             </div>
                         </div>
                         <div className="card responsivo" id="teste3">
-                            <img src="../img/filmes-f/gladiador.jpg" alt="" />
+                            <img src={imgFilmesGladiador} alt="" />
                             <h3>Gladiador</h3>
                             <div className="itens">
                                 <div className="streams">
