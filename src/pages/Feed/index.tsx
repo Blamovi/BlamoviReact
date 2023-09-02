@@ -24,7 +24,7 @@ function Feed() {
     return (
         <>
             <>
-                <aside id="sidebar_feed">
+                {/* <aside className="sidebar">
                     <nav className="navSidebar">
                         <button>
                             <span>
@@ -51,7 +51,7 @@ function Feed() {
                             </span>
                         </button>
                     </nav>
-                </aside>
+                </aside> */}
                 <main>
                     {/*Formulário de envio*/}
                     <div className="newPost">

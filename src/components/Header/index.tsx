@@ -33,8 +33,11 @@ function Header() {
                         <a href="../Home/home.html" style={{ animationDelay: "0.2s" }}>
                             Home
                         </a>
-                        <a href="../Favoritos/favoritos.html">Favoritos</a>
-                        <a href="../Cadastro/cadastro.html">Cadastro</a>
+                        <a href="../Favoritos/favoritos.html">Feed</a>
+                        <a href="">Perfil</a>
+                        <a href="">Calendário</a>
+                        <a href="">Favoritos</a>
+                        {/* <a href="../Cadastro/cadastro.html">Cadastro</a> */}
                         <a href="../Login/login.html">Login</a>
                     </nav>
                 </div>
