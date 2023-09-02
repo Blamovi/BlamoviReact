@@ -33,7 +33,7 @@ function PerfilUsuario() {
     return(
         <>
         <>
-  <aside className="sidebar">
+  {/* <aside className="sidebar">
     <nav>
       <button>
         <span>
@@ -54,7 +54,7 @@ function PerfilUsuario() {
         </span>
       </button>
     </nav>
-  </aside>
+  </aside> */}
   {/* Perfil do usuario  */}
   <main>
     {/* sessao 1  */}
@@ -137,7 +137,7 @@ function PerfilUsuario() {
       <li className="post">
         <div className="infoUserPost">
           <div className="imgUserPost">
-            <img src={imgfotopeerfil} alt="" />  
+            <img  src={imgfotopeerfil} alt="" />  
           </div>
           <div className="nameAndHour">
             <strong>@mufasa</strong>

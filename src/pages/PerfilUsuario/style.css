@@ -31,7 +31,7 @@ main{
     /* flex-direction: column; */
     align-items: flex-start;
     padding: 17px 13px;
-    border: 2px solid var(--cor1);
+    border: 2px solid var(--amarelo);
     border-radius: 3px;
     height: 211px;
 }
@@ -112,6 +112,7 @@ div.newPost form.formPost textarea{
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
+    background-color: var(--branco);
 }
 
 .filesPost{
@@ -141,6 +142,13 @@ div.newPost form.formPost textarea{
     background-color: var(--branco);
 }
 
+.imgUserPost img {
+    background-color: var(--branco);   
+}
+div.imgUserPost{
+    background-color: transparent;
+}
+
 p{
     margin-bottom: 10px;
     font-family: var(--font1);
@@ -149,6 +157,11 @@ p{
 
 .textoPost{
     font-size: 18px;
+    text-align: left;
+}
+
+.filesPost span{
+    background-color: var(--amarelo);
 }
 
 .textoComments{
@@ -158,6 +171,8 @@ p{
 .nameAndHour strong{
     font-family: var(--font1);
     color: black;
+    background-color: var(--branco);
+    
 }
 
 .balanoalvo{
@@ -184,6 +199,8 @@ p{
     margin-right: 5px;
     cursor: pointer;
 }
+
+
 
 /* footer */
 
@@ -223,6 +240,7 @@ footer>div>img {
 } 
 footer>div>span{
     color: var(--cor1);
+    background-color: var(--branco)
  } 
 
  .footer1{
@@ -366,7 +384,11 @@ nav .imagem_logado{
 
 .nameAndHour{
  line-height: 12px;
+ background-color: var(--branco);
+ text-align: left;
 }
+
+
 .actionBtnPost{
  display: flex;
 
@@ -380,9 +402,11 @@ nav .imagem_logado{
     font-weight: 600;
     text-align: center;
     border-radius: 10px;
+    background-color: var(--amarelo);
 }
 .filesPost img{
     width: 25px;
+    background-color: var(--amarelo);
 }
 
 
@@ -472,8 +496,15 @@ footer>div {
 
 footer>div>span,p {
     margin-top: 10px;
+    background-color: var(--branco);
+    text-align: left;
     
 }
+
+.nameAndHour p{
+    text-align: left;
+}
+
 
 footer>div>img {
     width: 20px;
