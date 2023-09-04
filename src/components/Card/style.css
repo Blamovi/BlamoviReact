@@ -1,0 +1,104 @@
+/* seção filmes e series  */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: relative
+}
+
+
+#teste3 {
+    position: relative;
+    top: 0;
+    padding: 4px;
+    transition: all .1s ease-in-out;
+}
+
+#teste3:hover {
+    top: -4px;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.267);
+}
+
+.card-linha {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.card>img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.card>div {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.card>a {
+    color: #7DD7FE;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card>a:hover {
+    color: var(--vermelho);
+}
+
+.itens {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.streams {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.icones {
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    gap: 10px;
+}
+
+.icones>img {
+    height: 25px;
+}
+
+.icones>span {
+    color: var(--branco);
+}
+
+.input-submit {
+    margin-top: 5%;
+    padding: 13px;
+    margin-left: 43%;
+    display: flex;
+    background-color: var(--amarelo);
+    color: var(--preto);
+    font-size: 23px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 18%;
+}
+
+.input-submit:hover {
+    background-color: var(--branco);
+    top: -4px;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.267);
+}

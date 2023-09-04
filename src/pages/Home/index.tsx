@@ -20,6 +20,7 @@ import imgFilmesBatman from "../../assets/img/filmes-f/batman-(cav-das-tre).webp
 import imgFilmesJoker from "../../assets/img/filmes-f/joker.webp";
 import imgFilmesVingadores from "../../assets/img/filmes-f/image 111.jpg";
 import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
+import Card from "../../components/Card";
 
 // import imgSeries from "../../assets/img/";
 // import imgSeries from "../../assets/img/";
@@ -32,6 +33,26 @@ import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
 // import { Link } from "react-router-dom";
 
 function Home() {
+    const listaFilmes: any[] = [
+        {
+            titulo: "Rambo",
+            img: "kugfle",
+            nota: 9.0,
+            comentarios: [
+                {
+                    conteudo: "ljgarwlutvblektilqc",
+                    usuario: "jdfsjkgljkd"
+                }, {
+                    conteudo: "ljgarwlutvblektilqc",
+                    usuario: "jdfsjkgljkd"
+                }, {
+                    conteudo: "ljgarwlutvblektilqc",
+                    usuario: "jdfsjkgljkd"
+                }
+            ]
+        }
+    ]
+
     return (
         <>
             <main id="main_home">
@@ -99,9 +120,21 @@ function Home() {
                     <h2>⭐ Filmes Favoritos</h2>
                     <div className="card-linha">
                         <img src="../img/elementos/Polygon 11.png" alt="" />
+                        {
+                            listaFilmes.map((Card: any) => {
+                                return <Card
+                                    id={Card.id}
+                                    titulo={Card.titulo}
+                                    foto={Card.img}
+                                    nota={Card.number}
+                                    comentarios={listaFilmes}
+                                />
+                            })
+
+                        }
                         <div className="card" id="teste3">
                             <a href="../filmesinformacoes/filmes.html">
-                            <img src={imgFilmesBatman} alt="" />
+                                <img src={imgFilmesBatman} alt="" />
                             </a>
                             <h3>Batman: O Cavaleiro das Trevas</h3>
                             <div className="itens">

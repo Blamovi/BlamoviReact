@@ -7,34 +7,34 @@ import { Link } from "react-router-dom";
 function Card(props: any) {
 
 
-    function verificarListaIcones() {
-        if (typeof props.listaTechs === "string") {
-            return JSON.parse(props.listaTechs);
+    function verificarComentarios() {
+        if (typeof props.comentarios === "string") {
+            return JSON.parse(props.comentarios);
         } else {
-            return props.listaTechs;
+            return props.comentarios;
         }
     }
 
     return (
         <div className="card responsivo" id="teste3">
             <img src={""} alt="" />
-            <h3>Joker</h3>
+            <h3>{props.titulo}</h3>
             <div className="itens">
                 <div className="streams">
-                    <img src={""} alt="" />
+                    <img src={props.img} alt="" />
                 </div>
                 <div className="icones">
 
-                {
-                    verificarListaIcones().map((tech: string, indice: number, ) => {
+                {/* {
+                    verificarComentarios().map((tech: string, indice: number, ) => {
                         return <span key={indice}>{tech}</span>
                     })
-                }
+                } */}
 
                     <img src={""} alt="" />
-                    {/* <span>8,8</span> */}
+                    <span>{props.nota}</span>
                     <img src={""} alt="" />
-                    {/* <span>59</span> */}
+                    <span>{verificarComentarios().length}</span>
                 </div>
             </div>
         </div>
