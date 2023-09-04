@@ -379,4 +379,10 @@ span {
     ul{
         display: none;
     }
+
+    .input-submit{
+        margin-left: 38%;
+        font-size: 13px;
+        width: 25%;
+    }
 }

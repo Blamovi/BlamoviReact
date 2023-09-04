@@ -20,7 +20,7 @@ import imgFilmesBatman from "../../assets/img/filmes-f/batman-(cav-das-tre).webp
 import imgFilmesJoker from "../../assets/img/filmes-f/joker.webp";
 import imgFilmesVingadores from "../../assets/img/filmes-f/image 111.jpg";
 import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
-import Card from "../../components/Card";
+import Card from "../../components/Card/index";
 
 // import imgSeries from "../../assets/img/";
 // import imgSeries from "../../assets/img/";
