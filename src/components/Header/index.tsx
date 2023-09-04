@@ -37,7 +37,7 @@ function Header() {
                         <a href="">Perfil</a>
                         <a href="">Calendário</a>
                         <a href="">Favoritos</a>
-                        {/* <a href="../Cadastro/cadastro.html">Cadastro</a> */}
+                        <a href="../Cadastro/cadastro.html">Cadastro</a>
                         <a href="../Login/login.html">Login</a>
                     </nav>
                 </div>
