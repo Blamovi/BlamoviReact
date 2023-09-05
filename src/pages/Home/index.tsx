@@ -30,6 +30,10 @@ import imgClassicoRambo2 from "../../assets/img/classicos/rambo2.png"
 import imgClassicoRambo3 from "../../assets/img/classicos/rambo3.png"
 import imgClassicoRambo4 from "../../assets/img/classicos/rambo4.png"
 import imgClassicoChefao from "../../assets/img/classicos/20120876 1.png"
+import imgLancaSpider from "../../assets/img/filmes-f/image 84.png"
+import imgLancaTransformers from "../../assets/img/filmes-f/image 83.png"
+import imgLancaFlash from "../../assets/img/filmes-f/image 83.png"
+import imgLancaDemonio from "../../assets/img/filmes-f/black demon.png"
 import Card from "../../components/Card";
 
 // import imgSeries from "../../assets/img/";
@@ -272,6 +276,75 @@ function Home() {
             ]
         }
     ]
+
+    const listarLancamentos: any[] = [
+        {
+            titulo: "Homem-Aranha: Através do Aranhaverso",
+            img: { imgLancaSpider },
+            nota: 8.8,
+            comentarios: [
+                {
+                    conteudo: "It's honestly absurd how good the Spider-Verse movies are.",
+                    usuario: "MiroslavKyuranov"
+                }, {
+                    conteudo: "The animation, flow of everything, genius character development, and action were all electrifying!",
+                    usuario: "UniqueParticle"
+                }, {
+                    conteudo: "If it wasn't already obvious in the first film, it's now officially clear as day that the people behind the Spider-Verse franchise",
+                    usuario: "pugpool10"
+                }
+            ]
+        },{
+            titulo: "Transformers: O Despertar das Feras",
+            img: { imgLancaTransformers },
+            nota: 6.7,
+            comentarios: [
+                {
+                    conteudo: "It's time to move on from the humans needing to be the heroes in these storylines.",
+                    usuario: "kevin_robbins"
+                }, {
+                    conteudo: "After the success of 'Bumblebee' I was hoping that this instalment might offer a more rewarding viewing experience than the previous.",
+                    usuario: "ethanbresnett"
+                }, {
+                    conteudo: "Times for everything, unfortunately including cinema too.",
+                    usuario: "tchitouniaram"
+                }
+            ]
+        },{
+            titulo: "The Flash",
+            img: { imgLancaFlash },
+            nota: 6.8,
+            comentarios: [
+                {
+                    conteudo: "Keaton Steals The Show.",
+                    usuario: "slightlymad22"
+                }, {
+                    conteudo: "Finally after the early screening on 6th June which showed the unfinished print, I get to watch the final cut on IMAX today.",
+                    usuario: "chand-suhas"
+                }, {
+                    conteudo: "I always start any review of a superhero movie by making it clear that these are not my types of movies and my opinion, for any superfans out there.",
+                    usuario: "jtindahouse"
+                }
+            ]
+        },{
+            titulo: "O Demônio dos Mares",
+            img: { imgLancaDemonio },
+            nota: 3.7,
+            comentarios: [
+                {
+                    conteudo: "Extremely disappointing.",
+                    usuario: "ray512122"
+                }, {
+                    conteudo: "Never judge a book by its cover.",
+                    usuario: "kuner-59029"
+                }, {
+                    conteudo: "Pay no attention to the negative reviews because this was solid popcorn..",
+                    usuario: "LordCommandar"
+                }
+            ]
+        }
+    ]
+    
 
     return (
         <>
@@ -623,7 +696,19 @@ function Home() {
                     <h2>📅 Lançamentos</h2>
                     <div className="card-linha">
                         <img src="../img/elementos/Polygon 11.png" alt="" />
-                        <div className="card" id="teste3">
+                        {
+                            listarLancamentos.map((Card: any) => {
+                                return <Card
+                                    id={Card.id}
+                                    titulo={Card.titulo}
+                                    foto={Card.img}
+                                    nota={Card.number}
+                                    comentarios={listaFilmes}
+                                />
+                            })
+
+                        }
+                        {/* <div className="card" id="teste3">
                             <h2>01 Junho</h2>
                             <img src="../img/filmes-f/image 84.png" alt="" />
                             <h3>Homem-Aranha: Através do Aranhaverso</h3>
@@ -654,7 +739,7 @@ function Home() {
                             <a href="https://www.youtube.com/watch?v=yX-pvjO4N3o&pp=ygUUTyBERU3DlE5JTyBET1MgTUFSRVM%3DD">
                                 Assistir ao trailer
                             </a>
-                        </div>
+                        </div> */}
                         <img src="../img/elementos/Polygon 15.png" alt="" />
                     </div>
                     <a className="input-submit" href="../calendario/calendario.html">
