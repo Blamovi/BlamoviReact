@@ -20,6 +20,16 @@ import imgFilmesBatman from "../../assets/img/filmes-f/batman-(cav-das-tre).webp
 import imgFilmesJoker from "../../assets/img/filmes-f/joker.webp";
 import imgFilmesVingadores from "../../assets/img/filmes-f/image 111.jpg";
 import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
+import imgSeriesTheLast from "../../assets/img/series-f/The-last-of-us.jpg"
+import imgSeriesCasaDragao from "../../assets/img/series-f/A-casa-dos-dragões.jpg"
+import imgSeriesBeef from "../../assets/img/series-f/image 30.png"
+import imgClassicoAlien from "../../assets/img/classicos/06-Alien.png"
+import imgClassicoTruman from "../../assets/img/classicos/20-the-truman-show.png"
+import imgClassicoRambo1 from "../../assets/img/classicos/rambo1.png"
+import imgClassicoRambo2 from "../../assets/img/classicos/rambo2.png"
+import imgClassicoRambo3 from "../../assets/img/classicos/rambo3.png"
+import imgClassicoRambo4 from "../../assets/img/classicos/rambo4.png"
+import imgClassicoChefao from "../../assets/img/classicos/20120876 1.png"
 import Card from "../../components/Card";
 
 // import imgSeries from "../../assets/img/";
@@ -35,19 +45,229 @@ import Card from "../../components/Card";
 function Home() {
     const listaFilmes: any[] = [
         {
-            titulo: "Rambo",
-            img: "kugfle",
+            titulo: "Batman: O Cavaleiro das Trevas",
+            img: { imgFilmesBatman },
             nota: 9.0,
             comentarios: [
                 {
-                    conteudo: "ljgarwlutvblektilqc",
-                    usuario: "jdfsjkgljkd"
+                    conteudo: "This movie is a work of art. The finest sequel ever made.",
+                    usuario: "dseferaj"
                 }, {
-                    conteudo: "ljgarwlutvblektilqc",
-                    usuario: "jdfsjkgljkd"
+                    conteudo: "Dark, yes, complex, ambitious.",
+                    usuario: "littlemartinarocena"
                 }, {
-                    conteudo: "ljgarwlutvblektilqc",
-                    usuario: "jdfsjkgljkd"
+                    conteudo: "I couldn't believe The Dark knight could live up to the hype.",
+                    usuario: "filmquestint"
+                }
+            ]
+        },
+
+        {
+            titulo: "Joker",
+            img: { imgFilmesJoker },
+            nota: 8.4,
+            comentarios: [
+                {
+                    conteudo: "The movie affects you in a way that makes it physically painful to experience.",
+                    usuario: "brianmlucas"
+                }, {
+                    conteudo: "Arthur Fleck's a guy with lofty aspirations, wants to make you laugh and disturb your foundations.",
+                    usuario: "Xstal"
+                }, {
+                    conteudo: "Truly a masterpiece, The Best Hollywood film of 2019, one of the Best films of the decade.",
+                    usuario: "Aman_Goyal"
+                }
+            ]
+        },
+
+        {
+            titulo: "Vingadores: Ultimato",
+            img: { imgFilmesVingadores },
+            nota: 8.4,
+            comentarios: [
+                {
+                    conteudo: "Not as good as infinity war but a great movie",
+                    usuario: "ACollegeStudent"
+                }, {
+                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+                    usuario: "davyjones-636363"
+                }, {
+                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+                    usuario: "ahmetkozan"
+                }
+            ]
+        }
+    ]
+
+    const listarFilmesClassicos: any[] = [
+        {
+            titulo: "Alien - O 8º Passageiro",
+            img: { imgClassicoAlien },
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        },
+        {
+            titulo: "O Show de Truman: O Show da Vida",
+            img: { imgClassicoTruman },
+            nota: 8.2,
+            comentarios: [
+                {
+                    conteudo: "The Truman Show is a film I never got around to watching until now, despite having heard references to it here and there over the past.",
+                    usuario: "skepticskeptical"
+                }, {
+                    conteudo: "I have never liked Jim Carey's humor. I have found it to very broad and boorish.",
+                    usuario: "planktonrules"
+                }, {
+                    conteudo: "As inventive and creative as Weir's staging is, The Truman Show wouldn't work without credible Truman.",
+                    usuario: "MrPupkin"
+                }
+            ]
+        },
+        {
+            titulo: "O Poderoso Chefão",
+            img: { imgClassicoChefao },
+            nota: 9.2,
+            comentarios: [
+                {
+                    conteudo: "A masterclass in film making, is The Godfather a contender for the best film of all time?",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "It is now past 1 PM and I just finished watching Francis Ford Coppola's The Godfather. I should probably go to bed. ",
+                    usuario: "andrewburgereviews"
+                }, {
+                    conteudo: "his isn't just a beautifully crafted gangster film.",
+                    usuario: "gogoschka-1"
+                }
+            ]
+        }
+    ]
+
+    const listarSeries: any[] = [
+        {
+            titulo: "Alien - O 8º Passageiro",
+            img: { imgSeriesTheLast },
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        }, {
+            titulo: "Alien - O 8º Passageiro",
+            img: { imgSeriesCasaDragao },
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        }, {
+            titulo: "Alien - O 8º Passageiro",
+            img: { imgSeriesBeef },
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        },
+    ]
+
+    const listarMaratonas: any[] = [
+        {
+            titulo: "Rambo - Programado Para Matar",
+            img: { imgClassicoRambo1 },
+            nota: 7.7,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        },{
+            titulo: "Rambo II: A Missão",
+            img: { imgClassicoRambo2 },
+            nota: 6.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        },{
+            titulo: "Rambo III",
+            img: { imgClassicoRambo3 },
+            nota: 5.8,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        },{
+            titulo: "Rambo IV",
+            img: { imgClassicoRambo4 },
+            nota: 7.0,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
                 }
             ]
         }
@@ -132,7 +352,7 @@ function Home() {
                             })
 
                         }
-                        <div className="card" id="teste3">
+                        {/* <div className="card" id="teste3">
                             <a href="../filmesinformacoes/filmes.html">
                                 <img src={imgFilmesBatman} alt="" />
                             </a>
@@ -148,8 +368,8 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card responsivo" id="teste3">
+                        </div> */}
+                        {/* <div className="card responsivo" id="teste3">
                             <img src={imgFilmesJoker} alt="" />
                             <h3>Joker</h3>
                             <div className="itens">
@@ -163,8 +383,8 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card responsivo" id="teste3">
+                        </div> */}
+                        {/* <div className="card responsivo" id="teste3">
                             <img src={imgFilmesVingadores} alt="" />
                             <h3>Vingadores: Ultimato</h3>
                             <div className="itens">
@@ -178,8 +398,8 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card responsivo" id="teste3">
+                        </div> */}
+                        {/* <div className="card responsivo" id="teste3">
                             <img src={imgFilmesGladiador} alt="" />
                             <h3>Gladiador</h3>
                             <div className="itens">
@@ -193,7 +413,7 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <img src="../img/elementos/Polygon 15.png" alt="" />
                     </div>
                 </section>
@@ -206,20 +426,19 @@ function Home() {
                                 src="../img/classicos/movies-the-lord-of-the-rings-aragorn-viggo-mortensen-movie-posters-posters-the-return-of-the-king-entertainment-movies-hd-art-wallpaper-preview.png"
                                 alt=""
                             />
-                            <h3>Senhor dos Anéis: A Sociedade do Anel</h3>
-                            <div className="itens">
-                                <div className="streams">
-                                    <img src="../img/streams/HBO-MAX.png" alt="" />
-                                </div>
-                                <div className="icones">
-                                    <img src="../img/elementos/Trophy.png" alt="" />
-                                    <span>8,8</span>
-                                    <img src="../img/elementos/Talk.png" alt="" />
-                                    <span>59</span>
-                                </div>
-                            </div>
+                            {
+                                listarFilmesClassicos.map((Card: any) => {
+                                    return <Card
+                                        id={Card.id}
+                                        titulo={Card.titulo}
+                                        foto={Card.img}
+                                        nota={Card.number}
+                                        comentarios={listaFilmes}
+                                    />
+                                })
+                            }
                         </div>
-                        <div className="card responsivo" id="teste3">
+                        {/* <div className="card responsivo" id="teste3">
                             <img src="../img/classicos/20120876 1.png" alt="" />
                             <h3>O Poderoso Chefão</h3>
                             <div className="itens">
@@ -233,8 +452,8 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card responsivo" id="teste3">
+                        </div> */}
+                        {/* <div className="card responsivo" id="teste3">
                             <img src="../img/classicos/20-the-truman-show.png" alt="" />
                             <h3>O Show de Truman - O Show da Vida</h3>
                             <div className="itens">
@@ -248,8 +467,8 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card responsivo" id="teste3">
+                        </div> */}
+                        {/* <div className="card responsivo" id="teste3">
                             <img src="../img/classicos/06-Alien.png" alt="" />
                             <h3>Alien - O 8.º Passageiro</h3>
                             <div className="itens">
@@ -263,7 +482,7 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <img src="../img/elementos/Polygon 15.png" alt="" />
                     </div>
                 </section>
@@ -274,19 +493,19 @@ function Home() {
                         <div className="card" id="teste3">
                             <img src="../img/series-f/image 30.png" alt="" />
                             <h3>Treta</h3>
-                            <div className="itens">
-                                <div className="streams">
-                                    <img src="../img/streams/HBO-MAX.png" alt="" />
-                                </div>
-                                <div className="icones">
-                                    <img src="../img/elementos/Trophy.png" alt="" />
-                                    <span>8,8</span>
-                                    <img src="../img/elementos/Talk.png" alt="" />
-                                    <span>59</span>
-                                </div>
-                            </div>
+                            {
+                                listarSeries.map((Card: any) => {
+                                    return <Card
+                                        id={Card.id}
+                                        titulo={Card.titulo}
+                                        foto={Card.img}
+                                        nota={Card.number}
+                                        comentarios={listaFilmes}
+                                    />
+                                })
+                            }
                         </div>
-                        <div className="card responsivo" id="teste3">
+                        {/* <div className="card responsivo" id="teste3">
                             <img src="../img/series-f/The-last-of-us.jpg" alt="" />
                             <h3>The last of us</h3>
                             <div className="itens">
@@ -300,8 +519,8 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card responsivo" id="teste3">
+                        </div> */}
+                        {/* <div className="card responsivo" id="teste3">
                             <img src="../img/series-f/mandalorian.jpg" alt="" />
                             <h3>Mandalorian</h3>
                             <div className="itens">
@@ -315,8 +534,8 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
-                        <div className="card responsivo" id="teste3">
+                        </div> */}
+                        {/* <div className="card responsivo" id="teste3">
                             <img src="../img/series-f/image 108.png" alt="" />
                             <h3>Origem</h3>
                             <div className="itens">
@@ -330,7 +549,7 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <img src="../img/elementos/Polygon 15.png" alt="" />
                     </div>
                 </section>
@@ -340,20 +559,19 @@ function Home() {
                         <img src="../img/elementos/Polygon 11.png" alt="" />
                         <div className="card" id="teste3">
                             <img src="../img/filmes-f/image 102.png" alt="" />
-                            <h3>Rambo Programado para matar</h3>
-                            <div className="itens">
-                                <div className="streams">
-                                    <img src="../img/streams/youtube.png" alt="" />
-                                </div>
-                                <div className="icones">
-                                    <img src="../img/elementos/Trophy.png" alt="" />
-                                    <span>8,8</span>
-                                    <img src="../img/elementos/Talk.png" alt="" />
-                                    <span>59</span>
-                                </div>
-                            </div>
+                            {
+                                listarMaratonas.map((Card: any) => {
+                                    return <Card
+                                        id={Card.id}
+                                        titulo={Card.titulo}
+                                        foto={Card.img}
+                                        nota={Card.number}
+                                        comentarios={listaFilmes}
+                                    />
+                                })
+                            }
                         </div>
-                        <div className="card responsivo" id="teste3">
+                        {/* <div className="card responsivo" id="teste3">
                             <img src="../img/filmes-f/image 48.png" alt="" />
                             <h3>Rambo 2 A missão</h3>
                             <div className="itens">
@@ -397,7 +615,7 @@ function Home() {
                                     <span>59</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <img src="../img/elementos/Polygon 15.png" alt="" />
                     </div>
                 </section>
