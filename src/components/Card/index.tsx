@@ -21,7 +21,7 @@ function Card(props: any) {
             <h3>{props.titulo}</h3>
             <div className="itens">
                 <div className="streams">
-                    <img src={props.img} alt="" />
+                    <img src={props} alt="" />
                 </div>
                 <div className="icones">
 
