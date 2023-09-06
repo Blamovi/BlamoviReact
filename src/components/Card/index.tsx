@@ -4,6 +4,10 @@ import "./style.css";
 //rotas
 import { Link } from "react-router-dom";
 
+import imgIconesTrofeu from "../../assets//img/elementos/Trophy.png";
+
+import imgStreamerHbo from "../../assets/img/streams/HBO-MAX.png";
+
 function Card(props: any) {
 
 
@@ -31,8 +35,8 @@ function Card(props: any) {
                     })
                 } */}
 
-                    <img src={""} alt="" />
-                    <span>{props.nota}</span>
+                    <img src={imgIconesTrofeu} alt="" />
+                    <span>{props.nota().length}</span>
                     <img src={""} alt="" />
                     <span>{verificarComentarios().length}</span>
                 </div>
