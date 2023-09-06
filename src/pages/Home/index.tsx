@@ -15,15 +15,15 @@ import imgFilmesJoker from "../../assets/img/filmes-f/joker.webp";
 import imgFilmesVingadores from "../../assets/img/filmes-f/image 111.jpg";
 import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
 
+import imgSeriesTheLast from "../../assets/img/series-f/The-last-of-us.jpg"
+import imgSeriesCasaDragao from "../../assets/img/series-f/A-casa-dos-dragões.jpg"
+import imgSeriesBeef from "../../assets/img/series-f/image 30.png"
+import imgSeriesMandalorian from "../../assets/img/series-f/mandalorian.jpg"
 
 import imgClassicoAlien from "../../assets/img/classicos/06-Alien.png"
 import imgClassicoTruman from "../../assets/img/classicos/20-the-truman-show.png"
 import imgClassicoChefao from "../../assets/img/classicos/20120876 1.png"
 import imgClassicoSenhorDosAneis from "../../assets/img/classicos/Senhor Dos Aneis.png"
-
-import imgSeriesTheLast from "../../assets/img/series-f/The-last-of-us.jpg"
-import imgSeriesCasaDragao from "../../assets/img/series-f/A-casa-dos-dragões.jpg"
-import imgSeriesBeef from "../../assets/img/series-f/image 30.png"
 
 
 import imgClassicoRambo1 from "../../assets/img/classicos/rambo1.png"
@@ -36,7 +36,8 @@ import imgLancaTransformers from "../../assets/img/filmes-f/image 83.png"
 import imgLancaFlash from "../../assets/img/filmes-f/image 83.png"
 import imgLancaDemonio from "../../assets/img/filmes-f/black demon.png"
 
-import Card from "../../components/Card";
+
+// import Card from "../../components/Card";
 
 // import { Link } from "react-router-dom";
 
@@ -99,20 +100,20 @@ function Home() {
         {
             titulo: "Gladiador",
             img: { imgFilmesGladiador },
-            nota: 9.0,
+            nota: 9.4,
             comentarios: [
                 {
-                    conteudo: "This movie is a work of art. The finest sequel ever made.",
-                    usuario: "dseferaj"
+                    conteudo: "Not as good as infinity war but a great movie",
+                    usuario: "ACollegeStudent"
                 }, {
-                    conteudo: "Dark, yes, complex, ambitious.",
-                    usuario: "littlemartinarocena"
+                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+                    usuario: "davyjones-636363"
                 }, {
-                    conteudo: "I couldn't believe The Dark knight could live up to the hype.",
-                    usuario: "filmquestint"
+                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+                    usuario: "ahmetkozan"
                 }
             ]
-        },
+        }
     ]
 
     const listarFilmesClassicos: any[] = [
@@ -133,7 +134,7 @@ function Home() {
                 }
             ]
         },
-
+        
         {
             titulo: "O Show de Truman: O Show da Vida",
             img: { imgClassicoTruman },
@@ -151,7 +152,7 @@ function Home() {
                 }
             ]
         },
-
+        
         {
             titulo: "O Poderoso Chefão",
             img: { imgClassicoChefao },
@@ -171,7 +172,7 @@ function Home() {
         },
 
         {
-            titulo: "Senhor dos Anéis",
+            titulo: "Senhor dos Aneis: A sociedade do anel",
             img: { imgClassicoSenhorDosAneis },
             nota: 9.2,
             comentarios: [
@@ -187,6 +188,8 @@ function Home() {
                 }
             ]
         }
+
+
     ]
 
     const listarSeries: any[] = [
@@ -206,7 +209,9 @@ function Home() {
                     usuario: "ivo-cobra8"
                 }
             ]
-        }, {
+        },
+        
+        {
             titulo: "Alien - O 8º Passageiro",
             img: { imgSeriesCasaDragao },
             nota: 8.5,
@@ -222,7 +227,9 @@ function Home() {
                     usuario: "ivo-cobra8"
                 }
             ]
-        }, {
+        },
+        
+        {
             titulo: "Alien - O 8º Passageiro",
             img: { imgSeriesBeef },
             nota: 8.5,
@@ -239,6 +246,23 @@ function Home() {
                 }
             ]
         },
+        {
+            titulo: "Mandalorian",
+            img: { imgSeriesMandalorian },
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        }
     ]
 
     const listarMaratonas: any[] = [
@@ -326,7 +350,9 @@ function Home() {
                     usuario: "pugpool10"
                 }
             ]
-        },{
+        },
+        
+        {
             titulo: "Transformers: O Despertar das Feras",
             img: { imgLancaTransformers },
             nota: 6.7,
@@ -342,7 +368,9 @@ function Home() {
                     usuario: "tchitouniaram"
                 }
             ]
-        },{
+        },
+        
+        {
             titulo: "The Flash",
             img: { imgLancaFlash },
             nota: 6.8,
@@ -358,7 +386,9 @@ function Home() {
                     usuario: "jtindahouse"
                 }
             ]
-        },{
+        },
+        
+        {
             titulo: "O Demônio dos Mares",
             img: { imgLancaDemonio },
             nota: 3.7,
