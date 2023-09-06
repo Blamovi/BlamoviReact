@@ -30,196 +30,172 @@ import { Link } from "react-router-dom";
 
 
 function PerfilUsuario() {
-    return(
-        <>
-        <>
-  {/* <aside className="sidebar">
-    <nav>
-      <button>
-        <span>
-         <img src={imgHome} alt="" />
-          <span className="textomenu">Home</span>
-        </span>
-      </button>
-      <button>
-        <span>
-           <img src={imgHeart} alt="" />
-          <span className="textomenu">Favoritos</span>
-        </span>
-      </button>
-      <button>
-        <span>
-         <img src={imgUser} alt="" />
-          <span className="textomenu">Perfil</span>
-        </span>
-      </button>
-    </nav>
-  </aside> */}
-  {/* Perfil do usuario  */}
-  <main>
-    {/* sessao 1  */}
-    <section>
-      <div className="estrutura">
-        <img className="imagem1" src={imgreileaop}  alt="perfilcapa" />  
-        <div className="posicionamento_perfil">
-          <img
-            className="entre_imagens"
-            src={imgfotopeerfil} 
-            alt="fotopeerfil"
-          />
-          <div>
-            <span>@Mufasa</span>
+  return (
+    <>
+      {/* Perfil do usuario  */}
+      <main id="main_perfilusuario">
+        {/* sessao 1  */}
+        <section>
+          <div className="estrutura">
+            <img className="imagem1" src={imgreileaop} alt="perfilcapa" />
+            <div className="posicionamento_perfil">
+              <img
+                className="entre_imagens"
+                src={imgfotopeerfil}
+                alt="fotopeerfil"
+              />
+              <div>
+                <span>@Mufasa</span>
+              </div>
+              <img className="tam" src={imgverificado} alt="" />
+              <img className="tam" src={imglevel} alt="" />
+              <img className="tam" src={imgGrey} alt="" />
+              <div className="botao_do_perfil">
+                <button className="botao"> Editar perfil</button>
+              </div>
+            </div>
+            <div className="text">
+              <p>
+                Amo meu filho, esposa e também de assistir filmes. Ator em Rei Leão
+                (Disney).
+              </p>
+            </div>
+            <div className="icons">
+              <img src={imgiconmap} alt="map" />
+              <span className="spancolor">Parque Nacional do Serengeti - TZ </span>
+              <img src={imgpais} alt="pais" />
+              <img src={imgCalendar} alt="Calendar" />
+              <span className="spancolor">Entrou em 2023</span>
+            </div>
           </div>
-          <img className="tam" src={imgverificado}  alt="" />  
-          <img className="tam" src={imglevel}  alt="" />  
-          <img className="tam" src={imgGrey} alt="" />  
-          <div className="botao_do_perfil">
-            <button className="botao"> Editar perfil</button>
+        </section>
+        {/* sessao 2  */}
+        <div className="classificacao">
+          <div className="filmes">
+            <span className="comlinha">episodios assistidos</span>
+            <span className="tam2">4k</span>
+          </div>
+          <div className="series">
+            <span className="comlinha">filmes assistidos </span>
+            <span className="tam2">330</span>
           </div>
         </div>
-        <div className="text">
-          <p>
-            Amo meu filho, esposa e também de assistir filmes. Ator em Rei Leão
-            (Disney).
+        {/*Formulário de envio*/}
+        <div className="newPost">
+          <div className="infoUser">
+            <img src={imgmufasaperfil} alt="" />
+          </div>
+          <form action="" className="formPost">
+            <textarea
+              name="textarea"
+              placeholder="O que você assistiu recentemente?"
+              defaultValue={""}
+            />
+            <div className="iconsUser">
+              <div className="icons">
+                <button className="btnFileForm">
+                  <img src={imgiconpe} alt="Adicione uma imagem" />
+                </button>
+                <button className="btnFileForm">
+                  <img src={imgiconLocal} alt="Adicione um local" />
+                </button>
+                <button className="btnFileForm">
+                  <img src={imgiconAnexo} alt="Anexe um arquivo" />
+                </button>
+              </div>
+              <button className="btnFileForm">
+                <img src={imgiconSend} alt="Publicar" />
+              </button>
+            </div>
+          </form>
+        </div>
+        {/*corpo da feed*/}
+        <ul className="posts">
+          <li className="post">
+            <div className="infoUserPost">
+              <div className="imgUserPost">
+                <img src={imgfotopeerfil} alt="" />
+              </div>
+              <div className="nameAndHour">
+                <strong>@mufasa</strong>
+                <p>4m atrás</p>
+                <p className="colorir_texto_filmes">
+                  Assistiu - Terror no Estúdio 666
+                </p>
+              </div>
+            </div>
+          </li>
+          <p className="textoPost">
+            Para quem estiver procurando diversão descompromissada, embalada por
+            muito sangue e rock pesadíssimo (mais pesado que qualquer música que o
+            Foo Fighters já tenha feito), Terror no Estúdio 666 é uma boa pedida.{" "}
           </p>
-        </div>
-        <div className="icons">
-          <img src={imgiconmap} alt="map" />   
-          <span className="spancolor">Parque Nacional do Serengeti - TZ </span>
-          <img  src={imgpais} alt="pais" /> 
-          <img src={imgCalendar} alt="Calendar" />   
-          <span className="spancolor">Entrou em 2023</span>
-        </div>
-      </div>
-    </section>
-    {/* sessao 2  */}
-    <div className="classificacao">
-      <div className="filmes">
-        <span className="comlinha">episodios assistidos</span>
-        <span className="tam2">4k</span>
-      </div>
-      <div className="series">
-        <span className="comlinha">filmes assistidos </span>
-        <span className="tam2">330</span>
-      </div>
-    </div>
-    {/*Formulário de envio*/}
-    <div className="newPost">
-      <div className="infoUser">
-        <img src={imgmufasaperfil} alt="" />  
-      </div>
-      <form action="" className="formPost">
-        <textarea
-          name="textarea"
-          placeholder="O que você assistiu recentemente?"
-          defaultValue={""}
-        />
-        <div className="iconsUser">
-          <div className="icons">
-            <button className="btnFileForm">
-              <img src={imgiconpe} alt="Adicione uma imagem" />  
+          <img className="balanoalvo" src={imgff666} alt="" />
+          <div className="actionBtnPost">
+            <button type="button" className="filesPost">
+              <img src={imglike} alt="Curtir" />
+              <span>Curtir</span>
             </button>
-            <button className="btnFileForm">
-              <img src={imgiconLocal} alt="Adicione um local" />  
+            <button type="button" className="filesPost">
+              <img src={imgcomentar} alt="Comentar" />
+              <span>comentar</span>
             </button>
-            <button className="btnFileForm">
-              <img  src={imgiconAnexo} alt="Anexe um arquivo" />  
+            <button type="button" className="filesPost">
+              <img src={imgrecomendar} alt="Recomendar" />
+              <span>recomendar</span>
             </button>
           </div>
-          <button className="btnFileForm">
-            <img src={imgiconSend} alt="Publicar" />  
-          </button>
+        </ul>
+        <ul className="posts">
+          <li className="post">
+            <div className="infoUserPost">
+              <div className="imgUserPost">
+                <img src={imgfotopeerfil} alt="" />
+              </div>
+              <div className="nameAndHour">
+                <strong>@mufasa &gt;</strong>
+                <p>3 atrás</p>
+                <p className="colorir_texto_filmes">
+                  Assistiu - Hotel Transilvânia{" "}
+                </p>
+              </div>
+            </div>
+          </li>
+          <p className="textoPost">
+            Ao repetir a fórmula do primeiro filme, Hotel Transilvânia 2 tem grandes
+            chances de agradar aqueles que se divertiram com o original. Há piadas
+            engraçadas, como o GPS de voz fantasmagórica, a sacaneada ao visual de
+            Drácula de Bram Stoker e o acampamento para jovens vampiros (com uma
+            pitada sarcástica envolvendo o cenário atual do politicamente correto),
+            mas o grande trunfo continua sendo o estilo performático e exagerado de
+            Drácula. Neste caso, vale também destacar o brilhantismo de Alexandre
+            Moreno como a voz brasileira do personagem, trazendo um misto de pompa e
+            galhofa. Diverte, apesar de ser claramente mais voltado para as crianças
+            e de certos problemas de roteiro.
+          </p>
+          <img className="balanoalvo" src={imgvampires} alt="" />
+          <div className="actionBtnPost">
+            <button type="button" className="filesPost">
+              <img src={imglike} alt="Curtir" />
+              <span>Curtir</span>
+            </button>
+            <button type="button" className="filesPost">
+              <img src={imgcomentar} alt="Comentar" />
+              <span>comentar</span>
+            </button>
+            <button type="button" className="filesPost">
+              <img src={imgrecomendar} alt="Recomendar" />
+              <span>recomendar</span>
+            </button>
+          </div>
+        </ul>
+        <div className="carregamento">
+          <img src={imgcarregandofeed} alt="carregamento" />
         </div>
-      </form>
-    </div>
-    {/*corpo da feed*/}
-    <ul className="posts">
-      <li className="post">
-        <div className="infoUserPost">
-          <div className="imgUserPost">
-            <img  src={imgfotopeerfil} alt="" />  
-          </div>
-          <div className="nameAndHour">
-            <strong>@mufasa</strong>
-            <p>4m atrás</p>
-            <p className="colorir_texto_filmes">
-              Assistiu - Terror no Estúdio 666
-            </p>
-          </div>
-        </div>
-      </li>
-      <p className="textoPost">
-        Para quem estiver procurando diversão descompromissada, embalada por
-        muito sangue e rock pesadíssimo (mais pesado que qualquer música que o
-        Foo Fighters já tenha feito), Terror no Estúdio 666 é uma boa pedida.{" "}
-      </p>
-      <img className="balanoalvo" src={imgff666} alt="" />  
-      <div className="actionBtnPost">
-        <button type="button" className="filesPost">
-          <img src={imglike} alt="Curtir" />  
-          <span>Curtir</span>
-        </button>
-        <button type="button" className="filesPost">
-          <img src={imgcomentar} alt="Comentar" />  
-          <span>comentar</span>
-        </button>
-        <button type="button" className="filesPost">
-          <img src={imgrecomendar} alt="Recomendar" />  
-          <span>recomendar</span>
-        </button>
-      </div>
-    </ul>
-    <ul className="posts">
-      <li className="post">
-        <div className="infoUserPost">
-          <div className="imgUserPost">
-            <img src={imgfotopeerfil} alt="" />
-          </div>
-          <div className="nameAndHour">
-            <strong>@mufasa &gt;</strong>
-            <p>3 atrás</p>
-            <p className="colorir_texto_filmes">
-              Assistiu - Hotel Transilvânia{" "}
-            </p>
-          </div>
-        </div>
-      </li>
-      <p className="textoPost">
-        Ao repetir a fórmula do primeiro filme, Hotel Transilvânia 2 tem grandes
-        chances de agradar aqueles que se divertiram com o original. Há piadas
-        engraçadas, como o GPS de voz fantasmagórica, a sacaneada ao visual de
-        Drácula de Bram Stoker e o acampamento para jovens vampiros (com uma
-        pitada sarcástica envolvendo o cenário atual do politicamente correto),
-        mas o grande trunfo continua sendo o estilo performático e exagerado de
-        Drácula. Neste caso, vale também destacar o brilhantismo de Alexandre
-        Moreno como a voz brasileira do personagem, trazendo um misto de pompa e
-        galhofa. Diverte, apesar de ser claramente mais voltado para as crianças
-        e de certos problemas de roteiro.
-      </p>
-      <img className="balanoalvo" src={imgvampires} alt="" />  
-      <div className="actionBtnPost">
-        <button type="button" className="filesPost">
-          <img src={imglike} alt="Curtir" />
-          <span>Curtir</span>
-        </button>
-        <button type="button" className="filesPost">
-          <img src={imgcomentar}  alt="Comentar" />
-          <span>comentar</span>
-        </button>
-        <button type="button" className="filesPost">
-          <img src={imgrecomendar} alt="Recomendar" />
-          <span>recomendar</span>
-        </button>
-      </div>
-    </ul>
-    <div className="carregamento">
-      <img src={imgcarregandofeed} alt="carregamento" />  
-    </div>
-  </main>
-</>
+      </main ></>
 
-        </>
-    )
+
+  )
 }
 
 export default PerfilUsuario
