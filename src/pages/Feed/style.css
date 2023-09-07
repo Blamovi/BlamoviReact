@@ -1,9 +1,5 @@
 
 
-body{
-    background-color: black;
-}
-
 
 span{
     display: flex;
@@ -300,12 +296,12 @@ p{
 
     .menu_barras{
         display: initial;
-    }
+    } 
 
-    /* .menu_barras svg{
+    .menu_barras svg{
         height: 50px;
         fill: white;
-    } */
+    } 
 
     .posicionamento_header {
         position: relative;
@@ -323,20 +319,20 @@ p{
         backdrop-filter: blur(10px);
         border-radius: 50px;
         border: 1px solid rgba(255, 255, 255, 0.8);
-    }
+    } 
 
     header nav a{
         margin: 30px 0;
         font-size: 22px;
-    }
+    } 
 
     
 }
 
 @media screen and (max-width: 1166px) {
-    /* #divBusca{
+    #divBusca{
         display: none;
-    } */
+    } 
 
     .filesPost span{
         display: none;
