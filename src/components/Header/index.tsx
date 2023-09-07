@@ -39,7 +39,7 @@ function Header() {
                         <a href="">Favoritos</a>
                          <a href="../Cadastro/cadastro.html">Cadastro</a> 
                          <a href="../Login/login.html">Login</a>
-                    </nav>  */}
+                    </nav>   */}
                 </div>
             </header> 
 
