@@ -170,9 +170,9 @@
         height: auto;
     }
 
-    .responsivo{
+    /* .responsivo{
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 895px) {
