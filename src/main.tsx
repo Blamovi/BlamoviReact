@@ -12,6 +12,7 @@ import Feed from './pages/Feed'
 import PerfilUsuario from './pages/PerfilUsuario'
 import Calendario from './pages/Calendario'
 import Cadastro from './pages/Cadastro'
+import Login from './pages/Login'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
        <Route path='/feed' element={<Feed/>}/> */
        <Route path='/calendario' element={<Calendario/>}/> */
        <Route path='/Cadastro' element={<Cadastro/>}/> */
+       <Route path='/Login' element={<Login/>}/> */
       </Routes>
       <Footer />
     </BrowserRouter>
