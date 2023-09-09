@@ -1,3 +1,5 @@
+/* ajustes */
+
 .ajustes{
   background-color: transparent;
 }
@@ -12,7 +14,42 @@ form h1 {
   background-color: transparent;
 }
 
+#foto {
+  background-color: transparent;
+}
+.alinhamento .link {
+  background-color: transparent;
+}
 
+body .cineminha {
+  width: 80%;
+  background-image: url("../../assets/images/cineminha.png");
+ 
+}
+main{
+  max-width: 100%;
+  margin: 0 auto;
+}
+input {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.ajustesrodape{
+  width: 100%;
+  
+
+}
+@media screen and (max-width: 877px) {
+  .ajustesrodape {
+    width: 755px;
+  }
+
+}
+
+
+
+/* ajustes */
 
 
 
@@ -51,10 +88,9 @@ form h1 {
   }
 
 
-  .banner {
+.banner {
 
-    background-image:
-      url("../Cadastro/imagens/cinema_foto_pexels\ 1.png");
+  
     /* width: 100%;
     max-width: 1920px; */
     /* height: 700px; */
@@ -65,9 +101,12 @@ form h1 {
     background-repeat: no-repeat;
     /* display: flex;
     position: relative; */
+    width: 100%;
 
 
   }
+
+ 
 
   /* .onda {
     width: 100%;
@@ -110,10 +149,10 @@ form h1 {
     max-width: 180px;
     height: 100%;
     max-height: 250px;
-  margin: 10px; 
+  margin: 10px;
 
     border-radius: 30px;
-  border: 2px solid #C12D6D; 
+  border: 2px solid #C12D6D;
     padding: 20px;
 
   } */
@@ -140,7 +179,7 @@ form h1 {
 
   }
 
-  
+
   .poster div a {
     width: 150px;
     height: 20px;
@@ -160,7 +199,7 @@ form h1 {
     background: #0f0;
   } */
 
-  
+
 
   /* .poster:hover {
     scale: 1.05;
@@ -177,21 +216,22 @@ form h1 {
     color: var(--branco);
   } */
 
-  footer {
-    /* display: flex; */
+  /* #main_cadastro footer {
+   display: flex; 
     background-image: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(1, 0, 20, 0) 25%, rgba(0, 0, 7, 0) 75%, rgba(0, 0, 0, 1) 100%), url(../BlaMovi/Imagem/footer.png);
-    /* margin: 30px; */
+   margin: 30px; 
     width: 100%;
-    max-width: 1920px;
+   max-width: 1920px;
     height: 100%;
     max-height: 100px;
-  }
+  } */
 
 
   .contato {
     display: flex;
     margin: 20px;
     justify-content: center;
+    background-color: transparent;
   }
 
   .contato a {
@@ -201,21 +241,33 @@ form h1 {
     font-size: 18px;
   }
 
-  
+  .imagem{
+    background-color: transparent;
+  }
+  .imagem img{
+    background-color: transparent;
+    margin: 3px;
+  }
+
 
   footer>div {
     width: 100%;
-    max-width: 1920px;
+    background-color: var(--preto);  
+
   }
 
+
+  
   footer ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     height: 50px;
-    /* background-color: #FBC02C; */
+     background-color: var(--preto);
     margin: 10px;
+    list-style-type: none
+    
 
   }
 
@@ -228,13 +280,15 @@ form h1 {
   }
 
   footer ul a:hover {
-    color: #e408;
+    color: rgba(219, 119, 112, 0.533);
     transform: scale(2.1);
     text-shadow: 0px 5px 10px rgba(239, 180, 4, 0.6);
   }
 
-  
+
   /* RESPONSIVIDADE */
+
+
 
   @media screen and (max-width: 1365px) {
     h1 {
@@ -256,6 +310,7 @@ form h1 {
         box-shadow: 0px 0px 10px 5px hsl(356, 92%, 48%);
         border: 5px solid hsl(321, 66%, 35%);
     } */
+ 
 
   }
 
@@ -276,7 +331,7 @@ form h1 {
 
   /*CADASTRO*/
   /* CSS reset */
- 
+
   *:before, *:after {
     margin: 0;
     padding: 0;
@@ -316,13 +371,13 @@ form h1 {
 
   }
 
- 
+
   p {
     margin-bottom: 15px;
   }
 
   p:first-child {
-    margin: 10px;
+    margin: 25px;
   }
 
   label {
@@ -332,7 +387,7 @@ form h1 {
     background-color: transparent;
   }
 
-  
+
   input {
     outline: none;
     background-color: transparent;
@@ -352,9 +407,11 @@ form h1 {
 
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
+    font-size: 16px;
+    font-weight: 900;
   }
 
-  
+
   input:hover {
     background: #4ab3c6;
   }
@@ -365,10 +422,8 @@ form h1 {
     background: #e1eaeb; */
     color: #7f7c7c;
     /* left: 0px; */
-    height: 20px;
-    width: 440px;
     padding: 17px 30px 20px 30px;
-    font-size: 16px;
+    font-size: 20px;
     text-align: right;
     border-top: 1px solid #dbe5e8;
     /* display: flex; */
@@ -378,11 +433,9 @@ form h1 {
   }
 
   .link a {
-    font-weight: bold;
     /* background: #f7f8f1; */
-    padding: 6px;
+    padding: 6px 23px;
     color: #FBC02C;
-    margin-left: 10px;
     /* border: 1px solid #cbd518; */
 
     -webkit-border-radius: 4px;
@@ -390,6 +443,7 @@ form h1 {
 
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
+    
   }
 
   .link a:hover {
@@ -503,14 +557,14 @@ form h1 {
     width: 480px;
   } */
 
-  
+
   .input {
     display: flex;
     width: 500px;
     margin: 10px;
     /* height: 40px; */
     align-items: flex-end;
-    
+
   }
 
   .contato {
@@ -558,18 +612,19 @@ form h1 {
   .input-submit{
     width: 90%;
     max-width: 150px;
-    height: 50px; 
+    height: 50px;
     display: flex;
     justify-content: center;
-   
+
   }
- 
+
   .form-label{
     width: 56px;
     height: 46px;
+    background-color: transparent;
   }
     /*header new*/
-    
+
 /* Cabeçalho */
 header {
   background-color: var(--preto);
@@ -639,4 +694,3 @@ form{
 }
 
 
-  

@@ -1,15 +1,30 @@
 import "./style.css"
 
-import imgCinema from "../../assets/images/cinema_foto_pexels 1.png"
+import imgHome from "../../assets/Home.svg"
+
+import imgIconUser33 from "../../assets/images/IconUser33.png"
+import imgGroupMessage from "../../assets/images/Group Message.png"
+import imgLock from "../../assets/images/Lock.png"
+import imglogo from "../../assets/images/logo.png"
+import imgfaceBranco from "../../assets/images/faceBranco.svg"
+import imgInstaBranco from "../../assets/images/InstaBranco.svg"
+import imgtwitterBranco from "../../assets/images/twitterBranco.svg"
+import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
+import imgbanner from "../../assets/images/cineminha.png"
 
 
 
 function Cadastro() {
     return(
         <>
-        <main className="banner" id="main_cadastro">
-
-       
+        <main   className="banner" id="main_cadastro" >
+        
+        <body className="cineminhacorpo">
+        <img className="cineminha" src={imgbanner}  />
+        </body>
+        {/* <div className="bannercineminha">
+        
+        </div> */}
 
   <div className="container">
     <a className="links" id="paracadastro" />
@@ -21,7 +36,7 @@ function Cadastro() {
           <div className="input">
             <img
               className="form-label"
-              src="../Cadastro/imagens/icon User.png"
+              src={imgIconUser33}
             />
             <div className="input-nome">
               <label htmlFor="nome_cad">Seu Nome</label>
@@ -36,7 +51,7 @@ function Cadastro() {
           <div className="input">
             <img
               className="form-label"
-              src="../Cadastro/imagens/Group Message.png"
+              src={imgGroupMessage}   
             />
             <div className="input-email">
               <label htmlFor="email_cad">Seu e-mail</label>
@@ -49,7 +64,7 @@ function Cadastro() {
             </div>
           </div>
           <div className="input">
-            <img className="form-label" src="../Cadastro/imagens/Lock.png" />
+            <img className="form-label" src={imgLock} />   
             <div className="input-senha">
               <label htmlFor="senha_cad">Sua senha</label>
               <input
@@ -61,7 +76,7 @@ function Cadastro() {
             </div>
           </div>
           <div className="input">
-            <img className="form-label" src="../Cadastro/imagens/Lock.png" />
+            <img className="form-label" src={imgLock} />  
             <div className="input-conf-senha">
               <label htmlFor="confirma-senha">Confirmar Senha</label>
               <input
@@ -75,7 +90,7 @@ function Cadastro() {
           <div className="input">
             <img
               className="form-label"
-              src="../Cadastro/imagens/icon User.png"
+              src={imgIconUser33}
             />
             <div className="input-user">
               <label htmlFor="user">Usuario</label>
@@ -85,7 +100,7 @@ function Cadastro() {
           <div className="input">
             <img
               className="form-label"
-              src="../Cadastro/imagens/icon User.png"
+              src={imgIconUser33}
             />
             <div className="input-foto">
               <label htmlFor="foto">Foto</label>
@@ -93,31 +108,30 @@ function Cadastro() {
             </div>
           </div>
           <div className="input-submit">
-            <input type="submit" defaultValue="Cadastrar" />
-          </div>
+              <input type="submit" value="Cadastrar" />
+            </div>
+
           {/* <hr class="linha"> */}
           <div className="alinhamento">
             <p className="link">
-              Já tem conta?
+
               <a href="#paralogin">
-                {" "}
-                <br />
-                Cadastre-se agora!{" "}
+               Login
               </a>
             </p>
           </div>
         </form>
         <div className="contato">
           <div className="imagem">
-            <img src="../Cadastro/imagens/logo.png" />
+            <img src={imglogo} />
             {/* <a href="contato@blamovi.com">contato@blamovi.com</a> */}
-            <img src="../Cadastro/imagens/redeSocial/faceBranco.svg" alt="" />
-            <img src="../Cadastro/imagens/redeSocial/InstaBranco.svg" alt="" />
+            <img src={imgfaceBranco} alt="" /> 
+            <img src={imgInstaBranco} alt="" />  
             <img
-              src="../Cadastro/imagens/redeSocial/twitterBranco.svg"
+              src={imgtwitterBranco}     
               alt=""
             />
-            <img src="../Cadastro/imagens/redeSocial/WhatsBranco.svg" alt="" />
+            <img src={imgWhatsBranco} alt="" />     
           </div>
         </div>
       </div>
@@ -125,7 +139,7 @@ function Cadastro() {
   </div>
 </main>
 
-<footer>
+<footer className="ajustesrodape" >
     <div>
       <ul>
         <li><a href="#" title="Home">Favoritos</a></li>
