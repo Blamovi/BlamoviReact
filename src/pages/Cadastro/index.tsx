@@ -19,14 +19,17 @@ function Cadastro() {
         <>
         <main   className="banner" id="main_cadastro" >
         
-        <body className="cineminhacorpo">
-        <img className="cineminha" src={imgbanner}  />
-        </body>
+        <div className="cineminhacorpo">
+        {/* <img className="cineminha" src={imgbanner}  /> */}
+        </div>
         {/* <div className="bannercineminha">
         
         </div> */}
 
   <div className="container">
+
+
+
     <a className="links" id="paracadastro" />
     <a className="links" id="paralogin" />
     <div className="content">
@@ -140,7 +143,9 @@ function Cadastro() {
 </main>
 
 <footer className="ajustesrodape" >
+
     <div>
+      
       <ul>
         <li><a href="#" title="Home">Favoritos</a></li>
         <li><a href="#" title="login">Home</a></li>
