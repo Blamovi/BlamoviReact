@@ -6,6 +6,7 @@ import './index.css'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Favoritos from './pages/Favoritos';
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/favoritos' element={<Favoritos/>} /> 
         {/* <Route path='NomeDaRota' element={<NomeDoComponente/>}/> */}
       </Routes>
       <Footer />
