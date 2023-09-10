@@ -2,8 +2,8 @@ import "./style.css"
 
 import imgDestaques from "../../assets/img/section/film-everything-everywhere-all-at-once_ratio-16x9 1.svg";
 
-import imgSetaDireita from "../../assets/img/elementos/Polygon 15.png";
-import imgSetaEsquerda from "../../assets/img/elementos/Polygon 11.png";
+import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
+import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
 
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
