@@ -1,5 +1,7 @@
 import "./style.css"
 
+import { Link } from "react-router-dom";
+
 import imgCinemaFooter from "../../assets/img/footer/cinema_foto_pexels 1 (1).png"
 import imgLogoBranco from "../../assets/img/logo/logo-branco.svg"
 
@@ -13,12 +15,12 @@ function Footer() {
                     alt=""
                 />
                 <ul>
-                    <a href="../Home/home.html">Home</a>
-                    <a href="../Login/login.html">Login</a>
-                    <a href="">Pesquisar</a>
-                    <a href="../calendario/calendario.html">Calendario</a>
-                    <a href="../Favoritos/favoritos.html">Favoritos</a>
-                    <a href="../filmesinformacoes/filmes.html">Informações</a>
+                    <Link to={"/"}>Home</Link>
+                    <Link to={"/Login"}>Login</Link>
+                    <Link to={"#"}>Pesquisar</Link>
+                    <Link to={"/Calendario"}>Calendario</Link>
+                    <Link to={"/Favoritos"}>Favoritos</Link>
+                    <Link to={"/Filmes/Informações"}>Informações</Link>
                 </ul>
                 <div>
                     <div>

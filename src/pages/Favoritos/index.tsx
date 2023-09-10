@@ -5,10 +5,7 @@ import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
 
 import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
 import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
-// import imgStreamAmazon from "../../assets/img/streams/amazon.png";
 import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
-// import imgStreamStar from "../../assets/img/streams/star.png";
-// import imgStreamYoutube from "../../assets/img/streams/youtube.png";
 
 import Card from "../../components/Card";
 
