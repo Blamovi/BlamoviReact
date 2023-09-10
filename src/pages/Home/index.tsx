@@ -5,41 +5,22 @@ import imgDestaques from "../../assets/img/section/film-everything-everywhere-al
 import imgSetaDireita from "../../assets/img/elementos/Polygon 15.png";
 import imgSetaEsquerda from "../../assets/img/elementos/Polygon 11.png";
 
-
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
 
+import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
+import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
+import imgStreamAmazon from "../../assets/img/streams/amazon.png";
+import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
+import imgStreamStar from "../../assets/img/streams/star.png";
+import imgStreamYoutube from "../../assets/img/streams/youtube.png";
 
-import imgFilmesBatman from "../../assets/img/filmes-f/batman-(cav-das-tre).webp";
-import imgFilmesJoker from "../../assets/img/filmes-f/joker.webp";
-import imgFilmesVingadores from "../../assets/img/filmes-f/image 111.jpg";
-import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
-
-import imgSeriesTheLast from "../../assets/img/series-f/The-last-of-us.jpg";
-import imgSeriesCasaDragao from "../../assets/img/series-f/A-casa-dos-dragões.jpg";
-import imgSeriesBeef from "../../assets/img/series-f/image 30.png";
-import imgSeriesMandalorian from "../../assets/img/series-f/mandalorian.jpg";
-
-import imgClassicoAlien from "../../assets/img/classicos/06-Alien.png";
-import imgClassicoTruman from "../../assets/img/classicos/20-the-truman-show.png";
-import imgClassicoChefao from "../../assets/img/classicos/20120876 1.png";
-import imgClassicoSenhorDosAneis from "../../assets/img/classicos/Senhor Dos Aneis.png";
-
-
-import imgClassicoRambo1 from "../../assets/img/filmes-f/rambo1.png";
-import imgClassicoRambo2 from "../../assets/img/filmes-f/rambo2.png";
-import imgClassicoRambo3 from "../../assets/img/filmes-f/rambo3.png";
-import imgClassicoRambo4 from "../../assets/img/filmes-f/rambo4.png";
-
-import imgLancaSpider from "../../assets/img/filmes-f/image 84.png";
-import imgLancaTransformers from "../../assets/img/filmes-f/image 83.png";
-import imgLancaFlash from "../../assets/img/filmes-f/image 83.png";
-import imgLancaDemonio from "../../assets/img/filmes-f/black demon.png";
 
 
 import Card from "../../components/Card";
+import CardLancamentos from "../../components/CardLancamentos";
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
     const listaFilmes: any[] = [
@@ -47,6 +28,7 @@ function Home() {
             id: 1,
             titulo: "Batman: O Cavaleiro das Trevas",
             img: "src/assets/img/filmes-f/batman-(cav-das-tre).webp",
+            imgStream: imgStreamHbo,
             nota: 9.0,
             comentarios: [
                 {
@@ -67,6 +49,7 @@ function Home() {
             titulo: "Joker",
             img: "src/assets/img/filmes-f/joker.webp",
             nota: 8.4,
+            imgStream: imgStreamHbo,
             comentarios: [
                 {
                     conteudo: "The movie affects you in a way that makes it physically painful to experience.",
@@ -86,6 +69,7 @@ function Home() {
             titulo: "Vingadores: Ultimato",
             img: "src/assets/img/filmes-f/image 111.jpg",
             nota: 8.4,
+            imgStream: imgStreamDisney,
             comentarios: [
                 {
                     conteudo: "Not as good as infinity war but a great movie",
@@ -104,7 +88,9 @@ function Home() {
             id: 4,
             titulo: "Gladiador",
             img: "src/assets/img/filmes-f/gladiador.jpg",
+            imgStream: imgStreamNetflix,
             nota: 9.4,
+
             comentarios: [
                 {
                     conteudo: "Not as good as infinity war but a great movie",
@@ -122,26 +108,50 @@ function Home() {
 
     const listarFilmesClassicos: any[] = [
         {
-            titulo: "Alien - O 8º Passageiro",
-            img: { imgClassicoAlien },
-            nota: 8.5,
+            id: 1,
+            titulo: "Senhor dos Aneis: A sociedade do anel",
+            img: "src/assets/img/classicos/Senhor Dos Aneis.png",
+            imgStream: imgStreamHbo,
+            nota: 9.2,
             comentarios: [
                 {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    conteudo: "A masterclass in film making, is The Godfather a contender for the best film of all time?",
                     usuario: "Sleepin_Dragon"
                 }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
+                    conteudo: "It is now past 1 PM and I just finished watching Francis Ford Coppola's The Godfather. I should probably go to bed. ",
+                    usuario: "andrewburgereviews"
                 }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
+                    conteudo: "his isn't just a beautifully crafted gangster film.",
+                    usuario: "gogoschka-1"
                 }
             ]
         },
-        
+
         {
+            id: 2,
+            titulo: "O Poderoso Chefão",
+            img: "src/assets/img/classicos/20120876 1.png",
+            imgStream: imgStreamNetflix,
+            nota: 9.2,
+            comentarios: [
+                {
+                    conteudo: "A masterclass in film making, is The Godfather a contender for the best film of all time?",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "It is now past 1 PM and I just finished watching Francis Ford Coppola's The Godfather. I should probably go to bed. ",
+                    usuario: "andrewburgereviews"
+                }, {
+                    conteudo: "his isn't just a beautifully crafted gangster film.",
+                    usuario: "gogoschka-1"
+                }
+            ]
+        },
+
+        {
+            id: 3,
             titulo: "O Show de Truman: O Show da Vida",
-            img: { imgClassicoTruman },
+            img: "src/assets/img/classicos/20-the-truman-show.png",
+            imgStream: imgStreamAmazon,
             nota: 8.2,
             comentarios: [
                 {
@@ -156,50 +166,77 @@ function Home() {
                 }
             ]
         },
-        
-        {
-            titulo: "O Poderoso Chefão",
-            img: { imgClassicoChefao },
-            nota: 9.2,
-            comentarios: [
-                {
-                    conteudo: "A masterclass in film making, is The Godfather a contender for the best film of all time?",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "It is now past 1 PM and I just finished watching Francis Ford Coppola's The Godfather. I should probably go to bed. ",
-                    usuario: "andrewburgereviews"
-                }, {
-                    conteudo: "his isn't just a beautifully crafted gangster film.",
-                    usuario: "gogoschka-1"
-                }
-            ]
-        },
 
         {
-            titulo: "Senhor dos Aneis: A sociedade do anel",
-            img: { imgClassicoSenhorDosAneis },
-            nota: 9.2,
+            id: 4,
+            titulo: "Alien - O 8º Passageiro",
+            img: "src/assets/img/classicos/06-Alien.png",
+            imgStream: imgStreamStar,
+            nota: 8.5,
+
             comentarios: [
                 {
-                    conteudo: "A masterclass in film making, is The Godfather a contender for the best film of all time?",
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
                     usuario: "Sleepin_Dragon"
                 }, {
-                    conteudo: "It is now past 1 PM and I just finished watching Francis Ford Coppola's The Godfather. I should probably go to bed. ",
-                    usuario: "andrewburgereviews"
-                }, {
-                    conteudo: "his isn't just a beautifully crafted gangster film.",
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
                     usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
                 }
             ]
-        }
+        }  
 
 
     ]
 
     const listarSeries: any[] = [
         {
-            titulo: "Alien - O 8º Passageiro",
-            img: { imgSeriesTheLast },
+            id: 1,
+            titulo: "The last of us",
+            img: "src/assets/img/series-f/The-last-of-us.jpg",
+            imgStream: imgStreamHbo,
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        },
+
+        {
+            id: 2,
+            titulo: "A Casa do Dragao",
+            img: "src/assets/img/series-f/A-casa-dos-dragões.jpg",
+            imgStream: imgStreamHbo,
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        },
+
+        {
+            id: 3,
+            titulo: "Beef",
+            img: "src/assets/img/series-f/image 30.png",
+            imgStream: imgStreamHbo,
             nota: 8.5,
             comentarios: [
                 {
@@ -216,43 +253,10 @@ function Home() {
         },
         
         {
-            titulo: "Alien - O 8º Passageiro",
-            img: { imgSeriesCasaDragao },
-            nota: 8.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
-        
-        {
-            titulo: "Alien - O 8º Passageiro",
-            img: { imgSeriesBeef },
-            nota: 8.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
-        {
+            id: 4,
             titulo: "Mandalorian",
-            img: { imgSeriesMandalorian },
+            img: "src/assets/img/series-f/mandalorian.jpg",
+            imgStream: imgStreamDisney,
             nota: 8.5,
             comentarios: [
                 {
@@ -271,8 +275,10 @@ function Home() {
 
     const listarMaratonas: any[] = [
         {
+            id: 1,
             titulo: "Rambo - Programado Para Matar",
-            img: { imgClassicoRambo1 },
+            img: "src/assets/img/filmes-f/rambo1.png",
+            imgStream: imgStreamYoutube,
             nota: 7.7,
             comentarios: [
                 {
@@ -286,9 +292,13 @@ function Home() {
                     usuario: "ivo-cobra8"
                 }
             ]
-        },{
+        },
+        
+        {
+            id: 2,
             titulo: "Rambo II: A Missão",
-            img: { imgClassicoRambo2 },
+            img: "src/assets/img/filmes-f/rambo2.png",
+            imgStream: imgStreamYoutube,
             nota: 6.5,
             comentarios: [
                 {
@@ -302,9 +312,13 @@ function Home() {
                     usuario: "ivo-cobra8"
                 }
             ]
-        },{
+        },
+        
+        {
+            id: 3,
             titulo: "Rambo III",
-            img: { imgClassicoRambo3 },
+            img: "src/assets/img/filmes-f/rambo3.png",
+            imgStream: imgStreamYoutube,
             nota: 5.8,
             comentarios: [
                 {
@@ -318,9 +332,13 @@ function Home() {
                     usuario: "ivo-cobra8"
                 }
             ]
-        },{
+        },
+        
+        {
+            id: 4,
             titulo: "Rambo IV",
-            img: { imgClassicoRambo4 },
+            img: "src/assets/img/filmes-f/rambo4.png",
+            imgStream: imgStreamYoutube,
             nota: 7.0,
             comentarios: [
                 {
@@ -339,78 +357,42 @@ function Home() {
 
     const listarLancamentos: any[] = [
         {
-            titulo: "Homem-Aranha: Através do Aranhaverso",
-            img: { imgLancaSpider },
-            nota: 8.8,
-            comentarios: [
-                {
-                    conteudo: "It's honestly absurd how good the Spider-Verse movies are.",
-                    usuario: "MiroslavKyuranov"
-                }, {
-                    conteudo: "The animation, flow of everything, genius character development, and action were all electrifying!",
-                    usuario: "UniqueParticle"
-                }, {
-                    conteudo: "If it wasn't already obvious in the first film, it's now officially clear as day that the people behind the Spider-Verse franchise",
-                    usuario: "pugpool10"
-                }
-            ]
+            id: 1,
+            titulo: "01 Junho",
+            titulo2: "Homem-Aranha: Através do Aranhaverso",
+            img: "src/assets/img/filmes-f/image 84.png",
+            link: "https://www.youtube.com/watch?v=_4is7I_ZxTg&pp=ygUtdHJhaWxlciBob21lbSBhcmFuaGEgYXRyYXbDqXMgZG8gYXJhbmhhdmVyc28g",
+            
         },
-        
+
         {
-            titulo: "Transformers: O Despertar das Feras",
-            img: { imgLancaTransformers },
-            nota: 6.7,
-            comentarios: [
-                {
-                    conteudo: "It's time to move on from the humans needing to be the heroes in these storylines.",
-                    usuario: "kevin_robbins"
-                }, {
-                    conteudo: "After the success of 'Bumblebee' I was hoping that this instalment might offer a more rewarding viewing experience than the previous.",
-                    usuario: "ethanbresnett"
-                }, {
-                    conteudo: "Times for everything, unfortunately including cinema too.",
-                    usuario: "tchitouniaram"
-                }
-            ]
+            id: 2,
+            titulo: "08 Junho",
+            titulo2: "Transformers: O Despertar das Feras",
+            img: "src/assets/img/filmes-f/image 83.png",
+            link: "https://www.youtube.com/watch?v=PHC412-pCoQ&pp=ygUrdHJhaWxlciBUcmFuc2Zvcm1lcnM6IE8gRGVzcGVydGFyIGRhcyBGZXJhcw%3D%3D",
+            
         },
-        
+
         {
-            titulo: "The Flash",
-            img: { imgLancaFlash },
-            nota: 6.8,
-            comentarios: [
-                {
-                    conteudo: "Keaton Steals The Show.",
-                    usuario: "slightlymad22"
-                }, {
-                    conteudo: "Finally after the early screening on 6th June which showed the unfinished print, I get to watch the final cut on IMAX today.",
-                    usuario: "chand-suhas"
-                }, {
-                    conteudo: "I always start any review of a superhero movie by making it clear that these are not my types of movies and my opinion, for any superfans out there.",
-                    usuario: "jtindahouse"
-                }
-            ]
+            id: 3,
+            titulo: "14 Junho",
+            titulo2: "The Flash",
+            img: "src/assets/img/filmes-f/image 85.png",
+            link: "https://www.youtube.com/watch?v=xMbg-ZsFCCo&pp=ygURdHJhaWxlciBUaGUgRmxhc2g%3D",
+            
         },
-        
+
         {
-            titulo: "O Demônio dos Mares",
-            img: { imgLancaDemonio },
-            nota: 3.7,
-            comentarios: [
-                {
-                    conteudo: "Extremely disappointing.",
-                    usuario: "ray512122"
-                }, {
-                    conteudo: "Never judge a book by its cover.",
-                    usuario: "kuner-59029"
-                }, {
-                    conteudo: "Pay no attention to the negative reviews because this was solid popcorn..",
-                    usuario: "LordCommandar"
-                }
-            ]
+            id: 4,
+            titulo: "28 Junho",
+            titulo2: "O Demônio dos Mares",
+            img: "src/assets/img/filmes-f/black demon.png",
+            link: "https://www.youtube.com/watch?v=yX-pvjO4N3o&pp=ygUUTyBERU3DlE5JTyBET1MgTUFSRVM%3DD",
+            
         }
     ]
-    
+
 
     return (
         <>
@@ -478,7 +460,8 @@ function Home() {
                 <section className="Filmes_Destaques">
                     <h2>⭐ Filmes Favoritos</h2>
                     <div  className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" />
+                        <img src={imgSetaEsquerda} alt=""
+                        />
                         {
                             listaFilmes.map((card: any) => {
                                 return<div key={card.id
@@ -487,109 +470,112 @@ function Home() {
                                     img={card.img}
                                     titulo={card.titulo}
                                     foto={card.img}
+                                    imgStream={card.imgStream}
                                     nota={card.nota}
                                     comentarios={card.comentarios}
                                 /></div>
                             })
 
                         }
-                       
+
                         <img src={imgSetaDireita} alt="" />
                     </div>
                 </section>
-             {/*    <section className="Clássicos">
+                <section className="Clássicos">
                     <h2>🎭 Clássicos</h2>
                     <div className="card-linha">
-                        <img src="../img/elementos/Polygon 11.png" alt="" />
-                        <div className="card" id="teste3">
                             <img
-                                src="../img/classicos/movies-the-lord-of-the-rings-aragorn-viggo-mortensen-movie-posters-posters-the-return-of-the-king-entertainment-movies-hd-art-wallpaper-preview.png"
-                                alt=""
+                                src={imgSetaEsquerda} alt=""
                             />
-                            {
-                                listarFilmesClassicos.map((Card: any) => {
-                                    return <Card
-                                        id={Card.id}
-                                        titulo={Card.titulo}
-                                        foto={Card.img}
-                                        nota={Card.number}
-                                        comentarios={listaFilmes}
-                                    />
-                                })
-                            }
+                                {
+                                    listarFilmesClassicos.map((card: any) => {
+                                        return<div key={card.id
+                                        }>
+                                        <Card
+                                            img={card.img}
+                                            titulo={card.titulo}
+                                            foto={card.img}
+                                            imgStream={card.imgStream}
+                                            nota={card.nota}
+                                            comentarios={card.comentarios}
+                                        /></div>
+                                    })
+
+                                }
+                            <img src={imgSetaDireita} alt="" />
                         </div>
-                      
-                        <img src="../img/elementos/Polygon 15.png" alt="" />
-                    </div>
                 </section>
                 <section className="Melhores_series">
                     <h2>🏆 Melhores series</h2>
                     <div className="card-linha">
-                        <img src="../img/elementos/Polygon 11.png" alt="" />
-                        <div className="card" id="teste3">
-                            <img src="../img/series-f/image 30.png" alt="" />
-                            <h3>Treta</h3>
-                            {
-                                listarSeries.map((Card: any) => {
-                                    return <Card
-                                        id={Card.id}
-                                        titulo={Card.titulo}
-                                        foto={Card.img}
-                                        nota={Card.number}
-                                        comentarios={listaFilmes}
-                                    />
-                                })
-                            }
-                        </div>
-                    
-                        <img src="../img/elementos/Polygon 15.png" alt="" />
+                        <img src={imgSetaEsquerda} alt="" />
+                        {
+                            listarSeries.map((card: any) => {
+                                return<div key={card.id
+                                }>
+                                <Card
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    imgStream={card.imgStream}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}
+                                /></div>
+                            })
+
+                        }
+                        <img src={imgSetaDireita} alt="" />
                     </div>
                 </section>
                 <section className="Para_maratonar">
                     <h2>🏃 Para Maratonar</h2>
                     <div className="card-linha">
-                        <img src="../img/elementos/Polygon 11.png" alt="" />
-                        <div className="card" id="teste3">
-                            <img src="../img/filmes-f/image 102.png" alt="" />
-                            {
-                                listarMaratonas.map((Card: any) => {
-                                    return <Card
-                                        id={Card.id}
-                                        titulo={Card.titulo}
-                                        foto={Card.img}
-                                        nota={Card.number}
-                                        comentarios={listaFilmes}
-                                    />
-                                })
-                            }
-                        </div>
-                 
-                        <img src="../img/elementos/Polygon 15.png" alt="" />
+                        <img src={imgSetaEsquerda} alt="" />
+                        {
+                            listarMaratonas.map((card: any) => {
+                                return<div key={card.id
+                                }>
+                                <Card                                
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    imgStream={card.imgStream}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}
+                                /></div>
+                            })
+                        }
+                        <img src={imgSetaDireita} alt="" />
                     </div>
                 </section>
                 <section className="Lancamentos">
                     <h2>📅 Lançamentos</h2>
                     <div className="card-linha">
-                        <img src="../img/elementos/Polygon 11.png" alt="" />
+                        <img src={imgSetaEsquerda} alt="" /> 
+                        <div className="card_responsivo">
                         {
-                            listarLancamentos.map((Card: any) => {
-                                return <Card
-                                    id={Card.id}
-                                    titulo={Card.titulo}
-                                    foto={Card.img}
-                                    nota={Card.number}
-                                    comentarios={listaFilmes}
+                            listarLancamentos.map((cardLancamentos: any) => {
+                                return<div key={cardLancamentos.id
+                                }>
+                                <CardLancamentos
+                                    id={cardLancamentos.id}
+                                    titulo={cardLancamentos.titulo}
+                                    img={cardLancamentos.img}
+                                    titulo2={cardLancamentos.titulo2}
+                                    foto={cardLancamentos.img}
+                                    link={cardLancamentos.link}
+                                    
                                 />
+                                </div>
                             })
-
                         }
-                     
-                        <img src="../img/elementos/Polygon 15.png" alt="" />
+                        </div>                       
+                        
+                        
+                        <img src={imgSetaDireita} alt="" />
                     </div>
-                    <a className="input-submit" href="../calendario/calendario.html">
-                        + Lançamentos
-                    </a>
-                </section> */}
+                    <Link className="input-submit" to="/calendario">+ Lançamentos</Link>
+                </section>
             </main>
 
 
