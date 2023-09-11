@@ -30,10 +30,10 @@ import imgClassicoRambo2 from "../../assets/img/classicos/rambo2.png"
 import imgClassicoRambo3 from "../../assets/img/classicos/rambo3.png"
 import imgClassicoRambo4 from "../../assets/img/classicos/rambo4.png"
 import imgClassicoChefao from "../../assets/img/classicos/20120876 1.png"
-import imgLancaSpider from "../../assets/img/filmes-f/image 84.png"
-import imgLancaTransformers from "../../assets/img/filmes-f/image 83.png"
-import imgLancaFlash from "../../assets/img/filmes-f/image 83.png"
-import imgLancaDemonio from "../../assets/img/filmes-f/black demon.png"
+import imgLancaSpider from "../../assets/img/filmes-f/image84.png"
+import imgLancaTransformers from "../../assets/img/filmes-f/image83.png"
+import imgLancaFlash from "../../assets/img/filmes-f/image85.png"
+import imgLancaDemonio from "../../assets/img/filmes-f/blackdemon.png"
 import Card from "../../components/Card";
 
 // import imgSeries from "../../assets/img/";
