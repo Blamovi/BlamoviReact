@@ -38,7 +38,7 @@ footer>div {
 }
 
 footer>div>span,
-p {
+footer p {
     margin-top: 10px;
     color: var(--amarelo);
     text-align: center;

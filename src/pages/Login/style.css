@@ -52,9 +52,14 @@ max-width: 100%;
 } */
 
  .container {
-  background-image: url(/src/assets/images/cineminha.png);
+  background:
+    linear-gradient(180deg, #000 0%, #00000080 50%, #000 100%),
+    url("../../assets/images/cineminha.png");
   max-width: 100%;
   padding: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
 } 
 
@@ -465,6 +470,7 @@ max-width: 100%;
 
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
+    font-weight: bolder;
     
   }
 

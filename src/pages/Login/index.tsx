@@ -73,7 +73,7 @@ function Login() {
 
           </div>
           <div className="input-submit">
-              <input type="submit" value="Cadastrar" />
+              <input type="submit" value="Logar" />
             </div>
 
           {/* <hr class="linha"> */}
@@ -81,7 +81,7 @@ function Login() {
             <p className="link">
 
               <a href="#paralogin">
-               Login
+               Cadastrar
               </a>
             </p>
           </div>

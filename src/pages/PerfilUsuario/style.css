@@ -283,8 +283,15 @@
     background-color: var(--branco);
 }
 
-#main_perfilusuario p{
+#main_perfilusuario .nameAndHour p{
     margin-bottom: 10px;
+    font-family: var(--font1);
+    font-size: 13px;
+    background-color: var(--branco);
+    text-align: left;
+}
+
+#main_perfilusuario .textoPost{
     font-family: var(--font1);
     font-size: 13px;
     background-color: var(--branco);
@@ -307,6 +314,8 @@
 
 #main_perfilusuario .balanoalvo{
     margin-bottom: 15px;
+    width: 100%;
+    background-color: var(--branco);
 }
 
 #main_perfilusuario .imgUserComments{
