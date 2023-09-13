@@ -1,10 +1,10 @@
 import "./style.css"
 
-function Feed() {
+function PerfilUsuario() {
     return(
         <>
         </>
     )
 }
 
-export default Feed
+export default PerfilUsuario
