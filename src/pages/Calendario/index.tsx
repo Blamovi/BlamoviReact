@@ -1,17 +1,17 @@
 import "./style.css"
 
 //imagens
-import imgBanner from "../../assets/imagesBanner2.svg"
-import imgCalendar from "../../assets/Calendar.svg"
-import imgBookClub from "../../assets/book club.svg"
-import imgCoracao from "../../assets/coração.svg"
-import imgClassificacao14 from "../../assets/classificação 14.svg"
-import imgSereia from "../../assets/sereia.svg"
-import imgClassificacaoLivre from "../../assets/classificação Livre.svg"
-import imgClassificacao12 from "../../assets/classificação 12.svg"
-import imgHomemAranha from "../../assets/homem aranha.svg"
-import imgNickeloden from "../../assets/nickeloden.svg"
-import imgPlusMais from "../../assets/Plus.svg"
+import imgBanner from "../../assets/images/Banner2.svg"
+import imgCalendar from "../../assets/images/Calendar.svg"
+import imgBookClub from "../../assets/images/book club.svg"
+import imgCoracao from "../../assets/images/coração.svg"
+import imgClassificacao14 from "../../assets/images/classificação 14.svg"
+import imgSereia from "../../assets/images/sereia.svg"
+import imgClassificacaoLivre from "../../assets/images/classificação Livre.svg"
+import imgClassificacao12 from "../../assets/images/classificação 12.svg"
+import imgHomemAranha from "../../assets/images/homem aranha.svg"
+import imgNickeloden from "../../assets/images/nickeloden.svg"
+import imgPlusMais from "../../assets/images/Plus.svg"
 
 
 function Calendario() {
