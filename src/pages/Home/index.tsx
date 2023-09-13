@@ -84,26 +84,26 @@ function Home() {
             ]
         },
 
-        {
-            id: 4,
-            titulo: "Gladiador",
-            img: "src/assets/img/filmes-f/gladiador.jpg",
-            imgStream: imgStreamNetflix,
-            nota: 9.4,
+        // {
+        //     id: 4,
+        //     titulo: "Gladiador",
+        //     img: "src/assets/img/filmes-f/gladiador.jpg",
+        //     imgStream: imgStreamNetflix,
+        //     nota: 9.4,
 
-            comentarios: [
-                {
-                    conteudo: "Not as good as infinity war but a great movie",
-                    usuario: "ACollegeStudent"
-                }, {
-                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
-                    usuario: "davyjones-636363"
-                }, {
-                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
-                    usuario: "ahmetkozan"
-                }
-            ]
-        }
+        //     comentarios: [
+        //         {
+        //             conteudo: "Not as good as infinity war but a great movie",
+        //             usuario: "ACollegeStudent"
+        //         }, {
+        //             conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+        //             usuario: "davyjones-636363"
+        //         }, {
+        //             conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+        //             usuario: "ahmetkozan"
+        //         }
+        //     ]
+        // }
     ]
 
     const listarFilmesClassicos: any[] = [
@@ -167,26 +167,26 @@ function Home() {
             ]
         },
 
-        {
-            id: 4,
-            titulo: "Alien - O 8º Passageiro",
-            img: "src/assets/img/classicos/06-Alien.png",
-            imgStream: imgStreamStar,
-            nota: 8.5,
+        // {
+        //     id: 4,
+        //     titulo: "Alien - O 8º Passageiro",
+        //     img: "src/assets/img/classicos/06-Alien.png",
+        //     imgStream: imgStreamStar,
+        //     nota: 8.5,
 
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        }  
+        //     comentarios: [
+        //         {
+        //             conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+        //             usuario: "Sleepin_Dragon"
+        //         }, {
+        //             conteudo: "'Alien' is one of those special films that have aged very, very well.",
+        //             usuario: "gogoschka-1"
+        //         }, {
+        //             conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+        //             usuario: "ivo-cobra8"
+        //         }
+        //     ]
+        // }  
 
 
     ]
@@ -252,25 +252,25 @@ function Home() {
             ]
         },
         
-        {
-            id: 4,
-            titulo: "Mandalorian",
-            img: "src/assets/img/series-f/mandalorian.jpg",
-            imgStream: imgStreamDisney,
-            nota: 8.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        }
+        // {
+        //     id: 4,
+        //     titulo: "Mandalorian",
+        //     img: "src/assets/img/series-f/mandalorian.jpg",
+        //     imgStream: imgStreamDisney,
+        //     nota: 8.5,
+        //     comentarios: [
+        //         {
+        //             conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+        //             usuario: "Sleepin_Dragon"
+        //         }, {
+        //             conteudo: "'Alien' is one of those special films that have aged very, very well.",
+        //             usuario: "gogoschka-1"
+        //         }, {
+        //             conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+        //             usuario: "ivo-cobra8"
+        //         }
+        //     ]
+        // }
     ]
 
     const listarMaratonas: any[] = [
@@ -334,25 +334,25 @@ function Home() {
             ]
         },
         
-        {
-            id: 4,
-            titulo: "Rambo IV",
-            img: "src/assets/img/filmes-f/rambo4.png",
-            imgStream: imgStreamYoutube,
-            nota: 7.0,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        }
+        // {
+        //     id: 4,
+        //     titulo: "Rambo IV",
+        //     img: "src/assets/img/filmes-f/rambo4.png",
+        //     imgStream: imgStreamYoutube,
+        //     nota: 7.0,
+        //     comentarios: [
+        //         {
+        //             conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+        //             usuario: "Sleepin_Dragon"
+        //         }, {
+        //             conteudo: "'Alien' is one of those special films that have aged very, very well.",
+        //             usuario: "gogoschka-1"
+        //         }, {
+        //             conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+        //             usuario: "ivo-cobra8"
+        //         }
+        //     ]
+        // }
     ]
 
     const listarLancamentos: any[] = [
@@ -383,14 +383,14 @@ function Home() {
             
         },
 
-        {
-            id: 4,
-            titulo: "28 Junho",
-            titulo2: "O Demônio dos Mares",
-            img: "src/assets/img/filmes-f/black demon.png",
-            link: "https://www.youtube.com/watch?v=yX-pvjO4N3o&pp=ygUUTyBERU3DlE5JTyBET1MgTUFSRVM%3DD",
+        // {
+        //     id: 4,
+        //     titulo: "28 Junho",
+        //     titulo2: "O Demônio dos Mares",
+        //     img: "src/assets/img/filmes-f/black demon.png",
+        //     link: "https://www.youtube.com/watch?v=yX-pvjO4N3o&pp=ygUUTyBERU3DlE5JTyBET1MgTUFSRVM%3DD",
             
-        }
+        // }
     ]
 
 
