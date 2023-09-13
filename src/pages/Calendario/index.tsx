@@ -1,19 +1,18 @@
 import "./style.css"
 
 //imagens
-import imgBanner from "../../assets/Banner1.svg"
+import imgBanner from "../../assets/imagesBanner2.svg"
 import imgCalendar from "../../assets/Calendar.svg"
-import imgUser from "../../assets/User.svg"
-import imgMufasaPerfil from "../../assets/mufasaperfil.svg"
-import imgIconImg from "../../assets/iconImg.svg"
-import imgIconLocal from "../../assets/iconLocal.svg"
-import imgIconAnexo from "../../assets/iconAnexo.svg"
-import imgIconSend from "../../assets/iconSend.svg"
-import imgMadrigalPerfil from "../../assets/madrigalperfil.svg"
-import imgBalaNoAlvo from "../../assets/balanoalvo.svg"
+import imgBookClub from "../../assets/book club.svg"
+import imgCoracao from "../../assets/coração.svg"
+import imgClassificacao14 from "../../assets/classificação 14.svg"
+import imgSereia from "../../assets/sereia.svg"
+import imgClassificacaoLivre from "../../assets/classificação Livre.svg"
+import imgClassificacao12 from "../../assets/classificação 12.svg"
+import imgHomemAranha from "../../assets/homem aranha.svg"
+import imgNickeloden from "../../assets/nickeloden.svg"
+import imgPlusMais from "../../assets/Plus.svg"
 
-// Rotas
-import { Link } from "react-router-dom";
 
 function Calendario() {
     return(
@@ -34,7 +33,7 @@ function Calendario() {
     <h3>11 de Maio 2023</h3>
     <div className="card">
       <div>
-        <img className="card1" src="../calendario/img/book club.svg" alt="" />
+        <img className="card1" src={imgBookClub} alt="" />
       </div>
       <div>
         <h4>Clube do Livro 2: O Próximo do Capítulo</h4>
@@ -47,11 +46,11 @@ function Calendario() {
         </p>
       </div>
       <div className="lateral">
-        <img className="img1" src="../calendario/img/coração.svg" alt="" />
+        <img className="img1" src={imgCoracao} alt="" />
         <p className="classificaçao">Classificação</p>
         <img
           className="img2"
-          src="../calendario/img/classificação 14.svg"
+          src={imgClassificacao14}
           alt=""
         />
       </div>
@@ -59,7 +58,7 @@ function Calendario() {
     <h3>26 de Maio 2023</h3>
     <div className="card">
       <div>
-        <img className="card1" src="../calendario/img/sereia.svg" alt="" />
+        <img className="card1" src={imgSereia} alt="" />
       </div>
       <div>
         <h4>A Pequena Sereia</h4>
@@ -74,11 +73,11 @@ function Calendario() {
         </p>
       </div>
       <div className="lateral">
-        <img className="img1" src="../calendario/img/coração.svg" alt="" />
+        <img className="img1" src={imgCoracao} alt="" />
         <p className="classificaçao">Classificação</p>
         <img
           className="img2"
-          src="../calendario/img/classificação Livre.svg"
+          src={imgClassificacaoLivre}
           alt=""
         />
       </div>
@@ -88,7 +87,7 @@ function Calendario() {
       <div>
         <img
           className="card1"
-          src="../calendario/img/homem aranha.svg"
+          src={imgHomemAranha}
           alt=""
         />
       </div>
@@ -103,11 +102,11 @@ function Calendario() {
         </p>
       </div>
       <div className="lateral">
-        <img className="img1" src="../calendario/img/coração.svg" alt="" />
+        <img className="img1" src={imgCoracao} alt="" />
         <p className="classificaçao">Classificação</p>
         <img
           className="img2"
-          src="../calendario/img/classificação 12.svg"
+          src={imgClassificacao12}
           alt=""
         />
       </div>
@@ -115,7 +114,7 @@ function Calendario() {
     <h3>02 de Junho 2023</h3>
     <div className="card">
       <div>
-        <img className="card1" src="../calendario/img/nickeloden.svg" alt="" />
+        <img className="card1" src={imgNickeloden} alt="" />
       </div>
       <div>
         <h4>Blue's Big City Adventure</h4>
@@ -129,18 +128,18 @@ function Calendario() {
         </p>
       </div>
       <div className="lateral">
-        <img className="img1" src="../calendario/img/coração.svg" alt="" />
+        <img className="img1" src={imgCoracao} alt="" />
         <p className="classificaçao">Classificação</p>
         <img
           className="img2"
-          src="../calendario/img/classificação Livre.svg"
+          src={imgClassificacaoLivre}
           alt=""
         />
       </div>
     </div>
   </section>
   <div className="mais">
-    <img className="btmais" src="../calendario/img/Plus.svg" alt="" />
+    <img className="btmais" src={imgPlusMais} alt="" />
   </div>
 </main>
 
