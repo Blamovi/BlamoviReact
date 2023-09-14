@@ -11,7 +11,7 @@ import imgIconLocal from "../../assets/iconLocal.svg"
 import imgIconAnexo from "../../assets/iconAnexo.svg"
 import imgIconSend from "../../assets/iconSend.svg"
 import imgMadrigalPerfil from "../../assets/madrigalperfil.svg"
-import imgBalaNoAlvo from "../../assets/balanoalvo.svg"
+import imgToyStoryPost from "../../assets/balanoalvo.svg"
 import imgLike from "../../assets/like.svg"
 import imgComentar from "../../assets/comentar.svg"
 import imgRecomendar from "../../assets/recomendar.svg"
@@ -19,6 +19,8 @@ import imgBuzz from "../../assets/buzzlightyear.svg"
 import imgRoz from "../../assets/rozperfil.svg"
 import imgProvaFogo from "../../assets/a-prova-de-fogo-1.jpg"
 import imgFeedInfinito from "../../assets/feedinfinito.svg"
+
+import Post from "../../components/post"
 
 function Feed() {
 
@@ -41,40 +43,20 @@ function Feed() {
                     comentario: "Que bom que gostou!"
                 }
             ]
+        },{
+            id: 2,
+            userNome: "Roz",
+            foto: {imgRoz},
+            data: "Ontem",
+            assistiu: "Assistiu - À Prova de Fogo",
+            conteudoPost: "Muita gente criticando, mas não vê o contexto todo da história, ela foi maltrata por ele por 7 anos aguentando calada, até que ela começou a se posicionar e não servir de empregada, pois até mulher ele procurava na internet, deixando ela de lado. A parte que ela ficou com ele somente pq ele ajudou a mãe dela com a quantidade de $, é somente um ponto do filme que poderia ser colocado outra história parecida, ele poderia ter pedido doação, vendido carro etc… O fato q ela não ficou com quem tinha mais  condições financeiras, pq ele não tinha, ele apenas tinha um trocado que ajuntou para o barco dele, era as economias, mas quem era mais  rico era o médico. Então não falem q foi por dinheiro, pq ela poderia nem ter voltado com ele, mesmo depois dele comprar a cadeira e a cama p mãe dela. Achei excelente o filme, só quem passa por isso sabe, as mulheres principalmente! Esse filme muito abençoado.",
+            imgPost: {imgProvaFogo}
         }
     ]
     
     return (
         <>
             <>
-                {/* <aside className="sidebar">
-                    <nav className="navSidebar">
-                        <button>
-                            <span>
-                                <a href="../Home/home.html">
-                                    <img src={imgHome} alt="" />
-                                    <span className="textomenu">Home</span>
-                                </a>
-                            </span>
-                        </button>
-                        <button>
-                            <span>
-                                <a href="../Favoritos/favoritos.html">
-                                    <img src={imgHearth} alt="" />
-                                    <span className="textomenu">Favoritos</span>
-                                </a>
-                            </span>
-                        </button>
-                        <button>
-                            <span>
-                                <a href="../perfilUsuarios/perfil.html">
-                                    <img src={imgUser} alt="" />
-                                    <span className="textomenu">Perfil</span>
-                                </a>
-                            </span>
-                        </button>
-                    </nav>
-                </aside> */}
                 <main>
                     {/*Formulário de envio*/}
                     <div className="newPost">
@@ -106,23 +88,22 @@ function Feed() {
                         </form>
                     </div>
                     <ul className="posts">
-                        <li className="post">
-                            <div className="infoUserPost">
-                                <div className="imgUserPost">
-                                    <img src={imgMadrigalPerfil} alt="" />
-                                </div>
-                                <div className="nameAndHour">
-                                    <strong>Antônio Madrigal</strong>
-                                    <p>4m atrás</p>
-                                    <p className="colorir_texto_filmes">Assistiu - Toy Story 2</p>
-                                </div>
+                    {
+                        postFeed.map((post: any) => {
+                            return <div key={post.id}>
+                                <Post
+                                    userNome={post.nome}
+                                    foto={post.foto}
+                                    data={post.data}
+                                    assistiu={post.assistiu}
+                                    conteudoPost={post.conteudoPost}
+                                    img={post.img}
+                                />
                             </div>
-                        </li>
-                        <p className="textoPost">
-                            Acabei de assistir Toy Story 2 !!!! Que filme maravilhoso, para mim fica
-                            em primeiro lugar nos filmes Pixar. Assisti pelo YouTube.{" "}
-                        </p>
-                        <img className="balanoalvo" src={imgBalaNoAlvo} alt="" />
+                        })
+
+                    }
+                        <img className="balanoalvo" src={imgToyStoryPost} alt="" />
                         <div className="actionBtnPost">
                             <button type="button" className="filesPost">
                                 <img src={imgLike} alt="Curtir" />
@@ -162,38 +143,21 @@ function Feed() {
                         </div>
                     </ul>
                     <ul className="posts">
-                        <li className="post">
-                            <div className="infoUserPost">
-                                <div className="imgUserPost">
-                                    <img src={imgRoz} alt="" />
-                                </div>
-                                <div className="nameAndHour">
-                                    <strong>Roz</strong>
-                                    <p>Ontem</p>
-                                    <p className="colorir_texto_filmes">Assistiu - À Prova de Fogo</p>
-                                </div>
+                        {
+                        postFeed.map((post: any) => {
+                            return <div key={post.id}>
+                                <Post
+                                    userNome={post.nome}
+                                    foto={post.foto}
+                                    data={post.data}
+                                    assistiu={post.assistiu}
+                                    conteudoPost={post.conteudoPost}
+                                    img={post.img}
+                                />
                             </div>
-                        </li>
-                        <p className="textoPost">
-                            Muita gente criticando, mas não vê o contexto todo da história, ela foi
-                            maltrata por ele por 7 anos aguentando calada, até que ela começou a se
-                            posicionar e não servir de empregada, pois até mulher ele procurava na internet, deixando ela de lado. A parte que ela ficou com ele somente pq ele ajudou a mãe dela
-                            com a quantidade de $, é somente um ponto do filme que poderia ser
-                            colocado outra história parecida, ele poderia ter pedido doação,
-                            vendido carro etc… O fato q ela não ficou com quem tinha mais
-                            condições financeiras, pq ele não tinha, ele apenas tinha um trocado
-                            que ajuntou para o barco dele, era as economias, mas quem era mais
-                            rico era o médico. Então não falem q foi por dinheiro, pq ela poderia
-                            nem ter voltado com ele, mesmo depois dele comprar a cadeira e a cama
-                            p mãe dela. Achei excelente o filme, só quem passa por isso sabe, as
-                            mulheres principalmente! Esse filme muito abençoado.
-                            
+                        })
 
-                        </p>
-                        {/* <button onclick="leiaMais()" id="btnLeiaMais">
-                        Ver mais
-                        </button> */}
-                        <img className="balanoalvo" src={imgProvaFogo} alt="" />
+                    }
                         <div className="actionBtnPost">
                             <button type="button" className="filesPost">
                                 <img src={imgLike} alt="Curtir" />

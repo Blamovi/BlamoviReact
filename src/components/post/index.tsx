@@ -17,38 +17,22 @@ function Post(props: any) {
     return (
         <>
             <ul id="posts">
-                {/* {
-                    postFeed.map((post: any) => {
-                        return <div key={post.id}>
-                            <Post
-                                userNome={post.nome}
-                                foto={post.foto}
-                                data={post.data}
-                                assistiu={post.assistiu}
-                                conteudoPost={post.conteudoPost}
-                                img={post.img}
-                            />
-                            </div>
-                    })
-
-                } */}
                 <li className="post">
-                    <div className="infoUserPost">
-                        <div className="imgUserPost">
-                            <img src={imgMadrigalPerfil} alt="" />
-                        </div>
-                        <div className="nameAndHour">
-                            {/* <strong>{props.username}</strong> */}
-                            <strong>{props.nome}</strong>
-                            <p>4m atrás</p>
-                            <p className="colorir_texto_filmes">Assistiu - Toy Story 2</p>
-                        </div>
-                    </div>
-                    <p className="textoPost">
-                        Acabei de assistir Toy Story 2 !!!! Que filme maravilhoso, para mim fica em
-                        primeiro lugar nos filmes Pixar. Assisti pelo YouTube.{" "}
-                    </p>
-                    <img className="balanoalvo" src={imgToyStoryPost} alt="" />
+                    {
+                        props.postFeed.map((post: any) => {
+                            return <div key={post.id}>
+                                <Post
+                                    userNome={post.nome}
+                                    foto={post.foto}
+                                    data={post.data}
+                                    assistiu={post.assistiu}
+                                    conteudoPost={post.conteudoPost}
+                                    img={post.img}
+                                />
+                            </div>
+                        })
+
+                    }
                     <div className="actionBtnPost">
                         <button type="button" className="filesPost">
                             <img src={imgLike} alt="Curtir" />
@@ -66,12 +50,12 @@ function Post(props: any) {
                     <ul>
                         {
                             props.comentarios.map((cadaComentario: any) => {
-                                return<li className="comentarios">
+                                return <li className="comentarios">
                                     <Comentario
-                                        img = {cadaComentario.img}
-                                        nome = {cadaComentario.nome}
-                                        data = {cadaComentario.data}
-                                        comentario = {cadaComentario.comentario}
+                                        img={cadaComentario.img}
+                                        nome={cadaComentario.nome}
+                                        data={cadaComentario.data}
+                                        comentario={cadaComentario.comentario}
                                     />
                                 </li>
                             })
