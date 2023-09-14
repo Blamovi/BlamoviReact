@@ -1,45 +1,45 @@
 /* /////////////////////// */
 
-/* ajustes */
+/* ajustes Amanda */
 
- .ajustes{
+#main_cadastro .ajustes{
   background-color: transparent;
 }
- form div {
+#main_cadastro form div {
   background-color: transparent;
 }
- form div input {
+#main_cadastro#main_cadastro#main_cadastro#main_cadastro form div input {
   background-color: var(--branco);
 }
 
- form h1 {
+#main_cadastro#main_cadastro#main_cadastro form h1 {
   background-color: transparent;
 }
 
- #foto {
+#main_cadastro#main_cadastro #foto {
   background-color: transparent;
 }
- .alinhamento .link {
+#main_cadastro .alinhamento .link {
   background-color: transparent;
 }
 
-  main {
+#main_cadastro  main {
   max-width: 100%;
   margin: 0 auto;
 } 
- input {
+#main_cadastro input {
   font-size: 16px;
   font-weight: 900;
 }
 
- .ajustesrodape{
+#main_cadastro .ajustesrodape{
   width: 100%;
   
 
 }
 
 @media screen and (max-width: 877px) {
-   .ajustesrodape {
+  #main_cadastro .ajustesrodape {
     width: 755px;
   }
 
@@ -52,37 +52,44 @@ max-width: 100%;
 } */
 
  .container{
-  background-image: url(/src/assets/images/cineminha.png);
+  background:
+  linear-gradient(180deg, #000 0%, #00000080 50%, #000 100%),
+  url("../../assets/images/cineminha.png");
+  max-width: 100%;
+  padding: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 } 
 
- .cineminha{
+#main_cadastro .cineminha{
   width: 100%;
 }
 
 
- .content{
+#main_cadastro .content{
   background-color: transparent;
   padding: 30px;
 }
 
-/* ajustes */
+/* ajustes Amanda*/
 
 
 
 /* //////////////////////// */
 
 
- .menu ul {
+#main_cadastro .menu ul {
     display: flex;
     flex-wrap: wrap;
 
   }
 
-   .menu ul li {
+  #main_cadastro .menu ul li {
     text-decoration: none;
   }
 
-   .menu ul a {
+  #main_cadastro .menu ul a {
     color: #FBC02C;
     margin: 10px;
     text-decoration: none;
@@ -92,14 +99,14 @@ max-width: 100%;
 
   }
 
-   .menu ul a:hover {
+  #main_cadastro .menu ul a:hover {
     color: #e40810;
     transform: scale(1.5);
     text-shadow: 0px 5px 10px rgba(239, 180, 4, 0.6);
 
   }
 
-   .hamburguer {
+  #main_cadastro .hamburguer {
     width: 50px;
     height: 50px;
 
@@ -107,7 +114,7 @@ max-width: 100%;
   }
 
 
-   .banner {
+  #main_cadastro .banner {
 
   
     /* width: 100%;
@@ -246,30 +253,30 @@ max-width: 100%;
   } */
 
 
-   .contato {
+  #main_cadastro .contato {
     display: flex;
     margin: 20px;
     justify-content: center;
     background-color: transparent;
   }
 
-   .contato a {
+  #main_cadastro .contato a {
     font-family: var(--font2);
     text-decoration: none;
     color: var(--branco);
     font-size: 18px;
   }
 
-   .imagem{
+  #main_cadastro .imagem{
     background-color: transparent;
   }
-   .imagem img{
+  #main_cadastro .imagem img{
     background-color: transparent;
     margin: 3px;
   }
 
 
-   footer>div {
+  #main_cadastro footer>div {
     width: 100%;
     background-color: var(--preto);  
 
@@ -277,7 +284,7 @@ max-width: 100%;
 
 
   
-   footer ul {
+  #main_cadastro footer ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -290,7 +297,7 @@ max-width: 100%;
 
   }
 
-   footer div ul li a {
+  #main_cadastro footer div ul li a {
     font-family: var(--font1);
     color: #fff;
     text-decoration: none;
@@ -298,7 +305,7 @@ max-width: 100%;
     margin: 10px;
   }
 
-   footer ul a:hover {
+  #main_cadastro footer ul a:hover {
     color: rgba(219, 119, 112, 0.533);
     transform: scale(2.1);
     text-shadow: 0px 5px 10px rgba(239, 180, 4, 0.6);
@@ -317,11 +324,11 @@ max-width: 100%;
   }
 
   @media screen and (max-width: 1000px) {
-     .card {}
+    #main_cadastro .card {}
 
-     .poster>img {}
+    #main_cadastro .poster>img {}
 
-     .hamburguer {
+    #main_cadastro .hamburguer {
       display: none;
     }
 
@@ -334,15 +341,15 @@ max-width: 100%;
   }
 
   @media screen and (max-width: 360px) {
-     .menu ul a {
+    #main_cadastro .menu ul a {
       display: none;
     }
 
-     #divbusca {
+    #main_cadastro #divbusca {
       display: none;
     }
 
-     .hamburguer {
+    #main_cadastro .hamburguer {
       display: initial;
     }
 
@@ -351,26 +358,20 @@ max-width: 100%;
   /*CADASTRO*/
   /* CSS reset */
 
-   *:before, *:after {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
 
-
-   a {
+  #main_cadastro a {
     text-decoration: none;
    font-family: inter;
    color: #dbe5e8;
   }
 
   /* esconde as ancoras da tela */
-  a.links {
+  #main_cadastro a.links {
     display: none;
   }
 
   /* content que contem os formulários */
-   .content {
+  #main_cadastro .content {
     width: 750px;
     margin: 0px auto;
     /* position: relative; */
@@ -378,7 +379,7 @@ max-width: 100%;
 
   /* formatando o cabeçalho dos formulários */
 
-   h1 {
+  #main_cadastro h1 {
     font-size: 48px;
     /* color: #066a75; */
     color: #fff;
@@ -391,15 +392,15 @@ max-width: 100%;
   }
 
 
-   p {
+  #main_cadastro p {
     margin-bottom: 15px;
   }
 
-   p:first-child {
+  #main_cadastro p:first-child {
     margin: 25px;
   }
 
-   label {
+  #main_cadastro label {
     /* color: #405c60; */
     color: #fff;
     position: relative;
@@ -407,12 +408,12 @@ max-width: 100%;
   }
 
 
-   input {
+  #main_cadastro input {
     outline: none;
     background-color: transparent;
   }
 
-   input:not([type="checkbox"]) {
+  #main_cadastro input:not([type="checkbox"]) {
     width: 95%;
     margin-top: 4px;
     padding: 10px;
@@ -431,12 +432,12 @@ max-width: 100%;
   }
 
 
-   input:hover {
+  #main_cadastro input:hover {
     background: var(--branco)
   }
 
   /*marcando os links para mudar de um formulário para outro */
-   .link {
+  #main_cadastro .link {
     /* position: absolute;
     background: #e1eaeb; */
     color: #7f7c7c;
@@ -451,7 +452,7 @@ max-width: 100%;
     /* justify-content: center; */
   }
 
-   .link a {
+  #main_cadastro .link a {
     /* background: #f7f8f1; */
     padding: 6px 23px;
     color: #FBC02C;
@@ -466,7 +467,7 @@ max-width: 100%;
     
   }
 
-   .link a:hover {
+  #main_cadastro .link a:hover {
     color: #39bfd7;
     background: #f7f7f7;
     border: 1px solid #4ab3c6;
@@ -474,7 +475,7 @@ max-width: 100%;
 
   /* estilos para para ambos os formulários */
 
-   #cadastro, #login {
+  #main_cadastro  #cadastro, #login {
     /* position: absolute; */
     /* width: 860px; */
     /* height: 700px; */
@@ -508,7 +509,7 @@ max-width: 100%;
     background-color: transparent;
   }
 
-   #paracadastro:target~.content #cadastro,
+  #main_cadastro #paracadastro:target~.content #cadastro,
   #paralogin:target~.content #login {
     z-index: 2;
     -webkit-animation-name: fadeInLeft;
@@ -518,7 +519,7 @@ max-width: 100%;
     animation-delay: .1s;
   }
 
-   #registro:target~.content #login,
+  #main_cadastro #registro:target~.content #login,
   #paralogin:target~.content #cadastro {
     -webkit-animation-name: fadeOutLeft;
     animation-name: fadeOutLeft;
@@ -580,7 +581,7 @@ max-width: 100%;
   } */
 
 
-  .input {
+  #main_cadastro .input {
     display: flex;
     width: 500px;
     margin: 10px;
@@ -589,49 +590,49 @@ max-width: 100%;
 
   }
 
-   .contato {
+  #main_cadastro  .contato {
     display: flex;
   }
 
-  .imagem img {
+  #main_cadastro .imagem img {
     width: 40px;
     height: 40px;
   }
 
-   .alinhamento {
+  #main_cadastro .alinhamento {
     display: flex;
     justify-content: center;
     width: 100%;
     align-items: center;
   }
-   .input-nome{
+  #main_cadastro  .input-nome{
     width: 90%;
     max-width: 650px;
     border-radius: 20px;
 
   }
-   .input-email{
+  #main_cadastro .input-email{
     width: 90%;
     max-width: 650px;
   }
-  .input-senha{
+  #main_cadastro .input-senha{
     width: 90%;
     max-width: 650px;
   }
 
-  .input-conf-senha{
+  #main_cadastro .input-conf-senha{
     width: 90%;
     max-width: 650px;
   }
-  .input-user{
+  #main_cadastro .input-user{
     width: 90%;
     max-width: 650px;
   }
-   .input-foto{
+  #main_cadastro .input-foto{
     width: 90%;
     max-width: 650px;
   }
-   .input-submit{
+  #main_cadastro .input-submit{
     width: 90%;
     max-width: 150px;
     height: 50px;
@@ -640,7 +641,7 @@ max-width: 100%;
 
   }
 
-   .form-label{
+  #main_cadastro .form-label{
     width: 56px;
     height: 46px;
     background-color: transparent;
@@ -648,7 +649,7 @@ max-width: 100%;
     /*header new*/
 
 /* Cabeçalho */
-  header {
+#main_cadastro header {
   background-color: var(--preto);
   height: 70px;
   padding: 25px;
@@ -657,41 +658,41 @@ max-width: 100%;
   justify-content: center;
 }
 
-.posicionamento {
+#main_cadastro .posicionamento {
   width: 1400px;
   margin: 0 auto;
 }
 
-.posicionamento_header {
+#main_cadastro .posicionamento_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.posicionamento_header img {
+#main_cadastro.posicionamento_header img {
   width: 45px;
 }
 
-.posicionamento_header>span {
+#main_cadastro.posicionamento_header>span {
   padding-left: 10px;
 }
 
-.logo>img{
+#main_cadastro.logo>img{
   color: var(--amarelo);
 }
 
-.logo {
+#main_cadastro .logo {
   display: flex;
   align-items: center;
   color: var(--amarelo);
   width: 20px;
   height: 27px;
 }
-.logo>span{
+#main_cadastro .logo>span{
   color: var(--amarelo);
 }
 
-header nav {
+#main_cadastro header nav {
    background-color: brown; 
   display: flex;
   justify-content: space-between;
@@ -699,7 +700,7 @@ header nav {
   width: 450px;
 }
 
-header a {
+#main_cadastro header a {
   color: var(--amarelo);
   text-transform: uppercase;
   text-decoration: none;
@@ -708,7 +709,7 @@ header a {
 } 
 
 
- form{
+#main_cadastro form{
   display: flex;
     justify-content: center;
     align-items: center;

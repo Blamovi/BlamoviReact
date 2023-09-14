@@ -1,6 +1,11 @@
-#main_perfilusuario main{
-    margin-left: 60px;
+
+
+#main_perfilusuario {
+    width: 70%;
+    margin-left: 90px;
 }
+
+
 
 
 
@@ -289,6 +294,7 @@
     font-size: 13px;
     background-color: var(--branco);
     text-align: left;
+    
 }
 
 #main_perfilusuario .textoPost{
@@ -608,7 +614,7 @@
 #main_perfilusuario ul {
     display: flex;
     justify-content: space-evenly;
-    
+    color: var(--preto);
     font-family: var(--font1);
 
     position:relative;
@@ -632,10 +638,7 @@
     margin-top: 20px;
 }
 
-#main_perfilusuario footer>div>span,p {
-    margin-top: 10px;
-    
-}
+
 
 #main_perfilusuario footer>div>img {
     width: 20px;

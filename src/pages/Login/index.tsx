@@ -17,7 +17,7 @@ function Login() {
     return(
         <>
 
-<main   className="banner" id="ajustes_login" >
+<main   className="banner" id="ajustes3" >
         
         <div >
          {/* <img className="cineminha" src={imgbanner}  />  */}
