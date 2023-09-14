@@ -84,26 +84,26 @@ function Home() {
             ]
         },
 
-        {
-            id: 4,
-            titulo: "Gladiador",
-            img: "src/assets/img/filmes-f/gladiador.jpg",
-            imgStream: imgStreamNetflix,
-            nota: 9.4,
+        // {
+        //     id: 4,
+        //     titulo: "Gladiador",
+        //     img: "src/assets/img/filmes-f/gladiador.jpg",
+        //     imgStream: imgStreamNetflix,
+        //     nota: 9.4,
 
-            comentarios: [
-                {
-                    conteudo: "Not as good as infinity war but a great movie",
-                    usuario: "ACollegeStudent"
-                }, {
-                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
-                    usuario: "davyjones-636363"
-                }, {
-                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
-                    usuario: "ahmetkozan"
-                }
-            ]
-        }
+        //     comentarios: [
+        //         {
+        //             conteudo: "Not as good as infinity war but a great movie",
+        //             usuario: "ACollegeStudent"
+        //         }, {
+        //             conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+        //             usuario: "davyjones-636363"
+        //         }, {
+        //             conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+        //             usuario: "ahmetkozan"
+        //         }
+        //     ]
+        // }
     ]
 
     const listarFilmesClassicos: any[] = [
