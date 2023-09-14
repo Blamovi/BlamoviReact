@@ -7,30 +7,12 @@ import imgLike from "../../assets/images/like.svg"
 import imgComentar from "../../assets/images/comentar.svg"
 import imgRecomendar from "../../assets/images/recomendar.svg"
 import imgBuzz from "../../assets/images/buzzlightyear.svg"
+import Comentario from "../Comentario"
 
 
 function Post(props: any) {
 
-    // const postFeed: any[] = [
-    //     {
-    //         id: 1,
-    //         userNome: "Antônio Madrigal",
-    //         foto: { imgMadrigalPerfil },
-    //         data: "4m atrás",
-    //         assistiu: "Assistiu - Toy Story 2",
-    //         conteudoPost: "Acabei de assistir Toy Stroy 2 ! ! ! Que filme maravilhoso, para mim fica em primeiro lugar nos filmes Pixar. Assisti pelo YouTube.",
-    //         imgPost: { imgToyStoryPost },
-    //         comentarios: [
-    //             {
-    //                 id: 2,
-    //                 nome: "Buzz Lightyear",
-    //                 foto: { imgBuzz },
-    //                 data: "2m atrás",
-    //                 comentario: "Que bom que gostou!"
-    //             }
-    //         ]
-    //     }
-    // ]
+
 
     return (
         <>
@@ -57,7 +39,7 @@ function Post(props: any) {
                         </div>
                         <div className="nameAndHour">
                             {/* <strong>{props.username}</strong> */}
-                            <strong>Antônio Madrigal</strong>
+                            <strong>{props.nome}</strong>
                             <p>4m atrás</p>
                             <p className="colorir_texto_filmes">Assistiu - Toy Story 2</p>
                         </div>
@@ -82,18 +64,18 @@ function Post(props: any) {
                         </button>
                     </div>
                     <ul>
-                        <li className="comentarios">
-                            <div className="infoUserComments">
-                                <div className="imgUserComments">
-                                    <img src={imgBuzz} alt="" />
-                                </div>
-                                <div className="nameAndHour">
-                                    <strong>Buzz Lightyear</strong>
-                                    <p>2m atrás</p>
-                                </div>
-                            </div>
-                            <p className="textoComments">Que bom que gostou!</p>
-                        </li>
+                        {
+                            props.comentarios.map((cadaComentario: any) => {
+                                return<li className="comentarios">
+                                    <Comentario
+                                        img = {cadaComentario.img}
+                                        nome = {cadaComentario.nome}
+                                        data = {cadaComentario.data}
+                                        comentario = {cadaComentario.comentario}
+                                    />
+                                </li>
+                            })
+                        }
                     </ul>
                 </li>
             </ul>

@@ -11,13 +11,14 @@
 ul {
     color: var(--amarelo);
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     text-align: center;
     font-family: var(--font1);
 
     position: relative;
     top: 0;
     transition: all .1s ease-in-out;
+    list-style: none;
 }
 
 ul>a {

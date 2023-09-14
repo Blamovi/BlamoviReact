@@ -21,6 +21,29 @@ import imgProvaFogo from "../../assets/a-prova-de-fogo-1.jpg"
 import imgFeedInfinito from "../../assets/feedinfinito.svg"
 
 function Feed() {
+
+
+     const postFeed: any[] = [
+        {
+            id: 1,
+            userNome: "Antônio Madrigal",
+            foto: { imgMadrigalPerfil },
+            data: "4m atrás",
+            assistiu: "Assistiu - Toy Story 2",
+            conteudoPost: "Acabei de assistir Toy Stroy 2 ! ! ! Que filme maravilhoso, para mim fica em primeiro lugar nos filmes Pixar. Assisti pelo YouTube.",
+            imgPost: { imgToyStoryPost },
+            comentarios: [
+                {
+                    id: 2,
+                    nome: "Buzz Lightyear",
+                    foto: { imgBuzz },
+                    data: "2m atrás",
+                    comentario: "Que bom que gostou!"
+                }
+            ]
+        }
+    ]
+    
     return (
         <>
             <>
