@@ -62,6 +62,7 @@ span {
     justify-content: space-around;
     align-items: center;
     margin: auto;
+     /* overflow-x: auto;  fazer as imagens rolarem para lateral */
 }
 
 .fav-card{
@@ -75,6 +76,7 @@ span {
 }
 
 .fav-card>img {
+    width: 300px;
     object-fit: cover;
     border-radius: 10px;
     max-width: 90%;;
@@ -214,9 +216,9 @@ button[type="submit"]:hover {
         height: 773px;
     }
     
-    .responsivo{
+    /* .responsivo{
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 895px) {
