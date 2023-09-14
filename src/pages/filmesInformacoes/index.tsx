@@ -202,14 +202,7 @@ function FilmesInformacoes() {
                                 </div>
                             </div>
                         </div>
-                        <div className="mais">
-                            <img
-                                className="btmais"
-                                src={imgPlus}
-                                alt=""
-                            />
-                        </div>
-                    </div>
+                   </div>
                     <hr />
                     <div className="informacoes_direita">
                         <div className="elem_1">
