@@ -21,11 +21,12 @@ import imgProvaFogo from "../../assets/a-prova-de-fogo-1.jpg"
 import imgFeedInfinito from "../../assets/feedinfinito.svg"
 
 import Post from "../../components/post"
+import Comentario from "../../components/Comentario"
 
 function Feed() {
 
 
-     const postFeed: any[] = [
+    const postFeed: any[] = [
         {
             id: 1,
             userNome: "Antônio Madrigal",
@@ -43,17 +44,17 @@ function Feed() {
                     comentario: "Que bom que gostou!"
                 }
             ]
-        },{
+        }, {
             id: 2,
             userNome: "Roz",
-            foto: {imgRoz},
+            foto: { imgRoz },
             data: "Ontem",
             assistiu: "Assistiu - À Prova de Fogo",
             conteudoPost: "Muita gente criticando, mas não vê o contexto todo da história, ela foi maltrata por ele por 7 anos aguentando calada, até que ela começou a se posicionar e não servir de empregada, pois até mulher ele procurava na internet, deixando ela de lado. A parte que ela ficou com ele somente pq ele ajudou a mãe dela com a quantidade de $, é somente um ponto do filme que poderia ser colocado outra história parecida, ele poderia ter pedido doação, vendido carro etc… O fato q ela não ficou com quem tinha mais  condições financeiras, pq ele não tinha, ele apenas tinha um trocado que ajuntou para o barco dele, era as economias, mas quem era mais  rico era o médico. Então não falem q foi por dinheiro, pq ela poderia nem ter voltado com ele, mesmo depois dele comprar a cadeira e a cama p mãe dela. Achei excelente o filme, só quem passa por isso sabe, as mulheres principalmente! Esse filme muito abençoado.",
-            imgPost: {imgProvaFogo}
+            imgPost: { imgProvaFogo }
         }
     ]
-    
+
     return (
         <>
             <>
@@ -88,22 +89,21 @@ function Feed() {
                         </form>
                     </div>
                     <ul className="posts">
-                    {
-                        postFeed.map((post: any) => {
-                            return <div key={post.id}>
-                                <Post
-                                    userNome={post.nome}
-                                    foto={post.foto}
-                                    data={post.data}
-                                    assistiu={post.assistiu}
-                                    conteudoPost={post.conteudoPost}
-                                    img={post.img}
-                                />
-                            </div>
-                        })
+                        {
+                            postFeed.map((post: any) => {
+                                return <div key={post.id}>
+                                    <Post
+                                        userNome={post.nome}
+                                        foto={post.foto}
+                                        data={post.data}
+                                        assistiu={post.assistiu}
+                                        conteudoPost={post.conteudoPost}
+                                        img={post.img}
+                                    />
+                                </div>
+                            })
 
-                    }
-                        <img className="balanoalvo" src={imgToyStoryPost} alt="" />
+                        }
                         <div className="actionBtnPost">
                             <button type="button" className="filesPost">
                                 <img src={imgLike} alt="Curtir" />
@@ -119,17 +119,21 @@ function Feed() {
                             </button>
                         </div>
                         <li className="comentarios">
-                            <div className="infoUserComments">
-                                <div className="imgUserComments">
-                                    <img src={imgBuzz} alt="" />
+                        {
+                            postFeed.map((post: any) => {
+                                return <div key={post.id}>
+                                    <Post
+
+                                        nome={post.nome}
+                                        foto={post.foto}
+                                        data={post.data}
+                                        comentario={post.comentario}
+                                    />
                                 </div>
-                                <div className="nameAndHour">
-                                    <strong>Buzz Lightyear</strong>
-                                    <p>2m atrás</p>
-                                </div>
-                            </div>
+                            })
+
+                        }
                         </li>
-                        <p className="textoComments">Que bom que gostou!</p>
                         <div className="actionBtnComments">
                             <button type="button" className="filesPostComment">
                                 <img src={imgLike} alt="Curtir" />
@@ -144,20 +148,20 @@ function Feed() {
                     </ul>
                     <ul className="posts">
                         {
-                        postFeed.map((post: any) => {
-                            return <div key={post.id}>
-                                <Post
-                                    userNome={post.nome}
-                                    foto={post.foto}
-                                    data={post.data}
-                                    assistiu={post.assistiu}
-                                    conteudoPost={post.conteudoPost}
-                                    img={post.img}
-                                />
-                            </div>
-                        })
+                            postFeed.map((post: any) => {
+                                return <div key={post.id}>
+                                    <Post
+                                        userNome={post.nome}
+                                        foto={post.foto}
+                                        data={post.data}
+                                        assistiu={post.assistiu}
+                                        conteudoPost={post.conteudoPost}
+                                        img={post.img}
+                                    />
+                                </div>
+                            })
 
-                    }
+                        }
                         <div className="actionBtnPost">
                             <button type="button" className="filesPost">
                                 <img src={imgLike} alt="Curtir" />
