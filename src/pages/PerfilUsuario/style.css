@@ -1,13 +1,49 @@
+/* /// ajustes  */
+#main_perfilusuario * {
+    background-color: var(--branco);
+   
+}
+
+#main_perfilusuario .comentarios{
+    background-color: var(--branco);
+}
+#main_perfilusuario li .comentarios{
+    background-color: var(--branco);
+    
+}
+
+#main_perfilusuario .lista_comentarios{
+    background-color: var(--branco);
+}
+
+#main_perfilusuario .posts{
+    background-color: var(--branco);
+    border: none;
+}
+
+@media screen and (max-width: 10000px) {
+
+
+    #main_perfilusuario #footer {
+      display: none;
+    
+    }
+  
+    /* .poster:hover {
+        box-shadow: 0px 0px 10px 5px hsl(356, 92%, 48%);
+        border: 5px solid hsl(321, 66%, 35%);
+    } */
+  
+  
+  }
+
+/* //ajustes */
 
 
 #main_perfilusuario {
-    width: 70%;
+    width: 65%;
     margin-left: 90px;
 }
-
-
-
-
 
 
 #main_perfilusuario .menu_barras{
@@ -250,7 +286,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    gap: 50px;
+    
 }
 
 #main_perfilusuario .actionBtnPost{
@@ -302,6 +339,8 @@
     font-size: 13px;
     background-color: var(--branco);
     text-align: left;
+    padding: 10px;
+   
 }
 
 #main_perfilusuario .textoPost{
@@ -316,10 +355,11 @@
     font-family: var(--font1);
     color: black;
     background-color: var(--branco);
+    text-align: -webkit-left;
 }
 
 #main_perfilusuario .balanoalvo{
-    margin-bottom: 15px;
+ 
     width: 100%;
     background-color: var(--branco);
 }
@@ -531,8 +571,9 @@
 }
 
 #main_perfilusuario .nameAndHour{
- line-height: 12px;
+ line-height: 23px;
  background-color: var(--branco);
+ text-align: -webkit-left;
 }
 
 #main_perfilusuario .actionBtnPost{
@@ -674,8 +715,15 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    background-color: var(--preto);
    /*avaliar*/
 }
+#main_perfilusuario .carregamento img{
+  
+    background-color: var(--preto);
+   /*avaliar*/
+}
+
 
 
 

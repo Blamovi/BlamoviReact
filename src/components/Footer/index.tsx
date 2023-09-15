@@ -1,12 +1,13 @@
 import "./style.css"
 
-import imgCinemaFooter from "../../assets/cinema_foto_pexels 1 (1).png"
-import imgLogoBranco from "../../assets/logo-branco.svg"
+import imgLogoBranco  from "../../assets/images/logo-branco.svg";
+import imgCinemaFooter  from "../../assets/images/cinema_foto_pexels 1 (1).png";
+
 
 function Footer() {
     return (
         <>
-             {/* <footer id="footer">
+              <footer id="footer">
                 <img
                     className="img-footer"
                     src={imgCinemaFooter}
@@ -27,7 +28,7 @@ function Footer() {
                         <p>© 2023 by blamovi.com, Inc.</p>
                     </div>
                 </div>
-            </footer>  */}
+            </footer>  
 
         </>
     )

@@ -143,24 +143,7 @@ function Cadastro() {
   </div>
 </main>
 
-<footer className="ajustesrodape" >
 
-    <div>
-      
-      <ul>
-        <li><a href="#" title="Home">Favoritos</a></li>
-        <li><a href="#" title="login">Home</a></li>
-        <li><a href="#" title="pesquisar">Pesquisar</a></li>
-        <li><a href="#" title="login">Login</a></li>
-        <li><a href="#" title="noticias">Noticias</a></li>
-        <li><a href="#" title="informações">Informações</a></li>
-        <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
-
-      </ul>
-
-    </div>
-
-  </footer>
 
         </>
     )

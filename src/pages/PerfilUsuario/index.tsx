@@ -1,5 +1,7 @@
 import "./style.css";
 
+
+
 //imagens
 import imgHome from "../../assets/images/Home.svg";
 import imgHeart from "../../assets/images/Heart.svg";
@@ -23,6 +25,8 @@ import imgcomentar from "../../assets/images/comentar.svg";
 import imgrecomendar from "../../assets/images/recomendar.svg";
 import imgvampires from "../../assets/images/vampires.svg";
 import imgcarregandofeed from "../../assets/images/carregandofeed.svg";
+
+
 
 //rotas
 import { Link } from "react-router-dom";
@@ -81,7 +85,7 @@ function PerfilUsuario() {
           </div>
         </div>
         {/*Formulário de envio*/}
-        <div className="newPost">
+        {/* <div className="newPost">
           <div className="infoUser">
             <img src={imgmufasaperfil} alt="" />
           </div>
@@ -108,7 +112,7 @@ function PerfilUsuario() {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
         {/*corpo da feed*/}
         <ul className="posts">
           <li className="post">
@@ -130,15 +134,14 @@ function PerfilUsuario() {
               Foo Fighters já tenha feito), Terror no Estúdio 666 é uma boa pedida.{" "}
             </p>
             <img className="balanoalvo" src={imgff666} alt="" />
-            <ul className="lista_comentarios">
+            {/* <ul className="lista_comentarios">
               <li className="comentario">
                 <div>
-                  <img className="foto_user" src="" alt="" />
                   <span className="nome_user"></span>
                 </div>
                 <p className="texto_coment"></p>
               </li>
-            </ul>
+            </ul> */}
           </li>
 
           {/* </ul> */}
@@ -174,6 +177,8 @@ function PerfilUsuario() {
         <div className="carregamento">
           <img src={imgcarregandofeed} alt="carregamento" />
         </div>
+
+        
       </main ></>
 
 

@@ -1,5 +1,6 @@
 import "./style.css"
 
+
 import imgIconUser33 from "../../assets/images/IconUser33.png"
 import imgGroupMessage from "../../assets/images/Group Message.png"
 import imgLock from "../../assets/images/Lock.png"
@@ -104,11 +105,11 @@ function Login() {
   </div>
 </main>
 
-<footer className="ajustesrodape" >
+{/* <footer className="ajustesrodape" >
 
-    <div>
+    <div className="rodapejf1" >
       
-      <ul>
+      <ul className="rodapejf">
         <li><a href="#" title="Home">Favoritos</a></li>
         <li><a href="#" title="login">Home</a></li>
         <li><a href="#" title="pesquisar">Pesquisar</a></li>
@@ -121,7 +122,7 @@ function Login() {
 
     </div>
 
-  </footer>
+  </footer> */}
         
         </>
     )

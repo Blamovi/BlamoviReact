@@ -1,6 +1,8 @@
 import "./style.css"
 
-import imgLogoBranco from "../../assets/logo-branco.svg"
+
+import imgLogoBranco  from "../../assets/images/logo-branco.svg";
+
 
 function Header() {
     return (
