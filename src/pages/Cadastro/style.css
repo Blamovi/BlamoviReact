@@ -2,6 +2,27 @@
 
 /* ajustes Amanda */
 
+
+@media screen and (max-width: 800px) {
+
+
+  #main_cadastro .container {
+   
+  }
+
+
+}
+
+/* @media screen and (max-width: 814px) {
+
+
+  #main_cadastro .container {
+    margin-left: -86px;
+  }
+
+
+} */
+
 #main_cadastro .ajustes{
   background-color: transparent;
 }
@@ -55,11 +76,11 @@ max-width: 100%;
   background:
   linear-gradient(180deg, #000 0%, #00000080 50%, #000 100%),
   url("../../assets/images/cineminha.png");
-  max-width: 100%;
+  /* max-width: 100%;
   padding: 100px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 } 
 
 #main_cadastro .cineminha{
@@ -83,6 +104,9 @@ max-width: 100%;
 
 
 }
+
+
+
 
 /* ajustes Amanda*/
 

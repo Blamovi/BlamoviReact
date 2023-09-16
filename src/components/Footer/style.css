@@ -1,4 +1,5 @@
-/* footer */
+/* #footer */
+
 
 #footer .img-footer {
     margin-top: 0;
@@ -8,7 +9,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
 }
 
-#footer ul {
+#footer  ul {
     color: var(--amarelo);
     display: flex;
     justify-content: space-evenly;
@@ -18,6 +19,7 @@
     position: relative;
     top: 0;
     transition: all .1s ease-in-out;
+    
 }
 
 #footer ul>a {
@@ -29,7 +31,7 @@
     color: var(--vermelho);
 }
 
-#footer footer>div {
+#footer  footer>div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -38,13 +40,13 @@
 }
 
 #footer footer>div>span,
- footer p {
+footer p {
     margin-top: 10px;
     color: var(--amarelo);
     text-align: center;
 }
 
-#footer footer>div>img {
+#footer  footer>div>img {
     width: 20px;
     height: 27px;
 }
@@ -52,3 +54,4 @@
 #footer footer>div>span {
     color: var(--amarelo);
 }
+

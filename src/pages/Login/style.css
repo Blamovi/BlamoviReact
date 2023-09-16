@@ -2,6 +2,9 @@
 
 /* ajustes */
 
+@media screen and (max-width: 600px) {
+
+}
 
 
 #ajustes3 .ajustes{
@@ -57,11 +60,7 @@ max-width: 100%;
   background:
     linear-gradient(180deg, #000 0%, #00000080 50%, #000 100%),
     url("../../assets/images/cineminha.png");
-    max-width: 100%;
-    padding: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+   
   
 } 
 
