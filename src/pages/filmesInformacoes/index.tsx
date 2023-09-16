@@ -16,7 +16,6 @@ import imgMichael from "../../assets/Images/image 125.svg";
 import imgHeath from "../../assets/Images/image 123.svg";
 import imgMorgan from "../../assets/Images/image 128.svg";
 import imgCillian from "../../assets/Images/image 132.svg";
-import imgPlus from "../../assets/Images/Plus.svg";
 import imgLampada from "../../assets/Images/Light On.svg";
 import imgAvengers from "../../assets/Images/image 111.svg";
 import imgJoker from "../../assets/Images/image 110.svg";
@@ -37,7 +36,7 @@ function FilmesInformacoes() {
             <main>
                 <section className="Filmes">
                     <div className="banner_1">
-                        <p className="superbanner">BLAMOVI: RECOMENDA</p>
+                        <p className="superbanner">BLÁMOVI: RECOMENDA</p>
                         <img
                             className="img_rec"
                             src={imgSimboloBatman}
@@ -49,6 +48,11 @@ function FilmesInformacoes() {
                         <h3>Categoria: Ação . Aventura . Policial</h3>
                         <p className="paragrafo_inicial">Ano: 2008 - Duração: 2 h 32 min</p>
                         <div className="botoes2">
+                        <img
+                                className="comentario"
+                                src={imgBaloesComentarios}
+                                alt=""
+                            />
                             <img
                                 className="coração"
                                 src={imgCoracao}
@@ -328,6 +332,11 @@ function FilmesInformacoes() {
                                 src={imgDeslike}
                                 alt=""
                             />
+                            <img
+                                className="comentario"
+                                src={imgBaloesComentarios}
+                                alt=""
+                            />
                         </div>
                     </div>
                     <div className="Comentarios_todos">
@@ -352,6 +361,11 @@ function FilmesInformacoes() {
                             <img
                                 className="like"
                                 src={imgDeslike}
+                                alt=""
+                            />
+                            <img
+                                className="comentario"
+                                src={imgBaloesComentarios}
                                 alt=""
                             />
                         </div>
