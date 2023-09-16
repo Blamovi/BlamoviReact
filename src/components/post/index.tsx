@@ -8,31 +8,46 @@ import imgComentar from "../../assets/images/comentar.svg"
 import imgRecomendar from "../../assets/images/recomendar.svg"
 import imgBuzz from "../../assets/images/buzzlightyear.svg"
 import Comentario from "../Comentario"
+import { useEffect } from "react"
 
 
 function Post(props: any) {
 
-
+    function verificaTamanhoLista() {
+        if (props.comentarios.length > 0) {
+            props.comentarios.map((cadaComentario: any) => {
+                return <li key={cadaComentario.id} className="comentarios">
+                    <Comentario
+                        img={cadaComentario.foto}
+                        nome={cadaComentario.nome}
+                        data={cadaComentario.data}
+                        comentario={cadaComentario.comentario}
+                    />
+                </li>
+            })
+        }
+        return'';
+    }
 
     return (
         <>
             <ul id="posts">
                 <li className="post">
-                    {
-                        props.postFeed.map((post: any) => {
-                            return <div key={post.id}>
-                                <Post
-                                    userNome={post.nome}
-                                    foto={post.foto}
-                                    data={post.data}
-                                    assistiu={post.assistiu}
-                                    conteudoPost={post.conteudoPost}
-                                    img={post.img}
-                                />
+                    <div className="post">
+                        <div className="infoUserPost">
+                            <div className="imgUserPost">
+                                <img src={props.foto} alt="" />
                             </div>
-                        })
+                            <div className="nameAndHour">
+                                <strong>{props.nome}</strong>
+                                <p>{props.data}</p>
+                                <p className="colorir_texto_filmes">Assistiu - {props.filme}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="textoPost">{props.conteudoPost}</p>
 
-                    }
+                    <img className="balanoalvo" src={props.img} alt="" />
                     <div className="actionBtnPost">
                         <button type="button" className="filesPost">
                             <img src={imgLike} alt="Curtir" />
@@ -49,16 +64,7 @@ function Post(props: any) {
                     </div>
                     <ul>
                         {
-                            props.comentarios.map((cadaComentario: any) => {
-                                return <li className="comentarios">
-                                    <Comentario
-                                        img={cadaComentario.img}
-                                        nome={cadaComentario.nome}
-                                        data={cadaComentario.data}
-                                        comentario={cadaComentario.comentario}
-                                    />
-                                </li>
-                            })
+                            verificaTamanhoLista()
                         }
                     </ul>
                 </li>
