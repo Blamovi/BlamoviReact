@@ -1,7 +1,9 @@
 import "./style.css"
 
-import imgHome from "../../assets/Home.svg"
+//Hook
+import { useState } from "react";
 
+import imgHome from "../../assets/Home.svg"
 import imgIconUser33 from "../../assets/images/IconUser33.png"
 import imgGroupMessage from "../../assets/images/Group Message.png"
 import imgLock from "../../assets/images/Lock.png"
@@ -14,7 +16,60 @@ import imgbanner from "../../assets/images/cineminha.png"
 
 
 
+
+
 function Cadastro() {
+
+    //state techs com as tecnologias definidas
+const [techs, setTechs] = useState<string[]>(
+  [
+      "HTML",
+      "CSS",
+      "JAVASCRIPT"
+  ]
+);
+
+const [select, setSelect] = useState<string>(""); // state que contém a opção de skill selecionada pelo usuário
+
+    const [nome, setNome] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [senha, setSenha] = useState<string>("");
+    const [foto, setFoto] = useState<any>(); //valor inicial undefined
+
+/// function
+
+
+function cadastrarUsuario(event: any) {
+  event.preventDefault();
+
+  //só utiliza formData quando tiver arquivos 
+  const formData = new FormData();
+
+
+  //A chave da função do append() precisa ser o mesmo nome do atributo que api retorna
+  formData.append("nome", nome);
+  formData.append("email", email);
+  formData.append("password", senha);
+  formData.append("user_img", foto);
+
+  // api.post("users", formData)
+  //     .then((response: any) => {
+  //         console.log(response);
+  //         alert("Usuário cadastrado com sucesso!😊🤗");
+  //     })
+  //     .catch((error: any) => {
+  //         console.log(error);
+  //         alert("Falha ao cadastrar um novo usuário");
+  //     })
+
+
+}
+
+///function
+
+
+
+
     return(
         <>
         <main   className="banner" id="main_cadastro" >

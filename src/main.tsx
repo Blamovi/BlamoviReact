@@ -3,7 +3,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+
 
 //components
 import Header from './components/Header'
@@ -14,13 +14,35 @@ import Calendario from './pages/Calendario'
 import Cadastro from './pages/Cadastro'
 import Login from './pages/Login'
 
+
+import './index.css'
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import secureLocalStorage from 'react-secure-storage'
+
+
+
+function logado() {
+  if (secureLocalStorage.getItem("user")) {
+    const objetoUsuario: any = secureLocalStorage.getItem("user");
+
+    const nome: string = objetoUsuario.user.nome.trim().split(" ")[0];
+
+    return { logado: true, nomeUsuario: nome }
+  }
+  else {
+    return { logado: false, nomeUsuario: null }
+  }
+}
+
+
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
+      <Header usuario={logado()} />
       <Routes>
         {/* <Route path='NomeDaRota' element={<NomeDoComponente/>}/> */}
        <Route path='/perfil' element={<PerfilUsuario/>}/> */
