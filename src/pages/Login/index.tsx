@@ -1,3 +1,4 @@
+//estilização
 import "./style.css"
 
 
@@ -11,10 +12,53 @@ import imgtwitterBranco from "../../assets/images/twitterBranco.svg"
 import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
 import imgbanner from "../../assets/images/cineminha.png"
 
+//hooks
+import { useState, useEffect } from "react";
 
+
+//axios
+
+
+//rotas
+import { useNavigate } from "react-router-dom";
+
+//localStorage
+import secureLocalStorage from "react-secure-storage";
 
 
 function Login() {
+
+      //Variavel navigate que utiliza a função useNavigate para navegar entre os componentes
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState<string>("");
+    const [senha, setSenha] = useState<string>("");
+
+    function realizarAutenticacao(event: any) {
+        event.preventDefault();
+
+        const usuario = {
+            email: email,
+            password: senha
+        };
+
+        api.post("login", usuario)
+            .then((response: any) => {
+                console.log(response.data);
+
+                secureLocalStorage.setItem("user", response.data);
+
+                //redirecionar ao componente perfil
+                navigate("/PerfilUsuario/" + response.data.user.id);
+                //recarrega a tela
+                navigate(0);
+
+            })
+            .catch((error: any) => {
+                alert("Erro ao tentar se logar! :(");
+            })
+
+}
     return(
         <>
 
@@ -50,10 +94,15 @@ function Login() {
             <div className="input-email">
               <label htmlFor="email_cad">Seu e-mail</label>
               <input
+                // id="email_cad"
+                // name="email_cad"
+                // required={true}
+                // type="email"
+                type="email_cad"
                 id="email_cad"
-                name="email_cad"
+                // placeholder="Digite aqui seu e-mail:"
                 required={true}
-                type="email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -62,16 +111,21 @@ function Login() {
             <div className="input-senha">
               <label htmlFor="senha_cad">Sua senha</label>
               <input
+                // id="senha_cad"
+                // name="senha_cad"
+                // required={true}
+                // type="password"
                 id="senha_cad"
                 name="senha_cad"
+                // placeholder="Digite aqui sua senha:"
                 required={true}
-                type="password"
+                onChange={(e) => setSenha(e.target.value)}
               />
             </div>
           </div>
           <div className="input">
         
-
+  
           </div>
           <div className="input-submit">
               <input type="submit" value="Logar" />
