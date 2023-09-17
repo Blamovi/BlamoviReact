@@ -7,9 +7,19 @@ import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
 import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
 import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import Card from "../../components/Card";
 
 function Favoritos() {
+
+    const data = [
+        { id: '1', image: '../src/assets/img/banner/Frame 73.svg' },
+        // {id: '', image:'../src/assets/img/banner/Frame 75.svg'},
+        { id: '2', image: '../src/assets/img/banner/Frame 65.svg' },
+        { id: '3', image: '../src/assets/img/banner/Frame 64.svg' },
+    ]
+
     const listaFilmes: any[] = [
         {
             id: 1,
@@ -153,7 +163,7 @@ function Favoritos() {
                 }
             ]
         },
-        
+
         {
             id: 4,
             titulo: "Mandalorian",
@@ -177,48 +187,34 @@ function Favoritos() {
 
     return (
         <main id="main_favoritos">
-            {/* <section className="fav_banner">
-                <div className="fav_banner_img">
-                    <img src="" alt="" />
-                </div>
-                <div className="fav_banner_texto">
-                    <p>Não sabe o que Assistir?</p>
-                    <img src="../img/banner/logo.svg" alt="" />
-                    <p>
-                        A <span>Blámovi</span> te recomenda!
-                    </p>
-                </div>
-            </section> */}
+
+            <Swiper
+                // modules={[EffectCards]}
+                // effect="cards"
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                navigation
+            >
+                {data.map((item) => (
+                    <SwiperSlide key={item.id}>
+                        <img
+                            src={item.image}
+                            alt="Silder"
+                            className="slider-item"
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+
             <section className="fav-filmes-favoritos">
                 <h2>⭐ Filmes Favoritos</h2>
-                    <div  className="fav-card">
-                        <img src={imgSetaEsquerda} alt=""
-                        />
-                        {
-                            listaFilmes.map((card: any) => {
-                                return<div key={card.id
-                                }>
-                                 <Card
-                                    img={card.img}
-                                    titulo={card.titulo}
-                                    foto={card.img}
-                                    imgStream={card.imgStream}
-                                    nota={card.nota}
-                                    comentarios={card.comentarios}
-                                /></div>
-                            })
-                        }
-                        <img src={imgSetaDireita} alt="" />
-                    </div>
-            </section>
-            <section className="fav-series-favoritos">
-            <h2>⭐ Melhores series</h2>
-                    <div className="fav-card-linha">
-                        <img src={imgSetaEsquerda} alt="" />
-                        {
-                            listarSeries.map((card: any) => {
-                                return<div key={card.id
-                                }>
+                <div className="fav-card">
+                    <img src={imgSetaEsquerda} alt=""
+                    />
+                    {
+                        listaFilmes.map((card: any) => {
+                            return <div key={card.id
+                            }>
                                 <Card
                                     img={card.img}
                                     titulo={card.titulo}
@@ -227,10 +223,31 @@ function Favoritos() {
                                     nota={card.nota}
                                     comentarios={card.comentarios}
                                 /></div>
-                            })
-                        }
-                        <img src={imgSetaDireita} alt="" />
-                    </div>
+                        })
+                    }
+                    <img src={imgSetaDireita} alt="" />
+                </div>
+            </section>
+            <section className="fav-series-favoritos">
+                <h2>⭐ Melhores series</h2>
+                <div className="fav-card-linha">
+                    <img src={imgSetaEsquerda} alt="" />
+                    {
+                        listarSeries.map((card: any) => {
+                            return <div key={card.id
+                            }>
+                                <Card
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    imgStream={card.imgStream}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}
+                                /></div>
+                        })
+                    }
+                    <img src={imgSetaDireita} alt="" />
+                </div>
             </section>
         </main>
 

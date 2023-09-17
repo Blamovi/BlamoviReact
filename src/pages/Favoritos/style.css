@@ -1,27 +1,10 @@
 
 /* banner favoritos */
 
-.fav_banner{
-    display: flex;
+.slider-item{
     width: 100%;
-}
-
-.fav_banner_img {
-    height: 660px;
-}
-
-.fav_banner_texto p{
-    color: var(--branco);
-    font-size: 50px;
-}
-
-.fav_banner_texto span{
-    font-size: 50px;
-}
-
-.fav_banner_texto img{
-    width: 90%;
-    padding: 10%;
+    height: 600px;
+    object-fit: cover;
 }
 
 
@@ -56,21 +39,6 @@ span {
 
 
 /* seção filmes e series  */
-
-/* .fav-card-linha {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 20px;
-    position: relative;
-} */
 
 .fav-card,.fav-card-linha {
     display: flex;
