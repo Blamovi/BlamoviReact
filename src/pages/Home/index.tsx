@@ -415,7 +415,7 @@ function Home() {
     return (
         <>
             <main id="main_home">
-                <section className="banner">
+                {/* <section className="banner">
                     <div className="banner_img">
                         <img src={""} alt="" />
                     </div>
@@ -426,7 +426,7 @@ function Home() {
                             -  <span> - </span> -
                         </p>
                     </div>
-                </section>
+                </section> */}
                 <section className="destaque">
                     <div className="destaque_conteudo">
                         <img

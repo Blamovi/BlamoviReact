@@ -1,4 +1,19 @@
 /* seção filmes e series  */
+.card-linha{
+     /*display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    overflow-x: auto;  fazer as imagens rolarem para lateral */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    position: relative;
+} 
 
 .card {
     display: flex;
@@ -10,28 +25,21 @@
 }
 
 
-#teste3 {
+ #teste3 {
     position: relative;
     top: 0;
     padding: 4px;
     transition: all .1s ease-in-out;
-}
+} 
 
-#teste3:hover {
+ #teste3:hover {
     top: -4px;
-    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.267);
-}
-
-.card-linha {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-}
+    box-shadow: 0px 0px 10px 4px #fbc02c;
+} 
 
 .card>img {
-    height: 400px;
-    width: 300px;
+    /* height: 400px;*/
+    width: 300px; 
     object-fit: cover;
     border-radius: 10px;
     max-width: 90%;
