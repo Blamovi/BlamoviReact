@@ -1,5 +1,5 @@
-//estilização
-import "./style.css"
+
+// Referencia https://contactmentor.com/login-form-react-js-code/?expand_article=1
 
 
 import imgIconUser33 from "../../assets/images/IconUser33.png"
@@ -13,11 +13,10 @@ import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
 import imgbanner from "../../assets/images/cineminha.png"
 
 //hooks
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-
-//axios
-
+//estilização
+import "./style.css"
 
 //rotas
 import { useNavigate } from "react-router-dom";
@@ -26,39 +25,61 @@ import { useNavigate } from "react-router-dom";
 import secureLocalStorage from "react-secure-storage";
 
 
+
+
 function Login() {
 
       //Variavel navigate que utiliza a função useNavigate para navegar entre os componentes
-    const navigate = useNavigate();
+      const navigate = useNavigate();
 
-    const [email, setEmail] = useState<string>("");
-    const [senha, setSenha] = useState<string>("");
+    const [errorMessages, setErrorMessages] = useState({});
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    
 
-    function realizarAutenticacao(event: any) {
-        event.preventDefault();
+    const database= [
+    {
+      email: "user1",
+      password: "pass1"
+  },
+  {
+    email: "user1",
+    password: "pass1"
+  }
 
-        const usuario = {
-            email: email,
-            password: senha
-        };
+   ];
+        
+   const errors = {
+    email_cad: "invalid username",
+    senha_cad: "invalid password"
+  };
 
-        api.post("login", usuario)
-            .then((response: any) => {
-                console.log(response.data);
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
 
-                secureLocalStorage.setItem("user", response.data);
+    var { email_cad, senha_cad } = document.forms[0];
 
-                //redirecionar ao componente perfil
-                navigate("/PerfilUsuario/" + response.data.user.id);
-                //recarrega a tela
-                navigate(0);
+    const userData = database.find((user) => user.email === email_cad.value);
 
-            })
-            .catch((error: any) => {
-                alert("Erro ao tentar se logar! :(");
-            })
+    if (userData) {
+      if (userData.password !== senha_cad.value) {
+        // senha invalida
+        setErrorMessages({ name: "senha_cad", message: errors.senha_cad });
+      } else {
+        setIsSubmitted(true);
+      }
+    } else {
+      
+      setErrorMessages({ name: "email_cad", message: errors.email_cad });
+    }
+      
+};
 
-}
+// mensagem de erro
+const renderErrorMessage = (name: any) =>
+name === errorMessages.name && (
+  <div className="error">{errorMessages.message}</div>
+);
+
     return(
         <>
 
@@ -83,7 +104,7 @@ function Login() {
           <h1>Login</h1>
           <div className="input">
          
-            
+         
            
           </div>
           <div className="input">
@@ -94,15 +115,11 @@ function Login() {
             <div className="input-email">
               <label htmlFor="email_cad">Seu e-mail</label>
               <input
-                // id="email_cad"
-                // name="email_cad"
-                // required={true}
-                // type="email"
-                type="email_cad"
-                id="email_cad"
-                // placeholder="Digite aqui seu e-mail:"
-                required={true}
-                onChange={(e) => setEmail(e.target.value)}
+                 id="email_cad"     /// O que realmente é do codigo 
+                 name="email_cad"
+                 required //={true}
+                 type="text" // email
+                 {renderErrorMessage("email_cad")}
               />
             </div>
           </div>
@@ -111,15 +128,14 @@ function Login() {
             <div className="input-senha">
               <label htmlFor="senha_cad">Sua senha</label>
               <input
-                // id="senha_cad"
-                // name="senha_cad"
-                // required={true}
-                // type="password"
-                id="senha_cad"
-                name="senha_cad"
-                // placeholder="Digite aqui sua senha:"
-                required={true}
-                onChange={(e) => setSenha(e.target.value)}
+
+                 id="senha_cad"     /// O que realmente é do codigo 
+                 name="senha_cad"
+                 required //={true}
+                 type="password" // email
+                 {renderErrorMessage("senha_cad")}
+                 
+     
               />
             </div>
           </div>
@@ -135,9 +151,9 @@ function Login() {
           <div className="alinhamento">
             <p className="link">
 
-              <a href="#paralogin">
+              <link href="#paralogin">
                Cadastrar
-              </a>
+              </link>
             </p>
           </div>
         </form>
@@ -183,3 +199,8 @@ function Login() {
 }
 
 export default Login
+
+
+
+
+// validação login 

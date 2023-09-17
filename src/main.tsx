@@ -13,6 +13,8 @@ import PerfilUsuario from './pages/PerfilUsuario'
 import Calendario from './pages/Calendario'
 import Cadastro from './pages/Cadastro'
 import Login from './pages/Login'
+import RecuperacaoSenha from './pages/RecuperacaoSenha'
+import Contato from './pages/Contato'
 
 
 import './index.css'
@@ -50,6 +52,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
        <Route path='/calendario' element={<Calendario/>}/> */
        <Route path='/Cadastro' element={<Cadastro/>}/> */
        <Route path='/Login' element={<Login/>}/> */
+       <Route path='/senha' element={<RecuperacaoSenha/>}/> */
+       <Route path='/contato' element={<Contato/>}/> */
       </Routes>
       <Footer />
     </BrowserRouter>

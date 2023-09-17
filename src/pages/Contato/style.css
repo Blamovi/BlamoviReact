@@ -6,7 +6,7 @@
 @media screen and (max-width: 800px) {
 
 
-    #recuperacao_senha .container {
+    #main_contato .container {
      
     }
   
@@ -23,44 +23,44 @@
   
   } */
   
-  #recuperacao_senha .ajustes{
+  #main_contato .ajustes{
     background-color: transparent;
   }
-  #recuperacao_senha form div {
+  #main_contato form div {
     background-color: transparent;
   }
-  #recuperacao_senha form div input {
+  #main_contato form div input {
     background-color: var(--branco);
   }
   
-  #recuperacao_senha form h1 {
+  #main_contato form h1 {
     background-color: transparent;
   }
   
-  #recuperacao_senha #foto {
+  #main_contato #foto {
     background-color: transparent;
   }
-  #recuperacao_senha .alinhamento .link {
+  #main_contato .alinhamento .link {
     background-color: transparent;
   }
   
-  #recuperacao_senha  main {
+  #main_contato  main {
     max-width: 100%;
     margin: 0 auto;
   } 
-  #recuperacao_senha input {
+  #main_contato input {
     font-size: 16px;
     font-weight: 900;
   }
   
-  #recuperacao_senha .ajustesrodape{
+  #main_contato .ajustesrodape{
     width: 100%;
     
   
   }
   
   @media screen and (max-width: 877px) {
-    #recuperacao_senha .ajustesrodape {
+    #main_contato .ajustesrodape {
       width: 755px;
     }
   
@@ -72,7 +72,7 @@
    opacity: 0.2;
   } */
   
-  #recuperacao_senha .container{
+  #main_contato .container{
     background:
     linear-gradient(180deg, #000 0%, #00000080 50%, #000 100%),
     url("../../assets/images/cineminha.png");
@@ -83,12 +83,12 @@
     background-repeat: no-repeat; */
   } 
   
-  #recuperacao_senha .cineminha{
+  #main_contato .cineminha{
     width: 100%;
   }
   
   
-  #recuperacao_senha .content{
+  #main_contato .content{
     background-color: transparent;
     padding: 30px;
   }
@@ -96,7 +96,7 @@
   @media screen and (max-width: 10000px) {
   
   
-    #recuperacao_senha #footer img{
+    #main_contato #footer img{
       display: none;
     }
   
@@ -115,17 +115,17 @@
   /* //////////////////////// */
   
   
-  #recuperacao_senha .menu ul {
+  #main_contato .menu ul {
       display: flex;
       flex-wrap: wrap;
   
     }
   
-    #recuperacao_senha .menu ul li {
+    #main_contato .menu ul li {
       text-decoration: none;
     }
   
-    #recuperacao_senha .menu ul a {
+    #main_contato .menu ul a {
       color: #FBC02C;
       margin: 10px;
       text-decoration: none;
@@ -135,14 +135,14 @@
   
     }
   
-    #recuperacao_senha .menu ul a:hover {
+    #main_contato .menu ul a:hover {
       color: #e40810;
       transform: scale(1.5);
       text-shadow: 0px 5px 10px rgba(239, 180, 4, 0.6);
   
     }
   
-    #recuperacao_senha .hamburguer {
+    #main_contato .hamburguer {
       width: 50px;
       height: 50px;
   
@@ -150,7 +150,7 @@
     }
   
   
-    #recuperacao_senha .banner {
+    #main_contato .banner {
   
     
       /* width: 100%;
@@ -289,30 +289,30 @@
     } */
   
   
-    #recuperacao_senha .contato {
+    #main_contato .contato {
       display: flex;
       margin: 20px;
       justify-content: center;
       background-color: transparent;
     }
   
-    #recuperacao_senha .contato a {
+    #main_contato .contato a {
       font-family: var(--font2);
       text-decoration: none;
       color: var(--branco);
       font-size: 18px;
     }
   
-    #recuperacao_senha .imagem{
+    #main_contato .imagem{
       background-color: transparent;
     }
-    #recuperacao_senha .imagem img{
+    #main_contato .imagem img{
       background-color: transparent;
       margin: 3px;
     }
   
   
-    #recuperacao_senha footer>div {
+    #main_contato footer>div {
       width: 100%;
       background-color: var(--preto);  
   
@@ -320,7 +320,7 @@
   
   
     
-    #recuperacao_senha footer ul {
+    #main_contato footer ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -333,7 +333,7 @@
   
     }
   
-    #recuperacao_senha footer div ul li a {
+    #main_contato footer div ul li a {
       font-family: var(--font1);
       color: #fff;
       text-decoration: none;
@@ -341,7 +341,7 @@
       margin: 10px;
     }
   
-    #recuperacao_senha footer ul a:hover {
+    #main_contato footer ul a:hover {
       color: rgba(219, 119, 112, 0.533);
       transform: scale(2.1);
       text-shadow: 0px 5px 10px rgba(239, 180, 4, 0.6);
@@ -353,18 +353,18 @@
   
   
     @media screen and (max-width: 1365px) {
-        #recuperacao_senha h1 {
+        #main_contato h1 {
         display: none;
       }
   
     }
   
     @media screen and (max-width: 1000px) {
-        #recuperacao_senha .card {}
+        #main_contato .card {}
   
-        #recuperacao_senha .poster>img {}
+        #main_contato .poster>img {}
   
-        #recuperacao_senha .hamburguer {
+        #main_contato .hamburguer {
         display: none;
       }
   
@@ -377,15 +377,15 @@
     }
   
     @media screen and (max-width: 360px) {
-        #recuperacao_senha .menu ul a {
+        #main_contato .menu ul a {
         display: none;
       }
   
-      #recuperacao_senha #divbusca {
+      #main_contato #divbusca {
         display: none;
       }
   
-      #recuperacao_senha .hamburguer {
+      #main_contato .hamburguer {
         display: initial;
       }
   
@@ -395,19 +395,19 @@
     /* CSS reset */
   
   
-    #recuperacao_senha a {
+    #main_contato a {
       text-decoration: none;
      font-family: inter;
      color: #dbe5e8;
     }
   
     /* esconde as ancoras da tela */
-    #recuperacao_senha a.links {
+    #main_contato a.links {
       display: none;
     }
   
     /* content que contem os formulários */
-    #recuperacao_senha .content {
+    #main_contato .content {
       width: 750px;
       margin: 0px auto;
       /* position: relative; */
@@ -415,7 +415,7 @@
   
     /* formatando o cabeçalho dos formulários */
   
-    #recuperacao_senha h1 {
+    #main_contato h1 {
       font-size: 48px;
       /* color: #066a75; */
       color: #fff;
@@ -428,15 +428,15 @@
     }
   
   
-    #recuperacao_senha p {
+    #main_contato p {
       margin-bottom: 15px;
     }
   
-    #recuperacao_senha p:first-child {
+    #main_contato p:first-child {
       margin: 25px;
     }
   
-    #recuperacao_senha label {
+    #main_contato label {
       /* color: #405c60; */
       color: #fff;
       position: relative;
@@ -444,12 +444,12 @@
     }
   
   
-    #recuperacao_senha input {
+    #main_contato input {
       outline: none;
       background-color: transparent;
     }
   
-    #recuperacao_senha input:not([type="checkbox"]) {
+    #main_contato input:not([type="checkbox"]) {
       width: 95%;
       margin-top: 4px;
       padding: 10px;
@@ -468,12 +468,12 @@
     }
   
   
-    #recuperacao_senha input:hover {
+    #main_contato input:hover {
       background: var(--branco)
     }
   
     /*marcando os links para mudar de um formulário para outro */
-    #recuperacao_senha .link {
+    #main_contato .link {
       /* position: absolute;
       background: #e1eaeb; */
       color: #7f7c7c;
@@ -488,7 +488,7 @@
       /* justify-content: center; */
     }
   
-    #recuperacao_senha .link a {
+    #main_contato .link a {
       /* background: #f7f8f1; */
       padding: 6px 23px;
       color: #FBC02C;
@@ -503,7 +503,7 @@
       
     }
   
-    #recuperacao_senha .link a:hover {
+    #main_contato .link a:hover {
       color: #39bfd7;
       background: #f7f7f7;
       border: 1px solid #4ab3c6;
@@ -511,7 +511,7 @@
   
     /* estilos para para ambos os formulários */
   
-    #recuperacao_senha  #cadastro, #login {
+    #main_contato  #cadastro, #login {
       /* position: absolute; */
       /* width: 860px; */
       /* height: 700px; */
@@ -545,7 +545,7 @@
       background-color: transparent;
     }
   
-    #recuperacao_senha #paracadastro:target~.content #cadastro,
+    #main_contato #paracadastro:target~.content #cadastro,
     #paralogin:target~.content #login {
       z-index: 2;
       -webkit-animation-name: fadeInLeft;
@@ -555,7 +555,7 @@
       animation-delay: .1s;
     }
   
-    #recuperacao_senha #registro:target~.content #login,
+    #main_contato #registro:target~.content #login,
     #paralogin:target~.content #cadastro {
       -webkit-animation-name: fadeOutLeft;
       animation-name: fadeOutLeft;
@@ -617,7 +617,7 @@
     } */
   
   
-    #recuperacao_senha .input {
+    #main_contato .input {
       display: flex;
       width: 500px;
       margin: 10px;
@@ -626,49 +626,49 @@
   
     }
   
-    #recuperacao_senha  .contato {
+    #main_contato  .contato {
       display: flex;
     }
   
-    #recuperacao_senha .imagem img {
+    #main_contato .imagem img {
       width: 40px;
       height: 40px;
     }
   
-    #recuperacao_senha .alinhamento {
+    #main_contato .alinhamento {
       display: flex;
       justify-content: center;
       width: 100%;
       align-items: center;
     }
-    #recuperacao_senha  .input-nome{
+    #main_contato  .input-nome{
       width: 90%;
       max-width: 650px;
       border-radius: 20px;
   
     }
-    #recuperacao_senha .input-email{
+    #main_contato .input-email{
       width: 90%;
       max-width: 650px;
     }
-    #recuperacao_senha .input-senha{
+    #main_contato .input-senha{
       width: 90%;
       max-width: 650px;
     }
   
-    #recuperacao_senha .input-conf-senha{
+    #main_contato .input-conf-senha{
       width: 90%;
       max-width: 650px;
     }
-    #recuperacao_senha.input-user{
+    #main_contato .input-user{
       width: 90%;
       max-width: 650px;
     }
-    #recuperacao_senha .input-foto{
+    #main_contato .input-foto{
       width: 90%;
       max-width: 650px;
     }
-    #recuperacao_senha .input-submit{
+    #main_contato .input-submit{
       width: 90%;
       max-width: 150px;
       height: 50px;
@@ -677,7 +677,7 @@
   
     }
   
-    #recuperacao_senha .form-label{
+    #main_contato .form-label{
       width: 56px;
       height: 46px;
       background-color: transparent;
@@ -685,7 +685,7 @@
       /*header new*/
   
   /* Cabeçalho */
-  #recuperacao_senha header {
+  #main_contato header {
     background-color: var(--preto);
     height: 70px;
     padding: 25px;
@@ -694,41 +694,41 @@
     justify-content: center;
   }
   
-  #recuperacao_senha .posicionamento {
+  #main_contato .posicionamento {
     width: 1400px;
     margin: 0 auto;
   }
   
-  #recuperacao_senha .posicionamento_header {
+  #main_contato .posicionamento_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  #recuperacao_senha .posicionamento_header img {
+  #main_contato .posicionamento_header img {
     width: 45px;
   }
   
-  #recuperacao_senha .posicionamento_header>span {
+  #main_contato .posicionamento_header>span {
     padding-left: 10px;
   }
   
-  #recuperacao_senha .logo>img{
+  #main_contato .logo>img{
     color: var(--amarelo);
   }
   
-  #recuperacao_senha .logo {
+  #main_contato .logo {
     display: flex;
     align-items: center;
     color: var(--amarelo);
     width: 20px;
     height: 27px;
   }
-  #recuperacao_senha .logo>span{
+  #main_contato .logo>span{
     color: var(--amarelo);
   }
   
-  #recuperacao_senha header nav {
+  #main_contato header nav {
      background-color: brown; 
     display: flex;
     justify-content: space-between;
@@ -736,7 +736,7 @@
     width: 450px;
   }
   
-  #recuperacao_senha header a {
+  #main_contato header a {
     color: var(--amarelo);
     text-transform: uppercase;
     text-decoration: none;
@@ -745,7 +745,7 @@
   } 
   
   
-  #recuperacao_senha form{
+  #main_contato form{
     display: flex;
       justify-content: center;
       align-items: center;
