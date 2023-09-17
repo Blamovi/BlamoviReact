@@ -57,29 +57,35 @@ span {
 
 /* seção filmes e series  */
 
-.fav-card-linha {
+/* .fav-card-linha {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
-     /* overflow-x: auto;  fazer as imagens rolarem para lateral */
-}
 
-.fav-card{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    gap: 1rem;
-    position: relative
+    gap: 20px;
+    position: relative;
+} */
+
+.fav-card,.fav-card-linha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    position: relative;
 }
 
 .fav-card>img {
-    width: 300px;
     object-fit: cover;
     border-radius: 10px;
-    max-width: 90%;;
+    max-width: 90%;
 }
 
 .fav-card>div {
@@ -88,7 +94,7 @@ span {
     flex-direction: row;
     gap: 40px;
 }
-
+/* 
 .fav-card>a{
     color: #7DD7FE;
     margin-top: 20px;
@@ -97,7 +103,7 @@ span {
 
 .fav-card>a:hover{
     color: var(--vermelho);
-}
+} */
 
 button[type="submit"] {
     margin-top: 5%;
@@ -216,9 +222,9 @@ button[type="submit"]:hover {
         height: 773px;
     }
     
-    /* .responsivo{
+    .responsivo{
         display: none;
-    } */
+    }
 }
 
 @media screen and (max-width: 895px) {

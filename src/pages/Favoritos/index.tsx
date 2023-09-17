@@ -71,26 +71,26 @@ function Favoritos() {
             ]
         },
 
-        // {
-        //     id: 4,
-        //     titulo: "Gladiador",
-        //     img: "src/assets/img/filmes-f/gladiador.jpg",
-        //     imgStream: imgStreamNetflix,
-        //     nota: 9.4,
+        {
+            id: 4,
+            titulo: "Gladiador",
+            img: "src/assets/img/filmes-f/gladiador.jpg",
+            imgStream: imgStreamNetflix,
+            nota: 9.4,
 
-        //     comentarios: [
-        //         {
-        //             conteudo: "Not as good as infinity war but a great movie",
-        //             usuario: "ACollegeStudent"
-        //         }, {
-        //             conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
-        //             usuario: "davyjones-636363"
-        //         }, {
-        //             conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
-        //             usuario: "ahmetkozan"
-        //         }
-        //     ]
-        // }
+            comentarios: [
+                {
+                    conteudo: "Not as good as infinity war but a great movie",
+                    usuario: "ACollegeStudent"
+                }, {
+                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+                    usuario: "davyjones-636363"
+                }, {
+                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+                    usuario: "ahmetkozan"
+                }
+            ]
+        }
     ]
 
     const listarSeries: any[] = [
@@ -154,25 +154,25 @@ function Favoritos() {
             ]
         },
         
-        // {
-        //     id: 4,
-        //     titulo: "Mandalorian",
-        //     img: "src/assets/img/series-f/mandalorian.jpg",
-        //     imgStream: imgStreamDisney,
-        //     nota: 8.5,
-        //     comentarios: [
-        //         {
-        //             conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-        //             usuario: "Sleepin_Dragon"
-        //         }, {
-        //             conteudo: "'Alien' is one of those special films that have aged very, very well.",
-        //             usuario: "gogoschka-1"
-        //         }, {
-        //             conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-        //             usuario: "ivo-cobra8"
-        //         }
-        //     ]
-        // }
+        {
+            id: 4,
+            titulo: "Mandalorian",
+            img: "src/assets/img/series-f/mandalorian.jpg",
+            imgStream: imgStreamDisney,
+            nota: 8.5,
+            comentarios: [
+                {
+                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+                    usuario: "Sleepin_Dragon"
+                }, {
+                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
+                    usuario: "gogoschka-1"
+                }, {
+                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+                    usuario: "ivo-cobra8"
+                }
+            ]
+        }
     ]
 
     return (
@@ -213,7 +213,7 @@ function Favoritos() {
             </section>
             <section className="fav-series-favoritos">
             <h2>⭐ Melhores series</h2>
-                    <div className="card-linha">
+                    <div className="fav-card-linha">
                         <img src={imgSetaEsquerda} alt="" />
                         {
                             listarSeries.map((card: any) => {
