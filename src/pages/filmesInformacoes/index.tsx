@@ -29,11 +29,12 @@ import imgRicardo from "../../assets/Images/image 136.svg";
 import imgMarcos from "../../assets/Images/image 140.svg";
 import imglike from "../../assets/Images/Facebook Like2.svg";
 import imgDeslike from "../../assets/Images/Facebook Like1.svg";
+import { Link } from "react-router-dom";
 
 function FilmesInformacoes() {
     return (
         <>
-            <main>
+            <main id="detalhe_filmesInformacoes">
                 <section className="Filmes">
                     <div className="banner_1">
                         <p className="superbanner">BLÁMOVI: RECOMENDA</p>
@@ -58,9 +59,9 @@ function FilmesInformacoes() {
                                 src={imgCoracao}
                                 alt=""
                             />
-                            <a className="recomendar" href="">
+                            <Link className="recomendar" to={"#"}>
                                 RECOMENDAR
-                            </a>
+                            </Link>
                         </div>
                         <div className="banner_trailer">
                             <div className="banner_box_img">
@@ -87,7 +88,7 @@ function FilmesInformacoes() {
                                 </div>
                             </div>
                             <div className="trailer">
-                                <a className="trailer1" href="http://">
+                                <Link className="trailer1" to={"#"}>
                                     <iframe
                                         width={930}
                                         height={400}
@@ -97,7 +98,7 @@ function FilmesInformacoes() {
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         // allowFullScreen=""
                                     />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -332,12 +333,7 @@ function FilmesInformacoes() {
                                 src={imgDeslike}
                                 alt=""
                             />
-                            <img
-                                className="comentario"
-                                src={imgBaloesComentarios}
-                                alt=""
-                            />
-                        </div>
+                     </div>
                     </div>
                     <div className="Comentarios_todos">
                         <div className="img_coment">
@@ -361,11 +357,6 @@ function FilmesInformacoes() {
                             <img
                                 className="like"
                                 src={imgDeslike}
-                                alt=""
-                            />
-                            <img
-                                className="comentario"
-                                src={imgBaloesComentarios}
                                 alt=""
                             />
                         </div>
