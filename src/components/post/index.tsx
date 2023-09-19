@@ -41,7 +41,7 @@ function Post(props: any) {
                             <div className="nameAndHour">
                                 <strong>{props.nome}</strong>
                                 <p>{props.data}</p>
-                                <p className="colorir_texto_filmes">Assistiu - {props.filme}</p>
+                                <p className="colorir_texto_filmes">{props.filme}</p>
                             </div>
                         </div>
                     </div>

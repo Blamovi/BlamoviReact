@@ -18,16 +18,16 @@ function Comentarios(props: any) {
 
     return (
         <>
-            <div className="infoUserComments">
+            <div id="comentarios" className="infoUserComments">
                 <div className="imgUserComments">
-                    <img src= {props.img} alt="" />
+                    <img src={props.img} alt="" />
                 </div>
                 <div className="nameAndHour">
                     <strong>{props.nome}</strong>
                     <p>{props.data}</p>
                 </div>
+                <p className="textoComments">{props.comentario}</p>
             </div>
-            <p className="textoComments">{props.comentario}</p>
         </>
     )
 }

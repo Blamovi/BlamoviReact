@@ -54,7 +54,7 @@ function Feed() {
             imgPost: imgProvaFogo,
             comentarios: []
         }, {
-            id: 3,
+            id: 2,
             nome: "Roz",
             foto: imgRoz,
             data: "Ontem",
@@ -68,7 +68,7 @@ function Feed() {
     return (
         <>
             <>
-                <main>
+                <main id="feed">
                     {/*Formulário de envio*/}
                     <div className="newPost">
                         <div className="infoUser">
