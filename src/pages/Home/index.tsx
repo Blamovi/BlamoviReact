@@ -15,32 +15,22 @@ import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
 import imgStreamStar from "../../assets/img/streams/star.png";
 import imgStreamYoutube from "../../assets/img/streams/youtube.png";
 
-
-
-import imgFilmesBatman from "../../assets/img/filmes-f/batman-(cav-das-tre).webp";
-import imgFilmesJoker from "../../assets/img/filmes-f/joker.webp";
-import imgFilmesVingadores from "../../assets/img/filmes-f/image 111.jpg";
-import imgFilmesGladiador from "../../assets/img/filmes-f/gladiador.jpg";
-import imgSeriesTheLast from "../../assets/img/series-f/The-last-of-us.jpg"
-import imgSeriesCasaDragao from "../../assets/img/series-f/A-casa-dos-dragões.jpg"
-import imgSeriesBeef from "../../assets/img/series-f/image 30.png"
-import imgClassicoAlien from "../../assets/img/classicos/06-Alien.png"
-import imgClassicoTruman from "../../assets/img/classicos/20-the-truman-show.png"
-import imgClassicoRambo1 from "../../assets/img/classicos/rambo1.png"
-import imgClassicoRambo2 from "../../assets/img/classicos/rambo2.png"
-import imgClassicoRambo3 from "../../assets/img/classicos/rambo3.png"
-import imgClassicoRambo4 from "../../assets/img/classicos/rambo4.png"
-import imgClassicoChefao from "../../assets/img/classicos/20120876 1.png"
-import imgLancaSpider from "../../assets/img/filmes-f/image84.png"
-import imgLancaTransformers from "../../assets/img/filmes-f/image83.png"
-import imgLancaFlash from "../../assets/img/filmes-f/image85.png"
-import imgLancaDemonio from "../../assets/img/filmes-f/blackdemon.png"
 import Card from "../../components/Card";
 import CardLancamentos from "../../components/CardLancamentos";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 import { Link } from "react-router-dom";
 
 function Home() {
+
+    const data = [
+        { id: '1', image: '../src/assets/img/banner/Frame 73.svg' },
+        { id: '2', image: '../src/assets/img/banner/Frame 65.svg' },
+        { id: '3', image: '../src/assets/img/banner/Frame 64.svg' },
+    ] 
+
     const listaFilmes: any[] = [
         {
             id: 1,
@@ -129,7 +119,7 @@ function Home() {
             id: 1,
             titulo: "Senhor dos Aneis: A sociedade do anel",
             img: "src/assets/img/classicos/Senhor Dos Aneis.png",
-            imgStream: {imgStreamHbo},
+            imgStream: imgStreamHbo,
             nota: 9.2,
             comentarios: [
                 {
@@ -378,7 +368,7 @@ function Home() {
             id: 1,
             titulo: "01 Junho",
             titulo2: "Homem-Aranha: Através do Aranhaverso",
-            img: "src/assets/img/filmes-f/image 84.png",
+            img: "src/assets/img/filmes-f/image84.png",
             link: "https://www.youtube.com/watch?v=_4is7I_ZxTg&pp=ygUtdHJhaWxlciBob21lbSBhcmFuaGEgYXRyYXbDqXMgZG8gYXJhbmhhdmVyc28g",
             
         },
@@ -405,7 +395,7 @@ function Home() {
             id: 4,
             titulo: "28 Junho",
             titulo2: "O Demônio dos Mares",
-            img: "src/assets/img/filmes-f/black demon.png",
+            img: "src/assets/img/filmes-f/blackdemon.png",
             link: "https://www.youtube.com/watch?v=yX-pvjO4N3o&pp=ygUUTyBERU3DlE5JTyBET1MgTUFSRVM%3DD",
             
         }
@@ -415,18 +405,23 @@ function Home() {
     return (
         <>
             <main id="main_home">
-                {/* <section className="banner">
-                    <div className="banner_img">
-                        <img src={""} alt="" />
-                    </div>
-                    <div className="banner_texto">
-                        <p>-</p>
-                        <img src={""} alt="" />
-                        <p>
-                            -  <span> - </span> -
-                        </p>
-                    </div>
-                </section> */}
+                
+            <Swiper
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                navigation
+            >
+                {data.map((item) => (
+                    <SwiperSlide key={item.id}>
+                        <img
+                            src={item.image}
+                            alt="Silder"
+                            className="slider-item"
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+
                 <section className="destaque">
                     <div className="destaque_conteudo">
                         <img
@@ -478,8 +473,7 @@ function Home() {
                 <section className="Filmes_Destaques">
                     <h2>⭐ Filmes Favoritos</h2>
                     <div  className="card-linha">
-                        <img src={imgSetaEsquerda} alt=""
-                        />
+                        <img src={imgSetaEsquerda} alt=""/>
                         {
                             listaFilmes.map((card: any) => {
                                 return<div key={card.id
@@ -493,10 +487,8 @@ function Home() {
                                     comentarios={card.comentarios}
                                 /></div>
                             })
-
                         }
-
-                        <img src={imgSetaDireita} alt="" />
+                        <img src={imgSetaDireita} alt=""/>
                     </div>
                 </section>
                 <section className="Clássicos">
