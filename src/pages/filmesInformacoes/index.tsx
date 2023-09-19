@@ -32,6 +32,16 @@ import imgDeslike from "../../assets/Images/Facebook Like1.svg";
 import { Link } from "react-router-dom";
 
 function FilmesInformacoes() {
+
+    const comentarioFilmes: any[] = [
+        {
+            id: 1,
+            nome: "Ricardo Motta",
+            foto: imgMarcos,
+            comentario: "APLAUDO de pé essa obra extraordinária. Christopher Nolan surpreende com suas ideias e criatividade de cinema desde essa época, assim como a participação de David Goyer no roteiro. A atuação de Christian Bale é IMPECÁVEL, esse Homem não tem defeitos."
+        }
+    ]
+
     return (
         <>
             <main id="detalhe_filmesInformacoes">
@@ -49,7 +59,7 @@ function FilmesInformacoes() {
                         <h3>Categoria: Ação . Aventura . Policial</h3>
                         <p className="paragrafo_inicial">Ano: 2008 - Duração: 2 h 32 min</p>
                         <div className="botoes2">
-                        <img
+                            <img
                                 className="comentario"
                                 src={imgBaloesComentarios}
                                 alt=""
@@ -96,7 +106,7 @@ function FilmesInformacoes() {
                                         title="YouTube video player"
                                         frameBorder={0}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        // allowFullScreen=""
+                                    // allowFullScreen=""
                                     />
                                 </Link>
                             </div>
@@ -207,7 +217,7 @@ function FilmesInformacoes() {
                                 </div>
                             </div>
                         </div>
-                   </div>
+                    </div>
                     <hr />
                     <div className="informacoes_direita">
                         <div className="elem_1">
@@ -308,21 +318,18 @@ function FilmesInformacoes() {
                         </div>
                     </div>
                     <div className="Comentarios_todos">
-                        <div className="img_coment">
-                            <img
-                                className="ricardo"
-                                src={imgRicardo}
-                                alt=""
-                            />
-                        </div>
+                        {
+                            comentarioFilmes.map((comentarFilme: any) => {
+                                return <div key={comentarFilme.id}>
+                                    <Comentario
+                                        nome={comentarFilme.nome}
+                                        foto={comentarFilme.foto}
+                                        comentarios={comentarFilme.comentario}
+                                    />
+                                </div>
+                            })
+                        }
                         <div>
-                            <p className="usuario1">Ricardo Motta </p>
-                            <p className="comentario_texto">
-                                APLAUDO de pé essa obra extraordinária. Christopher Nolan surpreende
-                                com suas ideias e criatividade de cinema desde essa época, assim como
-                                a participação de David Goyer no roteiro. A atuação de Christian Bale
-                                é IMPECÁVEL, esse Homem não tem defeitos.
-                            </p>
                             <img
                                 className="like"
                                 src={imglike}
@@ -333,7 +340,7 @@ function FilmesInformacoes() {
                                 src={imgDeslike}
                                 alt=""
                             />
-                     </div>
+                        </div>
                     </div>
                     <div className="Comentarios_todos">
                         <div className="img_coment">
