@@ -19,7 +19,7 @@ import { useState } from "react";
 import "./style.css"
 
 //rotas
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 //localStorage
 import secureLocalStorage from "react-secure-storage";
@@ -29,26 +29,26 @@ import secureLocalStorage from "react-secure-storage";
 
 function Login() {
 
-      //Variavel navigate que utiliza a função useNavigate para navegar entre os componentes
-      const navigate = useNavigate();
+  //Variavel navigate que utiliza a função useNavigate para navegar entre os componentes
+  const navigate = useNavigate();
 
-    const [errorMessages, setErrorMessages] = useState({});
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    
+  const [errorMessages, setErrorMessages] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const database= [
+
+  const database = [
     {
       email: "user1",
       password: "pass1"
-  },
-  {
-    email: "user1",
-    password: "pass1"
-  }
+    },
+    {
+      email: "user1",
+      password: "pass1"
+    }
 
-   ];
-        
-   const errors = {
+  ];
+
+  const errors = {
     email_cad: "invalid username",
     senha_cad: "invalid password"
   };
@@ -68,114 +68,113 @@ function Login() {
         setIsSubmitted(true);
       }
     } else {
-      
+
       setErrorMessages({ name: "email_cad", message: errors.email_cad });
     }
-      
-};
 
-// mensagem de erro
-const renderErrorMessage = (name: any) =>
-name === errorMessages.name && (
-  <div className="error">{errorMessages.message}</div>
-);
+  };
 
-    return(
-        <>
+  // mensagem de erro
+  // const renderErrorMessage = (name: any) =>
+  //   name === errorMessages.name && (
+  //     <div className="error">{errorMessages.message}</div>
+  //   );
 
-<main   className="banner" id="ajustes3" >
-        
+  return (
+    <>
+
+      <main className="banner" id="ajustes3" >
+
         <div >
-         {/* <img className="cineminha" src={imgbanner}  />  */}
+          {/* <img className="cineminha" src={imgbanner}  />  */}
         </div>
         {/* <div className="bannercineminha">
         
         </div> */}
 
-  <div className="container">
+        <div className="container">
 
 
 
-    <a className="links" id="paracadastro" />
-    <a className="links" id="paralogin" />
-    <div className="content">
-      <div id="cadastro">
-        <form className="ajustes " method="post" action="">
-          <h1>Login</h1>
-          <div className="input">
-         
-         
-           
-          </div>
-          <div className="input">
-            <img
-              className="form-label"
-              src={imgGroupMessage}   
-            />
-            <div className="input-email">
-              <label htmlFor="email_cad">Seu e-mail</label>
-              <input
-                 id="email_cad"     /// O que realmente é do codigo 
-                 name="email_cad"
-                 required //={true}
-                 type="text" // email
-                 {renderErrorMessage("email_cad")}
-              />
+          <Link to={"#"} className="links" id="paracadastro"></Link>
+          <Link to={"#"} className="links" id="paralogin" ></Link>
+          <div className="content">
+            <div id="cadastro">
+              <form className="ajustes " method="post" action="">
+                <h1>Login</h1>
+                <div className="input">
+
+
+
+                </div>
+                <div className="input">
+                  <img
+                    className="form-label"
+                    src={imgGroupMessage}
+                  />
+                  <div className="input-email">
+                    <label htmlFor="email_cad">Seu e-mail</label>
+                    <input
+                      id="email_cad"     /// O que realmente é do codigo 
+                      name="email_cad"
+                      required //={true}
+                      type="email" // email
+                      // {renderErrorMessage("email_cad")}
+                    />
+                  </div>
+                </div>
+                <div className="input">
+                  <img className="form-label" src={imgLock} />
+                  <div className="input-senha">
+                    <label htmlFor="senha_cad">Sua senha</label>
+                    <input
+
+                      id="senha_cad"     /// O que realmente é do codigo 
+                      name="senha_cad"
+                      required //={true}
+                      type="password" // email
+                      // {renderErrorMessage("senha_cad")}
+
+
+                    />
+                  </div>
+                </div>
+                <div className="input">
+
+
+                </div>
+                <div className="input-submit">
+                  <input type="submit" value="Logar" />
+                </div>
+
+                {/* <hr class="linha"> */}
+                <div className="alinhamento">
+                  <p className="link">
+
+                    <Link to={"#"}>Cadastrar</Link>
+
+                  </p>
+                </div>
+              </form>
+              <div className="contato">
+                <div className="imagem">
+                  <img src={imglogo} />
+                  {/* <a href="contato@blamovi.com">contato@blamovi.com</a> */}
+                  <img src={imgfaceBranco} alt="" />
+                  <img src={imgInstaBranco} alt="" />
+                  <img
+                    src={imgtwitterBranco}
+                    alt=""
+                  />
+                  <img src={imgWhatsBranco} alt="" />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="input">
-            <img className="form-label" src={imgLock} />   
-            <div className="input-senha">
-              <label htmlFor="senha_cad">Sua senha</label>
-              <input
-
-                 id="senha_cad"     /// O que realmente é do codigo 
-                 name="senha_cad"
-                 required //={true}
-                 type="password" // email
-                 {renderErrorMessage("senha_cad")}
-                 
-     
-              />
-            </div>
-          </div>
-          <div className="input">
-        
-  
-          </div>
-          <div className="input-submit">
-              <input type="submit" value="Logar" />
-            </div>
-
-          {/* <hr class="linha"> */}
-          <div className="alinhamento">
-            <p className="link">
-
-              <link href="#paralogin">
-               Cadastrar
-              </link>
-            </p>
-          </div>
-        </form>
-        <div className="contato">
-          <div className="imagem">
-            <img src={imglogo} />
-            {/* <a href="contato@blamovi.com">contato@blamovi.com</a> */}
-            <img src={imgfaceBranco} alt="" /> 
-            <img src={imgInstaBranco} alt="" />  
-            <img
-              src={imgtwitterBranco}     
-              alt=""
-            />
-            <img src={imgWhatsBranco} alt="" />     
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</main>
+      </main>
 
-{/* <footer className="ajustesrodape" >
+      {/* <footer className="ajustesrodape" >
 
     <div className="rodapejf1" >
       
@@ -193,14 +192,9 @@ name === errorMessages.name && (
     </div>
 
   </footer> */}
-        
-        </>
-    )
+
+    </>
+  )
 }
 
-export default Login
-
-
-
-
-// validação login 
+export default Login;

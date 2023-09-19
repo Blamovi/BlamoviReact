@@ -7,7 +7,7 @@ import imgLogoBranco  from "../../assets/images/logo-branco.svg";
 function Header() {
     return (
         <>
-            /* <header id="header">
+         <header id="header">
                 <div className="posicionamento_header posicionamento">
                     <div className="logo">
                         <img src={imgLogoBranco} alt="logo" />

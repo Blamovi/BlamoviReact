@@ -44,16 +44,17 @@ function logado() {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header usuario={logado()} />
+      <Header />
       <Routes>
         {/* <Route path='NomeDaRota' element={<NomeDoComponente/>}/> */}
-       <Route path='/perfil' element={<PerfilUsuario/>}/> */
-       <Route path='/feed' element={<Feed/>}/> */
-       <Route path='/calendario' element={<Calendario/>}/> */
-       <Route path='/Cadastro' element={<Cadastro/>}/> */
-       <Route path='/Login' element={<Login/>}/> */
-       <Route path='/senha' element={<RecuperacaoSenha/>}/> */
-       <Route path='/contato' element={<Contato/>}/> */
+       <Route path='/perfil' element={<PerfilUsuario/>}/>
+       <Route path='/feed' element={<Feed/>}/>
+       <Route path='/calendario' element={<Calendario/>}/>
+       <Route path='/Cadastro' element={<Cadastro/>}/>
+       <Route path='/Login' element={<Login/>}/>
+       <Route path='/senha' element={<RecuperacaoSenha/>}/> 
+       <Route path='/contato' element={<Contato/>}/>
+       <Route path='/recuperacaosenha' element={<RecuperacaoSenha/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

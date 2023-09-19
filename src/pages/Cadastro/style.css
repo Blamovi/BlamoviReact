@@ -397,8 +397,7 @@ max-width: 100%;
 
   #main_cadastro a {
     text-decoration: none;
-   font-family: inter;
-   color: #dbe5e8;
+     color: #dbe5e8;
   }
 
   /* esconde as ancoras da tela */
@@ -500,13 +499,14 @@ max-width: 100%;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
     font-weight: bolder;
+    font-size: 12px;
     
   }
 
   #main_cadastro .link a:hover {
-    color: #39bfd7;
-    background: #f7f7f7;
-    border: 1px solid #4ab3c6;
+   
+    
+   
   }
 
   /* estilos para para ambos os formulários */
@@ -543,6 +543,7 @@ max-width: 100%;
     animation-fill-mode: both;
 
     background-color: transparent;
+    padding: 55px;
   }
 
   #main_cadastro #paracadastro:target~.content #cadastro,

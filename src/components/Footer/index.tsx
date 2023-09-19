@@ -3,6 +3,8 @@ import "./style.css"
 import imgLogoBranco  from "../../assets/images/logo-branco.svg";
 import imgCinemaFooter  from "../../assets/images/cinema_foto_pexels 1 (1).png";
 
+import { Link, useNavigate } from "react-router-dom";
+
 
 function Footer() {
     return (
@@ -13,13 +15,15 @@ function Footer() {
                     src={imgCinemaFooter}
                     alt=""
                 />
-                <ul>
-                    <a href="../Home/home.html">Home</a>
-                    <a href="../Login/login.html">Login</a>
-                    <a href="">Pesquisar</a>
-                    <a href="../calendario/calendario.html">Calendario</a>
-                    <a href="../Favoritos/favoritos.html">Favoritos</a>
-                    <a href="../filmesinformacoes/filmes.html">Informações</a>
+                <ul>                   
+
+                <Link to={"../Home/home.html"}>Home</Link>
+                <Link to={"../Login/login.html"}>Login</Link>
+                <Link to={"../Login/login.html"}>Pesquisar</Link>
+                <Link to={"../calendario/calendario.html"}>Calendario</Link>
+                <Link to={"../Favoritos/favoritos.html"}>Home</Link>
+                <Link to={"../filmesinformacoes/filmes.html"}>Home</Link>
+                    
                 </ul>
                 <div>
                     <div>

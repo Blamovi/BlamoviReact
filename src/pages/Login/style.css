@@ -383,7 +383,6 @@ max-width: 100%;
 
   #ajustes3 a {
     text-decoration: none;
-   font-family: inter;
    color: #dbe5e8;
   }
 
@@ -394,9 +393,16 @@ max-width: 100%;
 
   /* content que contem os formulários */
   #ajustes3 .content {
-    width: 750px;
+    width: 775px;  
+    /* /// edit acima /////////////////////////////////////////////////////////////////////////////////////////////// */
     margin: 0px auto;
-    /* position: relative; */
+     position: relative;
+  }
+
+  
+
+  input {
+    width: 82%
   }
 
   /* formatando o cabeçalho dos formulários */
@@ -486,13 +492,13 @@ max-width: 100%;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
     font-weight: bolder;
+    font-size: 12px;
     
   }
 
   #ajustes3 .link a:hover {
-    color: #39bfd7;
-    background: #f7f7f7;
-    border: 1px solid #4ab3c6;
+    
+   /* //////////////////////////////////////////////////////////////////////////// */
   }
 
   /* estilos para para ambos os formulários */
@@ -529,6 +535,7 @@ max-width: 100%;
     animation-fill-mode: both;
 
     background-color: transparent;
+    padding: 55px;
   }
 
   #ajustes3 #paracadastro:target~.content #cadastro,

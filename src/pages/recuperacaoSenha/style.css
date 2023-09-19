@@ -383,7 +383,7 @@
   
       #recuperacao_senha #divbusca {
         display: none;
-      }
+      }ha 
   
       #recuperacao_senha .hamburguer {
         display: initial;
@@ -397,7 +397,6 @@
   
     #recuperacao_senha a {
       text-decoration: none;
-     font-family: inter;
      color: #dbe5e8;
     }
   
@@ -500,13 +499,13 @@
       -webkit-transition: all 0.4s linear;
       transition: all 0.4s linear;
       font-weight: bolder;
+      font-size: 12px;
       
     }
-  
+
     #recuperacao_senha .link a:hover {
-      color: #39bfd7;
-      background: #f7f7f7;
-      border: 1px solid #4ab3c6;
+      
+      
     }
   
     /* estilos para para ambos os formulários */
@@ -543,6 +542,7 @@
       animation-fill-mode: both;
   
       background-color: transparent;
+      padding: 55px;
     }
   
     #recuperacao_senha #paracadastro:target~.content #cadastro,

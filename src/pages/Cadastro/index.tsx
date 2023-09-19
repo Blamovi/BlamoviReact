@@ -13,6 +13,7 @@ import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
 import imgbanner from "../../assets/images/cineminha.png"
 
 
+
 //hooks
 import { useState } from "react";
 
@@ -20,7 +21,7 @@ import { useState } from "react";
 import "./style.css"
 
 //rotas
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 //localStorage
 import secureLocalStorage from "react-secure-storage";
@@ -40,7 +41,7 @@ function Cadastro() {
 
   const [formErrors, setFormErrors] = useState({});
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -48,7 +49,7 @@ function Cadastro() {
     });
   };
 
-  const handleFileChange = () => {
+  const handleFileChange = (e: any) => {
     const file = e.target.files[0];
     setFormData({
       ...formData,
@@ -56,43 +57,43 @@ function Cadastro() {
     });
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
+  // const handleSubmit = (e: any) => {
+  //   e.preventDefault();
     
-    const errors = {};
+  //   const errors = {};
 
-    if (formData.nome.trim() === '') {
-      errors.nome = 'preencha o campo Seu Nome';
-    }
+  //   if (formData.nome.trim() === '') {
+  //     errors.nome = 'preencha o campo Seu Nome';
+  //   }
 
-    if (formData.email.trim() === '') {
-      errors.email = ' preencha o campo Seu e-mail';
-    }
+  //   if (formData.email.trim() === '') {
+  //     errors.email = ' preencha o campo Seu e-mail';
+  //   }
 
-    if (formData.senha.trim() === '') {
-      errors.senha = 'preencha o campo Sua senha';
-    }
+  //   if (formData.senha.trim() === '') {
+  //     errors.senha = 'preencha o campo Sua senha';
+  //   }
 
-    if (formData.senha !== formData.confirmaSenha) {
-      errors.confirmaSenha = 'As senhas não coincidem.';
-    }
+  //   if (formData.senha !== formData.confirmaSenha) {
+  //     errors.confirmaSenha = 'As senhas não coincidem.';
+  //   }
 
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors);
-      return;
-    }
+  //   if (Object.keys(errors).length > 0) {
+  //     setFormErrors(errors);
+  //     return;
+  //   }
 
-    setFormData({
-      nome: '',
-      email: '',
-      senha: '',
-      confirmaSenha: '',
-      user: '',
-      foto: null,
-    });
+  //   setFormData({
+  //     nome: '',
+  //     email: '',
+  //     senha: '',
+  //     confirmaSenha: '',
+  //     user: '',
+  //     foto: null,
+  //   });
 
-    setFormErrors({});
-  };
+  //   setFormErrors({});
+  // };
 
 
     return(
@@ -111,8 +112,8 @@ function Cadastro() {
 
 
 
-    <a className="links" id="paracadastro" />
-    <a className="links" id="paralogin" />
+          <Link to={"#"} className="links" id="paracadastro"></Link>
+          <Link to={"#"} className="links" id="paralogin" ></Link>
     <div className="content">
 
        {/*FORMULÁRIO DE CADASTRO*/}
@@ -129,11 +130,10 @@ function Cadastro() {
               <input
                 id="nome_cad"
                 name="nome"   //nome_cad
-                type="text"
-                value={formData.nome}
-                //required={true}  
-                onChange={handleInputChange}
-                required
+                type="text" 
+                required={true}  
+                // onChange={handleInputChange}
+                // required
               />
               {/* //{formErrors.nome && <span className="error">{formErrors.nome}</span>} */}
             </div>
@@ -148,11 +148,10 @@ function Cadastro() {
               <input
                 id="email_cad"
                 name="email"   //nome_cad
-                type="email"
-                value={formData.email}
-                //required={true}  
-                onChange={handleInputChange}
-                required
+                type="email"              
+                required={true}  
+                // onChange={handleInputChange}
+                // required
               />
             </div>
           </div>
@@ -164,10 +163,9 @@ function Cadastro() {
                 id="senha_cad"
                 name="senha"   
                 type="password"
-                value={formData.senha}
-                //required={true}  
-                onChange={handleInputChange}
-                required
+                required={true}  
+                // onChange={handleInputChange}
+                // required
               />
             </div>
           </div>
@@ -180,10 +178,11 @@ function Cadastro() {
                 id="confirma-senha"
                 name="confirma-senha"   
                 type="password"
-                value={formData.confirmaSenha}
-                //required={true}  
-                onChange={handleInputChange}
-                required
+                required={true}
+                //value={formData.confirmaSenha}
+                  
+                // onChange={handleInputChange}
+                // required
               />
             </div>
           </div>
@@ -198,11 +197,12 @@ function Cadastro() {
 
                id="user"
                name="user"   
-               type="text"
-               value={formData.user}
-               //required={true}  
-               onChange={handleInputChange}
-               required
+               type="text"               
+               required={true}  
+               //value={formData.user}
+
+              //  onChange={handleInputChange}
+              //  required
                />
             </div>
           </div>
@@ -224,9 +224,9 @@ function Cadastro() {
           <div className="alinhamento">
             <p className="link">
 
-              <link href="#paralogin">
-               Login
-              </link>
+              <Link to={"#"}>Login</Link>
+
+              
             </p>
           </div>
         </form>

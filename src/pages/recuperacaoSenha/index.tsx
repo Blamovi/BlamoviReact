@@ -12,9 +12,18 @@ import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
 import imgbanner from "../../assets/images/cineminha.png"
 
 
+
 //hooks
 import { useState } from "react";
 
+//estilização
+import "./style.css"
+
+//rotas
+import { Link, useNavigate } from "react-router-dom";
+
+//localStorage
+import secureLocalStorage from "react-secure-storage";
 
 
 function RecuperacaoSenha() {
@@ -37,8 +46,8 @@ function RecuperacaoSenha() {
 
 
 
-    <a className="links" id="paracadastro" />
-    <a className="links" id="paralogin" />
+          <Link to={"#"} className="links" id="paracadastro"></Link>
+          <Link to={"#"} className="links" id="paralogin" ></Link>
     <div className="content">
 
        {/*FORMULÁRIO DE CADASTRO*/}
@@ -84,7 +93,7 @@ function RecuperacaoSenha() {
                 id="nome_cad"
                 name="nome_cad"
                 required={true}
-                type="password"
+                type="text"
               />
             </div>
           </div>
@@ -168,10 +177,9 @@ function RecuperacaoSenha() {
           {/* <hr class="linha"> */}
           <div className="alinhamento">
             <p className="link">
-
-              <link href="#paralogin">
-               Login
-              </link>
+     
+              <Link to={"#"}>Login</Link>
+             
             </p>
           </div>
         </form>
