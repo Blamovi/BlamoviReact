@@ -1,11 +1,13 @@
 import "./style.css"
 
-import imgLogoBranco from "../../assets/logo-branco.svg"
+
+import imgLogoBranco  from "../../assets/images/logo-branco.svg";
+
 
 function Header() {
     return (
         <>
-            /* <header id="header">
+         <header id="header">
                 <div className="posicionamento_header posicionamento">
                     <div className="logo">
                         <img src={imgLogoBranco} alt="logo" />
@@ -39,7 +41,7 @@ function Header() {
                         <a href="">Favoritos</a>
                          <a href="../Cadastro/cadastro.html">Cadastro</a> 
                          <a href="../Login/login.html">Login</a>
-                    </nav>  */}
+                    </nav>    */}
                 </div>
             </header> 
 

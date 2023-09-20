@@ -1,5 +1,7 @@
 import "./style.css";
 
+
+
 //imagens
 import imgHome from "../../assets/images/Home.svg";
 import imgHeart from "../../assets/images/Heart.svg";
@@ -23,6 +25,8 @@ import imgcomentar from "../../assets/images/comentar.svg";
 import imgrecomendar from "../../assets/images/recomendar.svg";
 import imgvampires from "../../assets/images/vampires.svg";
 import imgcarregandofeed from "../../assets/images/carregandofeed.svg";
+
+
 
 //rotas
 import { Link } from "react-router-dom";
@@ -81,7 +85,7 @@ function PerfilUsuario() {
           </div>
         </div>
         {/*Formulário de envio*/}
-        <div className="newPost">
+        {/* <div className="newPost">
           <div className="infoUser">
             <img src={imgmufasaperfil} alt="" />
           </div>
@@ -108,7 +112,7 @@ function PerfilUsuario() {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
         {/*corpo da feed*/}
         <ul className="posts">
           <li className="post">
@@ -124,29 +128,24 @@ function PerfilUsuario() {
                 </p>
               </div>
             </div>
+            <p className="textoPost">
+              Para quem estiver procurando diversão descompromissada, embalada por
+              muito sangue e rock pesadíssimo (mais pesado que qualquer música que o
+              Foo Fighters já tenha feito), Terror no Estúdio 666 é uma boa pedida.{" "}
+            </p>
+            <img className="balanoalvo" src={imgff666} alt="" />
+            {/* <ul className="lista_comentarios">
+              <li className="comentario">
+                <div>
+                  <span className="nome_user"></span>
+                </div>
+                <p className="texto_coment"></p>
+              </li>
+            </ul> */}
           </li>
-          <p className="textoPost">
-            Para quem estiver procurando diversão descompromissada, embalada por
-            muito sangue e rock pesadíssimo (mais pesado que qualquer música que o
-            Foo Fighters já tenha feito), Terror no Estúdio 666 é uma boa pedida.{" "}
-          </p>
-          <img className="balanoalvo" src={imgff666} alt="" />
-          <div className="actionBtnPost">
-            <button type="button" className="filesPost">
-              <img src={imglike} alt="Curtir" />
-              <span>Curtir</span>
-            </button>
-            <button type="button" className="filesPost">
-              <img src={imgcomentar} alt="Comentar" />
-              <span>comentar</span>
-            </button>
-            <button type="button" className="filesPost">
-              <img src={imgrecomendar} alt="Recomendar" />
-              <span>recomendar</span>
-            </button>
-          </div>
-        </ul>
-        <ul className="posts">
+
+          {/* </ul> */}
+          {/* <ul className="posts"> */}
           <li className="post">
             <div className="infoUserPost">
               <div className="imgUserPost">
@@ -160,38 +159,26 @@ function PerfilUsuario() {
                 </p>
               </div>
             </div>
+            <p className="textoPost">
+              Ao repetir a fórmula do primeiro filme, Hotel Transilvânia 2 tem grandes
+              chances de agradar aqueles que se divertiram com o original. Há piadas
+              engraçadas, como o GPS de voz fantasmagórica, a sacaneada ao visual de
+              Drácula de Bram Stoker e o acampamento para jovens vampiros (com uma
+              pitada sarcástica envolvendo o cenário atual do politicamente correto),
+              mas o grande trunfo continua sendo o estilo performático e exagerado de
+              Drácula. Neste caso, vale também destacar o brilhantismo de Alexandre
+              Moreno como a voz brasileira do personagem, trazendo um misto de pompa e
+              galhofa. Diverte, apesar de ser claramente mais voltado para as crianças
+              e de certos problemas de roteiro.
+            </p>
+            <img className="balanoalvo" src={imgvampires} alt="" />
           </li>
-          <p className="textoPost">
-            Ao repetir a fórmula do primeiro filme, Hotel Transilvânia 2 tem grandes
-            chances de agradar aqueles que se divertiram com o original. Há piadas
-            engraçadas, como o GPS de voz fantasmagórica, a sacaneada ao visual de
-            Drácula de Bram Stoker e o acampamento para jovens vampiros (com uma
-            pitada sarcástica envolvendo o cenário atual do politicamente correto),
-            mas o grande trunfo continua sendo o estilo performático e exagerado de
-            Drácula. Neste caso, vale também destacar o brilhantismo de Alexandre
-            Moreno como a voz brasileira do personagem, trazendo um misto de pompa e
-            galhofa. Diverte, apesar de ser claramente mais voltado para as crianças
-            e de certos problemas de roteiro.
-          </p>
-          <img className="balanoalvo" src={imgvampires} alt="" />
-          <div className="actionBtnPost">
-            <button type="button" className="filesPost">
-              <img src={imglike} alt="Curtir" />
-              <span>Curtir</span>
-            </button>
-            <button type="button" className="filesPost">
-              <img src={imgcomentar} alt="Comentar" />
-              <span>comentar</span>
-            </button>
-            <button type="button" className="filesPost">
-              <img src={imgrecomendar} alt="Recomendar" />
-              <span>recomendar</span>
-            </button>
-          </div>
         </ul>
         <div className="carregamento">
           <img src={imgcarregandofeed} alt="carregamento" />
         </div>
+
+        
       </main ></>
 
 

@@ -1,125 +1,200 @@
+
+// Referencia https://contactmentor.com/login-form-react-js-code/?expand_article=1
+
+
+import imgIconUser33 from "../../assets/images/IconUser33.png"
+import imgGroupMessage from "../../assets/images/Group Message.png"
+import imgLock from "../../assets/images/Lock.png"
+import imglogo from "../../assets/images/logo.png"
+import imgfaceBranco from "../../assets/images/faceBranco.svg"
+import imgInstaBranco from "../../assets/images/InstaBranco.svg"
+import imgtwitterBranco from "../../assets/images/twitterBranco.svg"
+import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
+import imgbanner from "../../assets/images/cineminha.png"
+
+//hooks
+import { useState } from "react";
+
+//estilização
 import "./style.css"
 
+//rotas
+import { Link, useNavigate } from "react-router-dom";
+
+//localStorage
+import secureLocalStorage from "react-secure-storage";
+
+
+
+
 function Login() {
-    return(
-        <>
-        <main className="banner" id="main_login">
-  <div className="container">
-    <a className="links" id="paracadastro" />
-    <a className="links" id="paralogin" />
-    <div className="content">
-      <div id="cadastro">
-        <form method="post" action="">
-          <h1>Usuario</h1>
-          <div className="input">
-            <img
-              className="form-label"
-              src="../Cadastro/imagens/icon User.png"
-            />
-            <div className="input-nome">
-              <label htmlFor="nome_cad">Seu Nome</label>
-              <input
-                id="nome_cad"
-                name="nome_cad"
-                required={true}
-                type="text"
-              />
+
+  //Variavel navigate que utiliza a função useNavigate para navegar entre os componentes
+  const navigate = useNavigate();
+
+  const [errorMessages, setErrorMessages] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+  const database = [
+    {
+      email: "user1",
+      password: "pass1"
+    },
+    {
+      email: "user1",
+      password: "pass1"
+    }
+
+  ];
+
+  const errors = {
+    email_cad: "invalid username",
+    senha_cad: "invalid password"
+  };
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+
+    var { email_cad, senha_cad } = document.forms[0];
+
+    const userData = database.find((user) => user.email === email_cad.value);
+
+    if (userData) {
+      if (userData.password !== senha_cad.value) {
+        // senha invalida
+        setErrorMessages({ name: "senha_cad", message: errors.senha_cad });
+      } else {
+        setIsSubmitted(true);
+      }
+    } else {
+
+      setErrorMessages({ name: "email_cad", message: errors.email_cad });
+    }
+
+  };
+
+  // mensagem de erro
+  // const renderErrorMessage = (name: any) =>
+  //   name === errorMessages.name && (
+  //     <div className="error">{errorMessages.message}</div>
+  //   );
+
+  return (
+    <>
+
+      <main className="banner" id="ajustes3" >
+
+        <div >
+          {/* <img className="cineminha" src={imgbanner}  />  */}
+        </div>
+        {/* <div className="bannercineminha">
+        
+        </div> */}
+
+        <div className="container">
+
+
+
+          <Link to={"#"} className="links" id="paracadastro"></Link>
+          <Link to={"#"} className="links" id="paralogin" ></Link>
+          <div className="content">
+            <div id="cadastro">
+              <form className="ajustes " method="post" action="">
+                <h1>Login</h1>
+                <div className="input">
+
+
+
+                </div>
+                <div className="input">
+                  <img
+                    className="form-label"
+                    src={imgGroupMessage}
+                  />
+                  <div className="input-email">
+                    <label htmlFor="email_cad">Seu e-mail</label>
+                    <input
+                      id="email_cad"     /// O que realmente é do codigo 
+                      name="email_cad"
+                      required //={true}
+                      type="email" // email
+                      // {renderErrorMessage("email_cad")}
+                    />
+                  </div>
+                </div>
+                <div className="input">
+                  <img className="form-label" src={imgLock} />
+                  <div className="input-senha">
+                    <label htmlFor="senha_cad">Sua senha</label>
+                    <input
+
+                      id="senha_cad"     /// O que realmente é do codigo 
+                      name="senha_cad"
+                      required //={true}
+                      type="password" // email
+                      // {renderErrorMessage("senha_cad")}
+
+
+                    />
+                  </div>
+                </div>
+                <div className="input">
+
+
+                </div>
+                <div className="input-submit">
+                  <input type="submit" value="Logar" />
+                </div>
+
+                {/* <hr class="linha"> */}
+                <div className="alinhamento">
+                  <p className="link">
+
+                    <Link to={"#"}>Cadastrar</Link>
+
+                  </p>
+                </div>
+              </form>
+              <div className="contato">
+                <div className="imagem">
+                  <img src={imglogo} />
+                  {/* <a href="contato@blamovi.com">contato@blamovi.com</a> */}
+                  <img src={imgfaceBranco} alt="" />
+                  <img src={imgInstaBranco} alt="" />
+                  <img
+                    src={imgtwitterBranco}
+                    alt=""
+                  />
+                  <img src={imgWhatsBranco} alt="" />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="input">
-            <img
-              className="form-label"
-              src="../Cadastro/imagens/Group Message.png"
-            />
-            <div className="input-email">
-              <label htmlFor="email_cad">Seu e-mail</label>
-              <input
-                id="email_cad"
-                name="email_cad"
-                required={true}
-                type="email"
-              />
-            </div>
-          </div>
-          <div className="input">
-            <img className="form-label" src="../Cadastro/imagens/Lock.png" />
-            <div className="input-senha">
-              <label htmlFor="senha_cad">Sua senha</label>
-              <input
-                id="senha_cad"
-                name="senha_cad"
-                required={true}
-                type="password"
-              />
-            </div>
-          </div>
-          <div className="input">
-            <img className="form-label" src="../Cadastro/imagens/Lock.png" />
-            <div className="input-conf-senha">
-              <label htmlFor="confirma-senha">Confirmar Senha</label>
-              <input
-                id="confirma-senha"
-                name="confirma-senha"
-                required={true}
-                type="password"
-              />
-            </div>
-          </div>
-          <div className="input">
-            <img
-              className="form-label"
-              src="../Cadastro/imagens/icon User.png"
-            />
-            <div className="input-user">
-              <label htmlFor="user">Usuario</label>
-              <input id="user" name="user" required={true} type="text" />
-            </div>
-          </div>
-          <div className="input">
-            <img
-              className="form-label"
-              src="../Cadastro/imagens/icon User.png"
-            />
-            <div className="input-foto">
-              <label htmlFor="foto">Foto</label>
-              <input id="foto" name="foto" required={true} type="file" />
-            </div>
-          </div>
-          <div className="input-submit">
-            <input type="submit" defaultValue="Cadastrar" />
-          </div>
-          {/* <hr class="linha"> */}
-          <div className="alinhamento">
-            <p className="link">
-              Já tem conta?
-              <a href="#paralogin">
-                {" "}
-                <br />
-                Cadastre-se agora!{" "}
-              </a>
-            </p>
-          </div>
-        </form>
-        <div className="contato">
-          <div className="imagem">
-            <img src="../Cadastro/imagens/logo.png" />
-            {/* <a href="contato@blamovi.com">contato@blamovi.com</a> */}
-            <img src="../Cadastro/imagens/redeSocial/faceBranco.svg" alt="" />
-            <img src="../Cadastro/imagens/redeSocial/InstaBranco.svg" alt="" />
-            <img
-              src="../Cadastro/imagens/redeSocial/twitterBranco.svg"
-              alt=""
-            />
-            <img src="../Cadastro/imagens/redeSocial/WhatsBranco.svg" alt="" />
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</main>
+      </main>
 
-        </>
-    )
+      {/* <footer className="ajustesrodape" >
+
+    <div className="rodapejf1" >
+      
+      <ul className="rodapejf">
+        <li><a href="#" title="Home">Favoritos</a></li>
+        <li><a href="#" title="login">Home</a></li>
+        <li><a href="#" title="pesquisar">Pesquisar</a></li>
+        <li><a href="#" title="login">Login</a></li>
+        <li><a href="#" title="noticias">Noticias</a></li>
+        <li><a href="#" title="informações">Informações</a></li>
+        <li><a href="#" title="Fale Conosco">Fale Conosco</a></li>
+
+      </ul>
+
+    </div>
+
+  </footer> */}
+
+    </>
+  )
 }
 
-export default Login
+export default Login;
