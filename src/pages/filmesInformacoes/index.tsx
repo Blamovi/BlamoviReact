@@ -318,6 +318,21 @@ function FilmesInformacoes() {
                         </div>
                     </div>
                     <div className="Comentarios_todos">
+
+  {/* {
+                            comentarioFilmes.map((comentarFilme: any) => {
+                                return <div key={comentarFilme.id}>
+                                    <Comentario
+                                        nome={comentarFilme.nome}
+                                        foto={comentarFilme.foto}
+                                        comentarios={comentarFilme.comentario}
+                                    />
+                                </div>
+                            })
+                        } */}
+                        
+
+
                         <div className="img_coment">
                             <img
                                 className="ricardo"
