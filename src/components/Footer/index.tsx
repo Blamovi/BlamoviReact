@@ -1,10 +1,11 @@
 import "./style.css"
 
-import imgLogoBranco  from "../../assets/images/logo-branco.svg";
-import imgCinemaFooter  from "../../assets/images/cinema_foto_pexels 1 (1).png";
+import { Link } from "react-router-dom";
 
-import { Link, useNavigate } from "react-router-dom";
 
+ import imgCinemaFooter from "../../assets/img/footer/cine.png"
+
+import imgLogoBranco from "../../assets/img/logo/logo-branco.svg"
 
 function Footer() {
     return (
@@ -15,15 +16,13 @@ function Footer() {
                     src={imgCinemaFooter}
                     alt=""
                 />
-                <ul>                   
-
-                <Link to={"../Home/home.html"}>Home</Link>
-                <Link to={"../Login/login.html"}>Login</Link>
-                <Link to={"../Login/login.html"}>Pesquisar</Link>
-                <Link to={"../calendario/calendario.html"}>Calendario</Link>
-                <Link to={"../Favoritos/favoritos.html"}>Home</Link>
-                <Link to={"../filmesinformacoes/filmes.html"}>Home</Link>
-                    
+                <ul>
+                    <Link to={"/"}>Home</Link>
+                    <Link to={"/Login"}>Login</Link>
+                    <Link to={"#"}>Pesquisar</Link>
+                    <Link to={"/Calendario"}>Calendario</Link>
+                    <Link to={"/Favoritos"}>Favoritos</Link>
+                    <Link to={"/Filmes/Informações"}>Informações</Link>
                 </ul>
                 <div>
                     <div>
