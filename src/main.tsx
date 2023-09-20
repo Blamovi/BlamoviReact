@@ -23,22 +23,22 @@ import './index.css'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import secureLocalStorage from 'react-secure-storage'
+// import secureLocalStorage from 'react-secure-storage'
 
 
 
-function logado() {
-  if (secureLocalStorage.getItem("user")) {
-    const objetoUsuario: any = secureLocalStorage.getItem("user");
+// function logado() {
+//   if (secureLocalStorage.getItem("user")) {
+//     const objetoUsuario: any = secureLocalStorage.getItem("user");
 
-    const nome: string = objetoUsuario.user.nome.trim().split(" ")[0];
+//     const nome: string = objetoUsuario.user.nome.trim().split(" ")[0];
 
-    return { logado: true, nomeUsuario: nome }
-  }
-  else {
-    return { logado: false, nomeUsuario: null }
-  }
-}
+//     return { logado: true, nomeUsuario: nome }
+//   }
+//   else {
+//     return { logado: false, nomeUsuario: null }
+//   }
+// }
 
 
 
