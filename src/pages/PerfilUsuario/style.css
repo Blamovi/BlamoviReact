@@ -113,7 +113,8 @@
     margin: 10px 0px;
     cursor: pointer;
     font-family: var(--font1);
-    background-color: var(--amarelo)
+    background-color: var(--amarelo);
+    color: black;
 }
 #main_perfilusuario .textomenu{
     font-size: 20px;

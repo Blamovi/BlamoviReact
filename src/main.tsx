@@ -5,12 +5,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 
-//components
+// componentes
 import Header from './components/Header'
+import Calendario from './pages/Calendario'
 import Footer from './components/Footer'
 import Feed from './pages/Feed'
 import PerfilUsuario from './pages/PerfilUsuario'
-import Calendario from './pages/Calendario'
 import Cadastro from './pages/Cadastro'
 import Login from './pages/Login'
 import Post from './components/Post'
