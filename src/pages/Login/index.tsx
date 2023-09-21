@@ -22,7 +22,7 @@ import "./style.css"
 import { Link, useNavigate } from "react-router-dom";
 
 //localStorage
-import secureLocalStorage from "react-secure-storage";
+// import secureLocalStorage from "react-secure-storage";
 
 
 
@@ -144,7 +144,9 @@ function Login() {
 
                 </div>
                 <div className="input-submit">
+                  <Link to={"/perfil"}>
                   <input type="submit" value="Logar" />
+                  </Link>
                 </div>
 
                 {/* <hr class="linha"> */}
