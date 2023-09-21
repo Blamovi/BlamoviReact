@@ -674,7 +674,7 @@
       height: 50px;
       display: flex;
       justify-content: center;
-  
+      margin: 0 auto;
     }
   
     #recuperacao_senha .form-label{
