@@ -19,10 +19,10 @@ function Footer() {
                 <ul>
                     <Link to={"/"}>Home</Link>
                     <Link to={"/Login"}>Login</Link>
-                    <Link to={"#"}>Pesquisar</Link>
+                    <Link to={"/feed"}>Feed</Link>
                     <Link to={"/Calendario"}>Calendario</Link>
                     <Link to={"/Favoritos"}>Favoritos</Link>
-                    <Link to={"/Filmes/Informações"}>Informações</Link>
+                    <Link to={"/filmesInformacoes"}>Informações</Link>
                 </ul>
                 <div>
                     <div>

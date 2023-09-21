@@ -13,7 +13,7 @@ import Feed from './pages/Feed'
 import PerfilUsuario from './pages/PerfilUsuario'
 import Cadastro from './pages/Cadastro'
 import Login from './pages/Login'
-import Post from './components/Post'
+// import Post from './components/Post'
 import Comentario from  './components/Comentario'
 import RecuperacaoSenha from './pages/RecuperacaoSenha'
 import Contato from './pages/Contato'
@@ -21,7 +21,13 @@ import Contato from './pages/Contato'
 
 import './index.css'
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// componentes
+
+import FilmesInformacoes from './pages/FilmesInformacoes'
+
+
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 // import secureLocalStorage from 'react-secure-storage'
 
@@ -67,14 +73,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path='/' element={<Home />} />
         <Route path='/favoritos' element={<Favoritos/>} /> 
         {/* <Route path='NomeDaRota' element={<NomeDoComponente/>}/> */}
-       <Route path='/post' element={<Post/>}/> */
-       <Route path='/comentario' element={<Comentario/>}/> */
+       {/* <Route path='/post' element={<Post/>}/>  */}
+       {/* <Route path='/comentario' element={<Comentario/>}/>  */}
        <Route path='/perfil' element={<PerfilUsuario/>}/>
        <Route path='/feed' element={<Feed/>}/>
        <Route path='/calendario' element={<Calendario/>}/>
        <Route path='/Cadastro' element={<Cadastro/>}/>
        <Route path='/Login' element={<Login/>}/>
        <Route path='/senha' element={<RecuperacaoSenha/>}/> 
+       <Route path='/filmesInformacoes' element={<FilmesInformacoes />} />
        <Route path='/contato' element={<Contato/>}/>
        <Route path='/recuperacaosenha' element={<RecuperacaoSenha/>}/>
       </Routes>

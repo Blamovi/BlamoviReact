@@ -23,7 +23,7 @@ import "./style.css"
 import { Link, useNavigate } from "react-router-dom";
 
 //localStorage
-import secureLocalStorage from "react-secure-storage";
+// import secureLocalStorage from "react-secure-storage";
 
 
 function RecuperacaoSenha() {

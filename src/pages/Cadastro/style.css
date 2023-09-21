@@ -6,9 +6,9 @@
 @media screen and (max-width: 800px) {
 
 
-  #main_cadastro .container {
+  /* #main_cadastro .container {
    
-  }
+  } */
 
 
 }
@@ -72,16 +72,16 @@ max-width: 100%;
  opacity: 0.2;
 } */
 
-#main_cadastro .container{
-  background:
+/* #main_cadastro .container{ */
+  /* background:
   linear-gradient(180deg, #000 0%, #00000080 50%, #000 100%),
-  url("../../assets/images/cineminha.png");
+  url("../../assets/images/cineminha.png"); */
   /* max-width: 100%;
   padding: 100px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; */
-} 
+  background-repeat: no-repeat; 
+} */
 
 #main_cadastro .cineminha{
   width: 100%;
@@ -360,9 +360,9 @@ max-width: 100%;
   }
 
   @media screen and (max-width: 1000px) {
-    #main_cadastro .card {}
+    /* #main_cadastro .card {}
 
-    #main_cadastro .poster>img {}
+    #main_cadastro .poster>img {} */
 
     #main_cadastro .hamburguer {
       display: none;

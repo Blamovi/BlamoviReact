@@ -57,9 +57,9 @@ max-width: 100%;
 } */
 
 #ajustes3 .container {
-  background:
+  /* background:
     linear-gradient(180deg, #000 0%, #00000080 50%, #000 100%),
-    url("../../assets/images/cineminha.png");
+    url("../../assets/images/cineminha.png"); */
    
   
 } 
@@ -80,7 +80,7 @@ max-width: 100%;
 @media screen and (max-width: 10000px) {
 
 
-  #footer img{
+  #ajuste3 .img-footer{
     display: none;
   }
 

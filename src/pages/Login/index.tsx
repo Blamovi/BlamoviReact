@@ -2,7 +2,7 @@
 // Referencia https://contactmentor.com/login-form-react-js-code/?expand_article=1
 
 
-import imgIconUser33 from "../../assets/images/IconUser33.png"
+// import imgIconUser33 from "../../assets/images/IconUser33.png"
 import imgGroupMessage from "../../assets/images/Group Message.png"
 import imgLock from "../../assets/images/Lock.png"
 import imglogo from "../../assets/images/logo.png"
@@ -10,7 +10,7 @@ import imgfaceBranco from "../../assets/images/faceBranco.svg"
 import imgInstaBranco from "../../assets/images/InstaBranco.svg"
 import imgtwitterBranco from "../../assets/images/twitterBranco.svg"
 import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
-import imgbanner from "../../assets/images/cineminha.png"
+// import imgbanner from "../../assets/images/cineminha.png"
 
 //hooks
 import { useState } from "react";
@@ -33,7 +33,7 @@ function Login() {
   const navigate = useNavigate();
 
   const [errorMessages, setErrorMessages] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmited, setIsSubmitted] = useState(false);
 
 
   const database = [

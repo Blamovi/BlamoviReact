@@ -1,0 +1,75 @@
+#detalhe_filmesInformacoes .ricardo {
+    width: 100px;
+    height: 100px;
+    margin-top: 55px;
+    border-radius: 50px;
+}
+
+#detalhe_filmesInformacoes .marcos {
+    width: 100px;
+    height: 100px;
+    margin-top: 55px;
+    border-radius: 50px;
+}
+
+#detalhe_filmesInformacoes .usuario1 {
+    color: #FBC02C;
+    text-align: left;
+    font-size: 25px;
+    margin-top: 100px;
+      padding: 0px 0px 0px 30px;
+}
+
+#detalhe_filmesInformacoes .usuario2 {
+    color: #FBC02C;
+    text-align: left;
+    font-size: 25px;
+    margin-top: 60px;
+    padding: 0px 0px 0px 30px;
+}
+
+#detalhe_filmesInformacoes .comentario_texto {
+    color: #ffffff;
+    text-align: justify;
+    padding: 0px 50px 0px 30px;
+}
+
+#detalhe_filmesInformacoes .like {
+    width: 35px;
+    height: 35px;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+#detalhe_filmesInformacoes .figurinhas {
+    width: 30px;
+    height: 30px;
+}
+
+
+@media screen and (max-width: 1100px) {
+    #detalhe_filmesInformacoes .subtitulo3 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #detalhe_filmesInformacoes .subtitulo3 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    #detalhe_filmesInformacoes .comentario_texto {
+        padding: 0px 14px 0px 30px;
+        
+    }
+}
+
+@media screen and (max-width: 523px) {
+    #detalhe_filmesInformacoes .separar_comentario {
+        display: none;
+    } 
+}
+
+  
