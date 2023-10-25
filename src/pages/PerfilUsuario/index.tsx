@@ -54,9 +54,9 @@ function PerfilUsuario() {
               <img className="tam" src={imgverificado} alt="" />
               <img className="tam" src={imglevel} alt="" />
               <img className="tam" src={imgGrey} alt="" />
-              <div className="botao_do_perfil">
+              {/* <div className="botao_do_perfil">
                 <button className="botao"> Editar perfil</button>
-              </div>
+              </div> */}
             </div>
             <div className="text">
               <p>
@@ -76,7 +76,7 @@ function PerfilUsuario() {
         {/* sessao 2  */}
         <div className="classificacao">
           <div className="filmes">
-            <span className="comlinha">episodios assistidos</span>
+            <span className="comlinha">Séries assistidas</span>
             <span className="tam2">4k</span>
           </div>
           <div className="series">
@@ -114,6 +114,7 @@ function PerfilUsuario() {
           </form>
         </div> */}
         {/*corpo da feed*/}
+      
         <ul className="posts">
           <li className="post">
             <div className="infoUserPost">
@@ -143,6 +144,9 @@ function PerfilUsuario() {
               </li>
             </ul> */}
           </li>
+          
+          
+
 
           {/* </ul> */}
           {/* <ul className="posts"> */}

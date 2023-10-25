@@ -30,10 +30,10 @@ h3 {
     margin-top: 20px;
 }
 
-span {
+#main_favoritos span {
 
     color: var(--amarelo);
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
 }
 
