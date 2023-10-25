@@ -113,6 +113,12 @@ max-width: 100%;
 
 
 /* //////////////////////// */
+div .input-data-nascimento{
+  margin-left: 8px;
+  width: 100%;
+}
+
+
 
 
 #main_cadastro .menu ul {

@@ -10,6 +10,7 @@ import imgfaceBranco from "../../assets/images/faceBranco.svg"
 import imgInstaBranco from "../../assets/images/InstaBranco.svg"
 import imgtwitterBranco from "../../assets/images/twitterBranco.svg"
 import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
+import imgCale from "../../assets/images/cale.png"
 import imgbanner from "../../assets/images/cineminha.png"
 
 
@@ -169,6 +170,8 @@ function Cadastro() {
                     />
                   </div>
                 </div>
+
+
                 <div className="input">
                   <img className="form-label" src={imgLock} />
                   <div className="input-conf-senha">
@@ -186,6 +189,25 @@ function Cadastro() {
                     />
                   </div>
                 </div>
+
+
+
+                <div className="input">
+                  <img className="form-label" src={imgCale} />
+                  <div className="input-data-nascimento">
+                    <label htmlFor="data_nascimento">Data de Nascimento</label>
+                    <input
+
+                      id="data_nascimento"
+                      name="data_nascimento"
+                      type="date"
+                      required={true}
+                    />
+                  </div>
+                </div>
+
+
+
                 <div className="input">
                   <img
                     className="form-label"
