@@ -31,70 +31,33 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Cadastro() {
 
-  const [formData, setFormData] = useState({
-    nome: 'nome_cad',
-    email: 'email_cad',
-    senha: 'senha_cad',
-    confirmaSenha: 'confirma-senha',
-    user: 'user',
-    foto: null,
-  });
 
-  const [formErrors, setFormErrors] = useState({});
 
-  const handleInputChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+
+  const [senha, setSenha] = useState('');
+  const [confirmaSenha, setConfirmaSenha] = useState('');
+  const [erroSenha, setErroSenha] = useState('');
+
+  const handleSenhaChange = (e) => {
+    setSenha(e.target.value);
   };
 
-  const handleFileChange = (e: any) => {
-    const file = e.target.files[0];
-    setFormData({
-      ...formData,
-      foto: file,
-    });
+  const handleConfirmaSenhaChange = (e) => {
+    setConfirmaSenha(e.target.value);
   };
 
-  // const handleSubmit = (e: any) => {
-  //   e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  //   const errors = {};
-
-  //   if (formData.nome.trim() === '') {
-  //     errors.nome = 'preencha o campo Seu Nome';
-  //   }
-
-  //   if (formData.email.trim() === '') {
-  //     errors.email = ' preencha o campo Seu e-mail';
-  //   }
-
-  //   if (formData.senha.trim() === '') {
-  //     errors.senha = 'preencha o campo Sua senha';
-  //   }
-
-  //   if (formData.senha !== formData.confirmaSenha) {
-  //     errors.confirmaSenha = 'As senhas não coincidem.';
-  //   }
-
-  //   if (Object.keys(errors).length > 0) {
-  //     setFormErrors(errors);
-  //     return;
-  //   }
-
-  //   setFormData({
-  //     nome: '',
-  //     email: '',
-  //     senha: '',
-  //     confirmaSenha: '',
-  //     user: '',
-  //     foto: null,
-  //   });
-
-  //   setFormErrors({});
-  // };
+    if (senha === confirmaSenha) {
+      setErroSenha('');
+      // As senhas coincidem, continue com o processo de cadastro
+      console.log('Cadastro bem-sucedido!');
+    } else {
+      setErroSenha('As senhas não coincidem');
+      // As senhas não coincidem, exiba uma mensagem de erro
+    }
+  };
 
 
   return (
@@ -119,7 +82,7 @@ function Cadastro() {
 
             {/*FORMULÁRIO DE CADASTRO*/}
             <div id="cadastro">
-              <form className="ajustes " method="post" action="">
+              <form className="ajustes " method="post" action="" onSubmit={handleSubmit}>
                 <h1>Cadastro</h1>
                 <div className="input">
                   <img
@@ -167,6 +130,7 @@ function Cadastro() {
                       required={true}
                     // onChange={handleInputChange}
                     // required
+                    onChange={handleSenhaChange}
                     />
                   </div>
                 </div>
@@ -183,7 +147,7 @@ function Cadastro() {
                       type="password"
                       required={true}
                     //value={formData.confirmaSenha}
-
+                    onChange={handleConfirmaSenhaChange}
                     // onChange={handleInputChange}
                     // required
                     />

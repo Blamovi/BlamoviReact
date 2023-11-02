@@ -21,11 +21,6 @@ import "./style.css"
 //rotas
 import { Link, useNavigate } from "react-router-dom";
 
-//localStorage
-// import secureLocalStorage from "react-secure-storage";
-
-
-
 
 function Login() {
 
@@ -74,11 +69,26 @@ function Login() {
 
   };
 
-  // mensagem de erro
-  // const renderErrorMessage = (name: any) =>
-  //   name === errorMessages.name && (
-  //     <div className="error">{errorMessages.message}</div>
-  //   );
+   /////////// VALIDAÇÃO DO LOGIN ////////////
+
+   function Login() {
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const history = useHistory();
+
+
+      // Você pode usar o useHistory ou uma biblioteca de roteamento, como react-router-dom, para fazer isso.
+  
+    const validLogin = () => {
+      if (email === 'usuario' && senha === 'usuario') {
+        alert('Sucesso');
+        history.push('/perfil'); // Redirecionar o usuário para a página de perfil
+      } else {
+        alert('Usuário ou senha incorretos');
+      }
+    }
+  };
+
 
   return (
     <>
@@ -100,7 +110,7 @@ function Login() {
           <Link to={"#"} className="links" id="paralogin" ></Link>
           <div className="content">
             <div id="cadastro">
-              <form className="ajustes " method="post" action="">
+              <form className="ajustes " method="post" action="" >
                 <h1>Login</h1>
                 <div className="input">
 
@@ -134,6 +144,7 @@ function Login() {
                       required //={true}
                       type="password" // email
                       // {renderErrorMessage("senha_cad")}
+                 
 
 
                     />
@@ -148,6 +159,8 @@ function Login() {
                   <input type="submit" value="Logar" />
                   </Link>
                 </div>
+
+
 
                 {/* <hr class="linha"> */}
                 <div className="alinhamento">
