@@ -5,7 +5,7 @@ import imgLogoBranco from "../../assets/logo-branco.svg"
 function Header() {
     return (
         <>
-            <header id="header">
+            {/* <header id="header">
                 <div className="posicionamento_header posicionamento">
                     <div className="logo">
                         <img src={imgLogoBranco} alt="logo" />
@@ -41,7 +41,43 @@ function Header() {
                         <a href="../Login/login.html">Login</a>
                     </nav>
                 </div>
+            </header> */}
+
+            <header id="headerResponsivo">
+                <div className="estruturaHeader">
+                    <div className="logo">
+                        <img src="../img/logobranca.svg" alt="" />
+                        <h1>Blámovi</h1>
+                    </div>
+                    <div id="divBusca">
+                        <input
+                            type="text"
+                            id="txtBusca"
+                            placeholder="Procure por filmes, séries..."
+                        />
+                        <button id="btnBusca">Buscar</button>
+                    </div>
+                    <button className="abrirMenu" />
+                    <nav className="menu">
+                        <button className="fecharMenu" />
+                        <ul id="menuR">
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">Calendario</a>
+                            </li>
+                            <li>
+                                <a href="">Favoritos</a>
+                            </li>
+                            <li>
+                                <a href="">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
+            <script src="./js/script.js"></script>
 
         </>
     )

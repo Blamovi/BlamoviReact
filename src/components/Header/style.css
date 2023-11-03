@@ -1,4 +1,4 @@
-#header {
+/* #header {
     background-color: var(--preto);
     height: 70px;
     padding: 25px;
@@ -68,7 +68,7 @@
 
 /* barra de pesquisa */
 
-#divBusca {
+/* #divBusca {
     background-color: #E0EEEE;
     border: solid 2px #fdf9f900;
     border-radius: 10px;
@@ -100,9 +100,9 @@
 
 #divBusca img {
     float: left;
-}
+} */ 
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
     .servicos>div>div:nth-child(2) {
         margin-top: 100px;
     }
@@ -143,5 +143,158 @@
 @media screen and (max-width: 768px) {
     header nav{
         width: 260px;
+    }
+} */
+
+/* CONTEUDO NICOLAS */
+
+#headerResponsivo header{
+    background-color: black;
+    padding: 15px;
+}
+
+#headerResponsivo .estruturaHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headerResponsivo h1{
+    color: white;
+    margin-left: 15px;
+}
+
+#headerResponsivo .logo{
+    display: flex;
+}
+
+/* CAMPO BUSCA */
+
+#headerResponsivo #divBusca {
+    background-color: #E0EEEE;
+    border: solid 2px #fdf9f900;
+    border-radius: 10px;
+    width: 320px;
+    height: 31px;
+
+}
+
+#headerResponsivo #txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 20px;
+    border: none;
+    height: 27px;
+    width: 243px;
+    border-radius: 8px;
+}
+
+#headerResponsivo #btnBusca {
+    border: none;
+    float: right;
+    height: 28px;
+    border-radius: 7px;
+    width: 70px;
+    font-weight: bold;
+    background: #FBC02C;
+}
+
+#headerResponsivo #divBusca img {
+    float: left;
+}
+
+/* CAMPO NAV MENU */
+
+#headerResponsivo button{
+    background: none;
+    border: none;
+}
+
+#headerResponsivo .menu{
+    display: flex;
+    align-items: center;
+}
+
+#headerResponsivo .menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#headerResponsivo .menu ul a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FBC02C;
+    font-size: 20px;
+    margin: 0px 15px;
+    text-decoration: none;
+    align-items: center;
+}
+
+#headerResponsivo li{
+    list-style: none;
+}
+
+/* RESPOSIVO */
+
+@media (max-width: 938px) {
+
+    #headerResponsivo .menu {
+        background-color: rgba(255, 255, 255, 0.568);
+        height: 100%;
+        position: fixed;
+        z-index: 10;
+        width: 50%;
+        max-width: 300px;
+        top: 0;
+        margin: 0;
+        right: -300px;
+        transition: right 0.5s ease-out;
+    }
+
+    #headerResponsivo .menuMobile .menu {
+        right: 0px;
+    }
+
+
+    #headerResponsivo .abrirMenu {
+        background: url(../img/abrirMenu.png);
+        background-size: cover;
+        padding: 20px;
+        border: 0;
+        display: block;
+    }
+
+    #headerResponsivo .fecharMenu {
+        background: url(../img/fecharMenu.png);
+        background-size: cover;
+        padding: 20px;
+        border: 0;
+        display: block;
+        width: 0%;
+        padding: 10%;
+        margin: 4%;
+    }
+
+    #headerResponsivo .menu {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #headerResponsivo .menu ul {
+        flex-direction: column;
+
+        margin: 20px;
+    }
+
+    #headerResponsivo .menu ul li {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #headerResponsivo .menu ul li a {
+        font-size: 30px;
+        margin-right: 60px;
+        margin-bottom: 15px;
     }
 }
