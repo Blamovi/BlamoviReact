@@ -410,6 +410,10 @@ function Home() {
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 navigation
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                  }}
             >
                 {data.map((item) => (
                     <SwiperSlide key={item.id}>
