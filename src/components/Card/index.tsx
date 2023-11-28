@@ -4,7 +4,29 @@ import "./style.css";
 import imgIconesTrofeu from "../../assets/img/elementos/Trophy.png";
 import imgIconesComentario from "../../assets/img/elementos/Talk.png";
 
+import { useEffect, useState } from "react";
+
+const moviesURL = import.meta.env.VITE_API;
+const apiKey = import.meta.env.VITE_API_KEY;
+
 function Card(props: any) {
+
+    const [topMovies, setTopMovies] = useState ([]);
+    
+    const getTopRatedMovies = async (url: RequestInfo | URL) => {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        console.log(data);
+    }
+    
+    useEffect(() =>{
+        const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
+
+        getTopRatedMovies(topRatedURL);
+        
+    })
+
 
 
     function verificarComentarios() {

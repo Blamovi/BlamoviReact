@@ -20,8 +20,11 @@ import CardLancamentos from "../../components/CardLancamentos";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 import { Link } from "react-router-dom";
+// import { useEffect, useState } from "react";
+
+// const moviesURL = import.meta.env.VITE_API;
+// const apiKey = import.meta.env.VITE_API_KEY;
 
 function Home() {
 
@@ -30,6 +33,22 @@ function Home() {
         { id: '2', image: '../src/assets/img/banner/Frame 65.svg' },
         { id: '3', image: '../src/assets/img/banner/Frame 64.svg' },
     ] 
+
+    // const [topMovies, setTopMovies] = useState ([]);
+    
+    // const getTopRatedMovies = async (url) => {
+    //     const res = await fetch(url);
+    //     const data = await res.json();
+
+    //     console.log(data);
+    // }
+    
+    // useEffect(() =>{
+    //     const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
+
+    //     getTopRatedMovies(topRatedURL);
+        
+    // })
 
     const listaFilmes: any[] = [
         {

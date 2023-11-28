@@ -31,8 +31,6 @@ function Header() {
         }
         menu_barras.classList.toggle("ativo"); 
     }
-    
-
 
     return (
         <><div id="sombra"></div>
