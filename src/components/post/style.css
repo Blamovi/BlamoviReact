@@ -1,0 +1,100 @@
+:root{
+    --font1:'Poppins', sans-serif;
+    --cor1: #FBC02C;
+    --cor2: #85141A;
+}
+
+body{
+    background-color: black;
+}
+
+#posts{
+    /* margin-bottom: 200px; */
+    background-color: #DCE0E6;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#posts .actionBtnPost{
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+#posts .filesPost{
+    display: flex;
+    align-items: center;
+    width: 274px;
+    height: 44px;
+    justify-content: center;
+    background-color: var(--cor1);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#posts .infoUserPost{
+    display: flex;
+    align-items: center;
+}
+
+#posts .infoUserPost img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#posts p{
+    margin-bottom: 10px;
+    font-family: var(--font1);
+    font-size: 13px;
+}
+
+#posts .textoPost{
+    font-size: 18px;
+}
+
+#posts #mais{
+    display: none;
+}
+
+#posts .textoComments{
+    font-size: 16px;
+}
+
+#posts .nameAndHour strong{
+    font-family: var(--font1);
+    color: black;
+}
+
+#posts .balanoalvo{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#posts .imgUserComments{
+    margin: 5px 10px 0px 0px;
+}
+
+#posts .infoUserComments{
+    display: flex;
+    align-items: center;
+}
+
+
+#posts .filesPostComment{
+    border: none;
+    background: transparent;
+    margin-right: 5px;
+    cursor: pointer;
+}

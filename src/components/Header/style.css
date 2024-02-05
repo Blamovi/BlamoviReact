@@ -1,6 +1,6 @@
 #header {
     background-color: var(--preto);
-    height: 70px;
+    height: 60px;
     padding: 25px;
     display: flex;
     align-items: center;
@@ -30,6 +30,8 @@
     color: var(--amarelo);
 }
 
+
+
 #header .logo {
     display: flex;
     align-items: center;
@@ -51,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 450px;
+    width: 550px;
 }
 
 #header a {
@@ -59,7 +61,8 @@
     text-transform: uppercase;
     text-decoration: none;
     font-family: var(--font1);
-    font-size: 18px;
+    font-size: 17px;
+    background-color: transparent;
 }
 
 #header a:hover {
@@ -68,7 +71,7 @@
 
 /* barra de pesquisa */
 
-#divBusca {
+ #divBusca {
     background-color: #E0EEEE;
     border: solid 2px #fdf9f900;
     border-radius: 10px;
@@ -77,7 +80,7 @@
 
 }
 
-#txtBusca {
+ #txtBusca {
     float: left;
     background-color: transparent;
     padding-left: 5px;
@@ -88,7 +91,7 @@
     border-radius: 8px;
 }
 
-#btnBusca {
+ #btnBusca {
     border: none;
     float: right;
     height: 28px;
@@ -98,25 +101,25 @@
     background: #FBC02C;
 }
 
-#divBusca img {
+  #divBusca img {
     float: left;
 }
 
 @media screen and (max-width: 1200px) {
-    .servicos>div>div:nth-child(2) {
+     .servicos>div>div:nth-child(2) {
         margin-top: 100px;
     }
 
-    .menu_barras {
+     .menu_barras {
         display: initial;
     }
 
-    .menu_barras svg {
+     .menu_barras svg {
         height: 50px;
         fill: var(--branco);
     }
 
-    .posicionamento_header {
+     .posicionamento_header {
         position: relative;
     }
 
@@ -134,7 +137,7 @@
         border: 1px solid rgba(255, 255, 255, 0.8);
     }
 
-    header nav a {
+     header nav a {
         margin: 30px 0;
         font-size: 22px;
     }
