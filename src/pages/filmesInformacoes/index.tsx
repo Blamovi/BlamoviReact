@@ -1,6 +1,6 @@
 import "./style.css"
 
-import imgSimboloBatman from "../../assets/Images/image 141.svg";
+// import imgSimboloBatman from "../../assets/Images/image 141.svg";
 import imgCoracao from "../../assets/Images/Coracao.svg";
 import imgBatman from "../../assets/Images/batman-(cav-das-tre).webp";
 import imgTrofeu from "../../assets/Images/image 144.svg";
@@ -10,21 +10,21 @@ import imgNetflix from "../../assets/Images/image 76.svg";
 import imgPrimeVideo from "../../assets/Images/image 70.svg";
 import imgDisney from "../../assets/Images/image 39.svg";
 import imgBonecosGrupo from "../../assets/Images/Business Group.svg";
-import imgChristian from "../../assets/Images/image 122.svg";
-import imgMaggie from "../../assets/Images/image 126.svg";
-import imgMichael from "../../assets/Images/image 125.svg";
-import imgHeath from "../../assets/Images/image 123.svg";
-import imgMorgan from "../../assets/Images/image 128.svg";
-import imgCillian from "../../assets/Images/image 132.svg";
-import imgLampada from "../../assets/Images/Light On.svg";
-import imgAvengers from "../../assets/Images/image 111.svg";
-import imgJoker from "../../assets/Images/image 110.svg";
-import imgFlash from "../../assets/Images/image 85.svg";
-import imgInfo from "../../assets/Images/Info Popup.svg";
-import imgOscars from "../../assets/Images/The Oscars.svg";
-import imgMicrofone from "../../assets/Images/Camping Chair.svg";
-import imgPage from "../../assets/Images/Page.svg";
-import imgCalendario from "../../assets/Images/Calendar.svg";
+// import imgChristian from "../../assets/Images/image 122.svg";
+// import imgMaggie from "../../assets/Images/image 126.svg";
+// import imgMichael from "../../assets/Images/image 125.svg";
+// import imgHeath from "../../assets/Images/image 123.svg";
+// import imgMorgan from "../../assets/Images/image 128.svg";
+// import imgCillian from "../../assets/Images/image 132.svg";
+// import imgLampada from "../../assets/Images/Light On.svg";
+// import imgAvengers from "../../assets/Images/image 111.svg";
+// import imgJoker from "../../assets/Images/image 110.svg";
+// import imgFlash from "../../assets/Images/image 85.svg";
+// import imgInfo from "../../assets/Images/Info Popup.svg";
+// import imgOscars from "../../assets/Images/The Oscars.svg";
+// import imgMicrofone from "../../assets/Images/Camping Chair.svg";
+// import imgPage from "../../assets/Images/Page.svg";
+// import imgCalendario from "../../assets/Images/Calendar.svg";
 import imgRicardo from "../../assets/Images/image 136.svg";
 import imgMarcos from "../../assets/Images/image 140.svg";
 import { Link } from "react-router-dom";
@@ -56,12 +56,12 @@ function FilmesInformacoes() {
             <main id="detalhe_filmesInformacoes">
                 <section className="Filmes">
                     <div className="banner_1">
-                        <p className="superbanner">BLÁMOVI: RECOMENDA</p>
-                        <img
+                        {/* <p className="superbanner">BLÁMOVI: RECOMENDA</p> */}
+                        {/* <img
                             className="img_rec"
                             src={imgSimboloBatman}
                             alt=""
-                        />
+                        /> */}
                     </div>
                     <div className="Banner2">
                         <h2>BATMAN: O CAVALEIRO DAS TREVAS (2008)</h2>
@@ -127,10 +127,7 @@ function FilmesInformacoes() {
                         <div>
                             <p className="titulo1">Sinópse</p>
                             <p className="sinopse">
-                                Com a ajuda de Jim Gordon e Harvey Dent, Batman tem mantido a ordem na
-                                cidade de Gotham. Mas um jovem e anárquico criminoso, conhecido como
-                                Coringa, pretende testar o justiceiro e mergulhar a cidade em um
-                                verdadeiro caos.
+                            Após dois anos desde o surgimento do Batman (Christian Bale), os criminosos de Gotham City têm muito o que temer. Com a ajuda do tenente James Gordon (Gary Oldman) e do promotor público Harvey Dent (Aaron Eckhart), Batman luta contra o crime organizado. Acuados com o combate, os chefes do crime aceitam a proposta feita pelo Coringa (Heath Ledger) e o contratam para combater o Homem-Morcego.
                             </p>
                         </div>
                         <div className="topico">
@@ -141,94 +138,117 @@ function FilmesInformacoes() {
                             />
                         </div>
                         <p className="titulo1">Elenco Princial</p>
-                        <p className="subtitulo1">Seus personagens</p>
+                        {/* <p className="subtitulo1">Seus personagens</p> */}
                         <div className="elementos">
                             <div className="elementos_1">
                                 <div className="grupo1">
                                     <div>
-                                        <img
+                                        {/* <img
                                             className="img1"
                                             src={imgChristian}
                                             alt=""
-                                        />
+                                        /> */}
                                     </div>
                                     <div className="ator">
                                         <p>Christian Bale</p>
-                                        <p className="personagem">Bruce Wayne</p>
+                                        {/* <p className="personagem">Bruce Wayne</p> */}
                                     </div>
                                 </div>
                                 <div className="grupo1">
                                     <div>
-                                        <img
+                                        {/* <img
                                             className="img1"
                                             src={imgMaggie}
                                             alt=""
-                                        />
+                                        /> */}
                                     </div>
                                     <div className="ator">
                                         <p>Maggie G.</p>
-                                        <p className="personagem">Rachel</p>
+                                        {/* <p className="personagem">Rachel</p> */}
                                     </div>
                                 </div>
                                 <div className="grupo1">
                                     <div>
-                                        <img
+                                        {/* <img
                                             className="img1"
                                             src={imgMichael}
                                             alt=""
-                                        />
+                                        /> */}
                                     </div>
                                     <div className="ator">
                                         <p>Michael Caine</p>
-                                        <p className="personagem">Alfred</p>
+                                        {/* <p className="personagem">Alfred</p> */}
                                     </div>
                                 </div>
                             </div>
                             <div className="elementos_2">
                                 <div className="grupo1">
                                     <div>
-                                        <img
+                                        {/* <img
                                             className="img1"
                                             src={imgHeath}
                                             alt=""
-                                        />
+                                        /> */}
                                     </div>
                                     <div className="ator">
                                         <p>Heath Ledger</p>
-                                        <p className="personagem">Coringa</p>
+                                        {/* <p className="personagem">Coringa</p> */}
                                     </div>
                                 </div>
                                 <div className="grupo1">
                                     <div>
-                                        <img
+                                        {/* <img
                                             className="img1"
                                             src={imgMorgan}
                                             alt=""
-                                        />
+                                        /> */}
                                     </div>
                                     <div className="ator">
                                         <p>Morgan F.</p>
-                                        <p className="personagem">Lucius Fox</p>
+                                        {/* <p className="personagem">Lucius Fox</p> */}
                                     </div>
                                 </div>
                                 <div className="grupo1">
                                     <div>
-                                        <img
+                                        {/* <img
                                             className="img1"
                                             src={imgCillian}
                                             alt=""
-                                        />
+                                        /> */}
                                     </div>
                                     <div className="ator">
                                         <p>Cillian Murphy.</p>
-                                        <p className="personagem">Espantalho</p>
+                                        {/* <p className="personagem">Espantalho</p> */}
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
+                        <p className="titulo2">Direção</p>
+                        {/* <p className="subtitulo1">Seus personagens</p> */}
+                        <div className="elementos">
+                            <div className="elementos_1">
+                                <div className="grupo1">
+                                    <div>
+                                        {/* <img
+                                            className="img1"
+                                            src={imgChristian}
+                                            alt=""
+                                        /> */}
+                                    </div>
+                                    <div className="ator">
+                                        <p>Christopher Nolan com Christian Bale</p>
+                                        {/* <p className="personagem">Bruce Wayne</p> */}
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
                     </div>
-                    <hr />
-                    <div className="informacoes_direita">
+
+                   
+                                
+                    {/* <hr /> */}
+                    {/* <div className="informacoes_direita">
                         <div className="elem_1">
                             <img
                                 className="img2"
@@ -317,7 +337,7 @@ function FilmesInformacoes() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </section>
                 <hr className="separar_comentario" />
                 <section>
