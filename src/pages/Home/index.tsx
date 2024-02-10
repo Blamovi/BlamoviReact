@@ -130,6 +130,87 @@ function Home() {
                     usuario: "ahmetkozan"
                 }
             ]
+        },
+
+        {
+            id: 5,
+            titulo: "Batman: O Cavaleiro das Trevas",
+            img: "src/assets/img/filmes-f/batman-(cav-das-tre).webp",
+            imgStream: imgStreamHbo,
+            nota: 9.0,
+            comentarios: [
+                {
+                    conteudo: "This movie is a work of art. The finest sequel ever made.",
+                    usuario: "dseferaj"
+                }, {
+                    conteudo: "Dark, yes, complex, ambitious.",
+                    usuario: "littlemartinarocena"
+                }, {
+                    conteudo: "I couldn't believe The Dark knight could live up to the hype.",
+                    usuario: "filmquestint"
+                }
+            ]
+        },
+
+        {
+            id: 6,
+            titulo: "Joker",
+            img: "src/assets/img/filmes-f/joker.webp",
+            nota: 8.4,
+            imgStream: imgStreamHbo,
+            comentarios: [
+                {
+                    conteudo: "The movie affects you in a way that makes it physically painful to experience.",
+                    usuario: "brianmlucas"
+                }, {
+                    conteudo: "Arthur Fleck's a guy with lofty aspirations, wants to make you laugh and disturb your foundations.",
+                    usuario: "Xstal"
+                }, {
+                    conteudo: "Truly a masterpiece, The Best Hollywood film of 2019, one of the Best films of the decade.",
+                    usuario: "Aman_Goyal"
+                }
+            ]
+        },
+
+        {
+            id: 7,
+            titulo: "Vingadores: Ultimato",
+            img: "src/assets/img/filmes-f/image 111.jpg",
+            nota: 8.4,
+            imgStream: imgStreamDisney,
+            comentarios: [
+                {
+                    conteudo: "Not as good as infinity war but a great movie",
+                    usuario: "ACollegeStudent"
+                }, {
+                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+                    usuario: "davyjones-636363"
+                }, {
+                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+                    usuario: "ahmetkozan"
+                }
+            ]
+        },
+
+        {
+            id: 8,
+            titulo: "Gladiador",
+            img: "src/assets/img/filmes-f/gladiador.jpg",
+            imgStream: imgStreamNetflix,
+            nota: 9.4,
+
+            comentarios: [
+                {
+                    conteudo: "Not as good as infinity war but a great movie",
+                    usuario: "ACollegeStudent"
+                }, {
+                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+                    usuario: "davyjones-636363"
+                }, {
+                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+                    usuario: "ahmetkozan"
+                }
+            ]
         }
     ]
 
@@ -496,7 +577,30 @@ function Home() {
                 <section className="Filmes_Destaques">
                     <h2>⭐ Filmes Favoritos</h2>
                     <div  className="card-linha">
-                        <img src={imgSetaEsquerda} alt=""/>
+
+                    <Swiper className="swipercard"
+                            slidesPerView={4}
+                            pagination={{ clickable: true }}
+                            navigation
+                            dyminac
+
+                        >
+                            {listaFilmes.map((card: any) =>(
+                                <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                    <Card
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    // imgStream={card.imgStream}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}
+                                />
+                                </SwiperSlide>
+                            ))}                               
+                        </Swiper>
+
+
+                        {/* <img src={imgSetaEsquerda} alt=""/>
                         {
                             listaFilmes.map((card: any) => {
                                 return<div key={card.id
@@ -511,10 +615,13 @@ function Home() {
                                 /></div>
                             })
                         }
-                        <img src={imgSetaDireita} alt=""/>
+                        <img src={imgSetaDireita} alt=""/> */}
+
+
                     </div>
+
                 </section>
-                <section className="Clássicos">
+                {/* <section className="Clássicos">
                     <h2>🎭 Clássicos</h2>
                     <div className="card-linha">
                             <img
@@ -608,7 +715,9 @@ function Home() {
                         <img src={imgSetaDireita} alt="" />
                     </div>
                     <Link className="input-submit" to="/calendario">+ Lançamentos</Link>
-                </section>
+                </section> */}
+
+
             </main>
 
 
