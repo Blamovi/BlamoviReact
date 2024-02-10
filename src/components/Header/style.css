@@ -31,7 +31,6 @@
 }
 
 
-
 #header .logo {
     display: flex;
     align-items: center;
@@ -49,11 +48,21 @@
     display: none;
 }
 
+
+#header .menu_links{
+    margin: 0 auto;
+}
+
+
+
 #header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 550px;
+    width: 62%;
+    max-width: 550px;
+    z-index: 2;
+    
 }
 
 #header a {
@@ -105,17 +114,22 @@
     float: left;
 }
 
+.swiper{
+    width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
      .servicos>div>div:nth-child(2) {
         margin-top: 100px;
     }
 
-     .menu_barras {
+    #header .menu_barras {
         display: initial;
+        justify-content: flex-end;
     }
 
-     .menu_barras svg {
-        height: 50px;
+    #header .menu_barras svg {
+        height: 40px;
         fill: var(--branco);
     }
 
@@ -141,10 +155,18 @@
         margin: 30px 0;
         font-size: 22px;
     }
+
+    #header nav{
+        width: 260px;
+    }
+
+
+    
+
+
+
 }
 
 @media screen and (max-width: 768px) {
-    header nav{
-        width: 260px;
-    }
+    
 }

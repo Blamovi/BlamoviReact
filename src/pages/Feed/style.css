@@ -294,28 +294,28 @@
         margin-top: 100px;
     } 
     
-    main{
+    #feed main{
         width: 60%;
     }
 
-    .actionBtnPost button{
+    #feed .actionBtnPost button{
         margin-left: 5px;
     }
 
-    .menu_barras{
+    #feed .menu_barras{
         display: initial;
     } 
 
-    .menu_barras svg{
+    #feed .menu_barras svg{
         height: 50px;
         fill: white;
     } 
 
-    .posicionamento_header {
+    #feed .posicionamento_header {
         position: relative;
     }
 
-    .posicionamento_header nav{
+    #feed.posicionamento_header nav{
         display: none;
         position: absolute;
         right: 0;
@@ -329,7 +329,7 @@
         border: 1px solid rgba(255, 255, 255, 0.8);
     } 
 
-    header nav a{
+    #feed header nav a{
         margin: 30px 0;
         font-size: 22px;
     } 
@@ -338,21 +338,21 @@
 }
 
 @media screen and (max-width: 1166px) {
-    #divBusca{
+    #feed  #divBusca{
         display: none;
     } 
 
-    .filesPost span{
+    #feed  .filesPost span{
         display: none;
     }
 }
 
 @media screen and (max-width: 670px) {
-    #divBusca{
+    #feed  #divBusca{
         display: none;
     }
 
-    .posicionamento_header nav{
+    #feed  .posicionamento_header nav{
         width: 78%;
     }
 }
@@ -360,20 +360,20 @@
 
 
 @media screen and (max-width: 540px) {
-    nav button span .textomenu{
+    #feed  nav button span .textomenu{
         display: none;
     }
 
-    .sidebar{
+    #feed  .sidebar{
         width: 75px;
     }
 
-    main{
+    #feed  main{
         width: 75%;
         margin-left: 100px;
     }
 
-    .navSidebar{
+    #feed  .navSidebar{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -382,7 +382,7 @@
 }
 
 @media screen and (max-width: 368px) {
-div.newPost form.formPost textarea{
+    #feed  div.newPost form.formPost textarea{
     width: 138px;
 }
 }

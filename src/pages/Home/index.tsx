@@ -7,6 +7,8 @@ import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
 
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
+import ImgAvatar from "../../assets/img/banner/av.jpg"
+import ImgAvatarr from "../../assets/img/banner/av2.jpg"
 
 import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
 import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
@@ -55,7 +57,7 @@ function Home() {
             id: 1,
             titulo: "Batman: O Cavaleiro das Trevas",
             img: "src/assets/img/filmes-f/batman-(cav-das-tre).webp",
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             nota: 9.0,
             comentarios: [
                 {
@@ -76,7 +78,7 @@ function Home() {
             titulo: "Joker",
             img: "src/assets/img/filmes-f/joker.webp",
             nota: 8.4,
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             comentarios: [
                 {
                     conteudo: "The movie affects you in a way that makes it physically painful to experience.",
@@ -96,7 +98,8 @@ function Home() {
             titulo: "Vingadores: Ultimato",
             img: "src/assets/img/filmes-f/image 111.jpg",
             nota: 8.4,
-            imgStream: imgStreamDisney,
+            // imgStream: imgStreamDisney,
+
             comentarios: [
                 {
                     conteudo: "Not as good as infinity war but a great movie",
@@ -115,7 +118,7 @@ function Home() {
             id: 4,
             titulo: "Gladiador",
             img: "src/assets/img/filmes-f/gladiador.jpg",
-            imgStream: imgStreamNetflix,
+            // imgStream: imgStreamNetflix,
             nota: 9.4,
 
             comentarios: [
@@ -138,7 +141,7 @@ function Home() {
             id: 1,
             titulo: "Senhor dos Aneis: A sociedade do anel",
             img: "src/assets/img/classicos/Senhor Dos Aneis.png",
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             nota: 9.2,
             comentarios: [
                 {
@@ -158,7 +161,7 @@ function Home() {
             id: 2,
             titulo: "O Poderoso Chefão",
             img: "src/assets/img/classicos/20120876 1.png",
-            imgStream: imgStreamNetflix,
+            // imgStream: imgStreamNetflix,
             nota: 9.2,
             comentarios: [
                 {
@@ -178,7 +181,7 @@ function Home() {
             id: 3,
             titulo: "O Show de Truman: O Show da Vida",
             img: "src/assets/img/classicos/20-the-truman-show.png",
-            imgStream: imgStreamAmazon,
+            // imgStream: imgStreamAmazon,
             nota: 8.2,
             comentarios: [
                 {
@@ -198,7 +201,7 @@ function Home() {
             id: 4,
             titulo: "Alien - O 8º Passageiro",
             img: "src/assets/img/classicos/06-Alien.png",
-            imgStream: imgStreamStar,
+            // imgStream: imgStreamStar,
             nota: 8.5,
 
             comentarios: [
@@ -223,7 +226,7 @@ function Home() {
             id: 1,
             titulo: "The last of us",
             img: "src/assets/img/series-f/The-last-of-us.jpg",
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             nota: 8.5,
             comentarios: [
                 {
@@ -243,7 +246,7 @@ function Home() {
             id: 2,
             titulo: "A Casa do Dragao",
             img: "src/assets/img/series-f/A-casa-dos-dragões.jpg",
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             nota: 8.5,
             comentarios: [
                 {
@@ -263,7 +266,7 @@ function Home() {
             id: 3,
             titulo: "Beef",
             img: "src/assets/img/series-f/image 30.png",
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             nota: 8.5,
             comentarios: [
                 {
@@ -283,7 +286,7 @@ function Home() {
             id: 4,
             titulo: "Mandalorian",
             img: "src/assets/img/series-f/mandalorian.jpg",
-            imgStream: imgStreamDisney,
+            // imgStream: imgStreamDisney,
             nota: 8.5,
             comentarios: [
                 {
@@ -305,7 +308,7 @@ function Home() {
             id: 1,
             titulo: "Rambo - Programado Para Matar",
             img: "src/assets/img/filmes-f/rambo1.png",
-            imgStream: imgStreamYoutube,
+            // imgStream: imgStreamYoutube,
             nota: 7.7,
             comentarios: [
                 {
@@ -325,7 +328,7 @@ function Home() {
             id: 2,
             titulo: "Rambo II: A Missão",
             img: "src/assets/img/filmes-f/rambo2.png",
-            imgStream: imgStreamYoutube,
+            // imgStream: imgStreamYoutube,
             nota: 6.5,
             comentarios: [
                 {
@@ -345,7 +348,7 @@ function Home() {
             id: 3,
             titulo: "Rambo III",
             img: "src/assets/img/filmes-f/rambo3.png",
-            imgStream: imgStreamYoutube,
+            // imgStream: imgStreamYoutube,
             nota: 5.8,
             comentarios: [
                 {
@@ -365,7 +368,7 @@ function Home() {
             id: 4,
             titulo: "Rambo IV",
             img: "src/assets/img/filmes-f/rambo4.png",
-            imgStream: imgStreamYoutube,
+            // imgStream: imgStreamYoutube,
             nota: 7.0,
             comentarios: [
                 {
@@ -424,6 +427,10 @@ function Home() {
     return (
         <>
             <main id="main_home">
+
+
+
+           
                 
             <Swiper
                 slidesPerView={1}
@@ -445,8 +452,19 @@ function Home() {
                 ))}
             </Swiper>
 
+          
+            {/* <img id="#avatar" src={ImgAvatarr} alt="" />   */}
+           
                 <section className="destaque">
                     <div className="destaque_conteudo">
+
+
+                    
+           
+          
+
+
+
                         <img
                             src={imgDestaques}
                             alt=""
@@ -493,8 +511,8 @@ function Home() {
                         </div>
                     </div>
                 </section>
-                <section className="Filmes_Destaques">
-                    <h2>⭐ Filmes Favoritos</h2>
+                {/* <section className="Filmes_Destaques">
+                    <h2>⭐ Filmes </h2>
                     <div  className="card-linha">
                         <img src={imgSetaEsquerda} alt=""/>
                         {
@@ -505,7 +523,7 @@ function Home() {
                                     img={card.img}
                                     titulo={card.titulo}
                                     foto={card.img}
-                                    imgStream={card.imgStream}
+                                    // imgStream={card.imgStream}
                                     nota={card.nota}
                                     comentarios={card.comentarios}
                                 /></div>
@@ -515,7 +533,7 @@ function Home() {
                     </div>
                 </section>
                 <section className="Clássicos">
-                    <h2>🎭 Clássicos</h2>
+                    <h2>🎭 Filmes</h2>
                     <div className="card-linha">
                             <img
                                 src={imgSetaEsquerda} alt=""
@@ -528,7 +546,7 @@ function Home() {
                                             img={card.img}
                                             titulo={card.titulo}
                                             foto={card.img}
-                                            imgStream={card.imgStream}
+                                            // imgStream={card.imgStream}
                                             nota={card.nota}
                                             comentarios={card.comentarios}
                                         /></div>
@@ -539,7 +557,7 @@ function Home() {
                         </div>
                 </section>
                 <section className="Melhores_series">
-                    <h2>🏆 Melhores series</h2>
+                    <h2>🎭 Series</h2>
                     <div className="card-linha">
                         <img src={imgSetaEsquerda} alt="" />
                         {
@@ -550,7 +568,7 @@ function Home() {
                                     img={card.img}
                                     titulo={card.titulo}
                                     foto={card.img}
-                                    imgStream={card.imgStream}
+                                    // imgStream={card.imgStream}
                                     nota={card.nota}
                                     comentarios={card.comentarios}
                                 /></div>
@@ -561,7 +579,7 @@ function Home() {
                     </div>
                 </section>
                 <section className="Para_maratonar">
-                    <h2>🏃 Para Maratonar</h2>
+                    <h2>🎥 Documentario</h2>
                     <div className="card-linha">
                         <img src={imgSetaEsquerda} alt="" />
                         {
@@ -572,7 +590,7 @@ function Home() {
                                     img={card.img}
                                     titulo={card.titulo}
                                     foto={card.img}
-                                    imgStream={card.imgStream}
+                                    // imgStream={card.imgStream}
                                     nota={card.nota}
                                     comentarios={card.comentarios}
                                 /></div>
@@ -608,7 +626,7 @@ function Home() {
                         <img src={imgSetaDireita} alt="" />
                     </div>
                     <Link className="input-submit" to="/calendario">+ Lançamentos</Link>
-                </section>
+                </section> */}
             </main>
 
 

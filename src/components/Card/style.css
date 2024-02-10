@@ -1,5 +1,5 @@
 /* seção filmes e series  */
-.card-linha{
+#main_home .card-linha{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,7 +10,7 @@
     position: relative;
 }
 
-.card {
+#main_home .card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,19 +23,19 @@
 }
 
 
- #teste3 {
+#main_home #teste3 {
     position: relative;
     top: 0;
     padding: 4px;
     transition: all .1s ease-in-out;
 }
 
- #teste3:hover {
+#main_home #teste3:hover {
     top: -4px;
     box-shadow: 0px 0px 10px 4px #fbc02c;
 }
 
-.card>img {
+#main_home .card>img {
     height: 400px;
     width: 300px;
     object-fit: cover;
@@ -43,47 +43,48 @@
     max-width: 90%;
 }
 
-.card>div {
+#main_home .card>div {
     display: flex;
     align-items: flex-end;
     flex-direction: row;
     gap: 40px;
 }
 
-.card>a {
+#main_home .card>a {
     color: rgba(255, 255, 255, 0.8);
     margin-top: 20px;
     text-align: center;
     text-decoration: none;
 }
 
-.card>a:hover {
+#main_home .card>a:hover {
     color: var(--vermelho);
 }
 
-.itens {
-    width: 80%;
+#main_home .itens {
+    /* width: 80%; */
     margin-top: 20px;
 }
 
-.streams {
+#main_home .streams {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
 }
 
-.icones {
+#main_home .icones {
     display: flex;
     flex-direction: inherit;
     align-items: center;
-    gap: 10px;
+    gap: 10px;   
+     padding: 13px 0 16px 3px;
 }
 
-.icones>img {
+#main_home .icones>img {
     height: 25px;
 }
 
-.icones>span {
+#main_home .icones>span {
     color: var(--branco);
 }
 
