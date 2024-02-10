@@ -1,4 +1,8 @@
 import "./style.css"
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import api from "../../utils/api";
+
 
 // import imgSimboloBatman from "../../assets/Images/image 141.svg";
 import imgCoracao from "../../assets/Images/Coracao.svg";
@@ -27,7 +31,7 @@ import imgBonecosGrupo from "../../assets/Images/Business Group.svg";
 // import imgCalendario from "../../assets/Images/Calendar.svg";
 import imgRicardo from "../../assets/Images/image 136.svg";
 import imgMarcos from "../../assets/Images/image 140.svg";
-import { Link } from "react-router-dom";
+
 
 //componentes
 import ComentariosFilme from "../../components/ComentariosFilme";
@@ -35,6 +39,63 @@ import ComentariosFilme from "../../components/ComentariosFilme";
 
 
 function FilmesInformacoes() {
+
+const { idUsuario } = useParams();
+
+const navigate = useNavigate();
+
+const [titulo, setTitulo] = useState<string>("");
+const [genero, setGenero] = useState<string>("");
+const [ano, setAno] = useState<string>("");
+const [duracao, setDuracao] = useState<string>("");
+const [classificacao, setClassificacao] = useState<string>("");
+const [poster, setPoster] = useState<string>("");
+const [trailer, setTrailer] = useState<string>("");
+const [sinopse, setSinopse] = useState<string>("");
+const [elenco, setElenco] = useState<string>("");
+const [diretor, setDiretor] = useState<string>("");
+const [nota_total, setNota_total] = useState<string>("");
+const [quantidade_post, setQuantidade_post] = useState<string>("");
+
+
+
+function buscarUsuarioPorID() {
+    //estrutura basica para consumir API
+    api.get("users/" + idUsuario)
+        .then((response: any) => {
+            console.log(response);
+
+            // seta os valores referente as informações do usuario
+            setTitulo(response.data.titulo);
+            setGenero(response.data.genero);
+            setAno(response.data.ano);
+            setDuracao(response.data.duracao);
+            setClassificacao(response.data.classificacao);
+            setPoster(response.data.poster);
+            setTrailer(response.data.trailer);
+            setSinopse(response.data.sinopse);
+            setElenco(response.data.elenco);
+            setDiretor(response.data.diretor);
+            setNota_total(response.data.nota_total);
+            setQuantidade_post(response.data.quantidade_post);
+
+        })
+        .catch((error: any) => console.log(error))
+
+}
+
+useEffect(() => {
+    buscarUsuarioPorID();
+}, []);
+
+function verificarListaTechs() {
+    // if (typeof listaSkills === "string") {
+    //     return JSON.parse(listaSkills);
+    // } else {
+    //     return listaSkills;
+    // }
+}
+
 
     const comentarios: any[] = [
         {
@@ -64,9 +125,10 @@ function FilmesInformacoes() {
                         /> */}
                     </div>
                     <div className="Banner2">
-                        <h2>BATMAN: O CAVALEIRO DAS TREVAS (2008)</h2>
-                        <h3>Categoria: Ação . Aventura . Policial</h3>
-                        <p className="paragrafo_inicial">Ano: 2008 - Duração: 2 h 32 min</p>
+                        <h2>{titulo}</h2>
+                        <h3>Gênero: {genero}</h3>
+                        <p className="paragrafo_inicial">Ano: {ano} | Duração: {duracao}</p>
+                        <p className="paragrafo_inicial">Classificação: {classificacao}</p>
                         <div className="botoes2">
                             <img
                                 className="comentario"
@@ -86,17 +148,17 @@ function FilmesInformacoes() {
                             <div className="banner_box_img">
                                 <img
                                     className="banner_img"
-                                    src={imgBatman}
+                                    src={poster}
                                     alt="Batman"
                                 />
                                 <div className="referências">
                                     <div className="div_avaliacoes_filme">
                                         <img src={imgTrofeu} />
-                                        <span>8,8</span>
+                                        <span>{nota_total}</span>
                                     </div>
                                     <div className="div_avaliacoes_filme">
                                         <img src={imgBaloesComentarios} alt="" />
-                                        <span>56</span>
+                                        <span>{quantidade_post}</span>
                                     </div>
                                     <div className="div_plataformas_filme">
                                         <img src={imgHbo} alt="" />
@@ -127,7 +189,7 @@ function FilmesInformacoes() {
                         <div>
                             <p className="titulo1">Sinópse</p>
                             <p className="sinopse">
-                            Após dois anos desde o surgimento do Batman (Christian Bale), os criminosos de Gotham City têm muito o que temer. Com a ajuda do tenente James Gordon (Gary Oldman) e do promotor público Harvey Dent (Aaron Eckhart), Batman luta contra o crime organizado. Acuados com o combate, os chefes do crime aceitam a proposta feita pelo Coringa (Heath Ledger) e o contratam para combater o Homem-Morcego.
+                            {sinopse}
                             </p>
                         </div>
                         <div className="topico">
@@ -237,7 +299,7 @@ function FilmesInformacoes() {
                                         /> */}
                                     </div>
                                     <div className="ator">
-                                        <p>Christopher Nolan com Christian Bale</p>
+                                        <p>{diretor}</p>
                                         {/* <p className="personagem">Bruce Wayne</p> */}
                                     </div>
                                 </div>
