@@ -2,8 +2,8 @@ import "./style.css"
 
 import imgDestaques from "../../assets/img/section/film-everything-everywhere-all-at-once_ratio-16x9 1.svg";
 
-import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
-import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
+// import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
+// import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
 
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
@@ -578,42 +578,24 @@ function Home() {
                     <h2>⭐ Filmes Favoritos</h2>
                     <div  className="card-linha">
 
-                    <Swiper className="swipercard"
-                            slidesPerView={5}
-                            pagination={{ clickable: true }}
-                            navigation
-                        >
-                            {listaFilmes.map((card: any) =>(
-                                <SwiperSlide className="swiper-slide-card" key={card.id}>
-                                    <Card
-                                    img={card.img}
-                                    titulo={card.titulo}
-                                    foto={card.img}
-                                    nota={card.nota}
-                                    comentarios={card.comentarios}
-                                />
-                                </SwiperSlide>
-                            ))}                               
+                        <Swiper className="swipercard"
+                                slidesPerView={5}
+                                pagination={{ clickable: true }}
+                                navigation>
+
+                                {listaFilmes.map((card: any) =>(
+                                    <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                        
+                                        <Card
+                                        img={card.img}
+                                        titulo={card.titulo}
+                                        foto={card.img}
+                                        nota={card.nota}
+                                        comentarios={card.comentarios}/>
+
+                                    </SwiperSlide>
+                                ))}                               
                         </Swiper>
-
-
-                        {/* <img src={imgSetaEsquerda} alt=""/>
-                        {
-                            listaFilmes.map((card: any) => {
-                                return<div key={card.id
-                                }>
-                                 <Card
-                                    img={card.img}
-                                    titulo={card.titulo}
-                                    foto={card.img}
-                                    imgStream={card.imgStream}
-                                    nota={card.nota}
-                                    comentarios={card.comentarios}
-                                /></div>
-                            })
-                        }
-                        <img src={imgSetaDireita} alt=""/> */}
-
 
                     </div>
 
