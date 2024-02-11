@@ -579,11 +579,9 @@ function Home() {
                     <div  className="card-linha">
 
                     <Swiper className="swipercard"
-                            slidesPerView={4}
+                            slidesPerView={5}
                             pagination={{ clickable: true }}
                             navigation
-                            dyminac
-
                         >
                             {listaFilmes.map((card: any) =>(
                                 <SwiperSlide className="swiper-slide-card" key={card.id}>
@@ -591,7 +589,6 @@ function Home() {
                                     img={card.img}
                                     titulo={card.titulo}
                                     foto={card.img}
-                                    // imgStream={card.imgStream}
                                     nota={card.nota}
                                     comentarios={card.comentarios}
                                 />
@@ -621,10 +618,30 @@ function Home() {
                     </div>
 
                 </section>
-                {/* <section className="Clássicos">
+                <section className="Clássicos">
                     <h2>🎭 Clássicos</h2>
                     <div className="card-linha">
-                            <img
+
+                        <Swiper className="swipercard"
+                                slidesPerView={4}
+                                pagination={{ clickable: true }}
+                                navigation
+                            >
+                                {listarFilmesClassicos.map((card: any) =>(
+                                    <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                        <Card
+                                        img={card.img}
+                                        titulo={card.titulo}
+                                        foto={card.img}
+                                        nota={card.nota}
+                                        comentarios={card.comentarios}
+                                    />
+                                    </SwiperSlide>
+                                ))}                               
+                        </Swiper>
+
+
+                            {/* <img
                                 src={imgSetaEsquerda} alt=""
                             />
                                 {
@@ -642,13 +659,30 @@ function Home() {
                                     })
 
                                 }
-                            <img src={imgSetaDireita} alt="" />
-                        </div>
+                            <img src={imgSetaDireita} alt="" /> */}
+                    </div>
                 </section>
                 <section className="Melhores_series">
                     <h2>🏆 Melhores series</h2>
                     <div className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" />
+                    <Swiper className="swipercard"
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarSeries.map((card: any) =>(
+                                <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                    <Card
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}
+                                />
+                                </SwiperSlide>
+                            ))}                               
+                        </Swiper>
+                        {/* <img src={imgSetaEsquerda} alt="" />
                         {
                             listarSeries.map((card: any) => {
                                 return<div key={card.id
@@ -664,13 +698,30 @@ function Home() {
                             })
 
                         }
-                        <img src={imgSetaDireita} alt="" />
+                        <img src={imgSetaDireita} alt="" /> */}
                     </div>
                 </section>
                 <section className="Para_maratonar">
                     <h2>🏃 Para Maratonar</h2>
                     <div className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" />
+                    <Swiper className="swipercard"
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarMaratonas.map((card: any) =>(
+                                <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                    <Card
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}
+                                />
+                                </SwiperSlide>
+                            ))}                               
+                        </Swiper>
+                        {/* <img src={imgSetaEsquerda} alt="" />
                         {
                             listarMaratonas.map((card: any) => {
                                 return<div key={card.id
@@ -685,13 +736,34 @@ function Home() {
                                 /></div>
                             })
                         }
-                        <img src={imgSetaDireita} alt="" />
+                        <img src={imgSetaDireita} alt="" /> */}
                     </div>
                 </section>
                 <section className="Lancamentos">
                     <h2>📅 Lançamentos</h2>
                     <div className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" /> 
+
+                    <Swiper className="swipercard"
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarLancamentos.map((cardLancamentos: any) =>(
+                                <SwiperSlide className="swiper-slide-card" key={cardLancamentos.id}>
+                                    <CardLancamentos
+                                    id={cardLancamentos.id}
+                                    titulo={cardLancamentos.titulo}
+                                    img={cardLancamentos.img}
+                                    titulo2={cardLancamentos.titulo2}
+                                    foto={cardLancamentos.img}
+                                    link={cardLancamentos.link}
+                                />
+                                </SwiperSlide>
+                            ))}                               
+                        </Swiper>
+
+
+                        {/* <img src={imgSetaEsquerda} alt="" /> 
                         <div className="card_responsivo">
                         {
                             listarLancamentos.map((cardLancamentos: any) => {
@@ -712,10 +784,10 @@ function Home() {
                         </div>                       
                         
                         
-                        <img src={imgSetaDireita} alt="" />
+                        <img src={imgSetaDireita} alt="" /> */}
                     </div>
                     <Link className="input-submit" to="/calendario">+ Lançamentos</Link>
-                </section> */}
+                </section>
 
 
             </main>

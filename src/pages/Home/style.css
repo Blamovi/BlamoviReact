@@ -131,7 +131,9 @@ h3 {
 
 
   /* SWIPER */
+
 .swipercard {
+    color: #FBC02C;
     max-width: 1400px;
     width: 100%;
 }

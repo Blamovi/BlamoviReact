@@ -111,6 +111,14 @@
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.267);
 }
 
+/* Swiper */
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+    --swiper-theme-color: #FBC02C;
+}
+
 
 /*  RESPONSIVO */
 @media screen and ( max-width: 1440px) {
