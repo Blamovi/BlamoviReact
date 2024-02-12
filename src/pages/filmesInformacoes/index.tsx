@@ -6,13 +6,13 @@ import api from "../../utils/api";
 
 // import imgSimboloBatman from "../../assets/Images/image 141.svg";
 import imgCoracao from "../../assets/Images/Coracao.svg";
-import imgBatman from "../../assets/Images/batman-(cav-das-tre).webp";
+//import imgBatman from "../../assets/Images/batman-(cav-das-tre).webp";
 import imgTrofeu from "../../assets/Images/image 144.svg";
 import imgBaloesComentarios from "../../assets/Images/image 145.svg";
-import imgHbo from "../../assets/Images/image 143.svg";
-import imgNetflix from "../../assets/Images/image 76.svg";
-import imgPrimeVideo from "../../assets/Images/image 70.svg";
-import imgDisney from "../../assets/Images/image 39.svg";
+//import imgHbo from "../../assets/Images/image 143.svg";
+//import imgNetflix from "../../assets/Images/image 76.svg";
+//import imgPrimeVideo from "../../assets/Images/image 70.svg";
+//import imgDisney from "../../assets/Images/image 39.svg";
 import imgBonecosGrupo from "../../assets/Images/Business Group.svg";
 // import imgChristian from "../../assets/Images/image 122.svg";
 // import imgMaggie from "../../assets/Images/image 126.svg";
@@ -40,61 +40,61 @@ import ComentariosFilme from "../../components/ComentariosFilme";
 
 function FilmesInformacoes() {
 
-const { idUsuario } = useParams();
+    const { idUsuario } = useParams();
 
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
-const [titulo, setTitulo] = useState<string>("");
-const [genero, setGenero] = useState<string>("");
-const [ano, setAno] = useState<string>("");
-const [duracao, setDuracao] = useState<string>("");
-const [classificacao, setClassificacao] = useState<string>("");
-const [poster, setPoster] = useState<string>("");
-const [trailer, setTrailer] = useState<string>("");
-const [sinopse, setSinopse] = useState<string>("");
-const [elenco, setElenco] = useState<string>("");
-const [diretor, setDiretor] = useState<string>("");
-const [nota_total, setNota_total] = useState<string>("");
-const [quantidade_post, setQuantidade_post] = useState<string>("");
+    const [titulo, setTitulo] = useState<string>("");
+    const [genero, setGenero] = useState<string>("");
+    const [ano, setAno] = useState<string>("");
+    const [duracao, setDuracao] = useState<string>("");
+    const [classificacao, setClassificacao] = useState<string>("");
+    const [poster, setPoster] = useState<string>("");
+    const [trailer, setTrailer] = useState<string>("");
+    const [sinopse, setSinopse] = useState<string>("");
+    const [elenco, setElenco] = useState<string>("");
+    const [diretor, setDiretor] = useState<string>("");
+    const [nota_total, setNota_total] = useState<string>("");
+    const [quantidade_post, setQuantidade_post] = useState<string>("");
 
 
 
-function buscarUsuarioPorID() {
-    //estrutura basica para consumir API
-    api.get("users/" + idUsuario)
-        .then((response: any) => {
-            console.log(response);
+    function buscarUsuarioPorID() {
+        //estrutura basica para consumir API
+        api.get("users/" + idUsuario)
+            .then((response: any) => {
+                console.log(response);
 
-            // seta os valores referente as informações do usuario
-            setTitulo(response.data.titulo);
-            setGenero(response.data.genero);
-            setAno(response.data.ano);
-            setDuracao(response.data.duracao);
-            setClassificacao(response.data.classificacao);
-            setPoster(response.data.poster);
-            setTrailer(response.data.trailer);
-            setSinopse(response.data.sinopse);
-            setElenco(response.data.elenco);
-            setDiretor(response.data.diretor);
-            setNota_total(response.data.nota_total);
-            setQuantidade_post(response.data.quantidade_post);
+                // seta os valores referente as informações do usuario
+                setTitulo(response.data.titulo);
+                setGenero(response.data.genero);
+                setAno(response.data.ano);
+                setDuracao(response.data.duracao);
+                setClassificacao(response.data.classificacao);
+                setPoster(response.data.poster);
+                setTrailer(response.data.trailer);
+                setSinopse(response.data.sinopse);
+                setElenco(response.data.elenco);
+                setDiretor(response.data.diretor);
+                setNota_total(response.data.nota_total);
+                setQuantidade_post(response.data.quantidade_post);
 
-        })
-        .catch((error: any) => console.log(error))
+            })
+            .catch((error: any) => console.log(error))
 
-}
+    }
 
-useEffect(() => {
-    buscarUsuarioPorID();
-}, []);
+    useEffect(() => {
+        buscarUsuarioPorID();
+    }, []);
 
-function verificarListaTechs() {
-    // if (typeof listaSkills === "string") {
-    //     return JSON.parse(listaSkills);
-    // } else {
-    //     return listaSkills;
-    // }
-}
+    function verificarListaTechs() {
+        // if (typeof listaSkills === "string") {
+        //     return JSON.parse(listaSkills);
+        // } else {
+        //     return listaSkills;
+        // }
+    }
 
 
     const comentarios: any[] = [
@@ -110,7 +110,7 @@ function verificarListaTechs() {
             foto: imgMarcos,
             comentario: "O maior filme de super herói já feito! Entrega tudo, o que é o Coringa e O Batman sem menosprezar quem é a máscara de Bruce Wayne"
         },
-       ]
+    ]
 
     return (
         <>
@@ -160,12 +160,6 @@ function verificarListaTechs() {
                                         <img src={imgBaloesComentarios} alt="" />
                                         <span>{quantidade_post}</span>
                                     </div>
-                                    <div className="div_plataformas_filme">
-                                        <img src={imgHbo} alt="" />
-                                        <img src={imgNetflix} alt="" />
-                                        <img src={imgPrimeVideo} alt="" />
-                                        <img src={imgDisney} alt="" />
-                                    </div>
                                 </div>
                             </div>
                             <div className="trailer">
@@ -185,221 +179,33 @@ function verificarListaTechs() {
                     </div>
                 </section>
                 <section className="informacoes_gerais">
-                    <div className="informacoes_esquerda">
-                        <div>
-                            <p className="titulo1">Sinópse</p>
-                            <p className="sinopse">
+                    <div>
+                        <p className="titulo1">Sinópse</p>
+                        <p className="sinopse">
                             {sinopse}
-                            </p>
-                        </div>
-                        <div className="topico">
-                            <img
-                                className="bonecos"
-                                src={imgBonecosGrupo}
-                                alt=""
-                            />
-                        </div>
-                        <p className="titulo1">Elenco Princial</p>
-                        {/* <p className="subtitulo1">Seus personagens</p> */}
-                        <div className="elementos">
-                            <div className="elementos_1">
-                                <div className="grupo1">
-                                    <div>
-                                        {/* <img
-                                            className="img1"
-                                            src={imgChristian}
-                                            alt=""
-                                        /> */}
-                                    </div>
-                                    <div className="ator">
-                                        <p>Christian Bale</p>
-                                        {/* <p className="personagem">Bruce Wayne</p> */}
-                                    </div>
-                                </div>
-                                <div className="grupo1">
-                                    <div>
-                                        {/* <img
-                                            className="img1"
-                                            src={imgMaggie}
-                                            alt=""
-                                        /> */}
-                                    </div>
-                                    <div className="ator">
-                                        <p>Maggie G.</p>
-                                        {/* <p className="personagem">Rachel</p> */}
-                                    </div>
-                                </div>
-                                <div className="grupo1">
-                                    <div>
-                                        {/* <img
-                                            className="img1"
-                                            src={imgMichael}
-                                            alt=""
-                                        /> */}
-                                    </div>
-                                    <div className="ator">
-                                        <p>Michael Caine</p>
-                                        {/* <p className="personagem">Alfred</p> */}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="elementos_2">
-                                <div className="grupo1">
-                                    <div>
-                                        {/* <img
-                                            className="img1"
-                                            src={imgHeath}
-                                            alt=""
-                                        /> */}
-                                    </div>
-                                    <div className="ator">
-                                        <p>Heath Ledger</p>
-                                        {/* <p className="personagem">Coringa</p> */}
-                                    </div>
-                                </div>
-                                <div className="grupo1">
-                                    <div>
-                                        {/* <img
-                                            className="img1"
-                                            src={imgMorgan}
-                                            alt=""
-                                        /> */}
-                                    </div>
-                                    <div className="ator">
-                                        <p>Morgan F.</p>
-                                        {/* <p className="personagem">Lucius Fox</p> */}
-                                    </div>
-                                </div>
-                                <div className="grupo1">
-                                    <div>
-                                        {/* <img
-                                            className="img1"
-                                            src={imgCillian}
-                                            alt=""
-                                        /> */}
-                                    </div>
-                                    <div className="ator">
-                                        <p>Cillian Murphy.</p>
-                                        {/* <p className="personagem">Espantalho</p> */}
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <p className="titulo2">Direção</p>
-                        {/* <p className="subtitulo1">Seus personagens</p> */}
-                        <div className="elementos">
-                            <div className="elementos_1">
-                                <div className="grupo1">
-                                    <div>
-                                        {/* <img
-                                            className="img1"
-                                            src={imgChristian}
-                                            alt=""
-                                        /> */}
-                                    </div>
-                                    <div className="ator">
-                                        <p>{diretor}</p>
-                                        {/* <p className="personagem">Bruce Wayne</p> */}
-                                    </div>
-                                </div>
-                                </div>
-                                </div>
+                        </p>
                     </div>
-
-                   
-                                
-                    {/* <hr /> */}
-                    {/* <div className="informacoes_direita">
-                        <div className="elem_1">
-                            <img
-                                className="img2"
-                                src={imgLampada}
-                                alt=""
-                            />
-                        </div>
-                        <p className="titulo1">Descubra</p>
-                        <p className="subtitulo1">Filmes Relacionados</p>
-                        <div>
-                            <div className="filmes_relacionados">
-                                <div>
-                                    <img
-                                        className="tela1"
-                                        src={imgAvengers}
-                                        alt=""
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        className="tela1"
-                                        src={imgJoker}
-                                        alt=""
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        className="tela1"
-                                        src={imgFlash}
-                                        alt=""
-                                    />
-                                </div>
+                    <div className="topico">
+                        <img
+                            className="bonecos"
+                            src={imgBonecosGrupo}
+                            alt=""
+                        />
+                    </div>
+                    <p className="titulo1">Elenco Principal</p>
+                    <div className="elementos">
+                        <div className="grupo1">
+                            <div className="ator">
+                                <p>{elenco}</p>
                             </div>
                         </div>
-                        <div className="Descubra">
-                            <div>
-                                <div className="elem_1">
-                                    <img
-                                        className="img2"
-                                        src={imgInfo}
-                                        alt=""
-                                    />
-                                </div>
-                                <p className="subtitulo1">+ Detalhes sobre o Filme</p>
-                            </div>
+                    </div>
+                    <p className="titulo2">Direção</p>
+                    <div className="elementos">
+                        <div className="ator">
+                            <p>{diretor}</p>
                         </div>
-                        <div className="detalhes_filme">
-                            <div className="elem_2">
-                                <div>
-                                    <img
-                                        className="img3"
-                                        src={imgOscars}
-                                        alt=""
-                                    />
-                                    <p className="subtitulo2">Ganhador de 2 Oscars</p>
-                                </div>
-                                <div>
-                                    <img
-                                        className="img3"
-                                        src={imgMicrofone}
-                                        alt=""
-                                    />
-                                    <p className="subtitulo2">Christopher Nolan</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="elem_2">
-                                    <div>
-                                        <img
-                                            className="img3"
-                                            src={imgPage}
-                                            alt=""
-                                        />
-                                        <p className="subtitulo2">
-                                            Jonathan Nolan Christopher Nolan David S. Goyer
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <img
-                                            className="img3"
-                                            src={imgCalendario}
-                                            alt=""
-                                        />
-                                        <p className="subtitulo2">18 de julho de 2008</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
+                    </div>
                 </section>
                 <hr className="separar_comentario" />
                 <section>

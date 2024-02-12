@@ -187,7 +187,8 @@
 
 #detalhe_filmesInformacoes .informacoes_gerais {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* #detalhe_filmesInformacoes .informacoes_esquerda {} */
