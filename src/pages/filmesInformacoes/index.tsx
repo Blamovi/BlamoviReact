@@ -40,61 +40,26 @@ import ComentariosFilme from "../../components/ComentariosFilme";
 
 function FilmesInformacoes() {
 
-    const { idUsuario } = useParams();
+    const [listaFilmes, setListaFilmes] = useState<any[]>([]);
 
-    const navigate = useNavigate();
+    function listarFilmes() {
 
-    const [titulo, setTitulo] = useState<string>("");
-    const [genero, setGenero] = useState<string>("");
-    const [ano, setAno] = useState<string>("");
-    const [duracao, setDuracao] = useState<string>("");
-    const [classificacao, setClassificacao] = useState<string>("");
-    const [poster, setPoster] = useState<string>("");
-    const [trailer, setTrailer] = useState<string>("");
-    const [sinopse, setSinopse] = useState<string>("");
-    const [elenco, setElenco] = useState<string>("");
-    const [diretor, setDiretor] = useState<string>("");
-    const [nota_total, setNota_total] = useState<string>("");
-    const [quantidade_post, setQuantidade_post] = useState<string>("");
-
-
-
-    function buscarUsuarioPorID() {
-        //estrutura basica para consumir API
-        api.get("users/" + idUsuario)
+        api.get("videos")
             .then((response: any) => {
-                console.log(response);
-
-                // seta os valores referente as informações do usuario
-                setTitulo(response.data.titulo);
-                setGenero(response.data.genero);
-                setAno(response.data.ano);
-                setDuracao(response.data.duracao);
-                setClassificacao(response.data.classificacao);
-                setPoster(response.data.poster);
-                setTrailer(response.data.trailer);
-                setSinopse(response.data.sinopse);
-                setElenco(response.data.elenco);
-                setDiretor(response.data.diretor);
-                setNota_total(response.data.nota_total);
-                setQuantidade_post(response.data.quantidade_post);
+                
+                setListaFilmes(response.data);
+                console.log(response.data[0].quantidade_post);
 
             })
-            .catch((error: any) => console.log(error))
-
+            .catch((error: any) => {
+                console.log("Error", error)
+            })
     }
+
 
     useEffect(() => {
-        buscarUsuarioPorID();
-    }, []);
-
-    function verificarListaTechs() {
-        // if (typeof listaSkills === "string") {
-        //     return JSON.parse(listaSkills);
-        // } else {
-        //     return listaSkills;
-        // }
-    }
+        listarFilmes();      
+    }, [])
 
 
     const comentarios: any[] = [
