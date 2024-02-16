@@ -39,7 +39,7 @@ function Card(props: any) {
 
     return (
         <div className="card responsivo" id="teste3" >
-            <img src={props.img}/>
+            <img src={"http://localhost:8090/images/" + props.poster}/>
             <h3>{props.titulo}</h3>
             <div className="itens">
                 <div className="streams">
