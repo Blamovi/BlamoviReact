@@ -29,17 +29,16 @@ function Card(props: any) {
 
 
 
-    function verificarComentarios() {
-        if (typeof props.comentarios === "string") {
-            return JSON.parse(props.comentarios);
-        } else {
-            return props.comentarios;
-        }
-    }
+    // function verificarComentarios() {
+    //     if (typeof props.comentarios === "string") {
+    //         return JSON.parse(props.comentarios);
+    //     } else {
+    //         return props.comentarios;
+    //     }
+    // }
 
     return (
         <div className="card responsivo" id="teste3" >
-            
             <img src={props.img}/>
             <h3>{props.titulo}</h3>
             <div className="itens">
@@ -50,14 +49,11 @@ function Card(props: any) {
                     <img src={imgIconesTrofeu} alt="" />
                     <span>{props.nota}</span>
                     <img src={imgIconesComentario} alt="" />
-                    <span>{verificarComentarios().length}</span>
+                    <p>{props.coment}</p>
                 </div>
             </div>
-            
         </div>
     )
 }
 
 export default Card;
-
-

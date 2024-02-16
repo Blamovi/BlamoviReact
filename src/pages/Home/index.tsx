@@ -21,6 +21,9 @@ import CardLancamentos from "../../components/CardLancamentos";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import api from "../../utils/api";
+
 // import { useEffect, useState } from "react";
 
 // const moviesURL = import.meta.env.VITE_API;
@@ -28,34 +31,56 @@ import { Link } from "react-router-dom";
 
 function Home() {
 
+    const [listaFilmes, setListaFilmes] = useState<any[]>([]);
+
+    function listarFilmes() {
+
+        api.get("videos")
+            .then((response: any) => {
+                
+                setListaFilmes(response.data);
+                console.log(response.data[0].quantidade_post);
+
+            })
+            .catch((error: any) => {
+                console.log("Error", error)
+            })
+    }
+
+
+    useEffect(() => {
+        listarFilmes();      
+    }, [])
+
+
     const data = [
         { id: '1', image: '../src/assets/img/banner/Frame 73.svg' },
         { id: '2', image: '../src/assets/img/banner/Frame 65.svg' },
         { id: '3', image: '../src/assets/img/banner/Frame 64.svg' },
-    ] 
+    ]
 
     // const [topMovies, setTopMovies] = useState ([]);
-    
+
     // const getTopRatedMovies = async (url) => {
     //     const res = await fetch(url);
     //     const data = await res.json();
 
     //     console.log(data);
     // }
-    
+
     // useEffect(() =>{
     //     const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
 
     //     getTopRatedMovies(topRatedURL);
-        
+
     // })
 
-    const listaFilmes: any[] = [
+    const listaFilmes1: any[] = [
         {
             id: 1,
             titulo: "Batman: O Cavaleiro das Trevas",
             img: "src/assets/img/filmes-f/batman-(cav-das-tre).webp",
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             nota: 9.0,
             comentarios: [
                 {
@@ -294,7 +319,7 @@ function Home() {
                     usuario: "ivo-cobra8"
                 }
             ]
-        }  
+        }
 
 
     ]
@@ -359,7 +384,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 4,
             titulo: "Mandalorian",
@@ -401,7 +426,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 2,
             titulo: "Rambo II: A Missão",
@@ -421,7 +446,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 3,
             titulo: "Rambo III",
@@ -441,7 +466,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 4,
             titulo: "Rambo IV",
@@ -470,7 +495,7 @@ function Home() {
             titulo2: "Homem-Aranha: Através do Aranhaverso",
             img: "src/assets/img/filmes-f/image84.png",
             link: "https://www.youtube.com/watch?v=_4is7I_ZxTg&pp=ygUtdHJhaWxlciBob21lbSBhcmFuaGEgYXRyYXbDqXMgZG8gYXJhbmhhdmVyc28g",
-            
+
         },
 
         {
@@ -479,7 +504,7 @@ function Home() {
             titulo2: "Transformers: O Despertar das Feras",
             img: "src/assets/img/filmes-f/image 83.png",
             link: "https://www.youtube.com/watch?v=PHC412-pCoQ&pp=ygUrdHJhaWxlciBUcmFuc2Zvcm1lcnM6IE8gRGVzcGVydGFyIGRhcyBGZXJhcw%3D%3D",
-            
+
         },
 
         {
@@ -488,7 +513,7 @@ function Home() {
             titulo2: "The Flash",
             img: "src/assets/img/filmes-f/image 85.png",
             link: "https://www.youtube.com/watch?v=xMbg-ZsFCCo&pp=ygURdHJhaWxlciBUaGUgRmxhc2g%3D",
-            
+
         },
 
         {
@@ -497,7 +522,7 @@ function Home() {
             titulo2: "O Demônio dos Mares",
             img: "src/assets/img/filmes-f/blackdemon.png",
             link: "https://www.youtube.com/watch?v=yX-pvjO4N3o&pp=ygUUTyBERU3DlE5JTyBET1MgTUFSRVM%3DD",
-            
+
         }
     ]
 
@@ -505,26 +530,26 @@ function Home() {
     return (
         <>
             <main id="main_home">
-                
-            <Swiper
-                slidesPerView={1}
-                pagination={{ clickable: true }}
-                navigation
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                  }}
-            >
-                {data.map((item) => (
-                    <SwiperSlide key={item.id}>
-                        <img
-                            src={item.image}
-                            alt="Silder"
-                            className="slider-item"
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+
+                <Swiper
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    navigation
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
+                >
+                    {data.map((item) => (
+                        <SwiperSlide key={item.id}>
+                            <img
+                                src={item.image}
+                                alt="Silder"
+                                className="slider-item"
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
 
                 <section className="destaque">
                     <div className="destaque_conteudo">
@@ -576,25 +601,25 @@ function Home() {
                 </section>
                 <section className="Filmes_Destaques">
                     <h2>⭐ Filmes Favoritos</h2>
-                    <div  className="card-linha">
+                    <div className="card-linha">
 
                         <Swiper className="swipercard"
-                                slidesPerView={5}
-                                pagination={{ clickable: true }}
-                                navigation>
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation>
 
-                                {listaFilmes.map((card: any) =>(
+                            {listaFilmes.map((card: any) => (
+                                card.tipo == "Filme" ?
                                     <SwiperSlide className="swiper-slide-card" key={card.id}>
-                                        
                                         <Card
-                                        img={card.img}
-                                        titulo={card.titulo}
-                                        foto={card.img}
-                                        nota={card.nota}
-                                        comentarios={card.comentarios}/>
-
+                                            img={card.poster}
+                                            titulo={card.titulo}
+                                            nota={card.nota_total / card.quantidade_post}
+                                            coment={card.quantidade_post}
+                                        />
                                     </SwiperSlide>
-                                ))}                               
+                                    : ""
+                            ))}
                         </Swiper>
 
                     </div>
@@ -605,25 +630,24 @@ function Home() {
                     <div className="card-linha">
 
                         <Swiper className="swipercard"
-                                slidesPerView={4}
-                                pagination={{ clickable: true }}
-                                navigation
-                            >
-                                {listarFilmesClassicos.map((card: any) =>(
-                                    <SwiperSlide className="swiper-slide-card" key={card.id}>
-                                        <Card
+                            slidesPerView={4}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarFilmesClassicos.map((card: any) => (
+                                <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                    <Card
                                         img={card.img}
                                         titulo={card.titulo}
-                                        foto={card.img}
                                         nota={card.nota}
                                         comentarios={card.comentarios}
                                     />
-                                    </SwiperSlide>
-                                ))}                               
+                                </SwiperSlide>
+                            ))}
                         </Swiper>
 
 
-                            {/* <img
+                        {/* <img
                                 src={imgSetaEsquerda} alt=""
                             />
                                 {
@@ -647,22 +671,22 @@ function Home() {
                 <section className="Melhores_series">
                     <h2>🏆 Melhores series</h2>
                     <div className="card-linha">
-                    <Swiper className="swipercard"
+                        <Swiper className="swipercard"
                             slidesPerView={5}
                             pagination={{ clickable: true }}
                             navigation
                         >
-                            {listarSeries.map((card: any) =>(
+                            {listarSeries.map((card: any) => (
                                 <SwiperSlide className="swiper-slide-card" key={card.id}>
                                     <Card
-                                    img={card.img}
-                                    titulo={card.titulo}
-                                    foto={card.img}
-                                    nota={card.nota}
-                                    comentarios={card.comentarios}
-                                />
+                                        img={card.img}
+                                        titulo={card.titulo}
+                                        foto={card.img}
+                                        nota={card.nota}
+                                        comentarios={card.comentarios}
+                                    />
                                 </SwiperSlide>
-                            ))}                               
+                            ))}
                         </Swiper>
                         {/* <img src={imgSetaEsquerda} alt="" />
                         {
@@ -686,22 +710,22 @@ function Home() {
                 <section className="Para_maratonar">
                     <h2>🏃 Para Maratonar</h2>
                     <div className="card-linha">
-                    <Swiper className="swipercard"
+                        <Swiper className="swipercard"
                             slidesPerView={5}
                             pagination={{ clickable: true }}
                             navigation
                         >
-                            {listarMaratonas.map((card: any) =>(
+                            {listarMaratonas.map((card: any) => (
                                 <SwiperSlide className="swiper-slide-card" key={card.id}>
                                     <Card
-                                    img={card.img}
-                                    titulo={card.titulo}
-                                    foto={card.img}
-                                    nota={card.nota}
-                                    comentarios={card.comentarios}
-                                />
+                                        img={card.img}
+                                        titulo={card.titulo}
+                                        foto={card.img}
+                                        nota={card.nota}
+                                        comentarios={card.comentarios}
+                                    />
                                 </SwiperSlide>
-                            ))}                               
+                            ))}
                         </Swiper>
                         {/* <img src={imgSetaEsquerda} alt="" />
                         {
@@ -725,23 +749,23 @@ function Home() {
                     <h2>📅 Lançamentos</h2>
                     <div className="card-linha">
 
-                    <Swiper className="swipercard"
+                        <Swiper className="swipercard"
                             slidesPerView={5}
                             pagination={{ clickable: true }}
                             navigation
                         >
-                            {listarLancamentos.map((cardLancamentos: any) =>(
+                            {listarLancamentos.map((cardLancamentos: any) => (
                                 <SwiperSlide className="swiper-slide-card" key={cardLancamentos.id}>
                                     <CardLancamentos
-                                    id={cardLancamentos.id}
-                                    titulo={cardLancamentos.titulo}
-                                    img={cardLancamentos.img}
-                                    titulo2={cardLancamentos.titulo2}
-                                    foto={cardLancamentos.img}
-                                    link={cardLancamentos.link}
-                                />
+                                        id={cardLancamentos.id}
+                                        titulo={cardLancamentos.titulo}
+                                        img={cardLancamentos.img}
+                                        titulo2={cardLancamentos.titulo2}
+                                        foto={cardLancamentos.img}
+                                        link={cardLancamentos.link}
+                                    />
                                 </SwiperSlide>
-                            ))}                               
+                            ))}
                         </Swiper>
 
 
