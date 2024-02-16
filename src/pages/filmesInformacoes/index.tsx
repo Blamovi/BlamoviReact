@@ -79,7 +79,11 @@ function FilmesInformacoes() {
 
     return (
         <>
-            <main id="detalhe_filmesInformacoes">
+ {listaFilmes.map((card: any) => (
+
+
+
+<main id="detalhe_filmesInformacoes">
                 <section className="Filmes">
                     <div className="banner_1">
                         {/* <p className="superbanner">BLÁMOVI: RECOMENDA</p> */}
@@ -90,10 +94,10 @@ function FilmesInformacoes() {
                         /> */}
                     </div>
                     <div className="Banner2">
-                        <h2>{titulo}</h2>
-                        <h3>Gênero: {genero}</h3>
-                        <p className="paragrafo_inicial">Ano: {ano} | Duração: {duracao}</p>
-                        <p className="paragrafo_inicial">Classificação: {classificacao}</p>
+                        <h2>{card.titulo}</h2>
+                        <h3>Gênero: {card.genero}</h3>
+                        <p className="paragrafo_inicial">Ano: {card.ano} | Duração: {card.duracao}</p>
+                        <p className="paragrafo_inicial">Classificação: {card.classificacao}</p>
                         <div className="botoes2">
                             <img
                                 className="comentario"
@@ -113,17 +117,17 @@ function FilmesInformacoes() {
                             <div className="banner_box_img">
                                 <img
                                     className="banner_img"
-                                    src={poster}
+                                    src={card.poster}
                                     alt="Batman"
                                 />
                                 <div className="referências">
                                     <div className="div_avaliacoes_filme">
                                         <img src={imgTrofeu} />
-                                        <span>{nota_total}</span>
+                                        <span>{card.nota_total / card.quantidade_post}</span>
                                     </div>
                                     <div className="div_avaliacoes_filme">
                                         <img src={imgBaloesComentarios} alt="" />
-                                        <span>{quantidade_post}</span>
+                                        <span>{card.quantidade_post}</span>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +151,7 @@ function FilmesInformacoes() {
                     <div>
                         <p className="titulo1">Sinópse</p>
                         <p className="sinopse">
-                            {sinopse}
+                            {card.sinopse}
                         </p>
                     </div>
                     <div className="topico">
@@ -161,17 +165,30 @@ function FilmesInformacoes() {
                     <div className="elementos">
                         <div className="grupo1">
                             <div className="ator">
-                                <p>{elenco}</p>
+                                <p>{card.elenco}</p>
                             </div>
                         </div>
                     </div>
                     <p className="titulo2">Direção</p>
                     <div className="elementos">
                         <div className="ator">
-                            <p>{diretor}</p>
+                            <p>{card.diretor}</p>
                         </div>
                     </div>
                 </section>
+
+
+
+
+
+
+
+     ))}
+
+
+
+
+            
                 <hr className="separar_comentario" />
                 <section>
                     <div className="Comentarios_filmes">
