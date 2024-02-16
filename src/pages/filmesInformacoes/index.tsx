@@ -140,7 +140,7 @@ function FilmesInformacoes() {
                                 src={imgCoracao}
                                 alt=""
                             />
-                            <Link className="recomendar" to={"#"}>
+                            <Link className="recomendar" to={"PerfilUsuario"}>
                                 RECOMENDAR
                             </Link>
                         </div>
