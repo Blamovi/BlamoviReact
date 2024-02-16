@@ -24,13 +24,13 @@ function Footer() {
                     <Link to={"/Favoritos"}>Favoritos</Link>
                     <Link to={"/filmesInformacoes"}>Informações</Link>
                 </ul>
-                <div>
-                    <div>
-                        <img className="img-copy" src={imgLogoBranco} alt="" />
-                        <span>Blámovi</span>
-                        <p>© 2023 by blamovi.com, Inc.</p>
-                    </div>
+               
+                <div className="copy-right">
+                    <img className="img-copy" src={imgLogoBranco} alt="" />
+                    <span>Blámovi</span>
+                    <p>© 2023 by blamovi.com, Inc.</p>
                 </div>
+                
             </footer>  
 
         </>

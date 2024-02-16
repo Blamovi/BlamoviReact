@@ -2,8 +2,8 @@ import "./style.css"
 
 import imgDestaques from "../../assets/img/section/film-everything-everywhere-all-at-once_ratio-16x9 1.svg";
 
-import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
-import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
+// import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
+// import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
 
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
@@ -21,6 +21,9 @@ import CardLancamentos from "../../components/CardLancamentos";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import api from "../../utils/api";
+
 // import { useEffect, useState } from "react";
 
 // const moviesURL = import.meta.env.VITE_API;
@@ -28,34 +31,56 @@ import { Link } from "react-router-dom";
 
 function Home() {
 
+    const [listaFilmes, setListaFilmes] = useState<any[]>([]);
+
+    function listarFilmes() {
+
+        api.get("videos")
+            .then((response: any) => {
+                
+                setListaFilmes(response.data);
+                console.log(response.data[0].quantidade_post);
+
+            })
+            .catch((error: any) => {
+                console.log("Error", error)
+            })
+    }
+
+
+    useEffect(() => {
+        listarFilmes();      
+    }, [])
+
+
     const data = [
         { id: '1', image: '../src/assets/img/banner/Frame 73.svg' },
         { id: '2', image: '../src/assets/img/banner/Frame 65.svg' },
         { id: '3', image: '../src/assets/img/banner/Frame 64.svg' },
-    ] 
+    ]
 
     // const [topMovies, setTopMovies] = useState ([]);
-    
+
     // const getTopRatedMovies = async (url) => {
     //     const res = await fetch(url);
     //     const data = await res.json();
 
     //     console.log(data);
     // }
-    
+
     // useEffect(() =>{
     //     const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
 
     //     getTopRatedMovies(topRatedURL);
-        
+
     // })
 
-    const listaFilmes: any[] = [
+    const listaFilmes1: any[] = [
         {
             id: 1,
             titulo: "Batman: O Cavaleiro das Trevas",
             img: "src/assets/img/filmes-f/batman-(cav-das-tre).webp",
-            imgStream: imgStreamHbo,
+            // imgStream: imgStreamHbo,
             nota: 9.0,
             comentarios: [
                 {
@@ -113,6 +138,87 @@ function Home() {
 
         {
             id: 4,
+            titulo: "Gladiador",
+            img: "src/assets/img/filmes-f/gladiador.jpg",
+            imgStream: imgStreamNetflix,
+            nota: 9.4,
+
+            comentarios: [
+                {
+                    conteudo: "Not as good as infinity war but a great movie",
+                    usuario: "ACollegeStudent"
+                }, {
+                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+                    usuario: "davyjones-636363"
+                }, {
+                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+                    usuario: "ahmetkozan"
+                }
+            ]
+        },
+
+        {
+            id: 5,
+            titulo: "Batman: O Cavaleiro das Trevas",
+            img: "src/assets/img/filmes-f/batman-(cav-das-tre).webp",
+            imgStream: imgStreamHbo,
+            nota: 9.0,
+            comentarios: [
+                {
+                    conteudo: "This movie is a work of art. The finest sequel ever made.",
+                    usuario: "dseferaj"
+                }, {
+                    conteudo: "Dark, yes, complex, ambitious.",
+                    usuario: "littlemartinarocena"
+                }, {
+                    conteudo: "I couldn't believe The Dark knight could live up to the hype.",
+                    usuario: "filmquestint"
+                }
+            ]
+        },
+
+        {
+            id: 6,
+            titulo: "Joker",
+            img: "src/assets/img/filmes-f/joker.webp",
+            nota: 8.4,
+            imgStream: imgStreamHbo,
+            comentarios: [
+                {
+                    conteudo: "The movie affects you in a way that makes it physically painful to experience.",
+                    usuario: "brianmlucas"
+                }, {
+                    conteudo: "Arthur Fleck's a guy with lofty aspirations, wants to make you laugh and disturb your foundations.",
+                    usuario: "Xstal"
+                }, {
+                    conteudo: "Truly a masterpiece, The Best Hollywood film of 2019, one of the Best films of the decade.",
+                    usuario: "Aman_Goyal"
+                }
+            ]
+        },
+
+        {
+            id: 7,
+            titulo: "Vingadores: Ultimato",
+            img: "src/assets/img/filmes-f/image 111.jpg",
+            nota: 8.4,
+            imgStream: imgStreamDisney,
+            comentarios: [
+                {
+                    conteudo: "Not as good as infinity war but a great movie",
+                    usuario: "ACollegeStudent"
+                }, {
+                    conteudo: "This film is an emotional rollercoaster with some of the coolest superhero plot lines ever drawn up.",
+                    usuario: "davyjones-636363"
+                }, {
+                    conteudo: "After Avengers Infinity War, we waited for the Avengers Endgame.",
+                    usuario: "ahmetkozan"
+                }
+            ]
+        },
+
+        {
+            id: 8,
             titulo: "Gladiador",
             img: "src/assets/img/filmes-f/gladiador.jpg",
             imgStream: imgStreamNetflix,
@@ -213,7 +319,7 @@ function Home() {
                     usuario: "ivo-cobra8"
                 }
             ]
-        }  
+        }
 
 
     ]
@@ -278,7 +384,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 4,
             titulo: "Mandalorian",
@@ -320,7 +426,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 2,
             titulo: "Rambo II: A Missão",
@@ -340,7 +446,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 3,
             titulo: "Rambo III",
@@ -360,7 +466,7 @@ function Home() {
                 }
             ]
         },
-        
+
         {
             id: 4,
             titulo: "Rambo IV",
@@ -389,7 +495,7 @@ function Home() {
             titulo2: "Homem-Aranha: Através do Aranhaverso",
             img: "src/assets/img/filmes-f/image84.png",
             link: "https://www.youtube.com/watch?v=_4is7I_ZxTg&pp=ygUtdHJhaWxlciBob21lbSBhcmFuaGEgYXRyYXbDqXMgZG8gYXJhbmhhdmVyc28g",
-            
+
         },
 
         {
@@ -398,7 +504,7 @@ function Home() {
             titulo2: "Transformers: O Despertar das Feras",
             img: "src/assets/img/filmes-f/image 83.png",
             link: "https://www.youtube.com/watch?v=PHC412-pCoQ&pp=ygUrdHJhaWxlciBUcmFuc2Zvcm1lcnM6IE8gRGVzcGVydGFyIGRhcyBGZXJhcw%3D%3D",
-            
+
         },
 
         {
@@ -407,7 +513,7 @@ function Home() {
             titulo2: "The Flash",
             img: "src/assets/img/filmes-f/image 85.png",
             link: "https://www.youtube.com/watch?v=xMbg-ZsFCCo&pp=ygURdHJhaWxlciBUaGUgRmxhc2g%3D",
-            
+
         },
 
         {
@@ -416,7 +522,7 @@ function Home() {
             titulo2: "O Demônio dos Mares",
             img: "src/assets/img/filmes-f/blackdemon.png",
             link: "https://www.youtube.com/watch?v=yX-pvjO4N3o&pp=ygUUTyBERU3DlE5JTyBET1MgTUFSRVM%3DD",
-            
+
         }
     ]
 
@@ -424,26 +530,26 @@ function Home() {
     return (
         <>
             <main id="main_home">
-                
-            <Swiper
-                slidesPerView={1}
-                pagination={{ clickable: true }}
-                navigation
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                  }}
-            >
-                {data.map((item) => (
-                    <SwiperSlide key={item.id}>
-                        <img
-                            src={item.image}
-                            alt="Silder"
-                            className="slider-item"
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+
+                <Swiper
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    navigation
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    }}
+                >
+                    {data.map((item) => (
+                        <SwiperSlide key={item.id}>
+                            <img
+                                src={item.image}
+                                alt="Silder"
+                                className="slider-item"
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
 
                 <section className="destaque">
                     <div className="destaque_conteudo">
@@ -495,29 +601,53 @@ function Home() {
                 </section>
                 <section className="Filmes_Destaques">
                     <h2>⭐ Filmes Favoritos</h2>
-                    <div  className="card-linha">
-                        <img src={imgSetaEsquerda} alt=""/>
-                        {
-                            listaFilmes.map((card: any) => {
-                                return<div key={card.id
-                                }>
-                                 <Card
-                                    img={card.img}
-                                    titulo={card.titulo}
-                                    foto={card.img}
-                                    imgStream={card.imgStream}
-                                    nota={card.nota}
-                                    comentarios={card.comentarios}
-                                /></div>
-                            })
-                        }
-                        <img src={imgSetaDireita} alt=""/>
+                    <div className="card-linha">
+
+                        <Swiper className="swipercard"
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation>
+
+                            {listaFilmes.map((card: any) => (
+                                card.tipo == "Filme" ?
+                                    <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                        <Card
+                                            img={card.poster}
+                                            titulo={card.titulo}
+                                            nota={card.nota_total / card.quantidade_post}
+                                            coment={card.quantidade_post}
+                                        />
+                                    </SwiperSlide>
+                                    : ""
+                            ))}
+                        </Swiper>
+
                     </div>
+
                 </section>
                 <section className="Clássicos">
                     <h2>🎭 Clássicos</h2>
                     <div className="card-linha">
-                            <img
+
+                        <Swiper className="swipercard"
+                            slidesPerView={4}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarFilmesClassicos.map((card: any) => (
+                                <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                    <Card
+                                        img={card.img}
+                                        titulo={card.titulo}
+                                        nota={card.nota}
+                                        comentarios={card.comentarios}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+
+                        {/* <img
                                 src={imgSetaEsquerda} alt=""
                             />
                                 {
@@ -535,13 +665,30 @@ function Home() {
                                     })
 
                                 }
-                            <img src={imgSetaDireita} alt="" />
-                        </div>
+                            <img src={imgSetaDireita} alt="" /> */}
+                    </div>
                 </section>
                 <section className="Melhores_series">
                     <h2>🏆 Melhores series</h2>
                     <div className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" />
+                        <Swiper className="swipercard"
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarSeries.map((card: any) => (
+                                <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                    <Card
+                                        img={card.img}
+                                        titulo={card.titulo}
+                                        foto={card.img}
+                                        nota={card.nota}
+                                        comentarios={card.comentarios}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        {/* <img src={imgSetaEsquerda} alt="" />
                         {
                             listarSeries.map((card: any) => {
                                 return<div key={card.id
@@ -557,13 +704,30 @@ function Home() {
                             })
 
                         }
-                        <img src={imgSetaDireita} alt="" />
+                        <img src={imgSetaDireita} alt="" /> */}
                     </div>
                 </section>
                 <section className="Para_maratonar">
                     <h2>🏃 Para Maratonar</h2>
                     <div className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" />
+                        <Swiper className="swipercard"
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarMaratonas.map((card: any) => (
+                                <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                    <Card
+                                        img={card.img}
+                                        titulo={card.titulo}
+                                        foto={card.img}
+                                        nota={card.nota}
+                                        comentarios={card.comentarios}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        {/* <img src={imgSetaEsquerda} alt="" />
                         {
                             listarMaratonas.map((card: any) => {
                                 return<div key={card.id
@@ -578,13 +742,34 @@ function Home() {
                                 /></div>
                             })
                         }
-                        <img src={imgSetaDireita} alt="" />
+                        <img src={imgSetaDireita} alt="" /> */}
                     </div>
                 </section>
                 <section className="Lancamentos">
                     <h2>📅 Lançamentos</h2>
                     <div className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" /> 
+
+                        <Swiper className="swipercard"
+                            slidesPerView={5}
+                            pagination={{ clickable: true }}
+                            navigation
+                        >
+                            {listarLancamentos.map((cardLancamentos: any) => (
+                                <SwiperSlide className="swiper-slide-card" key={cardLancamentos.id}>
+                                    <CardLancamentos
+                                        id={cardLancamentos.id}
+                                        titulo={cardLancamentos.titulo}
+                                        img={cardLancamentos.img}
+                                        titulo2={cardLancamentos.titulo2}
+                                        foto={cardLancamentos.img}
+                                        link={cardLancamentos.link}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+
+                        {/* <img src={imgSetaEsquerda} alt="" /> 
                         <div className="card_responsivo">
                         {
                             listarLancamentos.map((cardLancamentos: any) => {
@@ -605,10 +790,12 @@ function Home() {
                         </div>                       
                         
                         
-                        <img src={imgSetaDireita} alt="" />
+                        <img src={imgSetaDireita} alt="" /> */}
                     </div>
                     <Link className="input-submit" to="/calendario">+ Lançamentos</Link>
                 </section>
+
+
             </main>
 
 

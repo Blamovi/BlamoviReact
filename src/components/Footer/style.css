@@ -1,6 +1,5 @@
 /* #footer */
 
-
 #footer .img-footer {
     margin-top: 0;
     width: 100%;
@@ -23,6 +22,15 @@
     list-style: none;
     padding: 27px;
     margin: 0px auto;
+}
+
+.copy-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.copy-right>span,.img-copy{
+    color: var(--amarelo);
 }
    
     

@@ -1,7 +1,7 @@
 import "./style.css"
 
-import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
-import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
+// import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
+// import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
 
 import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
 import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
@@ -10,12 +10,12 @@ import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Card from "../../components/Card";
+// import { Link } from "react-router-dom";
 
 function Favoritos() {
 
     const data = [
         { id: '1', image: '../src/assets/img/banner/Frame 73.svg' },
-        // {id: '', image:'../src/assets/img/banner/Frame 75.svg'},
         { id: '2', image: '../src/assets/img/banner/Frame 65.svg' },
         { id: '3', image: '../src/assets/img/banner/Frame 64.svg' },
     ]
@@ -209,7 +209,28 @@ function Favoritos() {
             <section className="fav-filmes-favoritos">
                 <h2>⭐ Filmes Favoritos</h2>
                 <div className="fav-card">
-                    <img src={imgSetaEsquerda} alt=""
+                    
+                    <Swiper className="swipercard"
+                        slidesPerView={5}
+                        pagination={{ clickable: true }}
+                        navigation>
+                    
+                        {listaFilmes.map((card: any) => (
+                            <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                <Card
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}/>
+                                
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>               
+
+
+
+                    {/* <img src={imgSetaEsquerda} alt=""
                     />
                     {
                         listaFilmes.map((card: any) => {
@@ -225,28 +246,31 @@ function Favoritos() {
                                 /></div>
                         })
                     }
-                    <img src={imgSetaDireita} alt="" />
+                    <img src={imgSetaDireita} alt="" /> */}
                 </div>
             </section>
+
             <section className="fav-series-favoritos">
                 <h2>⭐ Melhores series</h2>
                 <div className="fav-card-linha">
-                    <img src={imgSetaEsquerda} alt="" />
-                    {
-                        listarSeries.map((card: any) => {
-                            return <div key={card.id
-                            }>
+
+                    <Swiper className="swipercard"
+                        slidesPerView={5}
+                        pagination={{ clickable: true }}
+                        navigation>
+
+                        {listarSeries.map((card: any) => (
+                            <SwiperSlide className="swiper-slide-card" key={card.id}>
                                 <Card
                                     img={card.img}
                                     titulo={card.titulo}
                                     foto={card.img}
-                                    imgStream={card.imgStream}
                                     nota={card.nota}
-                                    comentarios={card.comentarios}
-                                /></div>
-                        })
-                    }
-                    <img src={imgSetaDireita} alt="" />
+                                    comentarios={card.comentarios}/>
+
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </section>
         </main>
