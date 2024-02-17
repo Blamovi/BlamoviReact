@@ -37,19 +37,54 @@ import imgMarcos from "../../assets/Images/image 140.svg";
 //componentes
 import ComentariosFilme from "../../components/ComentariosFilme";
 
+import { useParams } from "react-router-dom";
 
 
 function FilmesInformacoes() {
 
-    const [listaFilmes, setListaFilmes] = useState<any[]>([]);
+    const [titulo, setTitulo] = useState<string>("");
+    const [genero, setGenero] = useState<string>("");
+    const [diretor, setDiretor] = useState<string>("");
+    const [temporadas, setTemporadas] = useState<string>("");
+    const [sinopse, setSinopse] = useState<string>("");
+    const [ano, setAno] = useState<string>("");
+    const [curtida, setCurtida] = useState<string>("");
+    const [elenco, setElenco] = useState<string>("");
+    const [tipo, setTipo] = useState<string>("");
+    const [poster, setPoster] = useState<string>("");
+    const [trailer, setTrailer] = useState<string>("");
+    const [duracao, setDuracao] = useState<string>("200");
+    const [classificacao, setClassificacao] = useState<string>("");
+    const [nota_total, setNota_Total] = useState<any>();
+    const [quantidade_post, setQuantidade_Post] = useState<any>();
 
-    function listarFilmes() {
 
-        api.get("videos")
+
+
+    const { idFilme } = useParams();
+
+    function exibirInformacoesFilme() {
+
+        api.get("videos/" + idFilme)
             .then((response: any) => {
-                
-                setListaFilmes(response.data);
-                console.log(response.data[0].quantidade_post);
+
+                console.log(response.data);
+
+                setTitulo(response.data.titulo);
+                setGenero(response.data.genero);
+                setDiretor(response.data.diretor);
+                setTemporadas(response.data.temporadas);
+                setSinopse(response.data.sinopse);
+                setAno(response.data.ano);
+                setCurtida(response.data.curtida);
+                setElenco(response.data.elenco);
+                setTipo(response.data.tipo);
+                setPoster(response.data.poster);
+                setTrailer(response.data.trailer);
+                setClassificacao(response.data.classificacao);
+                setNota_Total(response.data.nota_total);
+                setQuantidade_Post(response.data.quantidade_post);
+                //setDuracao()
 
             })
             .catch((error: any) => {
@@ -57,34 +92,14 @@ function FilmesInformacoes() {
             })
     }
 
-
     useEffect(() => {
-        listarFilmes();      
+        exibirInformacoesFilme();
     }, [])
-
-
-    const comentarios: any[] = [
-        {
-            id: 1,
-            nome: "Ricardo Motta",
-            foto: imgRicardo,
-            comentario: "APLAUDO de pé essa obra extraordinária. Christopher Nolan surpreende com suas ideias e criatividade de cinema desde essa época, assim como a participação de David Goyer no roteiro. A atuação de Christian Bale é IMPECÁVEL, esse Homem não tem defeitos."
-        },
-        {
-            id: 2,
-            nome: "Marcos Felipe",
-            foto: imgMarcos,
-            comentario: "O maior filme de super herói já feito! Entrega tudo, o que é o Coringa e O Batman sem menosprezar quem é a máscara de Bruce Wayne"
-        },
-    ]
 
     return (
         <>
- {listaFilmes.map((card: any) => (
 
-
-
-<main id="detalhe_filmesInformacoes">
+            <main id="detalhe_filmesInformacoes">
                 <section className="Filmes">
                     <div className="banner_1">
                         {/* <p className="superbanner">BLÁMOVI: RECOMENDA</p> */}
@@ -95,10 +110,10 @@ function FilmesInformacoes() {
                         /> */}
                     </div>
                     <div className="Banner2">
-                        <h2>{card.titulo}</h2>
-                        <h3>Gênero: {card.genero}</h3>
-                        <p className="paragrafo_inicial">Ano: {card.ano} | Duração: {card.duracao}</p>
-                        <p className="paragrafo_inicial">Classificação: {card.classificacao}</p>
+                        <h2>{titulo}</h2>
+                        <h3>Gênero: {genero}</h3>
+                        <p className="paragrafo_inicial">Ano: {ano} | Duração: {duracao}</p>
+                        <p className="paragrafo_inicial">Classificação: {classificacao}</p>
                         <div className="botoes2">
                             <img
                                 className="comentario"
@@ -118,17 +133,17 @@ function FilmesInformacoes() {
                             <div className="banner_box_img">
                                 <img
                                     className="banner_img"
-                                    src={card.poster}
+                                    src={"http://localhost:8090/images/" + poster}
                                     alt="Batman"
                                 />
                                 <div className="referências">
                                     <div className="div_avaliacoes_filme">
                                         <img src={imgTrofeu} />
-                                        <span>{card.nota_total / card.quantidade_post}</span>
+                                        <span>{nota_total / quantidade_post}</span>
                                     </div>
                                     <div className="div_avaliacoes_filme">
                                         <img src={imgBaloesComentarios} alt="" />
-                                        <span>{card.quantidade_post}</span>
+                                        <span>{quantidade_post}</span>
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +167,7 @@ function FilmesInformacoes() {
                     <div>
                         <p className="titulo1">Sinópse</p>
                         <p className="sinopse">
-                            {card.sinopse}
+                            {sinopse}
                         </p>
                     </div>
                     <div className="topico">
@@ -166,30 +181,36 @@ function FilmesInformacoes() {
                     <div className="elementos">
                         <div className="grupo1">
                             <div className="ator">
-                                <p>{card.elenco}</p>
+                                <p>{elenco}</p>
                             </div>
                         </div>
                     </div>
                     <p className="titulo2">Direção</p>
                     <div className="elementos">
                         <div className="ator">
-                            <p>{card.diretor}</p>
+                            <p>{diretor}</p>
                         </div>
                     </div>
                 </section>
 
 
+                {/* const comentarios: any[] = [
+                    {
+                        id: 1,
+                    nome: "Ricardo Motta",
+                    foto: imgRicardo,
+                    comentario: "APLAUDO de pé essa obra extraordinária. Christopher Nolan surpreende com suas ideias e criatividade de cinema desde essa época, assim como a participação de David Goyer no roteiro. A atuação de Christian Bale é IMPECÁVEL, esse Homem não tem defeitos."
+        },
+                    {
+                        id: 2,
+                    nome: "Marcos Felipe",
+                    foto: imgMarcos,
+                    comentario: "O maior filme de super herói já feito! Entrega tudo, o que é o Coringa e O Batman sem menosprezar quem é a máscara de Bruce Wayne"
+        },
+                    ] */}
 
 
 
-
-
-     ))}
-
-
-
-
-            
                 <hr className="separar_comentario" />
                 <section>
                     <div className="Comentarios_filmes">
@@ -197,20 +218,21 @@ function FilmesInformacoes() {
                             <p className="subtitulo3">🗪 Comentários</p>
                         </div>
                     </div>
-                    {
-                        comentarios.map((comentario: any) => {
-                            return <div key={comentario.id} className="Comentarios_todos">
-                                <ComentariosFilme
-                                    fotoUsuario={comentario.foto}
-                                    nomeUsuario={comentario.nome}
-                                    comentario={comentario.comentario}
-                                />
-                            </div>
-                        })
-                    }
+                    {/* {
+                            comentarios.map((comentario: any) => {
+                                return <div key={comentario.id} className="Comentarios_todos">
+                                    <ComentariosFilme
+                                        fotoUsuario={comentario.foto}
+                                        nomeUsuario={comentario.nome}
+                                        comentario={comentario.comentario}
+                                    />
+                                </div>
+                            })
+                        } */}
 
                 </section>
             </main>
+
         </>
     );
 }

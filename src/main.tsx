@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/filmesInformacoes' element={<FilmesInformacoes />} />
+        <Route path='/filmesInformacoes/:idFilme' element={<FilmesInformacoes />} />
       </Routes>
       <Footer />
     </BrowserRouter>

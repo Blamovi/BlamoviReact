@@ -217,7 +217,7 @@
     padding-left: 8px;
     padding-bottom: 15px;
     font-size: 27px;
-    text-align: left;
+    text-align: center;
 }
 
 #detalhe_filmesInformacoes .diretor {
@@ -473,7 +473,7 @@
 
         padding-left: 8px;
         font-size: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     #detalhe_filmesInformacoes .tela1 {
