@@ -4,10 +4,6 @@ import "./style.css";
 import imgIconesTrofeu from "../../assets/img/elementos/Trophy.png";
 import imgIconesComentario from "../../assets/img/elementos/Talk.png";
 
-// import { useEffect, useState } from "react";
-
-// const moviesURL = import.meta.env.VITE_API;
-// const apiKey = import.meta.env.VITE_API_KEY;
 
 function Card(props: any) {
 
