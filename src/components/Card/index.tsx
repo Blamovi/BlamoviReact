@@ -47,7 +47,7 @@ function Card(props: any) {
                 </div>
                 <div className="icones">
                     <img src={imgIconesTrofeu} alt="" />
-                    <span>{props.nota}</span>
+                    <span>{parseFloat(props.nota).toFixed(1)}</span>
                     <img src={imgIconesComentario} alt="" />
                     <p>{props.coment}</p>
                 </div>

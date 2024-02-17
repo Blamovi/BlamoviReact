@@ -10,9 +10,34 @@ import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Card from "../../components/Card";
-// import { Link } from "react-router-dom";
+import api from "../../utils/api";
+import { useEffect, useState } from "react";
 
 function Favoritos() {
+
+    const [listaFilmes, setListaFilmes] = useState<any[]>([]);
+    const [listaSeries, setListaSeries] = useState<any[]>([]);
+
+    function listarFilmes() {
+
+        api.get("videos")
+            .then((response: any) => {
+
+                setListaFilmes(response.data);
+                setListaSeries(response.data);
+                
+
+
+            })
+            .catch((error: any) => {
+                console.log("Error", error)
+            })
+    }
+
+
+    useEffect(() => {
+        listarFilmes();
+    }, [])
 
     const data = [
         { id: '1', image: '../src/assets/img/banner/Frame 73.svg' },
@@ -20,7 +45,7 @@ function Favoritos() {
         { id: '3', image: '../src/assets/img/banner/Frame 64.svg' },
     ]
 
-    const listaFilmes: any[] = [
+    const listaFilmes1: any[] = [
         {
             id: 1,
             titulo: "Batman: O Cavaleiro das Trevas",
@@ -103,7 +128,7 @@ function Favoritos() {
         }
     ]
 
-    const listarSeries: any[] = [
+    const listarSeries2: any[] = [
         {
             id: 1,
             titulo: "The last of us",
@@ -189,8 +214,6 @@ function Favoritos() {
         <main id="main_favoritos">
 
             <Swiper
-                // modules={[EffectCards]}
-                // effect="cards"
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 navigation
@@ -209,8 +232,27 @@ function Favoritos() {
             <section className="fav-filmes-favoritos">
                 <h2>⭐ Filmes Favoritos</h2>
                 <div className="fav-card">
+
+                <Swiper className="swipercard"
+                            slidesPerView={3}
+                            pagination={{ clickable: true }}
+                            navigation>
+
+                            {listaFilmes.map((card: any) => (
+                                card.tipo == "Filme" ?
+                                    <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                        <Card
+                                            poster={card.poster}
+                                            titulo={card.titulo}
+                                            nota={card.nota_total / card.quantidade_post}
+                                            coment={card.quantidade_post}
+                                        />
+                                    </SwiperSlide>
+                                    : ""
+                            ))}
+                        </Swiper>
                     
-                    <Swiper className="swipercard"
+                    {/* <Swiper className="swipercard"
                         slidesPerView={5}
                         pagination={{ clickable: true }}
                         navigation>
@@ -226,7 +268,7 @@ function Favoritos() {
                                 
                             </SwiperSlide>
                         ))}
-                    </Swiper>               
+                    </Swiper>                */}
 
 
 
@@ -254,7 +296,26 @@ function Favoritos() {
                 <h2>⭐ Melhores series</h2>
                 <div className="fav-card-linha">
 
-                    <Swiper className="swipercard"
+                <Swiper className="swipercard"
+                            slidesPerView={3}
+                            pagination={{ clickable: true }}
+                            navigation>
+
+                            {listaFilmes.map((card: any) => (
+                                card.tipo == "Série" ?
+                                    <SwiperSlide className="swiper-slide-card" key={card.id}>
+                                        <Card
+                                            poster={card.poster}
+                                            titulo={card.titulo}
+                                            nota={card.nota_total / card.quantidade_post}
+                                            coment={card.quantidade_post}
+                                        />
+                                    </SwiperSlide>
+                                    : ""
+                            ))}
+                        </Swiper>
+
+                    {/* <Swiper className="swipercard"
                         slidesPerView={5}
                         pagination={{ clickable: true }}
                         navigation>
@@ -270,7 +331,7 @@ function Favoritos() {
 
                             </SwiperSlide>
                         ))}
-                    </Swiper>
+                    </Swiper> */}
                 </div>
             </section>
         </main>

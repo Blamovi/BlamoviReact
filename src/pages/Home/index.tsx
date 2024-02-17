@@ -8,19 +8,19 @@ import imgDestaques from "../../assets/img/section/film-everything-everywhere-al
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
 
-import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
-import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
-import imgStreamAmazon from "../../assets/img/streams/amazon.png";
-import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
-import imgStreamStar from "../../assets/img/streams/star.png";
-import imgStreamYoutube from "../../assets/img/streams/youtube.png";
+// import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
+// import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
+// import imgStreamAmazon from "../../assets/img/streams/amazon.png";
+// import imgStreamDisney from "../../assets/img/streams/DISNEY.png";
+// import imgStreamStar from "../../assets/img/streams/star.png";
+// import imgStreamYoutube from "../../assets/img/streams/youtube.png";
 
 import Card from "../../components/Card";
-import CardLancamentos from "../../components/CardLancamentos";
+// import CardLancamentos from "../../components/CardLancamentos";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../utils/api";
 
@@ -31,12 +31,10 @@ import api from "../../utils/api";
 
 function Home() {
 
-
     const [listaFilmes, setListaFilmes] = useState<any[]>([]);
     const [listaSeries, setListaSeries] = useState<any[]>([]);
     const [listaDocumentario, setlistaDocumentario] = useState<any[]>([]);
     
-
     function listarFilmes() {
 
         api.get("videos")
@@ -53,11 +51,9 @@ function Home() {
             })
     }
 
-
     useEffect(() => {
         listarFilmes();
     }, [])
-
 
     const data = [
         { id: '1', image: '../src/assets/img/banner/Frame 73.svg' },
@@ -531,7 +527,6 @@ function Home() {
 
     //     }
     // ]
-
 
     return (
         <>
