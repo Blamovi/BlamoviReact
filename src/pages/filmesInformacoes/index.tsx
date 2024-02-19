@@ -53,16 +53,13 @@ function FilmesInformacoes() {
     const [tipo, setTipo] = useState<string>("");
     const [poster, setPoster] = useState<string>("");
     const [trailer, setTrailer] = useState<string>("");
-    const [duracao, setDuracao] = useState<string>("200");
+    const [duracao, setDuracao] = useState<any>();
     const [classificacao, setClassificacao] = useState<string>("");
     const [nota_total, setNota_Total] = useState<any>();
     const [quantidade_post, setQuantidade_Post] = useState<any>();
 
-
-
-
     const { idFilme } = useParams();
-
+  
     function exibirInformacoesFilme() {
 
         api.get("videos/" + idFilme)
@@ -84,8 +81,7 @@ function FilmesInformacoes() {
                 setClassificacao(response.data.classificacao);
                 setNota_Total(response.data.nota_total);
                 setQuantidade_Post(response.data.quantidade_post);
-                //setDuracao()
-
+                setDuracao(response.data.duracao);
             })
             .catch((error: any) => {
                 console.log("Error", error)
@@ -113,7 +109,7 @@ function FilmesInformacoes() {
                         <h2>{titulo}</h2>
                         <h3>Gênero: {genero}</h3>
                         <p className="paragrafo_inicial">Ano: {ano} | Duração: {duracao}</p>
-                        <p className="paragrafo_inicial">Classificação: {classificacao}</p>
+                        <p className="paragrafo_inicial">Tipo: {tipo} | Temporadas: {temporadas} | Classificação: {classificacao}</p>
                         <div className="botoes2">
                             <img
                                 className="comentario"
@@ -148,11 +144,13 @@ function FilmesInformacoes() {
                                 </div>
                             </div>
                             <div className="trailer">
+
+                                
                                 <Link className="trailer1" to={"#"}>
                                     <iframe
                                         width={930}
                                         height={400}
-                                        src={props.trailer}"https://www.youtube.com/embed/htfkBjzUyDE?controls=0"
+                                        src="https://www.youtube.com/embed/htfkBjzUyDE?controls=0"
                                         title="YouTube video player"
                                         frameBorder={0}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -178,38 +176,16 @@ function FilmesInformacoes() {
                         />
                     </div>
                     <p className="titulo1">Elenco Principal</p>
-                    <div className="elementos">
-                        <div className="grupo1">
-                            <div className="ator">
-                                <p>{elenco}</p>
-                            </div>
-                        </div>
+                    <div className="ator">
+                        <p className="elenco">{elenco}</p>
                     </div>
                     <p className="titulo2">Direção</p>
                     <div className="elementos">
                         <div className="ator">
-                            <p>{diretor}</p>
+                            <p className="elenco">{diretor}</p>
                         </div>
                     </div>
                 </section>
-
-
-                {/* const comentarios: any[] = [
-                    {
-                        id: 1,
-                    nome: "Ricardo Motta",
-                    foto: imgRicardo,
-                    comentario: "APLAUDO de pé essa obra extraordinária. Christopher Nolan surpreende com suas ideias e criatividade de cinema desde essa época, assim como a participação de David Goyer no roteiro. A atuação de Christian Bale é IMPECÁVEL, esse Homem não tem defeitos."
-        },
-                    {
-                        id: 2,
-                    nome: "Marcos Felipe",
-                    foto: imgMarcos,
-                    comentario: "O maior filme de super herói já feito! Entrega tudo, o que é o Coringa e O Batman sem menosprezar quem é a máscara de Bruce Wayne"
-        },
-                    ] */}
-
-
 
                 <hr className="separar_comentario" />
                 <section>
@@ -218,21 +194,11 @@ function FilmesInformacoes() {
                             <p className="subtitulo3">🗪 Comentários</p>
                         </div>
                     </div>
-                    {/* {
-                            comentarios.map((comentario: any) => {
-                                return <div key={comentario.id} className="Comentarios_todos">
-                                    <ComentariosFilme
-                                        fotoUsuario={comentario.foto}
-                                        nomeUsuario={comentario.nome}
-                                        comentario={comentario.comentario}
-                                    />
-                                </div>
-                            })
-                        } */}
+
+                    <ComentariosFilme />
 
                 </section>
             </main>
-
         </>
     );
 }

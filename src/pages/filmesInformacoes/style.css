@@ -5,7 +5,7 @@
     justify-content: right;
     align-items: flex-end;
     margin-right: 20px;
-    margin-top: 185px;
+    margin-top: 165px;
 }
 
 #detalhe_filmesInformacoes .superbanner {
@@ -78,8 +78,10 @@
 }
 
 #detalhe_filmesInformacoes .banner_img {
-    height: 420px;
-    margin: 0px 30px;
+    width: 230px;
+    height: 400px;
+    margin-left: 40px;
+    margin-right: 20px;
     border-radius: 10px;
     border: 1px solid white;
     align-self: center;
@@ -155,8 +157,8 @@
 
 #detalhe_filmesInformacoes .trailer a {
     height: 300px;
-    margin: 0px 50px;
-    width: 90%;
+    margin: 0px 0px;
+    width: 85%;
     border: #FBC02C;
 }
 
@@ -169,7 +171,7 @@
     color: white;
     line-height: 50px;
     width: 100%;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -212,11 +214,15 @@
     height: 70px;
 }
 
+#detalhe_filmesInformacoes .elenco{
+    color: #E0EEEE;
+}
+
 #detalhe_filmesInformacoes .ator {
     color: #fbc02c;
     padding-left: 8px;
     padding-bottom: 15px;
-    font-size: 27px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -455,7 +461,7 @@
     }
 
     #detalhe_filmesInformacoes .trailer1 iframe{
-        width: 88%;
+        width: 80%;
     }
 }
 
