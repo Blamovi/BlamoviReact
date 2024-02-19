@@ -35,9 +35,9 @@ function Card(props: any) {
     // }
 
     return (
-        <Link to={`/filmesInformacoes/${Card + props.id}`}>
+        <Link to={`/filmesInformacoes/${Card + props.id}`} className="link">
             <div className="card responsivo" id="teste3" >
-                <img src={"http://localhost:8090/images/" + props.poster} alt={"/filmeInformacoes"}/>
+                <img src={"http://localhost:8090/images/" + props.poster}/>
                 <h3>{props.titulo}</h3>
                 <div className="itens">
                     <div className="streams">

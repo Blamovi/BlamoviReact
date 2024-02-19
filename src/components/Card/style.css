@@ -119,6 +119,11 @@
     --swiper-theme-color: #FBC02C;
 }
 
+.link{
+    text-decoration:none; 
+    color: var(--amarelo);
+}
+
 
 /*  RESPONSIVO */
 @media screen and ( max-width: 1440px) {
