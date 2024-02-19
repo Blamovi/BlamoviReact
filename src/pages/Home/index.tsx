@@ -2,9 +2,6 @@ import "./style.css"
 
 import imgDestaques from "../../assets/img/section/film-everything-everywhere-all-at-once_ratio-16x9 1.svg";
 
-// import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
-// import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
-
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
 
@@ -15,16 +12,19 @@ import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
 // import imgStreamStar from "../../assets/img/streams/star.png";
 // import imgStreamYoutube from "../../assets/img/streams/youtube.png";
 
+// import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
+// import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
+
+//componetes
 import Card from "../../components/Card";
 // import CardLancamentos from "../../components/CardLancamentos";
 
+//lib do carrosel
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+//chamada da API
 import api from "../../utils/api";
-
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // const moviesURL = import.meta.env.VITE_API;
 // const apiKey = import.meta.env.VITE_API_KEY;
@@ -39,12 +39,9 @@ function Home() {
 
         api.get("videos")
             .then((response: any) => {
-
                 setListaFilmes(response.data);
                 setListaSeries(response.data);
                 setlistaDocumentario(response.data);
-
-
             })
             .catch((error: any) => {
                 console.log("Error", error)
@@ -684,7 +681,7 @@ function Home() {
                             pagination={{ clickable: true }}
                             navigation>
 
-                            {listaFilmes.map((card: any) => (
+                            {listaSeries.map((card: any) => (
                                 card.tipo == "Série" ?
                                     <SwiperSlide className="swiper-slide-card" key={card.id}>
                                         <Card
@@ -729,7 +726,7 @@ function Home() {
                             pagination={{ clickable: true }}
                             navigation>
 
-                            {listaFilmes.map((card: any) => (
+                            {listaDocumentario.map((card: any) => (
                                 card.tipo == "Documentário" ?
                                     <SwiperSlide className="swiper-slide-card" key={card.id}>
                                         <Card
@@ -834,7 +831,6 @@ function Home() {
                     </div>
                     <Link className="input-submit" to="/calendario">+ Lançamentos</Link>
                 </section> */}
-
 
             </main>
 
