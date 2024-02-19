@@ -53,13 +53,10 @@ function FilmesInformacoes() {
     const [tipo, setTipo] = useState<string>("");
     const [poster, setPoster] = useState<string>("");
     const [trailer, setTrailer] = useState<string>("");
-    const [duracao, setDuracao] = useState<string>("200");
+    const [duracao, setDuracao] = useState<any>();
     const [classificacao, setClassificacao] = useState<string>("");
     const [nota_total, setNota_Total] = useState<any>();
     const [quantidade_post, setQuantidade_Post] = useState<any>();
-
-
-
 
     const { idFilme } = useParams();
 
@@ -84,8 +81,7 @@ function FilmesInformacoes() {
                 setClassificacao(response.data.classificacao);
                 setNota_Total(response.data.nota_total);
                 setQuantidade_Post(response.data.quantidade_post);
-                //setDuracao()
-
+                setDuracao(response.data.duracao);
             })
             .catch((error: any) => {
                 console.log("Error", error)
@@ -113,7 +109,7 @@ function FilmesInformacoes() {
                         <h2>{titulo}</h2>
                         <h3>Gênero: {genero}</h3>
                         <p className="paragrafo_inicial">Ano: {ano} | Duração: {duracao}</p>
-                        <p className="paragrafo_inicial">Classificação: {classificacao}</p>
+                        <p className="paragrafo_inicial">Tipo: {tipo} | Temporadas: {temporadas} | Classificação: {classificacao}</p>
                         <div className="botoes2">
                             <img
                                 className="comentario"
@@ -148,11 +144,13 @@ function FilmesInformacoes() {
                                 </div>
                             </div>
                             <div className="trailer">
+
+                                
                                 <Link className="trailer1" to={"#"}>
                                     <iframe
                                         width={930}
                                         height={400}
-                                        src="https://www.youtube.com/embed/htfkBjzUyDE?controls=0"
+                                        src={`https://www.youtube.com/embed/${trailer}`}
                                         title="YouTube video player"
                                         frameBorder={0}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -178,23 +176,26 @@ function FilmesInformacoes() {
                         />
                     </div>
                     <p className="titulo1">Elenco Principal</p>
-                    <div className="elementos">
-                        <div className="grupo1">
-                            <div className="ator">
-                                <p>{elenco}</p>
-                            </div>
-                        </div>
+                    <div className="ator">
+                        <p className="elenco">{elenco}</p>
                     </div>
                     <p className="titulo2">Direção</p>
                     <div className="elementos">
                         <div className="ator">
-                            <p>{diretor}</p>
+                            <p className="elenco">{diretor}</p>
                         </div>
                     </div>
                 </section>
 
+                <hr className="separar_comentario" />
+                <section>
+                    <div className="Comentarios_filmes">
+                        <div>
+                            <p className="subtitulo3">🗪 Comentários</p>
+                        </div>
+                    </div>
 
-                {/* const comentarios: any[] = [
+                    {/* const comentarios: any[] = [
                     {
                         id: 1,
                     nome: "Ricardo Motta",
@@ -209,15 +210,6 @@ function FilmesInformacoes() {
         },
                     ] */}
 
-
-
-                <hr className="separar_comentario" />
-                <section>
-                    <div className="Comentarios_filmes">
-                        <div>
-                            <p className="subtitulo3">🗪 Comentários</p>
-                        </div>
-                    </div>
                     {/* {
                             comentarios.map((comentario: any) => {
                                 return <div key={comentario.id} className="Comentarios_todos">
