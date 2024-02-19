@@ -59,7 +59,7 @@ function FilmesInformacoes() {
     const [quantidade_post, setQuantidade_Post] = useState<any>();
 
     const { idFilme } = useParams();
-
+  
     function exibirInformacoesFilme() {
 
         api.get("videos/" + idFilme)
@@ -195,36 +195,10 @@ function FilmesInformacoes() {
                         </div>
                     </div>
 
-                    {/* const comentarios: any[] = [
-                    {
-                        id: 1,
-                    nome: "Ricardo Motta",
-                    foto: imgRicardo,
-                    comentario: "APLAUDO de pé essa obra extraordinária. Christopher Nolan surpreende com suas ideias e criatividade de cinema desde essa época, assim como a participação de David Goyer no roteiro. A atuação de Christian Bale é IMPECÁVEL, esse Homem não tem defeitos."
-        },
-                    {
-                        id: 2,
-                    nome: "Marcos Felipe",
-                    foto: imgMarcos,
-                    comentario: "O maior filme de super herói já feito! Entrega tudo, o que é o Coringa e O Batman sem menosprezar quem é a máscara de Bruce Wayne"
-        },
-                    ] */}
-
-                    {/* {
-                            comentarios.map((comentario: any) => {
-                                return <div key={comentario.id} className="Comentarios_todos">
-                                    <ComentariosFilme
-                                        fotoUsuario={comentario.foto}
-                                        nomeUsuario={comentario.nome}
-                                        comentario={comentario.comentario}
-                                    />
-                                </div>
-                            })
-                        } */}
+                    <ComentariosFilme />
 
                 </section>
             </main>
-
         </>
     );
 }
