@@ -59,13 +59,17 @@ function FilmesInformacoes() {
     const [quantidade_post, setQuantidade_Post] = useState<any>();
 
     const { idFilme } = useParams();
-  
+
+    var filmeeee1: string = "";
+
     function exibirInformacoesFilme() {
 
         api.get("videos/" + idFilme)
             .then((response: any) => {
 
                 console.log(response.data);
+                // console.log("bananaaa")
+                // console.log(response.data.trailer)
 
                 setTitulo(response.data.titulo);
                 setGenero(response.data.genero);
@@ -77,7 +81,7 @@ function FilmesInformacoes() {
                 setElenco(response.data.elenco);
                 setTipo(response.data.tipo);
                 setPoster(response.data.poster);
-                setTrailer(response.data.trailer);
+                // setTrailer(response.data.trailer);
                 setClassificacao(response.data.classificacao);
                 setNota_Total(response.data.nota_total);
                 setQuantidade_Post(response.data.quantidade_post);
@@ -88,8 +92,24 @@ function FilmesInformacoes() {
             })
     }
 
+    // function videoexibido(filmeeee : String){
+    //  switch (idFilme){
+    //     case "02747d66-ca89-11ee-8998-1831bfd54982":
+    //         filmeeee = "https://www.youtube.com/watch?v=To4r67z73aw"
+    //     case '1cfb0d24-c7ac-11ee-aac3-b445067b85b4':
+    //         filmeeee = "https://www.youtube.com/watch?v=To4r67z73aw"
+    //  }
+
+    //  filmeeee = filmeeee1;
+
+    //  console.log(filmeeee)
+
+    // }
+
+
     useEffect(() => {
         exibirInformacoesFilme();
+        // videoexibido(filmeeee1);
     }, [])
 
     return (
@@ -145,16 +165,21 @@ function FilmesInformacoes() {
                             </div>
                             <div className="trailer">
 
-                                
-                                <Link className="trailer1" to={"#"}>
+                                <Link className="trailer1">
                                     <iframe
                                         width={930}
                                         height={400}
-                                        src="https://www.youtube.com/embed/htfkBjzUyDE?controls=0"
+                                        src={trailer}
                                         title="YouTube video player"
                                         frameBorder={0}
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
                                     // allowFullScreen=""
+
+                                    // <iframe width="560" height="315" 
+                                    
+                                    // src="https://www.youtube.com/embed/HJv4LQxbVEA?si=tTDuLwa9ZcBjP72q" 
+                                    // title="YouTube video player" frameborder="0" 
+                                    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     />
                                 </Link>
                             </div>
@@ -195,8 +220,26 @@ function FilmesInformacoes() {
                         </div>
                     </div>
 
-                    <ComentariosFilme />
-
+                    <ComentariosFilme
+                        nome={"Ricardo Soares"}
+                        texto={"Achei interessante. Um excelente filme que desmonta o esquema de golpes em larga escala, que ainda acontece, proporcionada pela veloz ascenção das criptomoedas e do enriquecimento rápido."}
+                    />
+                    <ComentariosFilme
+                        nome={"Dayvid Ygor Rodrigues"}
+                        texto={"Excelente filme, principalmente por ser real. Brian Banks foi vítima aos 16 anos de uma mentira que o levou a ficar na cadeia por 6 anos, e teria mais 5 na condicional. Lutou contra o sistema judicial como pôde, nunca perdeu as esperanças. A suposta vítima, uma mentirosa, é que deveria ter sido punida por ter prejudicado não só a vida de Brian na Família dele, também com seus amigos, mas a sua realização profissional. Felizmente também uma instituição que ajuda injustiçados abraçou a sua causa. Lamentavelmente a mentirosa suposta vítima manteve a mentira até o fim, pressionada pela mãe dela. O letreiro no fim do filme foi muito útil."}
+                    />
+                    <ComentariosFilme
+                        nome={"Luis Correia"}
+                        texto={"Fui ler o livro por causa da série de TV que estreia logo e confesso que fui esperando um livro de suspense com ação. O livro é, na verdade, um drama que tem uma morte passada como ponto principal. O que me deixa chateada é quando o livro acaba e faz com que eu me sinta meio burrra, como se eu tivesse perdido alguma coisa, sabe? Acho que a autora foi extremamente infeliz nesse final e espero que a série não siga pelo mesmo caminho"}
+                    />
+                    <ComentariosFilme
+                        nome={"Adrielly Siqueira"}
+                        texto={"Filme muito bom. Recomendo. Lógico que  em filme baseado  em fatos reais não muita ação.  Mas o contexto  foi bem trabalhado."}
+                    />
+                    <ComentariosFilme
+                        nome={"Dayvid Ygor Rodrigues"}
+                        texto={"Muito bom!!! Um dos melhores filmes que já vi. É um filme leve (comparado à outros como O Pianista, A Lista De Schindler e Bastardos Inglórios, q falam do mesmo tema), mas ainda assim conseguiu retratar muito bem os horrores do nazismo e dos campos de concentração, bem como da guerra. É uma linda história de amizade, apesar de seu trágico final (q eu chorei a primeira vez que assisti). Mostra de forma ímpar a perda da inocência e a descoberta da realidade, assim como quando vc encontra alguém que será seu amigo (a) até o fim. Recomendo muito, mas se vc for do tipo q chora (não importando se é homem ou mulher), então vai descarregar suas lágrimas e muito. Nota 9/10."}
+                    />
                 </section>
             </main>
         </>

@@ -1,8 +1,35 @@
+#detalhe_filmesInformacoes .separar_comentario {
+    margin-top: 80px;
+    border-top: 1px solid #FBC02C;
+}
+
+#detalhe_filmesInformacoes .Comentarios_filmes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#detalhe_filmesInformacoes .img4 {
+    margin-right: 20px;
+    width: 40px;
+    height: 43px;
+}
+
+#detalhe_filmesInformacoes .Comentarios_todos {
+    display: flex;
+}
+
+#detalhe_filmesInformacoes .img_coment {
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 20px;
+}
+
 #detalhe_filmesInformacoes .ricardo {
     width: 100px;
     height: 100px;
     margin-top: 55px;
-    border-radius: 50px;
 }
 
 #detalhe_filmesInformacoes .marcos {
@@ -45,6 +72,7 @@
     width: 30px;
     height: 30px;
 }
+
 
 
 @media screen and (max-width: 1100px) {

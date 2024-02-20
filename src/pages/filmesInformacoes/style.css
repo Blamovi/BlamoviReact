@@ -78,9 +78,9 @@
 }
 
 #detalhe_filmesInformacoes .banner_img {
-    width: 230px;
+    width: 280px;
     height: 400px;
-    margin-left: 40px;
+    margin-left: -10px;
     margin-right: 20px;
     border-radius: 10px;
     border: 1px solid white;
@@ -157,8 +157,8 @@
 
 #detalhe_filmesInformacoes .trailer a {
     height: 300px;
-    margin: 0px 0px;
-    width: 85%;
+    margin: 10px 0px;
+    width: 100%;
     border: #FBC02C;
 }
 

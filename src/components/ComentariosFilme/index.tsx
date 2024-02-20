@@ -5,51 +5,52 @@ import imglike from "../../assets/Images/Facebook Like2.svg";
 import imgDeslike from "../../assets/Images/Facebook Like1.svg";
 import "./style.css";
 
-function ComentariosFilme() {
+import semFoto from "../../assets/Images/sem_foto.png";
 
-    const [comentario, setComentario] = useState<any>(null);
-    const { idUsuario, idComentario } = useParams<{ idUsuario: string, idComentario: string }>();
+function ComentariosFilme(props: any) {
+
+    //const [comentario, setComentario] = useState<any>(null);
+    // const { idUsuario, idComentario } = useParams<{ idUsuario: string, idComentario: string }>();
 
     useEffect(() => {
-        api.get(`comentario/${idUsuario}/${idComentario}`)
-            .then((response: any) => {
-                console.log(response.data);
-                setComentario(response.data);
-            })
-            .catch((error: any) => {
-                console.log("Error", error)
-            });
-    }, [idUsuario, idComentario]);
+        // api.get(`comentario/${idUsuario}/${idComentario}`)
+        //     .then((response: any) => {
+        //         console.log(response.data);
+        //         setComentario(response.data);
+        //     })
+        //     .catch((error: any) => {
+        //         console.log("Error", error)
+        //     });
+    }, []);
 
     return (
         <>
-            {comentario && (
-                <div>
-                    <div className="img_coment">
-                        <img
-                            className="ricardo"
-                            src={"http://localhost:8090/images/" + comentario.id_usuario}
-                            alt=""
-                        />
-                    </div>
-                    <div>
-                        <p className="usuario2">{comentario.id_usuario}</p>
-                        <p className="comentario_texto">
-                            {comentario.texto}
-                        </p>
-                        <img
-                            className="like"
-                            src={imglike}
-                            alt=""
-                        />
-                        <img
-                            className="like"
-                            src={imgDeslike}
-                            alt=""
-                        />
-                    </div>
+            <div>
+                <div className="img_coment">
+                    <img
+                        className="ricardo"
+                        src={semFoto}
+                        alt=""
+                    />
+                    <p>{props.nome}</p>
                 </div>
-            )}
+                <div>
+                    <p className="usuario2">{props.id_usuario}</p>
+                    <p className="comentario_texto">
+                        {props.texto}
+                    </p>
+                    <img
+                        className="like"
+                        src={imglike}
+                        alt=""
+                    />
+                    <img
+                        className="like"
+                        src={imgDeslike}
+                        alt=""
+                    />
+                </div>
+            </div>
         </>
     )
 }
