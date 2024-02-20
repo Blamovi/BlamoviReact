@@ -5,7 +5,7 @@ import imglike from "../../assets/Images/Facebook Like2.svg";
 import imgDeslike from "../../assets/Images/Facebook Like1.svg";
 import "./style.css";
 
-import semFoto from "../../assets/Images/sem_foto.png";
+import logo_blamovi from "../../assets/Images/logo_blamovi.png";
 
 function ComentariosFilme(props: any) {
 
@@ -28,14 +28,17 @@ function ComentariosFilme(props: any) {
             <div>
                 <div className="img_coment">
                     <img
-                        className="ricardo"
-                        src={semFoto}
+                        className="foto_comentario"
+                        src={logo_blamovi}
                         alt=""
                     />
-                    <p>{props.nome}</p>
+                    <div className="nome_usuario">
+                    <p className="nome_usuario">{props.nome}</p>
+                    </div>
+                    
                 </div>
                 <div>
-                    <p className="usuario2">{props.id_usuario}</p>
+                    {/* <p className="usuario2">{props.id_usuario}</p> */}
                     <p className="comentario_texto">
                         {props.texto}
                     </p>

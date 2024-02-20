@@ -221,24 +221,28 @@ function FilmesInformacoes() {
                     </div>
 
                     <ComentariosFilme
-                        nome={"Ricardo Soares"}
+                        nome={"Amanda Bispo"}
                         texto={"Achei interessante. Um excelente filme que desmonta o esquema de golpes em larga escala, que ainda acontece, proporcionada pela veloz ascenção das criptomoedas e do enriquecimento rápido."}
                     />
                     <ComentariosFilme
-                        nome={"Dayvid Ygor Rodrigues"}
-                        texto={"Excelente filme, principalmente por ser real. Brian Banks foi vítima aos 16 anos de uma mentira que o levou a ficar na cadeia por 6 anos, e teria mais 5 na condicional. Lutou contra o sistema judicial como pôde, nunca perdeu as esperanças. A suposta vítima, uma mentirosa, é que deveria ter sido punida por ter prejudicado não só a vida de Brian na Família dele, também com seus amigos, mas a sua realização profissional. Felizmente também uma instituição que ajuda injustiçados abraçou a sua causa. Lamentavelmente a mentirosa suposta vítima manteve a mentira até o fim, pressionada pela mãe dela. O letreiro no fim do filme foi muito útil."}
+                        nome={"Elton Todinho"}
+                        texto={"Excelente filme, principalmente por ser real. Brian Banks foi vítima aos 16 anos de uma mentira que o levou a ficar na cadeia por 6 anos, e teria mais 5 na condicional. Lutou contra o sistema judicial como pôde, nunca perdeu as esperanças."}
                     />
                     <ComentariosFilme
-                        nome={"Luis Correia"}
-                        texto={"Fui ler o livro por causa da série de TV que estreia logo e confesso que fui esperando um livro de suspense com ação. O livro é, na verdade, um drama que tem uma morte passada como ponto principal. O que me deixa chateada é quando o livro acaba e faz com que eu me sinta meio burrra, como se eu tivesse perdido alguma coisa, sabe? Acho que a autora foi extremamente infeliz nesse final e espero que a série não siga pelo mesmo caminho"}
+                        nome={"Nicolas Henrique"}
+                        texto={"Fui ler o livro por causa da série de TV que estreia logo e confesso que fui esperando um livro de suspense com ação. O livro é, na verdade, um drama que tem uma morte passada como ponto principal. Acho que a autora foi extremamente infeliz nesse final e espero que a série não siga pelo mesmo caminho"}
                     />
                     <ComentariosFilme
-                        nome={"Adrielly Siqueira"}
+                        nome={"Flamarion Souza"}
                         texto={"Filme muito bom. Recomendo. Lógico que  em filme baseado  em fatos reais não muita ação.  Mas o contexto  foi bem trabalhado."}
                     />
                     <ComentariosFilme
-                        nome={"Dayvid Ygor Rodrigues"}
-                        texto={"Muito bom!!! Um dos melhores filmes que já vi. É um filme leve (comparado à outros como O Pianista, A Lista De Schindler e Bastardos Inglórios, q falam do mesmo tema), mas ainda assim conseguiu retratar muito bem os horrores do nazismo e dos campos de concentração, bem como da guerra. É uma linda história de amizade, apesar de seu trágico final (q eu chorei a primeira vez que assisti). Mostra de forma ímpar a perda da inocência e a descoberta da realidade, assim como quando vc encontra alguém que será seu amigo (a) até o fim. Recomendo muito, mas se vc for do tipo q chora (não importando se é homem ou mulher), então vai descarregar suas lágrimas e muito. Nota 9/10."}
+                        nome={"João Victor"}
+                        texto={"Muito bom!!! Um dos melhores filmes que já vi. É um filme leve, mas ainda assim conseguiu retratar muito bem os horrores do nazismo e dos campos de concentração, bem como da guerra. É uma linda história de amizade, apesar de seu trágico final. Mostra de forma ímpar a perda da inocência e a descoberta da realidade, assim como quando vc encontra alguém que será seu amigo (a) até o fim."}
+                    />
+                     <ComentariosFilme
+                        nome={"Jorge Felix"}
+                        texto={"Recomendo muito, mas se vc for do tipo q chora (não importando se é homem ou mulher), então vai descarregar suas lágrimas e muito. Nota 9/10."}
                     />
                 </section>
             </main>
