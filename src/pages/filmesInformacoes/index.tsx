@@ -81,7 +81,7 @@ function FilmesInformacoes() {
                 setElenco(response.data.elenco);
                 setTipo(response.data.tipo);
                 setPoster(response.data.poster);
-                // setTrailer(response.data.trailer);
+                setTrailer(response.data.trailer);
                 setClassificacao(response.data.classificacao);
                 setNota_Total(response.data.nota_total);
                 setQuantidade_Post(response.data.quantidade_post);
