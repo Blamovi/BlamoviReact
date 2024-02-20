@@ -105,6 +105,11 @@
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.267);
 }
 
+.link{
+    text-decoration:none; 
+    color: var(--amarelo);
+}
+
 
 /*  RESPONSIVO */
 @media screen and ( max-width: 1440px) {

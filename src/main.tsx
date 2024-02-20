@@ -14,7 +14,7 @@ import PerfilUsuario from './pages/PerfilUsuario'
 import Cadastro from './pages/Cadastro'
 import Login from './pages/Login'
 // import Post from './components/Post'
-import Comentario from  './components/Comentario'
+// import Comentario from  './components/Comentario'
 import RecuperacaoSenha from './pages/RecuperacaoSenha'
 import Contato from './pages/Contato'
 
@@ -87,6 +87,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </Routes>
       <Footer />
     </BrowserRouter>
-
-
   </React.StrictMode>)
