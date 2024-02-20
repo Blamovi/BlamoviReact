@@ -6,7 +6,7 @@ function CardLancamentos(props: any) {
 
 
     return (
-        <Link to={`/filmesInformacoes/${CardLancamentos + props.id}`}>  
+        <Link to={`/filmesInformacoes/${CardLancamentos + props.id}`} className="link">  
             <div className="card " id="teste4" >
                 <h2>{props.titulo}</h2>
                 <img src={"http://localhost:8090/images/" + props.poster}/>

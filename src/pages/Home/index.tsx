@@ -531,7 +531,7 @@ function Home() {
 
                 <Swiper
                     slidesPerView={1}
-                    pagination={{ clickable: true }}
+                    // pagination={{ clickable: true }}
                     navigation
                     autoplay={{
                         delay: 5000,
