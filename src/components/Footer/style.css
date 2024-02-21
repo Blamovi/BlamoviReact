@@ -1,8 +1,13 @@
 /* #footer */
 
+
+
+
+
 #footer .img-footer {
     margin-top: 0;
     width: 100%;
+    
     background-size: cover;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 66.67%, #000000 100%), url(cinema_foto_pexels.jpg);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
@@ -20,8 +25,9 @@
     top: 0;
     transition: all .1s ease-in-out;
     list-style: none;
-    padding: 27px;
+    padding: 23px;
     margin: 0px auto;
+    font-size: 10px;
 }
 
 .copy-right {
@@ -78,4 +84,13 @@ footer p {
     color: var(--amarelo);
     margin: 0px auto;
 }
+
+#footer .img-copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 60px;
+}
+
 

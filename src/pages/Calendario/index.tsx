@@ -23,7 +23,7 @@ function Calendario() {
       <img src={imgBanner} alt="" />   
     </div>
     <div className="banner_inicio">
-      <img src={imgCalendar} alt="" />
+      {/* <img src={imgCalendar} alt="" /> */}
       <div>
         <h2>CALENDÁRIO COMPLETO 2023</h2>
       </div>

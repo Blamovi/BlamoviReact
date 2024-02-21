@@ -141,7 +141,7 @@ function FilmesInformacoes() {
                                 src={imgCoracao}
                                 alt=""
                             />
-                            <Link className="recomendar" to={"PerfilUsuario"}>
+                            <Link className="recomendar" to={"/perfil"}>
                                 RECOMENDAR
                             </Link>
                         </div>
@@ -250,4 +250,4 @@ function FilmesInformacoes() {
     );
 }
 
-export default FilmesInformacoes;
+export default FilmesInformacoes;   

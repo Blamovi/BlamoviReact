@@ -9,28 +9,34 @@ import { Link } from "react-router-dom";
 function Header() {
 
     function mostrarMenu() {
-        let menu: any = document.getElementById("menu_links");
-        let sombra: any = document.getElementById("sombra"); 
-        let menu_barras: any = document.getElementById("menu_barras");
+        let menu: any = document.getElementById("menu_links"); // Obtém o elemento do menu pelo ID
+        let sombra: any = document.getElementById("sombra"); // Obtém o elemento da sombra pelo ID
+        let menu_barras: any = document.getElementById("menu_barras"); // Obtém o elemento do botão do menu pelo ID
 
+        let body: any = document.getElementsByTagName("body")[0]; // Obtém o elemento body (primeiro elemento)
 
-        let body: any = document.getElementsByTagName("body")[0];
+        if (window.getComputedStyle(menu).display == "none") { // Verifica se a propriedade 'left' do estilo computado do elemento do menu é diferente de 10px
+            menu.style.display = "flex";
+           // menu.style.left = "200px"; //Define a posição 'left' do menu como 10px movendo ele para direita
+        //   menu.style.justifyContent = "end"
+            sombra.style.right = "-10vw"; // Move a sombra para a direita
 
-        if (window.getComputedStyle(menu).left != "10px") { 
-            menu.style.left = "10px";
-            sombra.style.right = "-10vw"; 
-            menu_barras.setAttribute("aria-expanded", "true");
-            menu_barras.setAttribute("aria-label", "fechar menu"); 
-            body.style.overflow = "hidden";
+            menu_barras.setAttribute("aria-expanded", "true"); // Atualiza o atributo 'aria-expanded' para 'true'
+            menu_barras.setAttribute("aria-label", "fechar menu"); // Atualiza o atributo 'aria-label' para 'fechar menu'
+            body.style.overflow = "auto"; // Define o overflow do body como "hidden" para evitar a rolagem da página
         } else {
-            menu.style.left = "-300px"; 
-            sombra.style.right = "110vw"; 
-            menu_barras.setAttribute("aria-expanded", "false"); 
-            menu_barras.setAttribute("aria-label", "abrir menu"); 
-            body.style.overflow = "auto"; 
+            menu.style.display = "none";
+            //menu.style.left = "-3000px"; // Esconde o menu deslocando-o para esquerda
+        
+            sombra.style.right = "110vw"; // Move a sombra para a esquerda para ocultá-la
+            
+            menu_barras.setAttribute("aria-expanded", "false"); // Atualiza o atributo 'aria-expanded' para 'false'
+            menu_barras.setAttribute("aria-label", "abrir menu"); // Atualiza o atributo 'aria-label' para 'abrir menu'
+            body.style.overflow = "auto"; // Restaura o overflow do body para o valor padrão (auto)
         }
-        menu_barras.classList.toggle("ativo"); 
+        menu_barras.classList.toggle("ativo"); // Alterna a classe 'ativo' no botão do menu
     }
+    
 
     return (
         <><div id="sombra"></div>
@@ -40,10 +46,10 @@ function Header() {
                         <img src={imgLogoBranco} alt="logo" />
                         <span>Blámovi</span>
                     </div>
-                    <div id="divBusca">
+                    {/* <div id="divBusca">
                         <input type="text" id="txtBusca" placeholder="..." />
                         <button id="btnBusca">Buscar</button>
-                    </div>
+                    </div> */}
 
                     
 

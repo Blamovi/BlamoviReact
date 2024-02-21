@@ -68,7 +68,7 @@ function PerfilUsuario() {
               <img src={imgiconmap} alt="map" />
               <span className="spancolor">Parque Nacional do Serengeti - TZ </span>
               <img src={imgpais} alt="pais" />
-              <img src={imgCalendar} alt="Calendar" />
+              {/* <img src={imgCalendar} alt="Calendar" /> */}
               <span className="spancolor">Entrou em 2023</span>
             </div>
           </div>
