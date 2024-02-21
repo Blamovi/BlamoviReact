@@ -13,7 +13,7 @@ import imglevel from "../../assets/images/level.svg";
 import imgGrey from "../../assets/images/Grey.svg";
 import imgiconmap from "../../assets/images/iconmap.svg";
 import imgpais from "../../assets/images/pais.svg";
-import imgCalendar from "../../assets/images/Calendar.svg";
+// import imgCalendar from "../../assets/images/Calendar.svg";
 import imgmufasaperfil from "../../assets/images/mufasaperfil.svg";
 import imgiconpe from "../../assets/images/iconpe.svg";
 import imgiconLocal from "../../assets/images/iconLocal.svg";

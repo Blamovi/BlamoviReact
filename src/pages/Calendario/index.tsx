@@ -2,7 +2,7 @@ import "./style.css"
 
 //imagens
 import imgBanner from "../../assets/images/Banner2.svg"
-import imgCalendar from "../../assets/images/Calendar.svg"
+// import imgCalendar from "../../assets/images/Calendar.svg"
 import imgBookClub from "../../assets/images/book club.svg"
 import imgCoracao from "../../assets/images/coração.svg"
 import imgClassificacao14 from "../../assets/images/classificação 14.svg"

@@ -81,7 +81,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
        <Route path='/Cadastro' element={<Cadastro/>}/>
        <Route path='/Login' element={<Login/>}/>
        <Route path='/senha' element={<RecuperacaoSenha/>}/> 
-       <Route path='/filmesInformacoes' element={<FilmesInformacoes />} />
+       <Route path='/filmesInformacoes/:idFilme' element={<FilmesInformacoes />} />
        <Route path='/contato' element={<Contato/>}/>
        <Route path='/recuperacaosenha' element={<RecuperacaoSenha/>}/>
       </Routes>

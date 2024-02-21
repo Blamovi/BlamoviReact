@@ -5,10 +5,11 @@
     justify-content: right;
     align-items: flex-end;
     margin-right: 20px;
+    margin-top: 165px;
 }
 
 #detalhe_filmesInformacoes .superbanner {
-    margin-top: 20px;
+    margin-top: 160px;
     margin-right: 25px;
     color: #ffffff;
     text-align: right;
@@ -29,19 +30,19 @@
     color: var(--amarelo);
     font-size: 37px;
     text-align: left;
-    margin: -100px 0px 0px 60px;
+    margin: -120px 0px 0px 60px;
 }
 
 #detalhe_filmesInformacoes h3 {
     color: var(--branco);
-    font-size: 12px;
+    font-size: 16px;
     text-align: left;
     margin-left: 60px;
 }
 
 #detalhe_filmesInformacoes .paragrafo_inicial {
     color: var(--branco);
-    font-size: 12px;
+    font-size: 16px;
     text-align: left;
     margin: 5px 0px 0px 60px;
 }
@@ -77,8 +78,10 @@
 }
 
 #detalhe_filmesInformacoes .banner_img {
-    height: 420px;
-    margin: 0px 30px;
+    width: 280px;
+    height: 400px;
+    margin-left: -10px;
+    margin-right: 20px;
     border-radius: 10px;
     border: 1px solid white;
     align-self: center;
@@ -154,7 +157,7 @@
 
 #detalhe_filmesInformacoes .trailer a {
     height: 300px;
-    margin: 0px 50px;
+    margin: 10px 0px;
     width: 90%;
     border: #FBC02C;
 }
@@ -163,13 +166,13 @@
 /* seção 2 */
 
 #detalhe_filmesInformacoes .sinopse {
-    margin: 25px 0px 65px 0px;
-    padding: 0px 25px 0px 25px;
+    margin: 30px 80px 120px 0px;
+    padding: 0px 50px 0px 50px;
     color: white;
-    line-height: 25px;
+    line-height: 50px;
     width: 100%;
-    font-size: 15px;
-    text-align: justify;
+    font-size: 30px;
+    text-align: center;
 }
 
 #detalhe_filmesInformacoes .topico {
@@ -186,7 +189,8 @@
 
 #detalhe_filmesInformacoes .informacoes_gerais {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* #detalhe_filmesInformacoes .informacoes_esquerda {} */
@@ -210,10 +214,23 @@
     height: 70px;
 }
 
+#detalhe_filmesInformacoes .elenco{
+    color: #E0EEEE;
+}
+
 #detalhe_filmesInformacoes .ator {
     color: #fbc02c;
     padding-left: 8px;
-    font-size: 25px;
+    padding-bottom: 15px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#detalhe_filmesInformacoes .diretor {
+    color: #fbc02c;
+    padding-left: 8px;
+    padding-bottom: 15px;
+    font-size: 27px;
     text-align: left;
 }
 
@@ -275,7 +292,17 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
-    margin-top: 15px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#detalhe_filmesInformacoes .titulo2 {
+    color: #FBC02C;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 #detalhe_filmesInformacoes .subtitulo1 {
@@ -314,7 +341,7 @@
 
 #detalhe_filmesInformacoes .subtitulo3 {
     color: #FBC02C;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #detalhe_filmesInformacoes .separar_comentario {
@@ -326,7 +353,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 #detalhe_filmesInformacoes .img4 {
@@ -434,7 +461,7 @@
     }
 
     #detalhe_filmesInformacoes .trailer1 iframe{
-        width: 88%;
+        width: 80%;
     }
 }
 
@@ -452,7 +479,7 @@
 
         padding-left: 8px;
         font-size: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     #detalhe_filmesInformacoes .tela1 {
