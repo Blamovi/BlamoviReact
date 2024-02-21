@@ -615,6 +615,7 @@ function Home() {
                                             titulo={card.titulo}
                                             nota={card.nota_total / card.quantidade_post}
                                             coment={card.quantidade_post}
+                                            id={card.id}
                                         />
                                     </SwiperSlide>
                                     : ""
