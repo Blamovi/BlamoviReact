@@ -8,24 +8,6 @@ import { Link } from "react-router-dom";
 
 function Card(props: any) {
 
-    // const [topMovies, setTopMovies] = useState ([]);
-    
-    // const getTopRatedMovies = async (url: RequestInfo | URL) => {
-    //     const res = await fetch(url);
-    //     const data = await res.json();
-
-    //     console.log(data);
-    // }
-    
-    // useEffect(() =>{
-    //     const topRatedURL = `${moviesURL}top_rated?${apiKey}`;
-
-    //     getTopRatedMovies(topRatedURL);
-        
-    // })
-
-
-
     // function verificarComentarios() {
     //     if (typeof props.comentarios === "string") {
     //         return JSON.parse(props.comentarios);

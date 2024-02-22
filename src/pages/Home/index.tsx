@@ -4,8 +4,10 @@ import imgDestaques from "../../assets/img/section/film-everything-everywhere-al
 
 import imgCriticoLeo from "../../assets/img/banner/Group 72.png";
 import imgCriticoAna from "../../assets/img/banner/320x400 1.png";
-import ImgAvatar from "../../assets/img/banner/av.jpg"
-import ImgAvatarr from "../../assets/img/banner/av2.jpg"
+
+//nao utilizavel 
+// import ImgAvatar from "../../assets/img/banner/av.jpg"
+// import ImgAvatarr from "../../assets/img/banner/av2.jpg"
 
 // import imgStreamHbo from "../../assets/img/streams/HBO-MAX.png";
 // import imgStreamNetflix from "../../assets/img/streams/NETFLIX.png";
@@ -15,11 +17,14 @@ import ImgAvatarr from "../../assets/img/banner/av2.jpg"
 // import imgStreamYoutube from "../../assets/img/streams/youtube.png";
 
 // import imgSetaDireita from "../../assets/img/elementos/Less Than (4).png";
-import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
+// import imgSetaEsquerda from "../../assets/img/elementos/Less Than (3).png";
 
 //componetes
-import Card from "../../components/Card";
 // import CardLancamentos from "../../components/CardLancamentos";
+// const moviesURL = import.meta.env.VITE_API;
+// const apiKey = import.meta.env.VITE_API_KEY;
+
+import Card from "../../components/Card";
 
 //lib do carrosel
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,15 +33,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import api from "../../utils/api";
 import { useEffect, useState } from "react";
 
-// const moviesURL = import.meta.env.VITE_API;
-// const apiKey = import.meta.env.VITE_API_KEY;
 
 function Home() {
 
     const [listaFilmes, setListaFilmes] = useState<any[]>([]);
     const [listaSeries, setListaSeries] = useState<any[]>([]);
     const [listaDocumentario, setlistaDocumentario] = useState<any[]>([]);
-    
+
     function listarFilmes() {
 
         api.get("videos")
@@ -325,169 +328,169 @@ function Home() {
 
     // ]
 
-    const listarSeries: any[] = [
-        {
-            id: 1,
-            titulo: "The last of us",
-            img: "src/assets/img/series-f/The-last-of-us.jpg",
-            // imgStream: imgStreamHbo,
-            nota: 8.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
+    // const listarSeries: any[] = [
+    //     {
+    //         id: 1,
+    //         titulo: "The last of us",
+    //         img: "src/assets/img/series-f/The-last-of-us.jpg",
+    //         // imgStream: imgStreamHbo,
+    //         nota: 8.5,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     },
 
-        {
-            id: 2,
-            titulo: "A Casa do Dragao",
-            img: "src/assets/img/series-f/A-casa-dos-dragões.jpg",
-            // imgStream: imgStreamHbo,
-            nota: 8.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
+    //     {
+    //         id: 2,
+    //         titulo: "A Casa do Dragao",
+    //         img: "src/assets/img/series-f/A-casa-dos-dragões.jpg",
+    //         // imgStream: imgStreamHbo,
+    //         nota: 8.5,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     },
 
-        {
-            id: 3,
-            titulo: "Beef",
-            img: "src/assets/img/series-f/image 30.png",
-            // imgStream: imgStreamHbo,
-            nota: 8.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
-        
-        {
-            id: 4,
-            titulo: "Mandalorian",
-            img: "src/assets/img/series-f/mandalorian.jpg",
-            // imgStream: imgStreamDisney,
-            nota: 8.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        }
-    ]
+    //     {
+    //         id: 3,
+    //         titulo: "Beef",
+    //         img: "src/assets/img/series-f/image 30.png",
+    //         // imgStream: imgStreamHbo,
+    //         nota: 8.5,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     },
 
-    const listarMaratonas: any[] = [
-        {
-            id: 1,
-            titulo: "Rambo - Programado Para Matar",
-            img: "src/assets/img/filmes-f/rambo1.png",
-            // imgStream: imgStreamYoutube,
-            nota: 7.7,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
-        
-        {
-            id: 2,
-            titulo: "Rambo II: A Missão",
-            img: "src/assets/img/filmes-f/rambo2.png",
-            // imgStream: imgStreamYoutube,
-            nota: 6.5,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
-        
-        {
-            id: 3,
-            titulo: "Rambo III",
-            img: "src/assets/img/filmes-f/rambo3.png",
-            // imgStream: imgStreamYoutube,
-            nota: 5.8,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        },
-        
-        {
-            id: 4,
-            titulo: "Rambo IV",
-            img: "src/assets/img/filmes-f/rambo4.png",
-            // imgStream: imgStreamYoutube,
-            nota: 7.0,
-            comentarios: [
-                {
-                    conteudo: "Alien remains one of the most original, terrifying movies of all time.",
-                    usuario: "Sleepin_Dragon"
-                }, {
-                    conteudo: "'Alien' is one of those special films that have aged very, very well.",
-                    usuario: "gogoschka-1"
-                }, {
-                    conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
-                    usuario: "ivo-cobra8"
-                }
-            ]
-        }
-    ]
+    //     {
+    //         id: 4,
+    //         titulo: "Mandalorian",
+    //         img: "src/assets/img/series-f/mandalorian.jpg",
+    //         // imgStream: imgStreamDisney,
+    //         nota: 8.5,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     }
+    // ]
+
+    // const listarMaratonas: any[] = [
+    //     {
+    //         id: 1,
+    //         titulo: "Rambo - Programado Para Matar",
+    //         img: "src/assets/img/filmes-f/rambo1.png",
+    //         // imgStream: imgStreamYoutube,
+    //         nota: 7.7,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     },
+
+    //     {
+    //         id: 2,
+    //         titulo: "Rambo II: A Missão",
+    //         img: "src/assets/img/filmes-f/rambo2.png",
+    //         // imgStream: imgStreamYoutube,
+    //         nota: 6.5,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     },
+
+    //     {
+    //         id: 3,
+    //         titulo: "Rambo III",
+    //         img: "src/assets/img/filmes-f/rambo3.png",
+    //         // imgStream: imgStreamYoutube,
+    //         nota: 5.8,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     },
+
+    //     {
+    //         id: 4,
+    //         titulo: "Rambo IV",
+    //         img: "src/assets/img/filmes-f/rambo4.png",
+    //         // imgStream: imgStreamYoutube,
+    //         nota: 7.0,
+    //         comentarios: [
+    //             {
+    //                 conteudo: "Alien remains one of the most original, terrifying movies of all time.",
+    //                 usuario: "Sleepin_Dragon"
+    //             }, {
+    //                 conteudo: "'Alien' is one of those special films that have aged very, very well.",
+    //                 usuario: "gogoschka-1"
+    //             }, {
+    //                 conteudo: "One of the best classic sci-fi horror films of all time - A masterpiece.",
+    //                 usuario: "ivo-cobra8"
+    //             }
+    //         ]
+    //     }
+    // ]
 
     // const listarMaratonas: any[] = [
     //     {
@@ -633,16 +636,15 @@ function Home() {
                     ))}
                 </Swiper>
 
-          
-            {/* <img id="#avatar" src={ImgAvatarr} alt="" />   */}
-           
+                {/* <img id="#avatar" src={ImgAvatarr} alt="" />   */}
+
                 <section className="destaque">
                     <div className="destaque_conteudo">
 
 
-                    
-           
-          
+
+
+
 
 
 
@@ -663,6 +665,7 @@ function Home() {
                         </div>
                     </div>
                 </section>
+
                 <section className="comentarios">
                     <div className="container">
                         <div className="container_conteudo">
@@ -771,22 +774,8 @@ function Home() {
                 <section className="Melhores_series">
                     <h2>🎭 Series</h2>
                     <div className="card-linha">
-                        <img src={imgSetaEsquerda} alt="" />
-                        {/* {
-                            listarSeries.map((card: any) => {
-                                return<div key={card.id
-                                }>
-                                <Card
-                                    img={card.img}
-                                    titulo={card.titulo}
-                                    foto={card.img}
-                                    // imgStream={card.imgStream}
-                                    nota={card.nota}
-                                    comentarios={card.comentarios}
-                                /></div>
-                            }) */}
 
-                    <Swiper className="swipercard"
+                        <Swiper className="swipercard"
                             slidesPerView={3}
                             pagination={{ clickable: true }}
                             navigation>
@@ -804,6 +793,22 @@ function Home() {
                                     : ""
                             ))}
                         </Swiper>
+
+
+
+                        {/* {
+                            listarSeries.map((card: any) => {
+                                return<div key={card.id
+                                }>
+                                <Card
+                                    img={card.img}
+                                    titulo={card.titulo}
+                                    foto={card.img}
+                                    // imgStream={card.imgStream}
+                                    nota={card.nota}
+                                    comentarios={card.comentarios}
+                                /></div>
+                            }) */}
 
 
 
@@ -831,7 +836,7 @@ function Home() {
                     <h2>🎥 Documentario</h2>
                     <div className="card-linha">
 
-                    <Swiper className="swipercard"
+                        <Swiper className="swipercard"
                             slidesPerView={3}
                             pagination={{ clickable: true }}
                             navigation>
@@ -891,7 +896,7 @@ function Home() {
                         <img src={imgSetaDireita} alt="" /> */}
                     </div>
                 </section>
-                
+
                 {/* <section className="Lancamentos">
                     <h2>📅 Lançamentos</h2>
                     <div className="card-linha">

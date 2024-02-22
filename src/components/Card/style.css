@@ -1,5 +1,7 @@
 /* seção filmes e series  */
-#main_home .card-linha{
+
+
+.card-linha{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,7 +12,8 @@
     position: relative;
 }
 
-#main_home .card {
+
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,20 +25,20 @@
     height: 500px;
 }
 
-
-#main_home #teste3 {
+#teste3 {
     position: relative;
     top: 0;
     padding: 4px;
     transition: all .1s ease-in-out;
 }
 
-#main_home #teste3:hover {
+#teste3:hover {
     top: -4px;
     box-shadow: 0px 0px 10px 4px #fbc02c;
 }
 
-#main_home .card>img {
+
+.card>img {
     height: 400px;
     width: 300px;
     object-fit: cover;
@@ -43,36 +46,37 @@
     max-width: 90%;
 }
 
-#main_home .card>div {
+
+.card>div {
     display: flex;
     align-items: flex-end;
     flex-direction: row;
     gap: 40px;
 }
 
-#main_home .card>a {
+.card>a {
     color: rgba(255, 255, 255, 0.8);
     margin-top: 20px;
     text-align: center;
     text-decoration: none;
 }
 
-#main_home .card>a:hover {
+.card>a:hover {
     color: var(--vermelho);
 }
 
-#main_home .itens {
+.itens {
     /* width: 80%; */
     margin-top: 20px;
 }
 
-#main_home .streams {
+ .streams {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
 }
 
-#main_home .icones {
+.icones {
     display: flex;
     flex-direction: inherit;
     align-items: center;
@@ -85,7 +89,7 @@
 }
 
 #main_home .icones>span {
-    color: var(--branco);
+    color: var(--amarelo);
 }
 
 .input-submit {
@@ -117,6 +121,7 @@
 .swiper-button-prev,
 .swiper-pagination {
     --swiper-theme-color: #FBC02C;
+    background: transparent;
 }
 
 .link{

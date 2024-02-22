@@ -40,7 +40,30 @@ h3 {
 
 /* seção filmes e series  */
 
-#main_favoritos .fav-card,.fav-card-linha {
+.fav-card,.fav-card-linha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    position: relative;
+}
+
+.fav-card>img {
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.fav-card>div {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* #main_favoritos .fav-card,.fav-card-linha {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,8 +84,8 @@ h3 {
     align-items: flex-end;
     flex-direction: row;
     gap: 40px;
-}
-/* 
+} */
+
 .fav-card>a{
     color: #7DD7FE;
     margin-top: 20px;
@@ -71,7 +94,7 @@ h3 {
 
 .fav-card>a:hover{
     color: var(--vermelho);
-} */
+}
 
 #main_favoritos button[type="submit"] {
     margin-top: 5%;
@@ -131,7 +154,30 @@ h3 {
 
 #main_favoritos .icones>span{
     color: var(--branco);
+} */
+
+  /* SWIPER */
+
+.swipercard {
+    color: #FBC02C;
+    max-width: 1400px;
+    width: 100%;
 }
+.swiper-slide-card {
+    width: 220px;
+    padding: 55px;
+}
+
+.swiper-wrapper {
+    gap: 30px;
+}
+
+.swiper-button-next, 
+.swiper-button-prev, 
+.swiper-pagination{
+    background: transparent;
+}
+    
 
 
 
