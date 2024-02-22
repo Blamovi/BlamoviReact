@@ -1,5 +1,7 @@
 import "./style.css"
 
+import React, { useEffect } from 'react';
+
 import { Link } from "react-router-dom";
 
 
@@ -8,6 +10,27 @@ import { Link } from "react-router-dom";
 import imgLogoBranco from "../../assets/img/logo/logo-branco.svg"
 
 function Footer() {
+    // useEffect(() => {
+    //     const footerLinks = document.querySelectorAll('#footer a');
+
+    //     footerLinks.forEach((link) => {
+    //         link.addEventListener('click', (event) => {
+    //             event.preventDefault();
+    //             window.scrollTo({
+    //                 top: 0,
+    //                 behavior: 'smooth'
+    //             });
+    //         });
+    //     });
+
+    //     return () => {
+    //         footerLinks.forEach((link) => {
+    //             link.removeEventListener('click', () => {});
+    //         });
+    //     };
+
+
+    // }, []);
     return (
         <>
               <footer id="footer">

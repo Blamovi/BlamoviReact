@@ -1,5 +1,6 @@
 import "./style.css"
 
+import { useEffect } from "react";
 //imagens
 import imgBanner from "../../assets/images/Banner2.svg"
 // import imgCalendar from "../../assets/images/Calendar.svg"
@@ -12,6 +13,16 @@ import imgClassificacao12 from "../../assets/images/classificação 12.svg"
 import imgHomemAranha from "../../assets/images/homem aranha.svg"
 import imgNickeloden from "../../assets/images/nickeloden.svg"
 import imgPlusMais from "../../assets/images/Plus.svg"
+
+
+
+useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}, [])
+
 
 
 function Calendario() {

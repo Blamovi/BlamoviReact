@@ -13,7 +13,7 @@ import imgWhatsBranco from "../../assets/images/WhatsBranco.svg"
 // import imgbanner from "../../assets/images/cineminha.png"
 
 //hooks
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //estilização
 import "./style.css"
@@ -68,6 +68,13 @@ function Login() {
     }
 
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [])
 
    /////////// VALIDAÇÃO DO LOGIN ////////////
 
