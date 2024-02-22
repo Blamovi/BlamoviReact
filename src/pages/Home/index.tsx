@@ -845,6 +845,7 @@ function Home() {
                                 card.tipo == "Documentário" ?
                                     <SwiperSlide className="swiper-slide-card" key={card.id}>
                                         <Card
+                                        id={card.id}
                                             poster={card.poster}
                                             titulo={card.titulo}
                                             nota={card.nota_total / card.quantidade_post}
