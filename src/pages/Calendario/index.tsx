@@ -26,6 +26,14 @@ useEffect(() => {
 
 
 function Calendario() {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [])
+  
     return(
         <>
         <main id="main_Calendario">
